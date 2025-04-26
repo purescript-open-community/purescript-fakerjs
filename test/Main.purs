@@ -1,15 +1,11 @@
 module Test.Main where
 
 import Prelude
-import Prelude
 
 import Data.Array.NonEmpty as NonEmptyArray
-import Data.List.Lazy as List
 import Data.Maybe (Maybe(..))
 import Effect (Effect)
-import Effect (Effect)
 import Effect.Console (log)
-import Effect.Random (randomInt)
 import Fakerjs (makeFaker, base, en)
 import Fakerjs.Location as Location
 

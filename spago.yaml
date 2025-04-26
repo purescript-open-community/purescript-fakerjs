@@ -21,12 +21,11 @@ package:
     dependencies:
       - console
       - effect
-      - lists
-      - random
 workspace:
   packageSet:
     registry: 64.4.0
-  extraPackages: {}
+  extraPackages:
+    {}
     # undefinable:
     #   git: https://github.com/srghma/purescript-undefinable/
     #   ref: master
