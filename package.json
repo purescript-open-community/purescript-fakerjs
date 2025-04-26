@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "build": "spago build --strict --ensure-ranges --pedantic-packages",
+    "test": "spago test --offline --strict"
+  },
+  "author": "Serhii Khoma <srghma@gmail.com>",
+  "license": "MIT"
+}

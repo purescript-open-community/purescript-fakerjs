@@ -1,0 +1,62 @@
+module Test.Main where
+
+import Prelude
+
+import Data.List.Lazy as List
+import Effect (Effect)
+import Effect.Class.Console (log)
+import Effect.Random (randomInt)
+
+import Prelude
+
+import Effect (Effect)
+import Effect.Console (log)
+import Data.Maybe (Maybe(..))
+import Faker.Core (makeFaker)
+import Faker.Location as Location
+
+main :: Effect Unit
+main = do
+  faker <- makeFaker "en_US"
+
+  -- Basic location examples
+  log $ "City: " <> Location.city faker
+  log $ "Street: " <> Location.street faker
+  log $ "Country: " <> Location.country faker
+  log $ "Continent: " <> Location.continent faker
+  log $ "Building Number: " <> Location.buildingNumber faker
+  log $ "Time Zone: " <> Location.timeZone faker
+
+  -- Using options
+  log $ "Zip Code: " <> Location.zipCode faker Nothing
+  log $ "Street Address: " <> Location.streetAddress faker (Just { useFullAddress: true })
+
+  -- State with options
+  log $ "State: " <> Location.state faker { abbreviated: false }
+  log $ "State Abbreviated: " <> Location.state faker { abbreviated: true }
+
+  -- Country code
+  log $ "Country Code (Alpha-2): " <> Location.countryCode faker Location.Alpha2
+  log $ "Country Code (Alpha-3): " <> Location.countryCode faker Location.Alpha3
+  log $ "Country Code (Numeric): " <> Location.countryCode faker Location.Numeric
+
+  -- Directions
+  log $ "Direction: " <> Location.direction faker { abbreviated: false }
+  log $ "Direction Abbreviated: " <> Location.direction faker { abbreviated: true }
+  log $ "Cardinal Direction: " <> Location.cardinalDirection faker { abbreviated: false }
+  log $ "Ordinal Direction: " <> Location.ordinalDirection faker { abbreviated: false }
+
+  -- Coordinates
+  let lat = Location.latitude faker { max: 90.0, min: -90.0, precision: 4 }
+  let lng = Location.longitude faker { max: 180.0, min: -180.0, precision: 4 }
+  log $ "Latitude: " <> show lat
+  log $ "Longitude: " <> show lng
+
+  -- Nearby GPS coordinates
+  let origin = [ lat, lng ]
+  let nearbyCoords = Location.nearbyGPSCoordinate faker { origin: Just origin, radius: 10.0, isMetric: false }
+  log $ "Nearby GPS Coordinates: " <> show nearbyCoords
+
+  -- Language
+  let lang = Location.language faker
+  log $ "Language: " <> lang.name <> " (" <> lang.alpha2 <> ", " <> lang.alpha3 <> ")"
