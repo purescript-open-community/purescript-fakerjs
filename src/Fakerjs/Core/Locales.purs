@@ -1,6 +1,6 @@
-module Faker.Core.Locales where
+module Fakerjs.Core.Locales where
 
-import Faker.Core.Types
+import Fakerjs.Core.Types
 
 foreign import af_ZA :: FakerLocale
 foreign import ar :: FakerLocale

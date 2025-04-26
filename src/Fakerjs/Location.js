@@ -1,12 +1,12 @@
 export const zipCodeImpl = (faker, options) => faker.location.zipCode(options);
-export const city = (faker) => faker.location.city();
-export const buildingNumber = (faker) => faker.location.buildingNumber();
-export const street = (faker) => faker.location.street();
+export const cityImpl = (faker) => faker.location.city();
+export const buildingNumberImpl = (faker) => faker.location.buildingNumber();
+export const streetImpl = (faker) => faker.location.street();
 export const streetAddressImpl = (faker, options) => faker.location.streetAddress(options);
-export const secondaryAddress = (faker) => faker.location.secondaryAddress();
-export const county = (faker) => faker.location.county();
-export const country = (faker) => faker.location.country();
-export const continent = (faker) => faker.location.continent();
+export const secondaryAddressImpl = (faker) => faker.location.secondaryAddress();
+export const countyImpl = (faker) => faker.location.county();
+export const countryImpl = (faker) => faker.location.country();
+export const continentImpl = (faker) => faker.location.continent();
 export const countryCodeImpl = (faker, variant) => faker.location.countryCode(variant);
 export const stateImpl = (faker, options) => faker.location.state(options);
 export const latitudeImpl = (faker, options) => faker.location.latitude(options);
@@ -15,5 +15,5 @@ export const directionImpl = (faker, options) => faker.location.direction(option
 export const cardinalDirectionImpl = (faker, options) => faker.location.cardinalDirection(options);
 export const ordinalDirectionImpl = (faker, options) => faker.location.ordinalDirection(options);
 export const nearbyGPSCoordinateImpl = (faker, options) => faker.location.nearbyGPSCoordinate(options);
-export const timeZone = (faker) => faker.location.timeZone();
-export const language = (faker) => faker.location.language();
+export const timeZoneImpl = (faker) => faker.location.timeZone();
+export const languageImpl = (faker) => faker.location.language();

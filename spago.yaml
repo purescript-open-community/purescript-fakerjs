@@ -2,44 +2,32 @@ package:
   name: fakerjs
   publish:
     license: MIT
-    version: 1.0.0
+    version: 0.0.1
     location:
       githubOwner: purescript-open-community
       githubRepo: purescript-fakerjs
   dependencies:
     - arrays
-    - bifunctors
-    - codec
-    - control
-    - either
-    - foldable-traversable
-    - foreign-object
-    - integers
-    - json
-    - lists
+    - effect
+    - exceptions
+    - functions
     - maybe
-    - newtype
-    - ordered-collections
+    - nullable
     - prelude
-    - profunctor
-    - record
-    - safe-coerce
-    - strings
-    - transformers
-    - tuples
-    - type-equality
     - unsafe-coerce
-    - variant
-    - foreign
-    - foreign-object
+    # - undefinable
   test:
     main: Test.Main
     dependencies:
       - console
       - effect
-      - gen
-      - quickcheck
+      - lists
+      - random
 workspace:
   packageSet:
     registry: 64.4.0
-  extraPackages: {}
+  extraPackages:
+    {}
+    # undefinable:
+    #   git: https://github.com/srghma/purescript-undefinable/
+    #   ref: master

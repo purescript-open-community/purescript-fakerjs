@@ -1,6 +1,4 @@
-module Faker.Core.Types where
-
-import Prelude
+module Fakerjs.Core.Types where
 
 -- | The Faker instance type
 foreign import data Faker :: Type
