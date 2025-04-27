@@ -15,6 +15,9 @@ package:
     - nullable: ">=6.0.0 <7.0.0"
     - prelude: ">=6.0.2 <7.0.0"
     - unsafe-coerce: ">=6.0.0 <7.0.0"
+    - node-glob
+    - node-path
+    - node-fs
     # - undefinable
   test:
     main: Test.Main
@@ -25,7 +28,9 @@ workspace:
   packageSet:
     registry: 64.4.0
   extraPackages:
-    {}
+    node-fs:
+      git: https://github.com/srghma/purescript-node-fs
+      ref: master
     # undefinable:
     #   git: https://github.com/srghma/purescript-undefinable/
     #   ref: master
