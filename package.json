@@ -1,7 +1,8 @@
 {
   "scripts": {
     "build": "spago build --strict --pedantic-packages",
-    "test": "spago test --offline --strict"
+    "test": "spago test --offline --strict",
+    "generator:build-optimized": "purs-backend-es bundle-app --main Fakerjs2Generate --to ./output-es/Fakerjs2Generate.js --platform=node"
   },
   "author": "Serhii Khoma <srghma@gmail.com>",
   "license": "MIT",

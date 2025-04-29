@@ -15,9 +15,15 @@ package:
     - nullable: ">=6.0.0 <7.0.0"
     - prelude: ">=6.0.2 <7.0.0"
     - unsafe-coerce: ">=6.0.0 <7.0.0"
-    - node-glob
     - node-path
     - node-fs
+    - stringutils
+    - strings-extra
+    - js-promise-aff
+    - debug
+    - codec-argonaut
+    - tidy-codegen
+    # - codec-json
     # - undefinable
   test:
     main: Test.Main
@@ -31,6 +37,25 @@ workspace:
     node-fs:
       git: https://github.com/srghma/purescript-node-fs
       ref: master
+    tidy-codegen:
+      git: https://github.com/natefaubion/purescript-tidy-codegen
+      ref: main
+    codec-argonaut:
+      dependencies:
+        - argonaut-core
+        - codec
+        - console
+        - effect
+        - foreign-object
+        - ordered-collections
+        - prelude
+        - type-equality
+        - variant
+      git: https://github.com/garyb/purescript-codec-argonaut
+      ref: master
+    # codec-json:
+    #   git: https://github.com/srghma/purescript-codec-json
+    #   ref: spago
     # undefinable:
     #   git: https://github.com/srghma/purescript-undefinable/
     #   ref: master
