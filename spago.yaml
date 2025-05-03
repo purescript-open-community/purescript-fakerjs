@@ -11,6 +11,7 @@ package:
     - effect: ">=4.0.0 <5.0.0"
     - exceptions: ">=6.1.0 <7.0.0"
     - functions: ">=6.0.0 <7.0.0"
+    - gen: ">=3.0.0 <4.0.0"
     - maybe: ">=6.0.0 <7.0.0"
     - nullable: ">=6.0.0 <7.0.0"
     - prelude: ">=6.0.2 <7.0.0"
@@ -23,6 +24,11 @@ package:
     - debug
     - codec-argonaut
     - tidy-codegen
+    - quickcheck
+    - parsing
+    - these
+    - arrays-extra
+    # - string-parsers
     # - codec-json
     # - undefinable
   test:
@@ -30,6 +36,7 @@ package:
     dependencies:
       - console
       - effect
+      - spec-node
 workspace:
   packageSet:
     registry: 64.4.0
@@ -40,6 +47,10 @@ workspace:
     tidy-codegen:
       git: https://github.com/natefaubion/purescript-tidy-codegen
       ref: main
+    arrays-extra:
+      path: /home/srghma/projects/purescript-arrays-extra
+      # git: https://github.com/srghma/purescript-arrays-extra
+      # ref: main
     codec-argonaut:
       dependencies:
         - argonaut-core

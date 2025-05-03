@@ -1,0 +1,50 @@
+module Fakerjs2.Locales.Fr.Vehicle.BicycleType (bicycle_type) where
+
+import Data.Array.NonEmpty (NonEmptyArray)
+import Data.String.NonEmpty (NonEmptyString)
+import Fakerjs2.Types (BicycleType)
+import Unsafe.Coerce (unsafeCoerce)
+
+bicycle_type :: BicycleType
+bicycle_type = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
+  [ "Biporteur"
+  , "Cruiser"
+  , "Cyclo-draisine"
+  , "Draisienne"
+  , "Fatbike"
+  , "Gocycle"
+  , "Grand bi"
+  , "Gravel"
+  , "Longtail"
+  , "Lowrider bikes"
+  , "Michaudine"
+  , "Rickshaw"
+  , "Rosalie"
+  , "Singlespeed"
+  , "Tall bike"
+  , "Tandem"
+  , "Tricycle"
+  , "Tricycle couché"
+  , "Triplette"
+  , "Triporteur"
+  , "Vélo cargo"
+  , "Vélo couché"
+  , "Vélo de piste"
+  , "Vélo de route"
+  , "Vélo en bambou"
+  , "Vélo fantôme"
+  , "Vélo festif"
+  , "Vélo hollandais"
+  , "Vélo pliant"
+  , "Vélo tout chemin"
+  , "Vélo tout-terrain"
+  , "Vélo à assistance électrique"
+  , "Vélo à voile"
+  , "Vélo électrique"
+  , "Vélo-taxi"
+  , "Vélocar"
+  , "Vélocipède"
+  , "Vélocipèdraisiavaporianna"
+  , "Vélomobile"
+  , "Whike"
+  ]

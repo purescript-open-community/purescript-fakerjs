@@ -1,0 +1,50 @@
+module Fakerjs2.Locales.ZhCn.Food.Spice (spice) where
+
+import Data.Array.NonEmpty (NonEmptyArray)
+import Data.String.NonEmpty (NonEmptyString)
+import Fakerjs2.Types (Spice)
+import Unsafe.Coerce (unsafeCoerce)
+
+spice :: Spice
+spice = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
+  [ "丁香"
+  , "五香粉"
+  , "八角"
+  , "十三香"
+  , "味精"
+  , "咖喱粉"
+  , "姜黄"
+  , "孜然"
+  , "小茴香"
+  , "山奈"
+  , "干姜粉"
+  , "干辣椒"
+  , "干香菇粉"
+  , "桂皮"
+  , "桂花"
+  , "橙皮"
+  , "沙姜粉"
+  , "玫瑰花"
+  , "白胡椒粉"
+  , "紫苏"
+  , "罗勒"
+  , "肉豆蔻"
+  , "芫荽"
+  , "花椒"
+  , "花椒粉"
+  , "茴香籽"
+  , "草果"
+  , "葱白"
+  , "葱花"
+  , "蒜末"
+  , "豆蔻"
+  , "辣椒片"
+  , "辣椒粉"
+  , "陈皮"
+  , "香叶"
+  , "香茅"
+  , "香菜籽"
+  , "香葱"
+  , "鸡精"
+  , "黑胡椒粉"
+  ]

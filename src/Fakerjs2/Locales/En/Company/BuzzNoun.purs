@@ -1,0 +1,48 @@
+module Fakerjs2.Locales.En.Company.BuzzNoun (buzz_noun) where
+
+import Data.Array.NonEmpty (NonEmptyArray)
+import Data.String.NonEmpty (NonEmptyString)
+import Fakerjs2.Types (BuzzNoun)
+import Unsafe.Coerce (unsafeCoerce)
+
+buzz_noun :: BuzzNoun
+buzz_noun = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
+  [ "AI"
+  , "ROI"
+  , "applications"
+  , "architectures"
+  , "blockchains"
+  , "channels"
+  , "communities"
+  , "content"
+  , "convergence"
+  , "deliverables"
+  , "e-commerce"
+  , "experiences"
+  , "functionalities"
+  , "infrastructures"
+  , "initiatives"
+  , "interfaces"
+  , "large language models"
+  , "lifetime value"
+  , "markets"
+  , "methodologies"
+  , "metrics"
+  , "mindshare"
+  , "models"
+  , "networks"
+  , "niches"
+  , "paradigms"
+  , "partnerships"
+  , "platforms"
+  , "relationships"
+  , "schemas"
+  , "smart contracts"
+  , "solutions"
+  , "supply-chains"
+  , "synergies"
+  , "systems"
+  , "technologies"
+  , "users"
+  , "web services"
+  ]

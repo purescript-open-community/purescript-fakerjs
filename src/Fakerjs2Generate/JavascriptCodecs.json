@@ -1,0 +1,358 @@
+{
+  "cell_phone/formats.ts": [
+    "### ## ## ##",
+    "###-###-####",
+    "###.###.####",
+    "###/## ## ##",
+    "(###) ###-####",
+    "(+995 32) 2-##-##-##",
+    "04##/### ###",
+    "{{cell_phone.common_cell_prefix}}-###-####"
+  ],
+  "company/legal_entity_type.ts": [
+    "（集团）有限公司"
+  ],
+  "internet/domain_suffix.ts": [
+    "укр"
+  ],
+  "location/city_name.ts": [
+    "창원",
+    "통영"
+  ],
+  "location/city_pattern.ts": [
+    "{{company.adjective}}{{company.noun}}{{location.city_suffix}}",
+    "{{person.last_name.generic}}{{location.city_suffix}}"
+  ],
+  "location/postcode.ts": [
+    "1### ??",
+    "A## ****",
+    "Y#? #?#",
+    null
+  ],
+  "location/state.ts": [
+    "",
+    " بابل",
+  ],
+  "location/street_pattern.ts": [
+    "{{company.adjective}} {{company.noun}} {{location.street_suffix}}",
+    "{{number.int({\"max\": 9, \"min\": 1})}}丁目{{number.int({\"max\": 9, \"min\": 1})}}番{{number.int({\"max\": 9, \"min\": 1})}}号",
+    "{{person.firstName}} {{location.street_suffix}}",
+  ],
+  "person/first_name.ts": [
+    {
+      "generic": [
+        "Yvonne"
+      ],
+      "female": [
+        "Yvonne"
+      ],
+      "male": [
+        "Willie"
+      ]
+    }
+  ],
+  "person/last_name.ts": [
+    {
+      "generic": [
+        "Ackerman",
+      ]
+    },
+    {
+      "generic": [
+        "ادريس",
+      ]
+    },
+    {
+      "generic": [
+        "Žůrková"
+      ],
+      "female": [
+        "Adamcová",
+      ],
+      "male": [
+        "Žůrek"
+      ]
+    },
+  ],
+  "person/last_name_pattern.ts": [
+    {
+      "generic": [
+        {
+          "value": "{{person.last_name.generic}}",
+          "weight": 1
+        }
+      ]
+    },
+  ],
+  "color/human.ts": [
+    "회색"
+  ],
+  "commerce/department.ts": [
+    "音乐"
+  ],
+  "commerce/product_name.ts": [
+    {
+      "adjective": [
+        "يدويا"
+      ],
+      "material": [
+        "ناعم"
+      ],
+      "product": [
+        "مناشف"
+      ]
+    },
+  ],
+  "date/month.ts": [
+    {
+      "wide": [
+        "آب",
+      ],
+      "abbr": [
+        "أغسطس",
+      ]
+    },
+  ],
+  "date/weekday.ts": [
+    {
+      "abbr": null,
+      "wide": [
+        "الأحَد",
+      ]
+    },
+  ],
+  "location/building_number.ts": [
+    " s/n.",
+    "#",
+  ],
+  "location/country.ts": [
+    "黑山"
+  ],
+  "location/secondary_address.ts": [
+    "{{person.last_name.generic}}###号室",
+  ],
+  "location/street_address.ts": [
+    {
+      "normal": "{{location.buildingNumber}} {{location.street}}",
+      "full": "{{location.buildingNumber}} {{location.street}} {{location.secondaryAddress}}"
+    },
+  ],
+  "location/street_prefix.ts": [
+    "Acesso",
+  ],
+  "lorem/word.ts": [
+    "",
+    " و زمان",
+  ],
+  "person/job_type.ts": [
+    "წარმომადგენელი"
+  ],
+  "person/name.ts": [
+    {
+      "value": "{{person.prefix}} {{person.firstName}} {{person.lastName}}",
+      "weight": 1
+    },
+  ],
+  "person/prefix.ts": [
+    {
+      "generic": [
+        "آنسة",
+      ],
+      "female": [
+        "آنسة",
+      ],
+      "male": [
+        "بروفيسور",
+      ]
+    },
+  ],
+  "person/suffix.ts": [
+    "DDS",
+  ],
+  "team/creature.ts": [
+    "Vixens",
+  ],
+  "team/name.ts": [
+    "{{location.city}} {{team.suffix}}",
+  ],
+  "vehicle/fuel.ts": [
+    "Diesel",
+  ],
+  "vehicle/manufacturer.ts": [
+    "Aston Martin",
+  ],
+  "vehicle/model.ts": [
+    "1",
+  ],
+  "vehicle/type.ts": [
+    "Berlines",
+  ],
+  "color/space.ts": [
+    "Academy Color Encoding System (ACES)",
+  ],
+  "database/collation.ts": [
+    "ascii_bin",
+  ],
+  "database/engine.ts": [
+    "ARCHIVE",
+  ],
+  "database/type.ts": [
+    "bigint",
+  ],
+  "date/time_zone.ts": [
+    "Africa/Abidjan",
+  ],
+  "hacker/abbreviation.ts": [
+    "ADP",
+  ],
+  "internet/emoji.ts": [
+    {
+      "smiley": [
+        "😀",
+        "😃",
+      ],
+      "body": [
+        "👋",
+      ],
+      "person": [
+        "👶",
+      ],
+      "nature": [
+        "🐵",
+      ],
+      "food": [
+        "🍇",
+      ],
+      "travel": [
+        "🌍",
+      ],
+      "activity": [
+        "🎃",
+        "🎄",
+      ],
+      "object": [
+        "👓",
+      ],
+      "symbol": [
+        "🏧",
+      ],
+      "flag": [
+        "🏁",
+      ]
+    }
+  ],
+  "internet/http_status_code.ts": [
+    {
+      "informational": [
+        100,
+      ],
+      "success": [
+        200,
+      ],
+      "redirection": [
+        300,
+      ],
+      "clientError": [
+        400,
+      ],
+      "serverError": [
+        500,
+      ]
+    }
+  ],
+  "internet/jwt_algorithm.ts": [
+    "ES256",
+  ],
+  "internet/user_agent_pattern.ts": [
+    "FakerBot/{{system.semver}}",
+    "Googlebot/2.1 (+http://www.google.com/bot.html)",
+  ],
+  "location/country_code.ts": [
+    {
+      "alpha2": "AD",
+      "alpha3": "AND",
+      "numeric": "020"
+    },
+  ],
+  "location/time_zone.ts": [
+    null
+  ],
+  "system/directory_path.ts": [
+    "/Applications",
+  ],
+  "system/mime_type.ts": [
+    {
+      "application/epub+zip": {
+        "extensions": [
+          "epub"
+        ]
+      },
+    }
+  ],
+  "company/name_pattern.ts": [
+    "{{company.adjective}} {{company.noun}} {{company.legal_entity_type}}",
+  ],
+  "internet/free_email.ts": [
+    "126.com",
+  ],
+  "location/state_abbr.ts": [
+    "1",
+    "10",
+  ],
+  "location/street_name.ts": [
+    "1. sokače",
+  ],
+  "commerce/product_description.ts": [
+    "A Dev Byte vékony és egyszerű Maple Gaming billentyűzete elegáns testtel és 7 színű RGB LED-es háttérvilágítással rendelkezik az intelligens funkcionalitás érdekében",
+  ],
+  "company/adjective.ts": [
+    "24 ore",
+  ],
+  "company/buzz_adjective.ts": [
+    "24/365",
+  ],
+  "company/buzz_noun.ts": [
+    "AI",
+  ],
+  "company/buzz_verb.ts": [
+    "Envisioneer",
+  ],
+  "company/company_name.ts": [
+    "Aabenraa Anlæg",
+  ],
+  "company/descriptor.ts": [
+    "24 horas",
+  ],
+  "company/noun.ts": [
+    "Abilità",
+  ],
+  "location/direction.ts": [
+    {
+      "cardinal": [
+        "Nord",
+      ],
+      "cardinal_abbr": [
+        "N",
+      ],
+      "ordinal": [
+        "Nordøst",
+      ],
+      "ordinal_abbr": [
+        "NØ",
+      ]
+    },
+  ],
+  "person/middle_name.ts": [
+    {
+      "generic": [
+        "Birk",
+      ],
+      "female": [
+        "Birk",
+      ],
+      "male": [
+        "Birk",
+      ]
+    },
+  ],
+}

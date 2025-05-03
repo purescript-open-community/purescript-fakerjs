@@ -1,0 +1,57 @@
+module Fakerjs2.Locales.En.Vehicle.Manufacturer (manufacturer) where
+
+import Data.Array.NonEmpty (NonEmptyArray)
+import Data.String.NonEmpty (NonEmptyString)
+import Fakerjs2.Types (Manufacturer)
+import Unsafe.Coerce (unsafeCoerce)
+
+manufacturer :: Manufacturer
+manufacturer = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
+  [ "Aston Martin"
+  , "Audi"
+  , "BMW"
+  , "BYD"
+  , "Bentley"
+  , "Bugatti"
+  , "Cadillac"
+  , "Chevrolet"
+  , "Chrysler"
+  , "Citroën"
+  , "Dodge"
+  , "Ferrari"
+  , "Fiat"
+  , "Ford"
+  , "Honda"
+  , "Hyundai"
+  , "Jaguar"
+  , "Jeep"
+  , "Kia"
+  , "Lamborghini"
+  , "Land Rover"
+  , "MG"
+  , "Mahindra & Mahindra"
+  , "Maruti"
+  , "Maserati"
+  , "Mazda"
+  , "Mercedes Benz"
+  , "Mini"
+  , "Mitsubishi"
+  , "NIO"
+  , "Nissan"
+  , "Peugeot"
+  , "Polestar"
+  , "Porsche"
+  , "Renault"
+  , "Rivian"
+  , "Rolls Royce"
+  , "Skoda"
+  , "Smart"
+  , "Subaru"
+  , "Suzuki"
+  , "Tata"
+  , "Tesla"
+  , "Toyota"
+  , "Vauxhall"
+  , "Volkswagen"
+  , "Volvo"
+  ]

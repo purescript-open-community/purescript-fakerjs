@@ -1,0 +1,54 @@
+module Fakerjs2.Locales.Fa.Company.Descriptor (descriptor) where
+
+import Data.Array.NonEmpty (NonEmptyArray)
+import Data.String.NonEmpty (NonEmptyString)
+import Fakerjs2.Types (Descriptor)
+import Unsafe.Coerce (unsafeCoerce)
+
+descriptor :: Descriptor
+descriptor = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
+  [ "24 ساعت"
+  , "24/7"
+  , "اجرایی"
+  , "اختصاصی"
+  , "اموزشی"
+  , "انتقالی"
+  , "بی تفاوت"
+  , "تجزیه و تحلیل"
+  , "تحمل صفر"
+  , "تقاضا محور"
+  , "توانمند سازی"
+  , "ثابت"
+  , "جهت دار"
+  , "حساس به متن"
+  , "خطاپذيری"
+  , "دو جهته"
+  , "دوتایی"
+  , "روشن اندیشی"
+  , "روند رو به بالا"
+  , "سرویس دهنده مشتری"
+  , "سیستمی"
+  , "شایسته سیستم"
+  , "صریح"
+  , "مبتنی بر متن"
+  , "مبتنی بر محتوا"
+  , "محسوس"
+  , "محیط زیست"
+  , "مرکب"
+  , "مشتری محور"
+  , "منسجم"
+  , "نامتقارن"
+  , "ناهمگام"
+  , "نسل سوم"
+  , "نسل ششم"
+  , "نسل پنجم"
+  , "نسل چهارم"
+  , "نگرش محور"
+  , "پایدار"
+  , "پس زمینه"
+  , "پهنای باند پایش"
+  , "پویا"
+  , "پیش زمینه"
+  , "گسسته"
+  , "یکسان"
+  ]

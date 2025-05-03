@@ -1,0 +1,58 @@
+module Fakerjs2.Locales.ZhCn.Food.Fruit (fruit) where
+
+import Data.Array.NonEmpty (NonEmptyArray)
+import Data.String.NonEmpty (NonEmptyString)
+import Fakerjs2.Types (Fruit)
+import Unsafe.Coerce (unsafeCoerce)
+
+fruit :: Fruit
+fruit = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
+  [ "哈密瓜"
+  , "大根"
+  , "山竹"
+  , "干杏"
+  , "干梅"
+  , "指柠檬"
+  , "无花果"
+  , "杏子"
+  , "杨桃"
+  , "枇杷"
+  , "枣"
+  , "枸杞"
+  , "柑橘"
+  , "柠檬"
+  , "梅子"
+  , "樱桃"
+  , "橄榄"
+  , "橙子"
+  , "沙果"
+  , "火龙果"
+  , "甘蓝"
+  , "番石榴"
+  , "番茄"
+  , "番荔枝"
+  , "石榴"
+  , "绿芽"
+  , "芒果"
+  , "苹果"
+  , "茄子"
+  , "草莓"
+  , "荔枝"
+  , "莓果"
+  , "菠萝"
+  , "葡萄"
+  , "葡萄柚"
+  , "蓝莓"
+  , "蔓越莓"
+  , "血橙"
+  , "西瓜"
+  , "费约果"
+  , "金橘"
+  , "雪豆"
+  , "青柠"
+  , "香蕉"
+  , "鳄梨"
+  , "黑加仑"
+  , "黑莓"
+  , "龙眼"
+  ]

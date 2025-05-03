@@ -3,7 +3,7 @@ module Fakerjs2.Types where
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.Map (Map)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2Generate (JavascriptBetterMapValue, Weighted, NameCodeSymbolNumericCode)
+import Fakerjs2Generate.JavascriptBetter (JavascriptBetterMapValue, Weighted, NameCodeSymbolNumericCode)
 
 type Abbreviation = NonEmptyArray NonEmptyString
 type AccountType = NonEmptyArray NonEmptyString

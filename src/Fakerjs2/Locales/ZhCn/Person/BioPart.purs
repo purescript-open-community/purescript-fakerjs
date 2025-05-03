@@ -1,0 +1,48 @@
+module Fakerjs2.Locales.ZhCn.Person.BioPart (bio_part) where
+
+import Data.Array.NonEmpty (NonEmptyArray)
+import Data.String.NonEmpty (NonEmptyString)
+import Fakerjs2.Types (BioPart)
+import Unsafe.Coerce (unsafeCoerce)
+
+bio_part :: BioPart
+bio_part = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
+  [ "活动家"
+  , "艺术家"
+  , "作家"
+  , "博主"
+  , "企业家"
+  , "教练"
+  , "发明家"
+  , "设计师"
+  , "开发者"
+  , "教育家"
+  , "工程师"
+  , "企业主"
+  , "环保主义者"
+  , "电影爱好者"
+  , "电影制片人"
+  , "美食家"
+  , "创始人"
+  , "朋友"
+  , "玩家"
+  , "极客"
+  , "毕业生"
+  , "创造者"
+  , "领导者"
+  , "模特"
+  , "脑力爱好者"
+  , "父母"
+  , "爱国者"
+  , "个人"
+  , "哲学家"
+  , "摄影爱好者"
+  , "公众演说家"
+  , "科学家"
+  , "梦想家"
+  , "学生"
+  , "老师"
+  , "旅行家"
+  , "退伍军人"
+  , "作者"
+  ]

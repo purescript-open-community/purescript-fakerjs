@@ -1,0 +1,47 @@
+module Fakerjs2.Locales.ZhCn.Location.CityName (city_name) where
+
+import Data.Array.NonEmpty (NonEmptyArray)
+import Data.String.NonEmpty (NonEmptyString)
+import Fakerjs2.Types (CityName)
+import Unsafe.Coerce (unsafeCoerce)
+
+city_name :: CityName
+city_name = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
+  [ "北京"
+  , "上海"
+  , "广州"
+  , "深圳"
+  , "天津"
+  , "重庆"
+  , "成都"
+  , "杭州"
+  , "南京"
+  , "武汉"
+  , "西安"
+  , "苏州"
+  , "青岛"
+  , "宁波"
+  , "郑州"
+  , "长沙"
+  , "合肥"
+  , "福州"
+  , "厦门"
+  , "大连"
+  , "沈阳"
+  , "济南"
+  , "哈尔滨"
+  , "长春"
+  , "昆明"
+  , "南昌"
+  , "石家庄"
+  , "太原"
+  , "贵阳"
+  , "兰州"
+  , "海口"
+  , "乌鲁木齐"
+  , "呼和浩特"
+  , "南宁"
+  , "拉萨"
+  , "银川"
+  , "西宁"
+  ]

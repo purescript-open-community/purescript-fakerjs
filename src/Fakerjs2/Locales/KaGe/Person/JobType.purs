@@ -1,0 +1,47 @@
+module Fakerjs2.Locales.KaGe.Person.JobType (job_type) where
+
+import Data.Array.NonEmpty (NonEmptyArray)
+import Data.String.NonEmpty (NonEmptyString)
+import Fakerjs2.Types (JobType)
+import Unsafe.Coerce (unsafeCoerce)
+
+job_type :: JobType
+job_type = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
+  [ "აგენტი"
+  , "ადვოკატი"
+  , "ადმინისტრატორი"
+  , "არქიტექტორი"
+  , "ასისტენტი"
+  , "აღმასრულებელი დირექტორი"
+  , "დეველოპერი"
+  , "დეკანი"
+  , "დიზაინერი"
+  , "დირექტორი"
+  , "ელექტრიკოსი"
+  , "ექსპერტი"
+  , "ინჟინერი"
+  , "იურისტი"
+  , "კონსტრუქტორი"
+  , "კონსულტანტი"
+  , "კოორდინატორი"
+  , "ლექტორი"
+  , "მასაჟისტი"
+  , "მემანქანე"
+  , "მენეჯერი"
+  , "მძღოლი"
+  , "მწვრთნელი"
+  , "ოპერატორი"
+  , "ოფიცერი"
+  , "პედაგოგი"
+  , "პოლიციელი"
+  , "პროგრამისტი"
+  , "პროდიუსერი"
+  , "პრორექტორი"
+  , "ჟურნალისტი"
+  , "რექტორი"
+  , "სპეციალისტი"
+  , "სტრატეგისტი"
+  , "ტექნიკოსი"
+  , "ფოტოგრაფი"
+  , "წარმომადგენელი"
+  ]

@@ -1,0 +1,55 @@
+module Fakerjs2.Locales.PtBr.Color.Human (human) where
+
+import Data.Array.NonEmpty (NonEmptyArray)
+import Data.String.NonEmpty (NonEmptyString)
+import Fakerjs2.Types (Human)
+import Unsafe.Coerce (unsafeCoerce)
+
+human :: Human
+human = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
+  [ "amarelo"
+  , "ametista"
+  , "azul"
+  , "azul celeste"
+  , "azul marinho"
+  , "azul petróleo"
+  , "açafrão"
+  , "bordô"
+  , "bronze"
+  , "caramelo"
+  , "castanho"
+  , "cenoura"
+  , "cinza"
+  , "cobre"
+  , "coral"
+  , "dourado"
+  , "escarlate"
+  , "esmeralda"
+  , "ferrugem"
+  , "fuligem"
+  , "fúchsia"
+  , "grená"
+  , "jade"
+  , "laranja"
+  , "lilás"
+  , "limão"
+  , "madeira"
+  , "magenta"
+  , "marrom"
+  , "ouro"
+  , "pele"
+  , "prata"
+  , "preto"
+  , "púrpura"
+  , "rosa"
+  , "roxo"
+  , "salmão"
+  , "turquesa"
+  , "verde"
+  , "verde lima"
+  , "verde-azulado"
+  , "vermelho"
+  , "violeta"
+  , "âmbar"
+  , "índigo"
+  ]

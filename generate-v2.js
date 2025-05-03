@@ -5,7 +5,7 @@
 
 var { default: fg } = await import("fast-glob");
 var { pascalCase } = await import("change-case");
-var { promises: fs } = await import("fs");
+var { promises: fsPromises, default: fs } = await import("fs");
 var { default: path } = await import("path");
 
 var inputDir = '/home/srghma/projects/faker/src/locales';
@@ -16,6 +16,31 @@ var entries = await fg('**/*.ts', {
   cwd: inputDir,
   ignore: ['**/index.ts', '**/metadata.ts'],
 });
+
+
+var uniq = xs => [...new Set(xs)].sort()
+var x = uniq(entries.map(x => x.split('/').slice(1).join('/')))
+
+var entries_ = await Promise.all(entries.map(async x => {
+  let o = null
+  const p = inputDir + '/' + x
+  try { o = (await import(p)).default } catch (e) { }
+  return [x, o]
+}))
+
+// {
+//   "cell_phone/formats.ts": {
+//     "af_ZA": [
+// x = Object.groupBy(entries_, x => x[0].split('/').slice(1).join('/'))
+// x = Object.fromEntries(Object.entries(x).map(([k, v]) => [k, Object.fromEntries(v.map(([k, v]) => [k.split('/')[0], v]))]));
+
+
+x = Object.groupBy(entries_, x => x[0].split('/').slice(1).join('/'))
+x = Object.fromEntries(Object.entries(x).map(([k, v]) => [k, uniq(v.map(x => x[1]).flat())]));
+
+var outputPath = path.join('/home/srghma/projects/purescript-fakerjs/src/Fakerjs2Generate/', 'JavascriptCodecs.purs');
+fs.writeFileSync(outputPath, JSON.stringify(x, null, 2), 'utf8');
+console.log(`JSON written to ${outputPath}`);
 
 // Step 1: Build a naive tree (pure objects with `true`)
 const tree = {};
