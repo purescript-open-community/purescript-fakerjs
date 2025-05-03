@@ -11,7 +11,7 @@ import Data.String.NonEmpty (NonEmptyString)
 import Data.String.NonEmpty as NonEmptyString
 import Data.Traversable (for_, traverse)
 import Data.Tuple (Tuple(..))
-import Fakerjs2Generate.JavascriptBetter (JavascriptBetter(..), JavascriptBetterMapValue(..), Weighted)
+import Fakerjs2Generate.JavascriptBetter.Decode
 import Fakerjs2Generate.Tree (PathInfo)
 import Fakerjs2Generate.Utils (add_ifPurescriptKeyword, importFakerjs2Type, importGenType, importNonEmptyArrayType, importNonEmptyStringType, importOneOfFunction, importUnsafeCoerceInd, importUnsafeFromString, mkModuleName)
 import PureScript.CST.Types (Expr, Ident, Module, Proper, QualifiedName)

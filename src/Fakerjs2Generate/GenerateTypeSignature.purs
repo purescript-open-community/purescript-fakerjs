@@ -11,7 +11,7 @@ import Data.String.NonEmpty as NonEmptyString
 import Data.Tuple (Tuple(..))
 import PureScript.CST.Types as CST
 import Tidy.Codegen (typeApp, typeCtor) as C
-import Fakerjs2Generate.JavascriptBetter (JavascriptBetter(..), JavascriptBetterMapValue(..), Weighted)
+import Fakerjs2Generate.JavascriptBetter.Decode
 import Fakerjs2Generate.Tree (PathInfo)
 import Fakerjs2Generate.Utils (formatTypeSignature)
 

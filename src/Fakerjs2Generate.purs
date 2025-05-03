@@ -31,7 +31,7 @@ import Effect.Console as Console
 import Effect.Exception (error, message)
 import Fakerjs2Generate.GenerateModule (generateModule)
 import Fakerjs2Generate.GenerateTypeSignature (printSignaturesOnly)
-import Fakerjs2Generate.JavascriptBetter (JavascriptBetter(..), decodeBetter)
+import Fakerjs2Generate.JavascriptBetter.Decode
 import Fakerjs2Generate.JavascriptBetter.JavascriptError
 import Fakerjs2Generate.Load (loadPathDefault)
 import Fakerjs2Generate.Tree (PathInfo, Tree, buildTrees, collectLeaves, pathInfoToString)
