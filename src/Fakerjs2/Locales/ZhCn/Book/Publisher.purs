@@ -2,10 +2,8 @@ module Fakerjs2.Locales.ZhCn.Book.Publisher (publisher) where
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (Publisher)
 import Unsafe.Coerce (unsafeCoerce)
 
-publisher :: Publisher
 publisher = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
   [ "三联书店"
   , "上海交通大学出版社"

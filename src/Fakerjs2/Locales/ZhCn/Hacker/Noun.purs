@@ -2,10 +2,8 @@ module Fakerjs2.Locales.ZhCn.Hacker.Noun (noun) where
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (Noun)
 import Unsafe.Coerce (unsafeCoerce)
 
-noun :: Noun
 noun = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
   [ "传感器"
   , "像素"

@@ -2,10 +2,8 @@ module Fakerjs2.Locales.En.Animal.Snake (snake) where
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (Snake)
 import Unsafe.Coerce (unsafeCoerce)
 
-snake :: Snake
 snake = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
   [ "Abaco Island boa"
   , "Aesculapian snake"

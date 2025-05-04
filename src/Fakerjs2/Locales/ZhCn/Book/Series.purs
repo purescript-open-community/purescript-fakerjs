@@ -2,10 +2,8 @@ module Fakerjs2.Locales.ZhCn.Book.Series (series) where
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (Series)
 import Unsafe.Coerce (unsafeCoerce)
 
-series :: Series
 series = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
   [ "三体"
   , "九州缥缈录"

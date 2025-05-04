@@ -2,10 +2,8 @@ module Fakerjs2.Locales.En.Music.SongName (song_name) where
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (SongName)
 import Unsafe.Coerce (unsafeCoerce)
 
-song_name :: SongName
 song_name = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
   [ "(Everything I Do) I Do it For You"
   , "(Ghost) Riders in the Sky"

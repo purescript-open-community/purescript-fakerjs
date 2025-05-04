@@ -2,10 +2,8 @@ module Fakerjs2.Locales.En.Music.Artist (artist) where
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (Artist)
 import Unsafe.Coerce (unsafeCoerce)
 
-artist :: Artist
 artist = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
   [ "$NOT"
   , "$uicideboy$"

@@ -2,10 +2,8 @@ module Fakerjs2.Locales.En.Book.Series (series) where
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (Series)
 import Unsafe.Coerce (unsafeCoerce)
 
-series :: Series
 series = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
   [ "A Song of Ice and Fire"
   , "Anna Karenina"

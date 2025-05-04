@@ -2,10 +2,8 @@ module Fakerjs2.Locales.En.Word.Preposition (preposition) where
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (Preposition)
 import Unsafe.Coerce (unsafeCoerce)
 
-preposition :: Preposition
 preposition = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
   [ "a"
   , "abaft"

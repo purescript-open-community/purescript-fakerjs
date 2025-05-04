@@ -2,10 +2,8 @@ module Fakerjs2.Locales.ZhCn.Vehicle.Manufacturer (manufacturer) where
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (Manufacturer)
 import Unsafe.Coerce (unsafeCoerce)
 
-manufacturer :: Manufacturer
 manufacturer = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
   [ "三菱"
   , "丰田"

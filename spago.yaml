@@ -28,6 +28,7 @@ package:
     - parsing
     - these
     - arrays-extra
+    - record-extra-srghma
     # - string-parsers
     # - codec-json
     # - undefinable
@@ -39,7 +40,7 @@ package:
       - spec-node
 workspace:
   packageSet:
-    registry: 64.4.0
+    registry: 64.6.1
   extraPackages:
     node-fs:
       git: https://github.com/srghma/purescript-node-fs
@@ -49,6 +50,10 @@ workspace:
       ref: main
     arrays-extra:
       path: /home/srghma/projects/purescript-arrays-extra
+      # git: https://github.com/srghma/purescript-arrays-extra
+      # ref: main
+    record-extra-srghma:
+      path: /home/srghma/projects/purescript-record-extra-srghma
       # git: https://github.com/srghma/purescript-arrays-extra
       # ref: main
     codec-argonaut:

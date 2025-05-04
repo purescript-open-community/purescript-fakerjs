@@ -1,12 +1,9 @@
 module Fakerjs2.Locales.En.Lorem.Word (word) where
 
 import Data.Array.NonEmpty (NonEmptyArray)
-import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (Word)
 import Unsafe.Coerce (unsafeCoerce)
 
-word :: Word
-word = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
+word = (unsafeCoerce :: Array String -> NonEmptyArray String)
   [ "a"
   , "ab"
   , "abbas"

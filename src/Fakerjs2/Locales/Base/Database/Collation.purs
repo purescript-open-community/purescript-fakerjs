@@ -2,10 +2,8 @@ module Fakerjs2.Locales.Base.Database.Collation (collation) where
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (Collation)
 import Unsafe.Coerce (unsafeCoerce)
 
-collation :: Collation
 collation = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
   [ "ascii_bin"
   , "ascii_general_ci"

@@ -2,10 +2,8 @@ module Fakerjs2.Locales.Base.Date.TimeZone (time_zone) where
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (TimeZone)
 import Unsafe.Coerce (unsafeCoerce)
 
-time_zone :: TimeZone
 time_zone = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
   [ "Africa/Abidjan"
   , "Africa/Accra"

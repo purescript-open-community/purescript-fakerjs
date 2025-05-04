@@ -24,10 +24,12 @@ var x = uniq(entries.map(x => x.split('/').slice(1).join('/')))
 var entries_ = await Promise.all(entries.map(async x => {
   let o = null
   const p = inputDir + '/' + x
-  try { o = (await import(p)).default } catch (e) { }
-  return [x, o]
+  try { o = (await import(p)).default } catch (e) { console.error(e) }
+  const [lang, ...path] = x.split('/')
+  return [lang, path, o]
 }))
 
+entries_
 // {
 //   "cell_phone/formats.ts": {
 //     "af_ZA": [
@@ -35,8 +37,11 @@ var entries_ = await Promise.all(entries.map(async x => {
 // x = Object.fromEntries(Object.entries(x).map(([k, v]) => [k, Object.fromEntries(v.map(([k, v]) => [k.split('/')[0], v]))]));
 
 
-x = Object.groupBy(entries_, x => x[0].split('/').slice(1).join('/'))
-x = Object.fromEntries(Object.entries(x).map(([k, v]) => [k, uniq(v.map(x => x[1]).flat())]));
+var mapVals = (x, f) => Object.fromEntries(Object.entries(x).map(([k, v]) => [k, f(v)]))
+
+x = Object.groupBy(entries_, x => x[1].join('/'))
+x = mapVals(x, v => v.map(x => x[2]))
+x = mapVals(x, v => uniq(v.flat()))
 
 var outputPath = path.join('/home/srghma/projects/purescript-fakerjs/src/Fakerjs2Generate/', 'JavascriptCodecs.purs');
 fs.writeFileSync(outputPath, JSON.stringify(x, null, 2), 'utf8');

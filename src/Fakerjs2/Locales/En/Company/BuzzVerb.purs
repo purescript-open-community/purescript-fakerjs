@@ -2,10 +2,8 @@ module Fakerjs2.Locales.En.Company.BuzzVerb (buzz_verb) where
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (BuzzVerb)
 import Unsafe.Coerce (unsafeCoerce)
 
-buzz_verb :: BuzzVerb
 buzz_verb = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
   [ "aggregate"
   , "architect"

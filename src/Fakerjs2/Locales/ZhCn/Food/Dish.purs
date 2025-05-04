@@ -2,10 +2,8 @@ module Fakerjs2.Locales.ZhCn.Food.Dish (dish) where
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (Dish)
 import Unsafe.Coerce (unsafeCoerce)
 
-dish :: Dish
 dish = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
   [ "三杯鸡"
   , "京酱肉丝"

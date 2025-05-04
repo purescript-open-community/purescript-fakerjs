@@ -1,127 +1,131 @@
 module Fakerjs2.Locales.ZhCn.Airline.Airline (airline) where
 
-import Data.String.NonEmpty (unsafeFromString)
-import Fakerjs2.Types (Airline)
+import Data.Array.NonEmpty (NonEmptyArray)
+import Data.String.NonEmpty (NonEmptyString)
+import Unsafe.Coerce (unsafeCoerce)
 
-airline :: Airline
 airline =
-  [ { name: unsafeFromString "爱琴海航空公司", iataCode: unsafeFromString "A3" }
-  , { name: unsafeFromString "俄罗斯航空公司", iataCode: unsafeFromString "SU" }
-  , { name: unsafeFromString "阿根廷航空公司", iataCode: unsafeFromString "AR" }
-  , { name: unsafeFromString "墨西哥国际航空公司", iataCode: unsafeFromString "AM" }
-  , { name: unsafeFromString "阿尔及利亚航空公司", iataCode: unsafeFromString "AH" }
-  , { name: unsafeFromString "阿拉伯航空公司", iataCode: unsafeFromString "G9" }
-  , { name: unsafeFromString "加拿大航空公司", iataCode: unsafeFromString "AC" }
-  , { name: unsafeFromString "中国国际航空公司", iataCode: unsafeFromString "CA" }
-  , { name: unsafeFromString "西班牙欧洲航空公司", iataCode: unsafeFromString "UX" }
-  , { name: unsafeFromString "法航荷航集团", iataCode: unsafeFromString "AF" }
-  , { name: unsafeFromString "印度国际航空公司", iataCode: unsafeFromString "AI" }
-  , { name: unsafeFromString "毛里求斯航空公司", iataCode: unsafeFromString "MK" }
-  , { name: unsafeFromString "新西兰航空公司", iataCode: unsafeFromString "NZ" }
-  , { name: unsafeFromString "新几内亚航空公司", iataCode: unsafeFromString "PX" }
-  , { name: unsafeFromString "塔希提航空公司", iataCode: unsafeFromString "VT" }
-  , { name: unsafeFromString "大溪地航空公司", iataCode: unsafeFromString "TN" }
-  , { name: unsafeFromString "越洋航空公司", iataCode: unsafeFromString "TS" }
-  , { name: unsafeFromString "亚洲航空X公司", iataCode: unsafeFromString "D7" }
-  , { name: unsafeFromString "亚洲航空公司", iataCode: unsafeFromString "AK" }
-  , { name: unsafeFromString "喀里多尼亚国际航空公司", iataCode: unsafeFromString "SB" }
-  , { name: unsafeFromString "阿拉斯加航空公司", iataCode: unsafeFromString "AS" }
-  , { name: unsafeFromString "意大利航空公司", iataCode: unsafeFromString "AZ" }
-  , { name: unsafeFromString "全日空公司", iataCode: unsafeFromString "NH" }
-  , { name: unsafeFromString "忠实航空公司", iataCode: unsafeFromString "G4" }
-  , { name: unsafeFromString "美国航空公司", iataCode: unsafeFromString "AA" }
-  , { name: unsafeFromString "韩亚航空公司", iataCode: unsafeFromString "OZ" }
-  , { name: unsafeFromString "哥伦比亚航空公司", iataCode: unsafeFromString "AV" }
-  , { name: unsafeFromString "巴西蔚蓝航空公司", iataCode: unsafeFromString "AD" }
-  , { name: unsafeFromString "蓝色航空公司", iataCode: unsafeFromString "ZF" }
-  , { name: unsafeFromString "北京首都航空公司", iataCode: unsafeFromString "JD" }
-  , { name: unsafeFromString "玻利维亚航空公司", iataCode: unsafeFromString "OB" }
-  , { name: unsafeFromString "英国航空公司", iataCode: unsafeFromString "BA" }
-  , { name: unsafeFromString "国泰航空公司", iataCode: unsafeFromString "CX" }
-  , { name: unsafeFromString "宿雾太平洋航空公司", iataCode: unsafeFromString "5J" }
-  , { name: unsafeFromString "中华航空公司", iataCode: unsafeFromString "CI" }
-  , { name: unsafeFromString "中国东方航空公司", iataCode: unsafeFromString "MU" }
-  , { name: unsafeFromString "中国南方航空公司", iataCode: unsafeFromString "CZ" }
-  , { name: unsafeFromString "神鹰航空公司", iataCode: unsafeFromString "DE" }
-  , { name: unsafeFromString "巴拿马航空公司", iataCode: unsafeFromString "CM" }
-  , { name: unsafeFromString "达美航空公司", iataCode: unsafeFromString "DL" }
-  , { name: unsafeFromString "易飞航空公司", iataCode: unsafeFromString "VE" }
-  , { name: unsafeFromString "易捷航空公司", iataCode: unsafeFromString "U2" }
-  , { name: unsafeFromString "埃及航空公司", iataCode: unsafeFromString "MS" }
-  , { name: unsafeFromString "以色列艾拉航空公司", iataCode: unsafeFromString "LY" }
-  , { name: unsafeFromString "阿联酋航空公司", iataCode: unsafeFromString "EK" }
-  , { name: unsafeFromString "埃塞俄比亚航空公司", iataCode: unsafeFromString "ET" }
-  , { name: unsafeFromString "阿提哈德航空公司", iataCode: unsafeFromString "EY" }
-  , { name: unsafeFromString "长荣航空公司", iataCode: unsafeFromString "BR" }
-  , { name: unsafeFromString "斐济航空公司", iataCode: unsafeFromString "FJ" }
-  , { name: unsafeFromString "芬兰航空公司", iataCode: unsafeFromString "AY" }
-  , { name: unsafeFromString "迪拜航空公司公司", iataCode: unsafeFromString "FZ" }
-  , { name: unsafeFromString "边疆航空公司", iataCode: unsafeFromString "F9" }
-  , { name: unsafeFromString "印度尼西亚鹰航空公司", iataCode: unsafeFromString "GA" }
-  , { name: unsafeFromString "高尔航空公司", iataCode: unsafeFromString "G3" }
-  , { name: unsafeFromString "海南航空公司", iataCode: unsafeFromString "HU" }
-  , { name: unsafeFromString "夏威夷航空公司", iataCode: unsafeFromString "HA" }
-  , { name: unsafeFromString "靛蓝航空公司", iataCode: unsafeFromString "6E" }
-  , { name: unsafeFromString "日本航空公司", iataCode: unsafeFromString "JL" }
-  , { name: unsafeFromString "济州航空公司", iataCode: unsafeFromString "7C" }
-  , { name: unsafeFromString "捷特二航空公司", iataCode: unsafeFromString "LS" }
-  , { name: unsafeFromString "捷蓝航空公司", iataCode: unsafeFromString "B6" }
-  , { name: unsafeFromString "上海吉祥航空公司", iataCode: unsafeFromString "HO" }
-  , { name: unsafeFromString "肯尼亚航空公司", iataCode: unsafeFromString "KQ" }
-  , { name: unsafeFromString "大韩航空公司", iataCode: unsafeFromString "KE" }
-  , { name: unsafeFromString "酷路拉航空航空公司", iataCode: unsafeFromString "MN" }
-  , { name: unsafeFromString "南美航空公司", iataCode: unsafeFromString "LA" }
-  , { name: unsafeFromString "狮子航空公司", iataCode: unsafeFromString "JT" }
-  , { name: unsafeFromString "波兰航空公司", iataCode: unsafeFromString "LO" }
-  , { name: unsafeFromString "德国汉莎航空公司", iataCode: unsafeFromString "LH" }
-  , { name: unsafeFromString "利比亚阿拉伯航空公司", iataCode: unsafeFromString "LN" }
-  , { name: unsafeFromString "玻利维亚亚马孙航空公司", iataCode: unsafeFromString "Z8" }
-  , { name: unsafeFromString "马来西亚航空公司", iataCode: unsafeFromString "MH" }
-  , { name: unsafeFromString "北风航空公司", iataCode: unsafeFromString "N4" }
-  , { name: unsafeFromString "挪威穿梭航空公司", iataCode: unsafeFromString "DY" }
-  , { name: unsafeFromString "阿曼航空公司", iataCode: unsafeFromString "WY" }
-  , { name: unsafeFromString "巴基斯坦国际航空公司", iataCode: unsafeFromString "PK" }
-  , { name: unsafeFromString "飞马航空公司", iataCode: unsafeFromString "PC" }
-  , { name: unsafeFromString "菲律宾航空公司", iataCode: unsafeFromString "PR" }
-  , { name: unsafeFromString "澳洲航空公司", iataCode: unsafeFromString "QF" }
-  , { name: unsafeFromString "卡塔尔航空公司", iataCode: unsafeFromString "QR" }
-  , { name: unsafeFromString "共和航空公司", iataCode: unsafeFromString "YX" }
-  , { name: unsafeFromString "摩洛哥皇家航空公司", iataCode: unsafeFromString "AT" }
-  , { name: unsafeFromString "瑞安航空公司", iataCode: unsafeFromString "FR" }
-  , { name: unsafeFromString "西伯利亚航空公司", iataCode: unsafeFromString "S7" }
-  , { name: unsafeFromString "北欧航空公司", iataCode: unsafeFromString "SK" }
-  , { name: unsafeFromString "沙特阿拉伯航空公司", iataCode: unsafeFromString "SV" }
-  , { name: unsafeFromString "山东航空公司", iataCode: unsafeFromString "SC" }
-  , { name: unsafeFromString "四川航空公司", iataCode: unsafeFromString "3U" }
-  , { name: unsafeFromString "新加坡航空公司", iataCode: unsafeFromString "SQ" }
-  , { name: unsafeFromString "天空航空公司", iataCode: unsafeFromString "H2" }
-  , { name: unsafeFromString "天西航空公司", iataCode: unsafeFromString "OO" }
-  , { name: unsafeFromString "南非航空公司", iataCode: unsafeFromString "SA" }
-  , { name: unsafeFromString "西南航空公司", iataCode: unsafeFromString "WN" }
-  , { name: unsafeFromString "香料航空公司", iataCode: unsafeFromString "SG" }
-  , { name: unsafeFromString "精神航空公司", iataCode: unsafeFromString "NK" }
-  , { name: unsafeFromString "春秋航空公司", iataCode: unsafeFromString "9S" }
-  , { name: unsafeFromString "斯里兰卡航空公司", iataCode: unsafeFromString "UL" }
-  , { name: unsafeFromString "秘鲁星航空公司", iataCode: unsafeFromString "2I" }
-  , { name: unsafeFromString "太阳城航空公司", iataCode: unsafeFromString "SY" }
-  , { name: unsafeFromString "阳光快运航空", iataCode: unsafeFromString "XQ" }
-  , { name: unsafeFromString "葡萄牙航空公司", iataCode: unsafeFromString "TP" }
-  , { name: unsafeFromString "泰国亚洲航空", iataCode: unsafeFromString "FD" }
-  , { name: unsafeFromString "泰国航空公司", iataCode: unsafeFromString "TG" }
-  , { name: unsafeFromString "途易飞航空", iataCode: unsafeFromString "BY" }
-  , { name: unsafeFromString "突尼斯航空公司", iataCode: unsafeFromString "TU" }
-  , { name: unsafeFromString "土耳其航空公司", iataCode: unsafeFromString "TK" }
-  , { name: unsafeFromString "乌克兰国际航空公司", iataCode: unsafeFromString "PS" }
-  , { name: unsafeFromString "美国联合航空公司", iataCode: unsafeFromString "UA" }
-  , { name: unsafeFromString "乌拉航空公司", iataCode: unsafeFromString "U6" }
-  , { name: unsafeFromString "越南越捷航空公司", iataCode: unsafeFromString "VJ" }
-  , { name: unsafeFromString "越南航空公司", iataCode: unsafeFromString "VN" }
-  , { name: unsafeFromString "维珍航空公司", iataCode: unsafeFromString "VS" }
-  , { name: unsafeFromString "维珍蓝航空公司", iataCode: unsafeFromString "VA" }
-  , { name: unsafeFromString "万岁空中巴士航空公司", iataCode: unsafeFromString "VB" }
-  , { name: unsafeFromString "巴西航空公司", iataCode: unsafeFromString "2Z" }
-  , { name: unsafeFromString "沃拉里斯航空公司", iataCode: unsafeFromString "Y4" }
-  , { name: unsafeFromString "西捷航空公司", iataCode: unsafeFromString "WS" }
-  , { name: unsafeFromString "温戈航空公司", iataCode: unsafeFromString "P5" }
-  , { name: unsafeFromString "维兹航空公司", iataCode: unsafeFromString "W6" }
-  ]
+  ( unsafeCoerce
+      :: Array { iataCode :: String, name :: String }
+      -> NonEmptyArray { iataCode :: NonEmptyString, name :: NonEmptyString }
+  )
+    [ { iataCode: "A3", name: "爱琴海航空公司" }
+    , { iataCode: "SU", name: "俄罗斯航空公司" }
+    , { iataCode: "AR", name: "阿根廷航空公司" }
+    , { iataCode: "AM", name: "墨西哥国际航空公司" }
+    , { iataCode: "AH", name: "阿尔及利亚航空公司" }
+    , { iataCode: "G9", name: "阿拉伯航空公司" }
+    , { iataCode: "AC", name: "加拿大航空公司" }
+    , { iataCode: "CA", name: "中国国际航空公司" }
+    , { iataCode: "UX", name: "西班牙欧洲航空公司" }
+    , { iataCode: "AF", name: "法航荷航集团" }
+    , { iataCode: "AI", name: "印度国际航空公司" }
+    , { iataCode: "MK", name: "毛里求斯航空公司" }
+    , { iataCode: "NZ", name: "新西兰航空公司" }
+    , { iataCode: "PX", name: "新几内亚航空公司" }
+    , { iataCode: "VT", name: "塔希提航空公司" }
+    , { iataCode: "TN", name: "大溪地航空公司" }
+    , { iataCode: "TS", name: "越洋航空公司" }
+    , { iataCode: "D7", name: "亚洲航空X公司" }
+    , { iataCode: "AK", name: "亚洲航空公司" }
+    , { iataCode: "SB", name: "喀里多尼亚国际航空公司" }
+    , { iataCode: "AS", name: "阿拉斯加航空公司" }
+    , { iataCode: "AZ", name: "意大利航空公司" }
+    , { iataCode: "NH", name: "全日空公司" }
+    , { iataCode: "G4", name: "忠实航空公司" }
+    , { iataCode: "AA", name: "美国航空公司" }
+    , { iataCode: "OZ", name: "韩亚航空公司" }
+    , { iataCode: "AV", name: "哥伦比亚航空公司" }
+    , { iataCode: "AD", name: "巴西蔚蓝航空公司" }
+    , { iataCode: "ZF", name: "蓝色航空公司" }
+    , { iataCode: "JD", name: "北京首都航空公司" }
+    , { iataCode: "OB", name: "玻利维亚航空公司" }
+    , { iataCode: "BA", name: "英国航空公司" }
+    , { iataCode: "CX", name: "国泰航空公司" }
+    , { iataCode: "5J", name: "宿雾太平洋航空公司" }
+    , { iataCode: "CI", name: "中华航空公司" }
+    , { iataCode: "MU", name: "中国东方航空公司" }
+    , { iataCode: "CZ", name: "中国南方航空公司" }
+    , { iataCode: "DE", name: "神鹰航空公司" }
+    , { iataCode: "CM", name: "巴拿马航空公司" }
+    , { iataCode: "DL", name: "达美航空公司" }
+    , { iataCode: "VE", name: "易飞航空公司" }
+    , { iataCode: "U2", name: "易捷航空公司" }
+    , { iataCode: "MS", name: "埃及航空公司" }
+    , { iataCode: "LY", name: "以色列艾拉航空公司" }
+    , { iataCode: "EK", name: "阿联酋航空公司" }
+    , { iataCode: "ET", name: "埃塞俄比亚航空公司" }
+    , { iataCode: "EY", name: "阿提哈德航空公司" }
+    , { iataCode: "BR", name: "长荣航空公司" }
+    , { iataCode: "FJ", name: "斐济航空公司" }
+    , { iataCode: "AY", name: "芬兰航空公司" }
+    , { iataCode: "FZ", name: "迪拜航空公司公司" }
+    , { iataCode: "F9", name: "边疆航空公司" }
+    , { iataCode: "GA", name: "印度尼西亚鹰航空公司" }
+    , { iataCode: "G3", name: "高尔航空公司" }
+    , { iataCode: "HU", name: "海南航空公司" }
+    , { iataCode: "HA", name: "夏威夷航空公司" }
+    , { iataCode: "6E", name: "靛蓝航空公司" }
+    , { iataCode: "JL", name: "日本航空公司" }
+    , { iataCode: "7C", name: "济州航空公司" }
+    , { iataCode: "LS", name: "捷特二航空公司" }
+    , { iataCode: "B6", name: "捷蓝航空公司" }
+    , { iataCode: "HO", name: "上海吉祥航空公司" }
+    , { iataCode: "KQ", name: "肯尼亚航空公司" }
+    , { iataCode: "KE", name: "大韩航空公司" }
+    , { iataCode: "MN", name: "酷路拉航空航空公司" }
+    , { iataCode: "LA", name: "南美航空公司" }
+    , { iataCode: "JT", name: "狮子航空公司" }
+    , { iataCode: "LO", name: "波兰航空公司" }
+    , { iataCode: "LH", name: "德国汉莎航空公司" }
+    , { iataCode: "LN", name: "利比亚阿拉伯航空公司" }
+    , { iataCode: "Z8", name: "玻利维亚亚马孙航空公司" }
+    , { iataCode: "MH", name: "马来西亚航空公司" }
+    , { iataCode: "N4", name: "北风航空公司" }
+    , { iataCode: "DY", name: "挪威穿梭航空公司" }
+    , { iataCode: "WY", name: "阿曼航空公司" }
+    , { iataCode: "PK", name: "巴基斯坦国际航空公司" }
+    , { iataCode: "PC", name: "飞马航空公司" }
+    , { iataCode: "PR", name: "菲律宾航空公司" }
+    , { iataCode: "QF", name: "澳洲航空公司" }
+    , { iataCode: "QR", name: "卡塔尔航空公司" }
+    , { iataCode: "YX", name: "共和航空公司" }
+    , { iataCode: "AT", name: "摩洛哥皇家航空公司" }
+    , { iataCode: "FR", name: "瑞安航空公司" }
+    , { iataCode: "S7", name: "西伯利亚航空公司" }
+    , { iataCode: "SK", name: "北欧航空公司" }
+    , { iataCode: "SV", name: "沙特阿拉伯航空公司" }
+    , { iataCode: "SC", name: "山东航空公司" }
+    , { iataCode: "3U", name: "四川航空公司" }
+    , { iataCode: "SQ", name: "新加坡航空公司" }
+    , { iataCode: "H2", name: "天空航空公司" }
+    , { iataCode: "OO", name: "天西航空公司" }
+    , { iataCode: "SA", name: "南非航空公司" }
+    , { iataCode: "WN", name: "西南航空公司" }
+    , { iataCode: "SG", name: "香料航空公司" }
+    , { iataCode: "NK", name: "精神航空公司" }
+    , { iataCode: "9S", name: "春秋航空公司" }
+    , { iataCode: "UL", name: "斯里兰卡航空公司" }
+    , { iataCode: "2I", name: "秘鲁星航空公司" }
+    , { iataCode: "SY", name: "太阳城航空公司" }
+    , { iataCode: "XQ", name: "阳光快运航空" }
+    , { iataCode: "TP", name: "葡萄牙航空公司" }
+    , { iataCode: "FD", name: "泰国亚洲航空" }
+    , { iataCode: "TG", name: "泰国航空公司" }
+    , { iataCode: "BY", name: "途易飞航空" }
+    , { iataCode: "TU", name: "突尼斯航空公司" }
+    , { iataCode: "TK", name: "土耳其航空公司" }
+    , { iataCode: "PS", name: "乌克兰国际航空公司" }
+    , { iataCode: "UA", name: "美国联合航空公司" }
+    , { iataCode: "U6", name: "乌拉航空公司" }
+    , { iataCode: "VJ", name: "越南越捷航空公司" }
+    , { iataCode: "VN", name: "越南航空公司" }
+    , { iataCode: "VS", name: "维珍航空公司" }
+    , { iataCode: "VA", name: "维珍蓝航空公司" }
+    , { iataCode: "VB", name: "万岁空中巴士航空公司" }
+    , { iataCode: "2Z", name: "巴西航空公司" }
+    , { iataCode: "Y4", name: "沃拉里斯航空公司" }
+    , { iataCode: "WS", name: "西捷航空公司" }
+    , { iataCode: "P5", name: "温戈航空公司" }
+    , { iataCode: "W6", name: "维兹航空公司" }
+    ]

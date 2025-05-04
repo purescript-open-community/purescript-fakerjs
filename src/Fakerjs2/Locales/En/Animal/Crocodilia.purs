@@ -2,10 +2,8 @@ module Fakerjs2.Locales.En.Animal.Crocodilia (crocodilia) where
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (Crocodilia)
 import Unsafe.Coerce (unsafeCoerce)
 
-crocodilia :: Crocodilia
 crocodilia = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
   [ "African Slender-snouted Crocodile"
   , "Alligator mississippiensis"

@@ -1,187 +1,167 @@
 module Fakerjs2.Locales.En.Airline.Airplane (airplane) where
 
-import Data.String.NonEmpty (unsafeFromString)
-import Fakerjs2.Types (Airplane)
+import Data.Array.NonEmpty (NonEmptyArray)
+import Data.String.NonEmpty (NonEmptyString)
+import Unsafe.Coerce (unsafeCoerce)
 
-airplane :: Airplane
 airplane =
-  [ { name: unsafeFromString "Aerospatiale/BAC Concorde", iataTypeCode: unsafeFromString "SSC" }
-  , { name: unsafeFromString "Airbus A300", iataTypeCode: unsafeFromString "AB3" }
-  , { name: unsafeFromString "Airbus A310", iataTypeCode: unsafeFromString "310" }
-  , { name: unsafeFromString "Airbus A310-200", iataTypeCode: unsafeFromString "312" }
-  , { name: unsafeFromString "Airbus A310-300", iataTypeCode: unsafeFromString "313" }
-  , { name: unsafeFromString "Airbus A318", iataTypeCode: unsafeFromString "318" }
-  , { name: unsafeFromString "Airbus A319", iataTypeCode: unsafeFromString "319" }
-  , { name: unsafeFromString "Airbus A319neo", iataTypeCode: unsafeFromString "31N" }
-  , { name: unsafeFromString "Airbus A320", iataTypeCode: unsafeFromString "320" }
-  , { name: unsafeFromString "Airbus A320neo", iataTypeCode: unsafeFromString "32N" }
-  , { name: unsafeFromString "Airbus A321", iataTypeCode: unsafeFromString "321" }
-  , { name: unsafeFromString "Airbus A321neo", iataTypeCode: unsafeFromString "32Q" }
-  , { name: unsafeFromString "Airbus A330", iataTypeCode: unsafeFromString "330" }
-  , { name: unsafeFromString "Airbus A330-200", iataTypeCode: unsafeFromString "332" }
-  , { name: unsafeFromString "Airbus A330-300", iataTypeCode: unsafeFromString "333" }
-  , { name: unsafeFromString "Airbus A330-800neo", iataTypeCode: unsafeFromString "338" }
-  , { name: unsafeFromString "Airbus A330-900neo", iataTypeCode: unsafeFromString "339" }
-  , { name: unsafeFromString "Airbus A340", iataTypeCode: unsafeFromString "340" }
-  , { name: unsafeFromString "Airbus A340-200", iataTypeCode: unsafeFromString "342" }
-  , { name: unsafeFromString "Airbus A340-300", iataTypeCode: unsafeFromString "343" }
-  , { name: unsafeFromString "Airbus A340-500", iataTypeCode: unsafeFromString "345" }
-  , { name: unsafeFromString "Airbus A340-600", iataTypeCode: unsafeFromString "346" }
-  , { name: unsafeFromString "Airbus A350", iataTypeCode: unsafeFromString "350" }
-  , { name: unsafeFromString "Airbus A350-900", iataTypeCode: unsafeFromString "359" }
-  , { name: unsafeFromString "Airbus A350-1000", iataTypeCode: unsafeFromString "351" }
-  , { name: unsafeFromString "Airbus A380", iataTypeCode: unsafeFromString "380" }
-  , { name: unsafeFromString "Airbus A380-800", iataTypeCode: unsafeFromString "388" }
-  , { name: unsafeFromString "Antonov An-12", iataTypeCode: unsafeFromString "ANF" }
-  , { name: unsafeFromString "Antonov An-24", iataTypeCode: unsafeFromString "AN4" }
-  , { name: unsafeFromString "Antonov An-26", iataTypeCode: unsafeFromString "A26" }
-  , { name: unsafeFromString "Antonov An-28", iataTypeCode: unsafeFromString "A28" }
-  , { name: unsafeFromString "Antonov An-30", iataTypeCode: unsafeFromString "A30" }
-  , { name: unsafeFromString "Antonov An-32", iataTypeCode: unsafeFromString "A32" }
-  , { name: unsafeFromString "Antonov An-72", iataTypeCode: unsafeFromString "AN7" }
-  , { name: unsafeFromString "Antonov An-124 Ruslan", iataTypeCode: unsafeFromString "A4F" }
-  , { name: unsafeFromString "Antonov An-140", iataTypeCode: unsafeFromString "A40" }
-  , { name: unsafeFromString "Antonov An-148", iataTypeCode: unsafeFromString "A81" }
-  , { name: unsafeFromString "Antonov An-158", iataTypeCode: unsafeFromString "A58" }
-  , { name: unsafeFromString "Antonov An-225 Mriya", iataTypeCode: unsafeFromString "A5F" }
-  , { name: unsafeFromString "Boeing 707", iataTypeCode: unsafeFromString "703" }
-  , { name: unsafeFromString "Boeing 717", iataTypeCode: unsafeFromString "717" }
-  , { name: unsafeFromString "Boeing 720B", iataTypeCode: unsafeFromString "B72" }
-  , { name: unsafeFromString "Boeing 727", iataTypeCode: unsafeFromString "727" }
-  , { name: unsafeFromString "Boeing 727-100", iataTypeCode: unsafeFromString "721" }
-  , { name: unsafeFromString "Boeing 727-200", iataTypeCode: unsafeFromString "722" }
-  , { name: unsafeFromString "Boeing 737 MAX 7", iataTypeCode: unsafeFromString "7M7" }
-  , { name: unsafeFromString "Boeing 737 MAX 8", iataTypeCode: unsafeFromString "7M8" }
-  , { name: unsafeFromString "Boeing 737 MAX 9", iataTypeCode: unsafeFromString "7M9" }
-  , { name: unsafeFromString "Boeing 737 MAX 10", iataTypeCode: unsafeFromString "7MJ" }
-  , { name: unsafeFromString "Boeing 737", iataTypeCode: unsafeFromString "737" }
-  , { name: unsafeFromString "Boeing 737-100", iataTypeCode: unsafeFromString "731" }
-  , { name: unsafeFromString "Boeing 737-200", iataTypeCode: unsafeFromString "732" }
-  , { name: unsafeFromString "Boeing 737-300", iataTypeCode: unsafeFromString "733" }
-  , { name: unsafeFromString "Boeing 737-400", iataTypeCode: unsafeFromString "734" }
-  , { name: unsafeFromString "Boeing 737-500", iataTypeCode: unsafeFromString "735" }
-  , { name: unsafeFromString "Boeing 737-600", iataTypeCode: unsafeFromString "736" }
-  , { name: unsafeFromString "Boeing 737-700", iataTypeCode: unsafeFromString "73G" }
-  , { name: unsafeFromString "Boeing 737-800", iataTypeCode: unsafeFromString "738" }
-  , { name: unsafeFromString "Boeing 737-900", iataTypeCode: unsafeFromString "739" }
-  , { name: unsafeFromString "Boeing 747", iataTypeCode: unsafeFromString "747" }
-  , { name: unsafeFromString "Boeing 747-100", iataTypeCode: unsafeFromString "741" }
-  , { name: unsafeFromString "Boeing 747-200", iataTypeCode: unsafeFromString "742" }
-  , { name: unsafeFromString "Boeing 747-300", iataTypeCode: unsafeFromString "743" }
-  , { name: unsafeFromString "Boeing 747-400", iataTypeCode: unsafeFromString "744" }
-  , { name: unsafeFromString "Boeing 747-400D", iataTypeCode: unsafeFromString "74J" }
-  , { name: unsafeFromString "Boeing 747-8", iataTypeCode: unsafeFromString "748" }
-  , { name: unsafeFromString "Boeing 747SP", iataTypeCode: unsafeFromString "74L" }
-  , { name: unsafeFromString "Boeing 747SR", iataTypeCode: unsafeFromString "74R" }
-  , { name: unsafeFromString "Boeing 757", iataTypeCode: unsafeFromString "757" }
-  , { name: unsafeFromString "Boeing 757-200", iataTypeCode: unsafeFromString "752" }
-  , { name: unsafeFromString "Boeing 757-300", iataTypeCode: unsafeFromString "753" }
-  , { name: unsafeFromString "Boeing 767", iataTypeCode: unsafeFromString "767" }
-  , { name: unsafeFromString "Boeing 767-200", iataTypeCode: unsafeFromString "762" }
-  , { name: unsafeFromString "Boeing 767-300", iataTypeCode: unsafeFromString "763" }
-  , { name: unsafeFromString "Boeing 767-400", iataTypeCode: unsafeFromString "764" }
-  , { name: unsafeFromString "Boeing 777", iataTypeCode: unsafeFromString "777" }
-  , { name: unsafeFromString "Boeing 777-200", iataTypeCode: unsafeFromString "772" }
-  , { name: unsafeFromString "Boeing 777-200LR", iataTypeCode: unsafeFromString "77L" }
-  , { name: unsafeFromString "Boeing 777-300", iataTypeCode: unsafeFromString "773" }
-  , { name: unsafeFromString "Boeing 777-300ER", iataTypeCode: unsafeFromString "77W" }
-  , { name: unsafeFromString "Boeing 787", iataTypeCode: unsafeFromString "787" }
-  , { name: unsafeFromString "Boeing 787-8", iataTypeCode: unsafeFromString "788" }
-  , { name: unsafeFromString "Boeing 787-9", iataTypeCode: unsafeFromString "789" }
-  , { name: unsafeFromString "Boeing 787-10", iataTypeCode: unsafeFromString "781" }
-  , { name: unsafeFromString "Canadair Challenger", iataTypeCode: unsafeFromString "CCJ" }
-  , { name: unsafeFromString "Canadair CL-44", iataTypeCode: unsafeFromString "CL4" }
-  , { name: unsafeFromString "Canadair Regional Jet 100", iataTypeCode: unsafeFromString "CR1" }
-  , { name: unsafeFromString "Canadair Regional Jet 200", iataTypeCode: unsafeFromString "CR2" }
-  , { name: unsafeFromString "Canadair Regional Jet 700", iataTypeCode: unsafeFromString "CR7" }
-  , { name: unsafeFromString "Canadair Regional Jet 705", iataTypeCode: unsafeFromString "CRA" }
-  , { name: unsafeFromString "Canadair Regional Jet 900", iataTypeCode: unsafeFromString "CR9" }
-  , { name: unsafeFromString "Canadair Regional Jet 1000", iataTypeCode: unsafeFromString "CRK" }
-  , { name: unsafeFromString "De Havilland Canada DHC-2 Beaver"
-    , iataTypeCode: unsafeFromString "DHP"
-    }
-  , { name: unsafeFromString "De Havilland Canada DHC-2 Turbo-Beaver"
-    , iataTypeCode: unsafeFromString "DHR"
-    }
-  , { name: unsafeFromString "De Havilland Canada DHC-3 Otter"
-    , iataTypeCode: unsafeFromString "DHL"
-    }
-  , { name: unsafeFromString "De Havilland Canada DHC-4 Caribou"
-    , iataTypeCode: unsafeFromString "DHC"
-    }
-  , { name: unsafeFromString "De Havilland Canada DHC-6 Twin Otter"
-    , iataTypeCode: unsafeFromString "DHT"
-    }
-  , { name: unsafeFromString "De Havilland Canada DHC-7 Dash 7"
-    , iataTypeCode: unsafeFromString "DH7"
-    }
-  , { name: unsafeFromString "De Havilland Canada DHC-8-100 Dash 8 / 8Q"
-    , iataTypeCode: unsafeFromString "DH1"
-    }
-  , { name: unsafeFromString "De Havilland Canada DHC-8-200 Dash 8 / 8Q"
-    , iataTypeCode: unsafeFromString "DH2"
-    }
-  , { name: unsafeFromString "De Havilland Canada DHC-8-300 Dash 8 / 8Q"
-    , iataTypeCode: unsafeFromString "DH3"
-    }
-  , { name: unsafeFromString "De Havilland Canada DHC-8-400 Dash 8Q"
-    , iataTypeCode: unsafeFromString "DH4"
-    }
-  , { name: unsafeFromString "De Havilland DH.104 Dove", iataTypeCode: unsafeFromString "DHD" }
-  , { name: unsafeFromString "De Havilland DH.114 Heron", iataTypeCode: unsafeFromString "DHH" }
-  , { name: unsafeFromString "Douglas DC-3", iataTypeCode: unsafeFromString "D3F" }
-  , { name: unsafeFromString "Douglas DC-6", iataTypeCode: unsafeFromString "D6F" }
-  , { name: unsafeFromString "Douglas DC-8-50", iataTypeCode: unsafeFromString "D8T" }
-  , { name: unsafeFromString "Douglas DC-8-62", iataTypeCode: unsafeFromString "D8L" }
-  , { name: unsafeFromString "Douglas DC-8-72", iataTypeCode: unsafeFromString "D8Q" }
-  , { name: unsafeFromString "Douglas DC-9-10", iataTypeCode: unsafeFromString "D91" }
-  , { name: unsafeFromString "Douglas DC-9-20", iataTypeCode: unsafeFromString "D92" }
-  , { name: unsafeFromString "Douglas DC-9-30", iataTypeCode: unsafeFromString "D93" }
-  , { name: unsafeFromString "Douglas DC-9-40", iataTypeCode: unsafeFromString "D94" }
-  , { name: unsafeFromString "Douglas DC-9-50", iataTypeCode: unsafeFromString "D95" }
-  , { name: unsafeFromString "Douglas DC-10", iataTypeCode: unsafeFromString "D10" }
-  , { name: unsafeFromString "Douglas DC-10-10", iataTypeCode: unsafeFromString "D1X" }
-  , { name: unsafeFromString "Douglas DC-10-30", iataTypeCode: unsafeFromString "D1Y" }
-  , { name: unsafeFromString "Embraer 170", iataTypeCode: unsafeFromString "E70" }
-  , { name: unsafeFromString "Embraer 175", iataTypeCode: unsafeFromString "E75" }
-  , { name: unsafeFromString "Embraer 190", iataTypeCode: unsafeFromString "E90" }
-  , { name: unsafeFromString "Embraer 195", iataTypeCode: unsafeFromString "E95" }
-  , { name: unsafeFromString "Embraer E190-E2", iataTypeCode: unsafeFromString "290" }
-  , { name: unsafeFromString "Embraer E195-E2", iataTypeCode: unsafeFromString "295" }
-  , { name: unsafeFromString "Embraer EMB.110 Bandeirante", iataTypeCode: unsafeFromString "EMB" }
-  , { name: unsafeFromString "Embraer EMB.120 Brasilia", iataTypeCode: unsafeFromString "EM2" }
-  , { name: unsafeFromString "Embraer Legacy 600", iataTypeCode: unsafeFromString "ER3" }
-  , { name: unsafeFromString "Embraer Phenom 100", iataTypeCode: unsafeFromString "EP1" }
-  , { name: unsafeFromString "Embraer Phenom 300", iataTypeCode: unsafeFromString "EP3" }
-  , { name: unsafeFromString "Embraer RJ135", iataTypeCode: unsafeFromString "ER3" }
-  , { name: unsafeFromString "Embraer RJ140", iataTypeCode: unsafeFromString "ERD" }
-  , { name: unsafeFromString "Embraer RJ145 Amazon", iataTypeCode: unsafeFromString "ER4" }
-  , { name: unsafeFromString "Ilyushin IL18", iataTypeCode: unsafeFromString "IL8" }
-  , { name: unsafeFromString "Ilyushin IL62", iataTypeCode: unsafeFromString "IL6" }
-  , { name: unsafeFromString "Ilyushin IL76", iataTypeCode: unsafeFromString "IL7" }
-  , { name: unsafeFromString "Ilyushin IL86", iataTypeCode: unsafeFromString "ILW" }
-  , { name: unsafeFromString "Ilyushin IL96-300", iataTypeCode: unsafeFromString "I93" }
-  , { name: unsafeFromString "Ilyushin IL114", iataTypeCode: unsafeFromString "I14" }
-  , { name: unsafeFromString "Lockheed L-182 / 282 / 382 (L-100) Hercules"
-    , iataTypeCode: unsafeFromString "LOH"
-    }
-  , { name: unsafeFromString "Lockheed L-188 Electra", iataTypeCode: unsafeFromString "LOE" }
-  , { name: unsafeFromString "Lockheed L-1011 Tristar", iataTypeCode: unsafeFromString "L10" }
-  , { name: unsafeFromString "Lockheed L-1049 Super Constellation"
-    , iataTypeCode: unsafeFromString "L49"
-    }
-  , { name: unsafeFromString "McDonnell Douglas MD11", iataTypeCode: unsafeFromString "M11" }
-  , { name: unsafeFromString "McDonnell Douglas MD80", iataTypeCode: unsafeFromString "M80" }
-  , { name: unsafeFromString "McDonnell Douglas MD81", iataTypeCode: unsafeFromString "M81" }
-  , { name: unsafeFromString "McDonnell Douglas MD82", iataTypeCode: unsafeFromString "M82" }
-  , { name: unsafeFromString "McDonnell Douglas MD83", iataTypeCode: unsafeFromString "M83" }
-  , { name: unsafeFromString "McDonnell Douglas MD87", iataTypeCode: unsafeFromString "M87" }
-  , { name: unsafeFromString "McDonnell Douglas MD88", iataTypeCode: unsafeFromString "M88" }
-  , { name: unsafeFromString "McDonnell Douglas MD90", iataTypeCode: unsafeFromString "M90" }
-  , { name: unsafeFromString "Sukhoi Superjet 100-95", iataTypeCode: unsafeFromString "SU9" }
-  , { name: unsafeFromString "Tupolev Tu-134", iataTypeCode: unsafeFromString "TU3" }
-  , { name: unsafeFromString "Tupolev Tu-154", iataTypeCode: unsafeFromString "TU5" }
-  , { name: unsafeFromString "Tupolev Tu-204", iataTypeCode: unsafeFromString "T20" }
-  , { name: unsafeFromString "Yakovlev Yak-40", iataTypeCode: unsafeFromString "YK4" }
-  , { name: unsafeFromString "Yakovlev Yak-42", iataTypeCode: unsafeFromString "YK2" }
-  ]
+  ( unsafeCoerce
+      :: Array { iataTypeCode :: String, name :: String }
+      -> NonEmptyArray { iataTypeCode :: NonEmptyString, name :: NonEmptyString }
+  )
+    [ { iataTypeCode: "SSC", name: "Aerospatiale/BAC Concorde" }
+    , { iataTypeCode: "AB3", name: "Airbus A300" }
+    , { iataTypeCode: "310", name: "Airbus A310" }
+    , { iataTypeCode: "312", name: "Airbus A310-200" }
+    , { iataTypeCode: "313", name: "Airbus A310-300" }
+    , { iataTypeCode: "318", name: "Airbus A318" }
+    , { iataTypeCode: "319", name: "Airbus A319" }
+    , { iataTypeCode: "31N", name: "Airbus A319neo" }
+    , { iataTypeCode: "320", name: "Airbus A320" }
+    , { iataTypeCode: "32N", name: "Airbus A320neo" }
+    , { iataTypeCode: "321", name: "Airbus A321" }
+    , { iataTypeCode: "32Q", name: "Airbus A321neo" }
+    , { iataTypeCode: "330", name: "Airbus A330" }
+    , { iataTypeCode: "332", name: "Airbus A330-200" }
+    , { iataTypeCode: "333", name: "Airbus A330-300" }
+    , { iataTypeCode: "338", name: "Airbus A330-800neo" }
+    , { iataTypeCode: "339", name: "Airbus A330-900neo" }
+    , { iataTypeCode: "340", name: "Airbus A340" }
+    , { iataTypeCode: "342", name: "Airbus A340-200" }
+    , { iataTypeCode: "343", name: "Airbus A340-300" }
+    , { iataTypeCode: "345", name: "Airbus A340-500" }
+    , { iataTypeCode: "346", name: "Airbus A340-600" }
+    , { iataTypeCode: "350", name: "Airbus A350" }
+    , { iataTypeCode: "359", name: "Airbus A350-900" }
+    , { iataTypeCode: "351", name: "Airbus A350-1000" }
+    , { iataTypeCode: "380", name: "Airbus A380" }
+    , { iataTypeCode: "388", name: "Airbus A380-800" }
+    , { iataTypeCode: "ANF", name: "Antonov An-12" }
+    , { iataTypeCode: "AN4", name: "Antonov An-24" }
+    , { iataTypeCode: "A26", name: "Antonov An-26" }
+    , { iataTypeCode: "A28", name: "Antonov An-28" }
+    , { iataTypeCode: "A30", name: "Antonov An-30" }
+    , { iataTypeCode: "A32", name: "Antonov An-32" }
+    , { iataTypeCode: "AN7", name: "Antonov An-72" }
+    , { iataTypeCode: "A4F", name: "Antonov An-124 Ruslan" }
+    , { iataTypeCode: "A40", name: "Antonov An-140" }
+    , { iataTypeCode: "A81", name: "Antonov An-148" }
+    , { iataTypeCode: "A58", name: "Antonov An-158" }
+    , { iataTypeCode: "A5F", name: "Antonov An-225 Mriya" }
+    , { iataTypeCode: "703", name: "Boeing 707" }
+    , { iataTypeCode: "717", name: "Boeing 717" }
+    , { iataTypeCode: "B72", name: "Boeing 720B" }
+    , { iataTypeCode: "727", name: "Boeing 727" }
+    , { iataTypeCode: "721", name: "Boeing 727-100" }
+    , { iataTypeCode: "722", name: "Boeing 727-200" }
+    , { iataTypeCode: "7M7", name: "Boeing 737 MAX 7" }
+    , { iataTypeCode: "7M8", name: "Boeing 737 MAX 8" }
+    , { iataTypeCode: "7M9", name: "Boeing 737 MAX 9" }
+    , { iataTypeCode: "7MJ", name: "Boeing 737 MAX 10" }
+    , { iataTypeCode: "737", name: "Boeing 737" }
+    , { iataTypeCode: "731", name: "Boeing 737-100" }
+    , { iataTypeCode: "732", name: "Boeing 737-200" }
+    , { iataTypeCode: "733", name: "Boeing 737-300" }
+    , { iataTypeCode: "734", name: "Boeing 737-400" }
+    , { iataTypeCode: "735", name: "Boeing 737-500" }
+    , { iataTypeCode: "736", name: "Boeing 737-600" }
+    , { iataTypeCode: "73G", name: "Boeing 737-700" }
+    , { iataTypeCode: "738", name: "Boeing 737-800" }
+    , { iataTypeCode: "739", name: "Boeing 737-900" }
+    , { iataTypeCode: "747", name: "Boeing 747" }
+    , { iataTypeCode: "741", name: "Boeing 747-100" }
+    , { iataTypeCode: "742", name: "Boeing 747-200" }
+    , { iataTypeCode: "743", name: "Boeing 747-300" }
+    , { iataTypeCode: "744", name: "Boeing 747-400" }
+    , { iataTypeCode: "74J", name: "Boeing 747-400D" }
+    , { iataTypeCode: "748", name: "Boeing 747-8" }
+    , { iataTypeCode: "74L", name: "Boeing 747SP" }
+    , { iataTypeCode: "74R", name: "Boeing 747SR" }
+    , { iataTypeCode: "757", name: "Boeing 757" }
+    , { iataTypeCode: "752", name: "Boeing 757-200" }
+    , { iataTypeCode: "753", name: "Boeing 757-300" }
+    , { iataTypeCode: "767", name: "Boeing 767" }
+    , { iataTypeCode: "762", name: "Boeing 767-200" }
+    , { iataTypeCode: "763", name: "Boeing 767-300" }
+    , { iataTypeCode: "764", name: "Boeing 767-400" }
+    , { iataTypeCode: "777", name: "Boeing 777" }
+    , { iataTypeCode: "772", name: "Boeing 777-200" }
+    , { iataTypeCode: "77L", name: "Boeing 777-200LR" }
+    , { iataTypeCode: "773", name: "Boeing 777-300" }
+    , { iataTypeCode: "77W", name: "Boeing 777-300ER" }
+    , { iataTypeCode: "787", name: "Boeing 787" }
+    , { iataTypeCode: "788", name: "Boeing 787-8" }
+    , { iataTypeCode: "789", name: "Boeing 787-9" }
+    , { iataTypeCode: "781", name: "Boeing 787-10" }
+    , { iataTypeCode: "CCJ", name: "Canadair Challenger" }
+    , { iataTypeCode: "CL4", name: "Canadair CL-44" }
+    , { iataTypeCode: "CR1", name: "Canadair Regional Jet 100" }
+    , { iataTypeCode: "CR2", name: "Canadair Regional Jet 200" }
+    , { iataTypeCode: "CR7", name: "Canadair Regional Jet 700" }
+    , { iataTypeCode: "CRA", name: "Canadair Regional Jet 705" }
+    , { iataTypeCode: "CR9", name: "Canadair Regional Jet 900" }
+    , { iataTypeCode: "CRK", name: "Canadair Regional Jet 1000" }
+    , { iataTypeCode: "DHP", name: "De Havilland Canada DHC-2 Beaver" }
+    , { iataTypeCode: "DHR", name: "De Havilland Canada DHC-2 Turbo-Beaver" }
+    , { iataTypeCode: "DHL", name: "De Havilland Canada DHC-3 Otter" }
+    , { iataTypeCode: "DHC", name: "De Havilland Canada DHC-4 Caribou" }
+    , { iataTypeCode: "DHT", name: "De Havilland Canada DHC-6 Twin Otter" }
+    , { iataTypeCode: "DH7", name: "De Havilland Canada DHC-7 Dash 7" }
+    , { iataTypeCode: "DH1", name: "De Havilland Canada DHC-8-100 Dash 8 / 8Q" }
+    , { iataTypeCode: "DH2", name: "De Havilland Canada DHC-8-200 Dash 8 / 8Q" }
+    , { iataTypeCode: "DH3", name: "De Havilland Canada DHC-8-300 Dash 8 / 8Q" }
+    , { iataTypeCode: "DH4", name: "De Havilland Canada DHC-8-400 Dash 8Q" }
+    , { iataTypeCode: "DHD", name: "De Havilland DH.104 Dove" }
+    , { iataTypeCode: "DHH", name: "De Havilland DH.114 Heron" }
+    , { iataTypeCode: "D3F", name: "Douglas DC-3" }
+    , { iataTypeCode: "D6F", name: "Douglas DC-6" }
+    , { iataTypeCode: "D8T", name: "Douglas DC-8-50" }
+    , { iataTypeCode: "D8L", name: "Douglas DC-8-62" }
+    , { iataTypeCode: "D8Q", name: "Douglas DC-8-72" }
+    , { iataTypeCode: "D91", name: "Douglas DC-9-10" }
+    , { iataTypeCode: "D92", name: "Douglas DC-9-20" }
+    , { iataTypeCode: "D93", name: "Douglas DC-9-30" }
+    , { iataTypeCode: "D94", name: "Douglas DC-9-40" }
+    , { iataTypeCode: "D95", name: "Douglas DC-9-50" }
+    , { iataTypeCode: "D10", name: "Douglas DC-10" }
+    , { iataTypeCode: "D1X", name: "Douglas DC-10-10" }
+    , { iataTypeCode: "D1Y", name: "Douglas DC-10-30" }
+    , { iataTypeCode: "E70", name: "Embraer 170" }
+    , { iataTypeCode: "E75", name: "Embraer 175" }
+    , { iataTypeCode: "E90", name: "Embraer 190" }
+    , { iataTypeCode: "E95", name: "Embraer 195" }
+    , { iataTypeCode: "290", name: "Embraer E190-E2" }
+    , { iataTypeCode: "295", name: "Embraer E195-E2" }
+    , { iataTypeCode: "EMB", name: "Embraer EMB.110 Bandeirante" }
+    , { iataTypeCode: "EM2", name: "Embraer EMB.120 Brasilia" }
+    , { iataTypeCode: "ER3", name: "Embraer Legacy 600" }
+    , { iataTypeCode: "EP1", name: "Embraer Phenom 100" }
+    , { iataTypeCode: "EP3", name: "Embraer Phenom 300" }
+    , { iataTypeCode: "ER3", name: "Embraer RJ135" }
+    , { iataTypeCode: "ERD", name: "Embraer RJ140" }
+    , { iataTypeCode: "ER4", name: "Embraer RJ145 Amazon" }
+    , { iataTypeCode: "IL8", name: "Ilyushin IL18" }
+    , { iataTypeCode: "IL6", name: "Ilyushin IL62" }
+    , { iataTypeCode: "IL7", name: "Ilyushin IL76" }
+    , { iataTypeCode: "ILW", name: "Ilyushin IL86" }
+    , { iataTypeCode: "I93", name: "Ilyushin IL96-300" }
+    , { iataTypeCode: "I14", name: "Ilyushin IL114" }
+    , { iataTypeCode: "LOH", name: "Lockheed L-182 / 282 / 382 (L-100) Hercules" }
+    , { iataTypeCode: "LOE", name: "Lockheed L-188 Electra" }
+    , { iataTypeCode: "L10", name: "Lockheed L-1011 Tristar" }
+    , { iataTypeCode: "L49", name: "Lockheed L-1049 Super Constellation" }
+    , { iataTypeCode: "M11", name: "McDonnell Douglas MD11" }
+    , { iataTypeCode: "M80", name: "McDonnell Douglas MD80" }
+    , { iataTypeCode: "M81", name: "McDonnell Douglas MD81" }
+    , { iataTypeCode: "M82", name: "McDonnell Douglas MD82" }
+    , { iataTypeCode: "M83", name: "McDonnell Douglas MD83" }
+    , { iataTypeCode: "M87", name: "McDonnell Douglas MD87" }
+    , { iataTypeCode: "M88", name: "McDonnell Douglas MD88" }
+    , { iataTypeCode: "M90", name: "McDonnell Douglas MD90" }
+    , { iataTypeCode: "SU9", name: "Sukhoi Superjet 100-95" }
+    , { iataTypeCode: "TU3", name: "Tupolev Tu-134" }
+    , { iataTypeCode: "TU5", name: "Tupolev Tu-154" }
+    , { iataTypeCode: "T20", name: "Tupolev Tu-204" }
+    , { iataTypeCode: "YK4", name: "Yakovlev Yak-40" }
+    , { iataTypeCode: "YK2", name: "Yakovlev Yak-42" }
+    ]

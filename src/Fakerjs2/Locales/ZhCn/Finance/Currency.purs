@@ -1,783 +1,172 @@
 module Fakerjs2.Locales.ZhCn.Finance.Currency (currency) where
 
-import Data.String.NonEmpty (unsafeFromString)
-import Fakerjs2.Types (Currency)
+import Data.Array.NonEmpty (NonEmptyArray)
+import Data.String.NonEmpty (NonEmptyString)
+import Unsafe.Coerce (unsafeCoerce)
 
-currency :: Currency
 currency =
-  [ { name: unsafeFromString "阿联酋迪拉姆"
-    , code: unsafeFromString "AED"
-    , symbol: ""
-    , numericCode: unsafeFromString "784"
-    }
-  , { name: unsafeFromString "阿富汗尼"
-    , code: unsafeFromString "AFN"
-    , symbol: "؋"
-    , numericCode: unsafeFromString "971"
-    }
-  , { name: unsafeFromString "列克"
-    , code: unsafeFromString "ALL"
-    , symbol: "Lek"
-    , numericCode: unsafeFromString "008"
-    }
-  , { name: unsafeFromString "亚美尼亚德拉姆"
-    , code: unsafeFromString "AMD"
-    , symbol: ""
-    , numericCode: unsafeFromString "051"
-    }
-  , { name: unsafeFromString "荷属安的列斯盾"
-    , code: unsafeFromString "ANG"
-    , symbol: "ƒ"
-    , numericCode: unsafeFromString "532"
-    }
-  , { name: unsafeFromString "宽扎"
-    , code: unsafeFromString "AOA"
-    , symbol: ""
-    , numericCode: unsafeFromString "973"
-    }
-  , { name: unsafeFromString "阿根廷比索"
-    , code: unsafeFromString "ARS"
-    , symbol: "$"
-    , numericCode: unsafeFromString "032"
-    }
-  , { name: unsafeFromString "澳大利亚元"
-    , code: unsafeFromString "AUD"
-    , symbol: "$"
-    , numericCode: unsafeFromString "036"
-    }
-  , { name: unsafeFromString "阿鲁巴弗罗林"
-    , code: unsafeFromString "AWG"
-    , symbol: "ƒ"
-    , numericCode: unsafeFromString "533"
-    }
-  , { name: unsafeFromString "阿塞拜疆马纳特"
-    , code: unsafeFromString "AZN"
-    , symbol: "ман"
-    , numericCode: unsafeFromString "944"
-    }
-  , { name: unsafeFromString "可兑换马克"
-    , code: unsafeFromString "BAM"
-    , symbol: "KM"
-    , numericCode: unsafeFromString "977"
-    }
-  , { name: unsafeFromString "巴巴多斯元"
-    , code: unsafeFromString "BBD"
-    , symbol: "$"
-    , numericCode: unsafeFromString "052"
-    }
-  , { name: unsafeFromString "孟加拉塔卡"
-    , code: unsafeFromString "BDT"
-    , symbol: ""
-    , numericCode: unsafeFromString "050"
-    }
-  , { name: unsafeFromString "保加利亚列弗"
-    , code: unsafeFromString "BGN"
-    , symbol: "лв"
-    , numericCode: unsafeFromString "975"
-    }
-  , { name: unsafeFromString "巴林第纳尔"
-    , code: unsafeFromString "BHD"
-    , symbol: ""
-    , numericCode: unsafeFromString "048"
-    }
-  , { name: unsafeFromString "布隆迪法郎"
-    , code: unsafeFromString "BIF"
-    , symbol: ""
-    , numericCode: unsafeFromString "108"
-    }
-  , { name: unsafeFromString "百慕大元（通常称为百慕大元）"
-    , code: unsafeFromString "BMD"
-    , symbol: "$"
-    , numericCode: unsafeFromString "060"
-    }
-  , { name: unsafeFromString "文莱元"
-    , code: unsafeFromString "BND"
-    , symbol: "$"
-    , numericCode: unsafeFromString "096"
-    }
-  , { name: unsafeFromString "玻利维亚诺"
-    , code: unsafeFromString "BOB"
-    , symbol: "Bs"
-    , numericCode: unsafeFromString "068"
-    }
-  , { name: unsafeFromString "巴西雷亚尔"
-    , code: unsafeFromString "BRL"
-    , symbol: "R$"
-    , numericCode: unsafeFromString "986"
-    }
-  , { name: unsafeFromString "巴哈马元"
-    , code: unsafeFromString "BSD"
-    , symbol: "$"
-    , numericCode: unsafeFromString "044"
-    }
-  , { name: unsafeFromString "普拉"
-    , code: unsafeFromString "BWP"
-    , symbol: "P"
-    , numericCode: unsafeFromString "072"
-    }
-  , { name: unsafeFromString "白俄罗斯卢布"
-    , code: unsafeFromString "BYN"
-    , symbol: "Rbl"
-    , numericCode: unsafeFromString "933"
-    }
-  , { name: unsafeFromString "伯利兹元"
-    , code: unsafeFromString "BZD"
-    , symbol: "BZ$"
-    , numericCode: unsafeFromString "084"
-    }
-  , { name: unsafeFromString "加拿大元"
-    , code: unsafeFromString "CAD"
-    , symbol: "$"
-    , numericCode: unsafeFromString "124"
-    }
-  , { name: unsafeFromString "刚果法郎"
-    , code: unsafeFromString "CDF"
-    , symbol: ""
-    , numericCode: unsafeFromString "976"
-    }
-  , { name: unsafeFromString "瑞士法郎"
-    , code: unsafeFromString "CHF"
-    , symbol: "CHF"
-    , numericCode: unsafeFromString "756"
-    }
-  , { name: unsafeFromString "智利比索"
-    , code: unsafeFromString "CLP"
-    , symbol: "$"
-    , numericCode: unsafeFromString "152"
-    }
-  , { name: unsafeFromString "人民币"
-    , code: unsafeFromString "CNY"
-    , symbol: "¥"
-    , numericCode: unsafeFromString "156"
-    }
-  , { name: unsafeFromString "哥伦比亚比索"
-    , code: unsafeFromString "COP"
-    , symbol: "$"
-    , numericCode: unsafeFromString "170"
-    }
-  , { name: unsafeFromString "哥斯达黎加科朗"
-    , code: unsafeFromString "CRC"
-    , symbol: "₡"
-    , numericCode: unsafeFromString "188"
-    }
-  , { name: unsafeFromString "古巴比索"
-    , code: unsafeFromString "CUP"
-    , symbol: "₱"
-    , numericCode: unsafeFromString "192"
-    }
-  , { name: unsafeFromString "佛得角埃斯库多"
-    , code: unsafeFromString "CVE"
-    , symbol: ""
-    , numericCode: unsafeFromString "132"
-    }
-  , { name: unsafeFromString "捷克克朗"
-    , code: unsafeFromString "CZK"
-    , symbol: "Kč"
-    , numericCode: unsafeFromString "203"
-    }
-  , { name: unsafeFromString "吉布提法郎"
-    , code: unsafeFromString "DJF"
-    , symbol: ""
-    , numericCode: unsafeFromString "262"
-    }
-  , { name: unsafeFromString "丹麦克朗"
-    , code: unsafeFromString "DKK"
-    , symbol: "kr"
-    , numericCode: unsafeFromString "208"
-    }
-  , { name: unsafeFromString "多米尼加比索"
-    , code: unsafeFromString "DOP"
-    , symbol: "RD$"
-    , numericCode: unsafeFromString "214"
-    }
-  , { name: unsafeFromString "阿尔及利亚第纳尔"
-    , code: unsafeFromString "DZD"
-    , symbol: ""
-    , numericCode: unsafeFromString "012"
-    }
-  , { name: unsafeFromString "埃及镑"
-    , code: unsafeFromString "EGP"
-    , symbol: "£"
-    , numericCode: unsafeFromString "818"
-    }
-  , { name: unsafeFromString "纳克法"
-    , code: unsafeFromString "ERN"
-    , symbol: ""
-    , numericCode: unsafeFromString "232"
-    }
-  , { name: unsafeFromString "埃塞俄比亚比尔"
-    , code: unsafeFromString "ETB"
-    , symbol: ""
-    , numericCode: unsafeFromString "230"
-    }
-  , { name: unsafeFromString "欧元"
-    , code: unsafeFromString "EUR"
-    , symbol: "€"
-    , numericCode: unsafeFromString "978"
-    }
-  , { name: unsafeFromString "斐济元"
-    , code: unsafeFromString "FJD"
-    , symbol: "$"
-    , numericCode: unsafeFromString "242"
-    }
-  , { name: unsafeFromString "福克兰群岛镑"
-    , code: unsafeFromString "FKP"
-    , symbol: "£"
-    , numericCode: unsafeFromString "238"
-    }
-  , { name: unsafeFromString "英镑"
-    , code: unsafeFromString "GBP"
-    , symbol: "£"
-    , numericCode: unsafeFromString "826"
-    }
-  , { name: unsafeFromString "格鲁吉亚拉里"
-    , code: unsafeFromString "GEL"
-    , symbol: ""
-    , numericCode: unsafeFromString "981"
-    }
-  , { name: unsafeFromString "塞地"
-    , code: unsafeFromString "GHS"
-    , symbol: ""
-    , numericCode: unsafeFromString "936"
-    }
-  , { name: unsafeFromString "直布罗陀镑"
-    , code: unsafeFromString "GIP"
-    , symbol: "£"
-    , numericCode: unsafeFromString "292"
-    }
-  , { name: unsafeFromString "达尔西"
-    , code: unsafeFromString "GMD"
-    , symbol: ""
-    , numericCode: unsafeFromString "270"
-    }
-  , { name: unsafeFromString "几内亚法郎"
-    , code: unsafeFromString "GNF"
-    , symbol: ""
-    , numericCode: unsafeFromString "324"
-    }
-  , { name: unsafeFromString "格查尔"
-    , code: unsafeFromString "GTQ"
-    , symbol: "Q"
-    , numericCode: unsafeFromString "320"
-    }
-  , { name: unsafeFromString "圭亚那元"
-    , code: unsafeFromString "GYD"
-    , symbol: "$"
-    , numericCode: unsafeFromString "328"
-    }
-  , { name: unsafeFromString "港元"
-    , code: unsafeFromString "HKD"
-    , symbol: "$"
-    , numericCode: unsafeFromString "344"
-    }
-  , { name: unsafeFromString "伦皮拉"
-    , code: unsafeFromString "HNL"
-    , symbol: "L"
-    , numericCode: unsafeFromString "340"
-    }
-  , { name: unsafeFromString "古德"
-    , code: unsafeFromString "HTG"
-    , symbol: ""
-    , numericCode: unsafeFromString "332"
-    }
-  , { name: unsafeFromString "福林特"
-    , code: unsafeFromString "HUF"
-    , symbol: "Ft"
-    , numericCode: unsafeFromString "348"
-    }
-  , { name: unsafeFromString "印度尼西亚卢比"
-    , code: unsafeFromString "IDR"
-    , symbol: "Rp"
-    , numericCode: unsafeFromString "360"
-    }
-  , { name: unsafeFromString "新以色列谢克尔"
-    , code: unsafeFromString "ILS"
-    , symbol: "₪"
-    , numericCode: unsafeFromString "376"
-    }
-  , { name: unsafeFromString "不丹努扎姆"
-    , code: unsafeFromString "BTN"
-    , symbol: "Nu"
-    , numericCode: unsafeFromString "064"
-    }
-  , { name: unsafeFromString "印度卢比"
-    , code: unsafeFromString "INR"
-    , symbol: "₹"
-    , numericCode: unsafeFromString "356"
-    }
-  , { name: unsafeFromString "伊拉克第纳尔"
-    , code: unsafeFromString "IQD"
-    , symbol: ""
-    , numericCode: unsafeFromString "368"
-    }
-  , { name: unsafeFromString "伊朗里亚尔"
-    , code: unsafeFromString "IRR"
-    , symbol: "﷼"
-    , numericCode: unsafeFromString "364"
-    }
-  , { name: unsafeFromString "冰岛克朗"
-    , code: unsafeFromString "ISK"
-    , symbol: "kr"
-    , numericCode: unsafeFromString "352"
-    }
-  , { name: unsafeFromString "牙买加元"
-    , code: unsafeFromString "JMD"
-    , symbol: "J$"
-    , numericCode: unsafeFromString "388"
-    }
-  , { name: unsafeFromString "约旦第纳尔"
-    , code: unsafeFromString "JOD"
-    , symbol: ""
-    , numericCode: unsafeFromString "400"
-    }
-  , { name: unsafeFromString "日元"
-    , code: unsafeFromString "JPY"
-    , symbol: "¥"
-    , numericCode: unsafeFromString "392"
-    }
-  , { name: unsafeFromString "肯尼亚先令"
-    , code: unsafeFromString "KES"
-    , symbol: ""
-    , numericCode: unsafeFromString "404"
-    }
-  , { name: unsafeFromString "吉尔吉斯斯坦索姆"
-    , code: unsafeFromString "KGS"
-    , symbol: "лв"
-    , numericCode: unsafeFromString "417"
-    }
-  , { name: unsafeFromString "瑞尔"
-    , code: unsafeFromString "KHR"
-    , symbol: "៛"
-    , numericCode: unsafeFromString "116"
-    }
-  , { name: unsafeFromString "科摩罗法郎"
-    , code: unsafeFromString "KMF"
-    , symbol: ""
-    , numericCode: unsafeFromString "174"
-    }
-  , { name: unsafeFromString "朝鲜圆"
-    , code: unsafeFromString "KPW"
-    , symbol: "₩"
-    , numericCode: unsafeFromString "408"
-    }
-  , { name: unsafeFromString "韩元"
-    , code: unsafeFromString "KRW"
-    , symbol: "₩"
-    , numericCode: unsafeFromString "410"
-    }
-  , { name: unsafeFromString "科威特第纳尔"
-    , code: unsafeFromString "KWD"
-    , symbol: ""
-    , numericCode: unsafeFromString "414"
-    }
-  , { name: unsafeFromString "开曼群岛元"
-    , code: unsafeFromString "KYD"
-    , symbol: "$"
-    , numericCode: unsafeFromString "136"
-    }
-  , { name: unsafeFromString "坚戈"
-    , code: unsafeFromString "KZT"
-    , symbol: "лв"
-    , numericCode: unsafeFromString "398"
-    }
-  , { name: unsafeFromString "基普"
-    , code: unsafeFromString "LAK"
-    , symbol: "₭"
-    , numericCode: unsafeFromString "418"
-    }
-  , { name: unsafeFromString "黎巴嫩镑"
-    , code: unsafeFromString "LBP"
-    , symbol: "£"
-    , numericCode: unsafeFromString "422"
-    }
-  , { name: unsafeFromString "斯里兰卡卢比"
-    , code: unsafeFromString "LKR"
-    , symbol: "₨"
-    , numericCode: unsafeFromString "144"
-    }
-  , { name: unsafeFromString "利比里亚元"
-    , code: unsafeFromString "LRD"
-    , symbol: "$"
-    , numericCode: unsafeFromString "430"
-    }
-  , { name: unsafeFromString "利比亚第纳尔"
-    , code: unsafeFromString "LYD"
-    , symbol: ""
-    , numericCode: unsafeFromString "434"
-    }
-  , { name: unsafeFromString "摩洛哥迪拉姆"
-    , code: unsafeFromString "MAD"
-    , symbol: ""
-    , numericCode: unsafeFromString "504"
-    }
-  , { name: unsafeFromString "摩尔多瓦列伊"
-    , code: unsafeFromString "MDL"
-    , symbol: ""
-    , numericCode: unsafeFromString "498"
-    }
-  , { name: unsafeFromString "马达加斯加阿里亚里"
-    , code: unsafeFromString "MGA"
-    , symbol: ""
-    , numericCode: unsafeFromString "969"
-    }
-  , { name: unsafeFromString "马其顿代纳尔"
-    , code: unsafeFromString "MKD"
-    , symbol: "ден"
-    , numericCode: unsafeFromString "807"
-    }
-  , { name: unsafeFromString "缅甸元"
-    , code: unsafeFromString "MMK"
-    , symbol: ""
-    , numericCode: unsafeFromString "104"
-    }
-  , { name: unsafeFromString "图格里克"
-    , code: unsafeFromString "MNT"
-    , symbol: "₮"
-    , numericCode: unsafeFromString "496"
-    }
-  , { name: unsafeFromString "澳门元"
-    , code: unsafeFromString "MOP"
-    , symbol: ""
-    , numericCode: unsafeFromString "446"
-    }
-  , { name: unsafeFromString "乌吉亚"
-    , code: unsafeFromString "MRU"
-    , symbol: ""
-    , numericCode: unsafeFromString "929"
-    }
-  , { name: unsafeFromString "毛里求斯卢比"
-    , code: unsafeFromString "MUR"
-    , symbol: "₨"
-    , numericCode: unsafeFromString "480"
-    }
-  , { name: unsafeFromString "拉菲亚"
-    , code: unsafeFromString "MVR"
-    , symbol: ""
-    , numericCode: unsafeFromString "462"
-    }
-  , { name: unsafeFromString "克瓦查"
-    , code: unsafeFromString "MWK"
-    , symbol: ""
-    , numericCode: unsafeFromString "454"
-    }
-  , { name: unsafeFromString "墨西哥比索"
-    , code: unsafeFromString "MXN"
-    , symbol: "$"
-    , numericCode: unsafeFromString "484"
-    }
-  , { name: unsafeFromString "马来西亚林吉特"
-    , code: unsafeFromString "MYR"
-    , symbol: "RM"
-    , numericCode: unsafeFromString "458"
-    }
-  , { name: unsafeFromString "莫桑比克梅蒂卡尔"
-    , code: unsafeFromString "MZN"
-    , symbol: "MT"
-    , numericCode: unsafeFromString "943"
-    }
-  , { name: unsafeFromString "奈拉"
-    , code: unsafeFromString "NGN"
-    , symbol: "₦"
-    , numericCode: unsafeFromString "566"
-    }
-  , { name: unsafeFromString "科多巴金科多巴"
-    , code: unsafeFromString "NIO"
-    , symbol: "C$"
-    , numericCode: unsafeFromString "558"
-    }
-  , { name: unsafeFromString "挪威克朗"
-    , code: unsafeFromString "NOK"
-    , symbol: "kr"
-    , numericCode: unsafeFromString "578"
-    }
-  , { name: unsafeFromString "尼泊尔卢比"
-    , code: unsafeFromString "NPR"
-    , symbol: "₨"
-    , numericCode: unsafeFromString "524"
-    }
-  , { name: unsafeFromString "新西兰元"
-    , code: unsafeFromString "NZD"
-    , symbol: "$"
-    , numericCode: unsafeFromString "554"
-    }
-  , { name: unsafeFromString "阿曼里亚尔"
-    , code: unsafeFromString "OMR"
-    , symbol: "﷼"
-    , numericCode: unsafeFromString "512"
-    }
-  , { name: unsafeFromString "巴尔博亚"
-    , code: unsafeFromString "PAB"
-    , symbol: "B/."
-    , numericCode: unsafeFromString "590"
-    }
-  , { name: unsafeFromString "秘鲁新索尔"
-    , code: unsafeFromString "PEN"
-    , symbol: "S/."
-    , numericCode: unsafeFromString "604"
-    }
-  , { name: unsafeFromString "基纳"
-    , code: unsafeFromString "PGK"
-    , symbol: ""
-    , numericCode: unsafeFromString "598"
-    }
-  , { name: unsafeFromString "菲律宾比索"
-    , code: unsafeFromString "PHP"
-    , symbol: "Php"
-    , numericCode: unsafeFromString "608"
-    }
-  , { name: unsafeFromString "巴基斯坦卢比"
-    , code: unsafeFromString "PKR"
-    , symbol: "₨"
-    , numericCode: unsafeFromString "586"
-    }
-  , { name: unsafeFromString "兹罗提"
-    , code: unsafeFromString "PLN"
-    , symbol: "zł"
-    , numericCode: unsafeFromString "985"
-    }
-  , { name: unsafeFromString "巴拉圭瓜拉尼"
-    , code: unsafeFromString "PYG"
-    , symbol: "Gs"
-    , numericCode: unsafeFromString "600"
-    }
-  , { name: unsafeFromString "卡塔尔里亚尔"
-    , code: unsafeFromString "QAR"
-    , symbol: "﷼"
-    , numericCode: unsafeFromString "634"
-    }
-  , { name: unsafeFromString "新卢"
-    , code: unsafeFromString "RON"
-    , symbol: "lei"
-    , numericCode: unsafeFromString "946"
-    }
-  , { name: unsafeFromString "塞尔维亚第纳尔"
-    , code: unsafeFromString "RSD"
-    , symbol: "Дин."
-    , numericCode: unsafeFromString "941"
-    }
-  , { name: unsafeFromString "俄罗斯卢布"
-    , code: unsafeFromString "RUB"
-    , symbol: "руб"
-    , numericCode: unsafeFromString "643"
-    }
-  , { name: unsafeFromString "卢旺达法郎"
-    , code: unsafeFromString "RWF"
-    , symbol: ""
-    , numericCode: unsafeFromString "646"
-    }
-  , { name: unsafeFromString "沙特里亚尔"
-    , code: unsafeFromString "SAR"
-    , symbol: "﷼"
-    , numericCode: unsafeFromString "682"
-    }
-  , { name: unsafeFromString "所罗门群岛元"
-    , code: unsafeFromString "SBD"
-    , symbol: "$"
-    , numericCode: unsafeFromString "090"
-    }
-  , { name: unsafeFromString "塞舌尔卢比"
-    , code: unsafeFromString "SCR"
-    , symbol: "₨"
-    , numericCode: unsafeFromString "690"
-    }
-  , { name: unsafeFromString "苏丹镑"
-    , code: unsafeFromString "SDG"
-    , symbol: ""
-    , numericCode: unsafeFromString "938"
-    }
-  , { name: unsafeFromString "瑞典克朗"
-    , code: unsafeFromString "SEK"
-    , symbol: "kr"
-    , numericCode: unsafeFromString "752"
-    }
-  , { name: unsafeFromString "新加坡元"
-    , code: unsafeFromString "SGD"
-    , symbol: "$"
-    , numericCode: unsafeFromString "702"
-    }
-  , { name: unsafeFromString "圣赫勒拿镑"
-    , code: unsafeFromString "SHP"
-    , symbol: "£"
-    , numericCode: unsafeFromString "654"
-    }
-  , { name: unsafeFromString "利昂"
-    , code: unsafeFromString "SLE"
-    , symbol: ""
-    , numericCode: unsafeFromString "925"
-    }
-  , { name: unsafeFromString "索马里先令"
-    , code: unsafeFromString "SOS"
-    , symbol: "S"
-    , numericCode: unsafeFromString "706"
-    }
-  , { name: unsafeFromString "苏里南元"
-    , code: unsafeFromString "SRD"
-    , symbol: "$"
-    , numericCode: unsafeFromString "968"
-    }
-  , { name: unsafeFromString "南苏丹镑"
-    , code: unsafeFromString "SSP"
-    , symbol: ""
-    , numericCode: unsafeFromString "728"
-    }
-  , { name: unsafeFromString "多布拉"
-    , code: unsafeFromString "STN"
-    , symbol: "Db"
-    , numericCode: unsafeFromString "930"
-    }
-  , { name: unsafeFromString "叙利亚镑"
-    , code: unsafeFromString "SYP"
-    , symbol: "£"
-    , numericCode: unsafeFromString "760"
-    }
-  , { name: unsafeFromString "利兰吉尼"
-    , code: unsafeFromString "SZL"
-    , symbol: ""
-    , numericCode: unsafeFromString "748"
-    }
-  , { name: unsafeFromString "泰铢"
-    , code: unsafeFromString "THB"
-    , symbol: "฿"
-    , numericCode: unsafeFromString "764"
-    }
-  , { name: unsafeFromString "索莫尼"
-    , code: unsafeFromString "TJS"
-    , symbol: ""
-    , numericCode: unsafeFromString "972"
-    }
-  , { name: unsafeFromString "马纳特"
-    , code: unsafeFromString "TMT"
-    , symbol: ""
-    , numericCode: unsafeFromString "934"
-    }
-  , { name: unsafeFromString "突尼斯第纳尔"
-    , code: unsafeFromString "TND"
-    , symbol: ""
-    , numericCode: unsafeFromString "788"
-    }
-  , { name: unsafeFromString "帕安加"
-    , code: unsafeFromString "TOP"
-    , symbol: ""
-    , numericCode: unsafeFromString "776"
-    }
-  , { name: unsafeFromString "土耳其里拉"
-    , code: unsafeFromString "TRY"
-    , symbol: "₺"
-    , numericCode: unsafeFromString "949"
-    }
-  , { name: unsafeFromString "特立尼达和多巴哥元"
-    , code: unsafeFromString "TTD"
-    , symbol: "TT$"
-    , numericCode: unsafeFromString "780"
-    }
-  , { name: unsafeFromString "新台币"
-    , code: unsafeFromString "TWD"
-    , symbol: "NT$"
-    , numericCode: unsafeFromString "901"
-    }
-  , { name: unsafeFromString "坦桑尼亚先令"
-    , code: unsafeFromString "TZS"
-    , symbol: ""
-    , numericCode: unsafeFromString "834"
-    }
-  , { name: unsafeFromString "格里夫尼亚"
-    , code: unsafeFromString "UAH"
-    , symbol: "₴"
-    , numericCode: unsafeFromString "980"
-    }
-  , { name: unsafeFromString "乌干达先令"
-    , code: unsafeFromString "UGX"
-    , symbol: ""
-    , numericCode: unsafeFromString "800"
-    }
-  , { name: unsafeFromString "美元"
-    , code: unsafeFromString "USD"
-    , symbol: "$"
-    , numericCode: unsafeFromString "840"
-    }
-  , { name: unsafeFromString "乌拉圭比索"
-    , code: unsafeFromString "UYU"
-    , symbol: "$U"
-    , numericCode: unsafeFromString "858"
-    }
-  , { name: unsafeFromString "乌兹别克索姆"
-    , code: unsafeFromString "UZS"
-    , symbol: "лв"
-    , numericCode: unsafeFromString "860"
-    }
-  , { name: unsafeFromString "委内瑞拉玻利瓦尔"
-    , code: unsafeFromString "VES"
-    , symbol: "Bs"
-    , numericCode: unsafeFromString "928"
-    }
-  , { name: unsafeFromString "越南盾"
-    , code: unsafeFromString "VND"
-    , symbol: "₫"
-    , numericCode: unsafeFromString "704"
-    }
-  , { name: unsafeFromString "瓦图"
-    , code: unsafeFromString "VUV"
-    , symbol: ""
-    , numericCode: unsafeFromString "548"
-    }
-  , { name: unsafeFromString "塔拉"
-    , code: unsafeFromString "WST"
-    , symbol: ""
-    , numericCode: unsafeFromString "882"
-    }
-  , { name: unsafeFromString "科姆罗尔法郎"
-    , code: unsafeFromString "XAF"
-    , symbol: ""
-    , numericCode: unsafeFromString "950"
-    }
-  , { name: unsafeFromString "银"
-    , code: unsafeFromString "XAG"
-    , symbol: "XAG"
-    , numericCode: unsafeFromString "961"
-    }
-  , { name: unsafeFromString "金"
-    , code: unsafeFromString "XAU"
-    , symbol: "XAU"
-    , numericCode: unsafeFromString "959"
-    }
-  , { name: unsafeFromString "东加勒比元"
-    , code: unsafeFromString "XCD"
-    , symbol: "$"
-    , numericCode: unsafeFromString "951"
-    }
-  , { name: unsafeFromString "特别提款权"
-    , code: unsafeFromString "XDR"
-    , symbol: "XDR"
-    , numericCode: unsafeFromString "960"
-    }
-  , { name: unsafeFromString "中非金融合作法郎"
-    , code: unsafeFromString "XOF"
-    , symbol: ""
-    , numericCode: unsafeFromString "952"
-    }
-  , { name: unsafeFromString "波利尼西亚法郎"
-    , code: unsafeFromString "XPF"
-    , symbol: ""
-    , numericCode: unsafeFromString "953"
-    }
-  , { name: unsafeFromString "也门里亚尔"
-    , code: unsafeFromString "YER"
-    , symbol: "﷼"
-    , numericCode: unsafeFromString "886"
-    }
-  , { name: unsafeFromString "南非兰特"
-    , code: unsafeFromString "ZAR"
-    , symbol: "R"
-    , numericCode: unsafeFromString "710"
-    }
-  , { name: unsafeFromString "赞比亚克瓦查"
-    , code: unsafeFromString "ZMW"
-    , symbol: "ZK"
-    , numericCode: unsafeFromString "967"
-    }
-  , { name: unsafeFromString "津巴布韦元"
-    , code: unsafeFromString "ZWL"
-    , symbol: "$"
-    , numericCode: unsafeFromString "932"
-    }
-  ]
+  ( unsafeCoerce
+      :: Array { code :: String, name :: String, numericCode :: String, symbol :: String }
+      -> NonEmptyArray
+           { code :: NonEmptyString
+           , name :: NonEmptyString
+           , numericCode :: NonEmptyString
+           , symbol :: String
+           }
+  )
+    [ { code: "AED", name: "阿联酋迪拉姆", numericCode: "784", symbol: "" }
+    , { code: "AFN", name: "阿富汗尼", numericCode: "971", symbol: "؋" }
+    , { code: "ALL", name: "列克", numericCode: "008", symbol: "Lek" }
+    , { code: "AMD", name: "亚美尼亚德拉姆", numericCode: "051", symbol: "" }
+    , { code: "ANG", name: "荷属安的列斯盾", numericCode: "532", symbol: "ƒ" }
+    , { code: "AOA", name: "宽扎", numericCode: "973", symbol: "" }
+    , { code: "ARS", name: "阿根廷比索", numericCode: "032", symbol: "$" }
+    , { code: "AUD", name: "澳大利亚元", numericCode: "036", symbol: "$" }
+    , { code: "AWG", name: "阿鲁巴弗罗林", numericCode: "533", symbol: "ƒ" }
+    , { code: "AZN", name: "阿塞拜疆马纳特", numericCode: "944", symbol: "ман" }
+    , { code: "BAM", name: "可兑换马克", numericCode: "977", symbol: "KM" }
+    , { code: "BBD", name: "巴巴多斯元", numericCode: "052", symbol: "$" }
+    , { code: "BDT", name: "孟加拉塔卡", numericCode: "050", symbol: "" }
+    , { code: "BGN", name: "保加利亚列弗", numericCode: "975", symbol: "лв" }
+    , { code: "BHD", name: "巴林第纳尔", numericCode: "048", symbol: "" }
+    , { code: "BIF", name: "布隆迪法郎", numericCode: "108", symbol: "" }
+    , { code: "BMD", name: "百慕大元（通常称为百慕大元）", numericCode: "060", symbol: "$" }
+    , { code: "BND", name: "文莱元", numericCode: "096", symbol: "$" }
+    , { code: "BOB", name: "玻利维亚诺", numericCode: "068", symbol: "Bs" }
+    , { code: "BRL", name: "巴西雷亚尔", numericCode: "986", symbol: "R$" }
+    , { code: "BSD", name: "巴哈马元", numericCode: "044", symbol: "$" }
+    , { code: "BWP", name: "普拉", numericCode: "072", symbol: "P" }
+    , { code: "BYN", name: "白俄罗斯卢布", numericCode: "933", symbol: "Rbl" }
+    , { code: "BZD", name: "伯利兹元", numericCode: "084", symbol: "BZ$" }
+    , { code: "CAD", name: "加拿大元", numericCode: "124", symbol: "$" }
+    , { code: "CDF", name: "刚果法郎", numericCode: "976", symbol: "" }
+    , { code: "CHF", name: "瑞士法郎", numericCode: "756", symbol: "CHF" }
+    , { code: "CLP", name: "智利比索", numericCode: "152", symbol: "$" }
+    , { code: "CNY", name: "人民币", numericCode: "156", symbol: "¥" }
+    , { code: "COP", name: "哥伦比亚比索", numericCode: "170", symbol: "$" }
+    , { code: "CRC", name: "哥斯达黎加科朗", numericCode: "188", symbol: "₡" }
+    , { code: "CUP", name: "古巴比索", numericCode: "192", symbol: "₱" }
+    , { code: "CVE", name: "佛得角埃斯库多", numericCode: "132", symbol: "" }
+    , { code: "CZK", name: "捷克克朗", numericCode: "203", symbol: "Kč" }
+    , { code: "DJF", name: "吉布提法郎", numericCode: "262", symbol: "" }
+    , { code: "DKK", name: "丹麦克朗", numericCode: "208", symbol: "kr" }
+    , { code: "DOP", name: "多米尼加比索", numericCode: "214", symbol: "RD$" }
+    , { code: "DZD", name: "阿尔及利亚第纳尔", numericCode: "012", symbol: "" }
+    , { code: "EGP", name: "埃及镑", numericCode: "818", symbol: "£" }
+    , { code: "ERN", name: "纳克法", numericCode: "232", symbol: "" }
+    , { code: "ETB", name: "埃塞俄比亚比尔", numericCode: "230", symbol: "" }
+    , { code: "EUR", name: "欧元", numericCode: "978", symbol: "€" }
+    , { code: "FJD", name: "斐济元", numericCode: "242", symbol: "$" }
+    , { code: "FKP", name: "福克兰群岛镑", numericCode: "238", symbol: "£" }
+    , { code: "GBP", name: "英镑", numericCode: "826", symbol: "£" }
+    , { code: "GEL", name: "格鲁吉亚拉里", numericCode: "981", symbol: "" }
+    , { code: "GHS", name: "塞地", numericCode: "936", symbol: "" }
+    , { code: "GIP", name: "直布罗陀镑", numericCode: "292", symbol: "£" }
+    , { code: "GMD", name: "达尔西", numericCode: "270", symbol: "" }
+    , { code: "GNF", name: "几内亚法郎", numericCode: "324", symbol: "" }
+    , { code: "GTQ", name: "格查尔", numericCode: "320", symbol: "Q" }
+    , { code: "GYD", name: "圭亚那元", numericCode: "328", symbol: "$" }
+    , { code: "HKD", name: "港元", numericCode: "344", symbol: "$" }
+    , { code: "HNL", name: "伦皮拉", numericCode: "340", symbol: "L" }
+    , { code: "HTG", name: "古德", numericCode: "332", symbol: "" }
+    , { code: "HUF", name: "福林特", numericCode: "348", symbol: "Ft" }
+    , { code: "IDR", name: "印度尼西亚卢比", numericCode: "360", symbol: "Rp" }
+    , { code: "ILS", name: "新以色列谢克尔", numericCode: "376", symbol: "₪" }
+    , { code: "BTN", name: "不丹努扎姆", numericCode: "064", symbol: "Nu" }
+    , { code: "INR", name: "印度卢比", numericCode: "356", symbol: "₹" }
+    , { code: "IQD", name: "伊拉克第纳尔", numericCode: "368", symbol: "" }
+    , { code: "IRR", name: "伊朗里亚尔", numericCode: "364", symbol: "﷼" }
+    , { code: "ISK", name: "冰岛克朗", numericCode: "352", symbol: "kr" }
+    , { code: "JMD", name: "牙买加元", numericCode: "388", symbol: "J$" }
+    , { code: "JOD", name: "约旦第纳尔", numericCode: "400", symbol: "" }
+    , { code: "JPY", name: "日元", numericCode: "392", symbol: "¥" }
+    , { code: "KES", name: "肯尼亚先令", numericCode: "404", symbol: "" }
+    , { code: "KGS", name: "吉尔吉斯斯坦索姆", numericCode: "417", symbol: "лв" }
+    , { code: "KHR", name: "瑞尔", numericCode: "116", symbol: "៛" }
+    , { code: "KMF", name: "科摩罗法郎", numericCode: "174", symbol: "" }
+    , { code: "KPW", name: "朝鲜圆", numericCode: "408", symbol: "₩" }
+    , { code: "KRW", name: "韩元", numericCode: "410", symbol: "₩" }
+    , { code: "KWD", name: "科威特第纳尔", numericCode: "414", symbol: "" }
+    , { code: "KYD", name: "开曼群岛元", numericCode: "136", symbol: "$" }
+    , { code: "KZT", name: "坚戈", numericCode: "398", symbol: "лв" }
+    , { code: "LAK", name: "基普", numericCode: "418", symbol: "₭" }
+    , { code: "LBP", name: "黎巴嫩镑", numericCode: "422", symbol: "£" }
+    , { code: "LKR", name: "斯里兰卡卢比", numericCode: "144", symbol: "₨" }
+    , { code: "LRD", name: "利比里亚元", numericCode: "430", symbol: "$" }
+    , { code: "LYD", name: "利比亚第纳尔", numericCode: "434", symbol: "" }
+    , { code: "MAD", name: "摩洛哥迪拉姆", numericCode: "504", symbol: "" }
+    , { code: "MDL", name: "摩尔多瓦列伊", numericCode: "498", symbol: "" }
+    , { code: "MGA", name: "马达加斯加阿里亚里", numericCode: "969", symbol: "" }
+    , { code: "MKD", name: "马其顿代纳尔", numericCode: "807", symbol: "ден" }
+    , { code: "MMK", name: "缅甸元", numericCode: "104", symbol: "" }
+    , { code: "MNT", name: "图格里克", numericCode: "496", symbol: "₮" }
+    , { code: "MOP", name: "澳门元", numericCode: "446", symbol: "" }
+    , { code: "MRU", name: "乌吉亚", numericCode: "929", symbol: "" }
+    , { code: "MUR", name: "毛里求斯卢比", numericCode: "480", symbol: "₨" }
+    , { code: "MVR", name: "拉菲亚", numericCode: "462", symbol: "" }
+    , { code: "MWK", name: "克瓦查", numericCode: "454", symbol: "" }
+    , { code: "MXN", name: "墨西哥比索", numericCode: "484", symbol: "$" }
+    , { code: "MYR", name: "马来西亚林吉特", numericCode: "458", symbol: "RM" }
+    , { code: "MZN", name: "莫桑比克梅蒂卡尔", numericCode: "943", symbol: "MT" }
+    , { code: "NGN", name: "奈拉", numericCode: "566", symbol: "₦" }
+    , { code: "NIO", name: "科多巴金科多巴", numericCode: "558", symbol: "C$" }
+    , { code: "NOK", name: "挪威克朗", numericCode: "578", symbol: "kr" }
+    , { code: "NPR", name: "尼泊尔卢比", numericCode: "524", symbol: "₨" }
+    , { code: "NZD", name: "新西兰元", numericCode: "554", symbol: "$" }
+    , { code: "OMR", name: "阿曼里亚尔", numericCode: "512", symbol: "﷼" }
+    , { code: "PAB", name: "巴尔博亚", numericCode: "590", symbol: "B/." }
+    , { code: "PEN", name: "秘鲁新索尔", numericCode: "604", symbol: "S/." }
+    , { code: "PGK", name: "基纳", numericCode: "598", symbol: "" }
+    , { code: "PHP", name: "菲律宾比索", numericCode: "608", symbol: "Php" }
+    , { code: "PKR", name: "巴基斯坦卢比", numericCode: "586", symbol: "₨" }
+    , { code: "PLN", name: "兹罗提", numericCode: "985", symbol: "zł" }
+    , { code: "PYG", name: "巴拉圭瓜拉尼", numericCode: "600", symbol: "Gs" }
+    , { code: "QAR", name: "卡塔尔里亚尔", numericCode: "634", symbol: "﷼" }
+    , { code: "RON", name: "新卢", numericCode: "946", symbol: "lei" }
+    , { code: "RSD", name: "塞尔维亚第纳尔", numericCode: "941", symbol: "Дин." }
+    , { code: "RUB", name: "俄罗斯卢布", numericCode: "643", symbol: "руб" }
+    , { code: "RWF", name: "卢旺达法郎", numericCode: "646", symbol: "" }
+    , { code: "SAR", name: "沙特里亚尔", numericCode: "682", symbol: "﷼" }
+    , { code: "SBD", name: "所罗门群岛元", numericCode: "090", symbol: "$" }
+    , { code: "SCR", name: "塞舌尔卢比", numericCode: "690", symbol: "₨" }
+    , { code: "SDG", name: "苏丹镑", numericCode: "938", symbol: "" }
+    , { code: "SEK", name: "瑞典克朗", numericCode: "752", symbol: "kr" }
+    , { code: "SGD", name: "新加坡元", numericCode: "702", symbol: "$" }
+    , { code: "SHP", name: "圣赫勒拿镑", numericCode: "654", symbol: "£" }
+    , { code: "SLE", name: "利昂", numericCode: "925", symbol: "" }
+    , { code: "SOS", name: "索马里先令", numericCode: "706", symbol: "S" }
+    , { code: "SRD", name: "苏里南元", numericCode: "968", symbol: "$" }
+    , { code: "SSP", name: "南苏丹镑", numericCode: "728", symbol: "" }
+    , { code: "STN", name: "多布拉", numericCode: "930", symbol: "Db" }
+    , { code: "SYP", name: "叙利亚镑", numericCode: "760", symbol: "£" }
+    , { code: "SZL", name: "利兰吉尼", numericCode: "748", symbol: "" }
+    , { code: "THB", name: "泰铢", numericCode: "764", symbol: "฿" }
+    , { code: "TJS", name: "索莫尼", numericCode: "972", symbol: "" }
+    , { code: "TMT", name: "马纳特", numericCode: "934", symbol: "" }
+    , { code: "TND", name: "突尼斯第纳尔", numericCode: "788", symbol: "" }
+    , { code: "TOP", name: "帕安加", numericCode: "776", symbol: "" }
+    , { code: "TRY", name: "土耳其里拉", numericCode: "949", symbol: "₺" }
+    , { code: "TTD", name: "特立尼达和多巴哥元", numericCode: "780", symbol: "TT$" }
+    , { code: "TWD", name: "新台币", numericCode: "901", symbol: "NT$" }
+    , { code: "TZS", name: "坦桑尼亚先令", numericCode: "834", symbol: "" }
+    , { code: "UAH", name: "格里夫尼亚", numericCode: "980", symbol: "₴" }
+    , { code: "UGX", name: "乌干达先令", numericCode: "800", symbol: "" }
+    , { code: "USD", name: "美元", numericCode: "840", symbol: "$" }
+    , { code: "UYU", name: "乌拉圭比索", numericCode: "858", symbol: "$U" }
+    , { code: "UZS", name: "乌兹别克索姆", numericCode: "860", symbol: "лв" }
+    , { code: "VES", name: "委内瑞拉玻利瓦尔", numericCode: "928", symbol: "Bs" }
+    , { code: "VND", name: "越南盾", numericCode: "704", symbol: "₫" }
+    , { code: "VUV", name: "瓦图", numericCode: "548", symbol: "" }
+    , { code: "WST", name: "塔拉", numericCode: "882", symbol: "" }
+    , { code: "XAF", name: "科姆罗尔法郎", numericCode: "950", symbol: "" }
+    , { code: "XAG", name: "银", numericCode: "961", symbol: "XAG" }
+    , { code: "XAU", name: "金", numericCode: "959", symbol: "XAU" }
+    , { code: "XCD", name: "东加勒比元", numericCode: "951", symbol: "$" }
+    , { code: "XDR", name: "特别提款权", numericCode: "960", symbol: "XDR" }
+    , { code: "XOF", name: "中非金融合作法郎", numericCode: "952", symbol: "" }
+    , { code: "XPF", name: "波利尼西亚法郎", numericCode: "953", symbol: "" }
+    , { code: "YER", name: "也门里亚尔", numericCode: "886", symbol: "﷼" }
+    , { code: "ZAR", name: "南非兰特", numericCode: "710", symbol: "R" }
+    , { code: "ZMW", name: "赞比亚克瓦查", numericCode: "967", symbol: "ZK" }
+    , { code: "ZWL", name: "津巴布韦元", numericCode: "932", symbol: "$" }
+    ]

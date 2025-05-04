@@ -2,10 +2,8 @@ module Fakerjs2.Locales.En.Animal.Rabbit (rabbit) where
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (Rabbit)
 import Unsafe.Coerce (unsafeCoerce)
 
-rabbit :: Rabbit
 rabbit = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
   [ "American"
   , "American Chinchilla"

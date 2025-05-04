@@ -2,10 +2,8 @@ module Fakerjs2.Locales.Base.Hacker.Abbreviation (abbreviation) where
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (Abbreviation)
 import Unsafe.Coerce (unsafeCoerce)
 
-abbreviation :: Abbreviation
 abbreviation = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
   [ "ADP"
   , "AGP"

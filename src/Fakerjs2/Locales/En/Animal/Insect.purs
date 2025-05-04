@@ -2,10 +2,8 @@ module Fakerjs2.Locales.En.Animal.Insect (insect) where
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (Insect)
 import Unsafe.Coerce (unsafeCoerce)
 
-insect :: Insect
 insect = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
   [ "Acacia-ants"
   , "Acorn-plum gall"

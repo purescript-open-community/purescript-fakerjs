@@ -2,10 +2,8 @@ module Fakerjs2.Locales.Base.Color.Space (space) where
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (Space)
 import Unsafe.Coerce (unsafeCoerce)
 
-space :: Space
 space = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
   [ "Academy Color Encoding System (ACES)"
   , "Adobe RGB"

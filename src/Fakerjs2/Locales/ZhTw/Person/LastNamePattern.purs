@@ -1,7 +1,11 @@
-module Fakerjs2.Locales.ZhTw.Person.LastNamePattern (generic) where
+module Fakerjs2.Locales.ZhTw.Person.LastNamePattern (last_name_pattern) where
 
-import Data.String.NonEmpty (unsafeFromString)
-import Fakerjs2.Types (LastNamePatternGeneric)
+import Data.Array.NonEmpty (NonEmptyArray)
+import Data.String.NonEmpty (NonEmptyString)
+import Fakerjs2.Types (Weighted)
+import Unsafe.Coerce (unsafeCoerce)
 
-generic :: LastNamePatternGeneric
-generic = [ { value: unsafeFromString "{{person.last_name.generic}}", weight: 1 } ]
+last_name_pattern =
+  { generic: (unsafeCoerce :: Array (Weighted String) -> NonEmptyArray (Weighted NonEmptyString))
+      [ { value: "{{person.last_name.generic}}", weight: 1 } ]
+  }

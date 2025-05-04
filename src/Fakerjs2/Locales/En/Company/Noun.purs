@@ -2,10 +2,8 @@ module Fakerjs2.Locales.En.Company.Noun (noun) where
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (Noun)
 import Unsafe.Coerce (unsafeCoerce)
 
-noun :: Noun
 noun = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
   [ "ability"
   , "access"

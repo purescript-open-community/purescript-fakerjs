@@ -2,10 +2,8 @@ module Fakerjs2.Locales.En.Food.EthnicCategory (ethnic_category) where
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (EthnicCategory)
 import Unsafe.Coerce (unsafeCoerce)
 
-ethnic_category :: EthnicCategory
 ethnic_category = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
   [ "Ainu"
   , "Albanian"

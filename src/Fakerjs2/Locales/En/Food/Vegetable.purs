@@ -2,10 +2,8 @@ module Fakerjs2.Locales.En.Food.Vegetable (vegetable) where
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (Vegetable)
 import Unsafe.Coerce (unsafeCoerce)
 
-vegetable :: Vegetable
 vegetable = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
   [ "artichoke"
   , "arugula"

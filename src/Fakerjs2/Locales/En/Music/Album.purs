@@ -2,10 +2,8 @@ module Fakerjs2.Locales.En.Music.Album (album) where
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (Album)
 import Unsafe.Coerce (unsafeCoerce)
 
-album :: Album
 album = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
   [ "\"Awaken, My Love!\""
   , "(What's The Story) Morning Glory?"

@@ -2,10 +2,8 @@ module Fakerjs2.Locales.En.Food.DishPattern (dish_pattern) where
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (DishPattern)
 import Unsafe.Coerce (unsafeCoerce)
 
-dish_pattern :: DishPattern
 dish_pattern = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
   [ "{{food.adjective}} {{food.ethnic_category}} stew"
   , "{{food.adjective}} {{food.meat}} with {{food.vegetable}}"

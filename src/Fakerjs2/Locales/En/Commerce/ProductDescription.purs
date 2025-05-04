@@ -2,10 +2,8 @@ module Fakerjs2.Locales.En.Commerce.ProductDescription (product_description) whe
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (ProductDescription)
 import Unsafe.Coerce (unsafeCoerce)
 
-product_description :: ProductDescription
 product_description = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
   [ "Discover the {{animal.type}}-like agility of our {{commerce.product}}, perfect for {{word.adjective}} users"
   , "Discover the {{word.adjective}} new {{commerce.product}} with an exciting mix of {{commerce.productMaterial}} ingredients"

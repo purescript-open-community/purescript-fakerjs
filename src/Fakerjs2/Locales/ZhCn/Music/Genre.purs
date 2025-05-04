@@ -2,10 +2,8 @@ module Fakerjs2.Locales.ZhCn.Music.Genre (genre) where
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (Genre)
 import Unsafe.Coerce (unsafeCoerce)
 
-genre :: Genre
 genre = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
   [ "世界"
   , "乡村"

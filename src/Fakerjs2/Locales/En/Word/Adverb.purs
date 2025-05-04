@@ -2,10 +2,8 @@ module Fakerjs2.Locales.En.Word.Adverb (adverb) where
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (Adverb)
 import Unsafe.Coerce (unsafeCoerce)
 
-adverb :: Adverb
 adverb = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
   [ "abnormally"
   , "absentmindedly"

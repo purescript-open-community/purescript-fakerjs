@@ -1,126 +1,130 @@
 module Fakerjs2.Locales.ZhCn.Science.ChemicalElement (chemical_element) where
 
-import Data.String.NonEmpty (unsafeFromString)
-import Fakerjs2.Types (ChemicalElement)
+import Data.Array.NonEmpty (NonEmptyArray)
+import Data.String.NonEmpty (NonEmptyString)
+import Unsafe.Coerce (unsafeCoerce)
 
-chemical_element :: ChemicalElement
 chemical_element =
-  [ { name: unsafeFromString "氢", atomicNumber: 1, symbol: unsafeFromString "H" }
-  , { name: unsafeFromString "氦", atomicNumber: 2, symbol: unsafeFromString "He" }
-  , { name: unsafeFromString "锂", atomicNumber: 3, symbol: unsafeFromString "Li" }
-  , { name: unsafeFromString "铍", atomicNumber: 4, symbol: unsafeFromString "Be" }
-  , { name: unsafeFromString "硼", atomicNumber: 5, symbol: unsafeFromString "B" }
-  , { name: unsafeFromString "碳", atomicNumber: 6, symbol: unsafeFromString "C" }
-  , { name: unsafeFromString "氮", atomicNumber: 7, symbol: unsafeFromString "N" }
-  , { name: unsafeFromString "氧", atomicNumber: 8, symbol: unsafeFromString "O" }
-  , { name: unsafeFromString "氟", atomicNumber: 9, symbol: unsafeFromString "F" }
-  , { name: unsafeFromString "氖", atomicNumber: 10, symbol: unsafeFromString "Ne" }
-  , { name: unsafeFromString "钠", atomicNumber: 11, symbol: unsafeFromString "Na" }
-  , { name: unsafeFromString "镁", atomicNumber: 12, symbol: unsafeFromString "Mg" }
-  , { name: unsafeFromString "铝", atomicNumber: 13, symbol: unsafeFromString "Al" }
-  , { name: unsafeFromString "硅", atomicNumber: 14, symbol: unsafeFromString "Si" }
-  , { name: unsafeFromString "磷", atomicNumber: 15, symbol: unsafeFromString "P" }
-  , { name: unsafeFromString "硫", atomicNumber: 16, symbol: unsafeFromString "S" }
-  , { name: unsafeFromString "氯", atomicNumber: 17, symbol: unsafeFromString "Cl" }
-  , { name: unsafeFromString "氩", atomicNumber: 18, symbol: unsafeFromString "Ar" }
-  , { name: unsafeFromString "钾", atomicNumber: 19, symbol: unsafeFromString "K" }
-  , { name: unsafeFromString "钙", atomicNumber: 20, symbol: unsafeFromString "Ca" }
-  , { name: unsafeFromString "钪", atomicNumber: 21, symbol: unsafeFromString "Sc" }
-  , { name: unsafeFromString "钛", atomicNumber: 22, symbol: unsafeFromString "Ti" }
-  , { name: unsafeFromString "钒", atomicNumber: 23, symbol: unsafeFromString "V" }
-  , { name: unsafeFromString "铬", atomicNumber: 24, symbol: unsafeFromString "Cr" }
-  , { name: unsafeFromString "锰", atomicNumber: 25, symbol: unsafeFromString "Mn" }
-  , { name: unsafeFromString "铁", atomicNumber: 26, symbol: unsafeFromString "Fe" }
-  , { name: unsafeFromString "钴", atomicNumber: 27, symbol: unsafeFromString "Co" }
-  , { name: unsafeFromString "镍", atomicNumber: 28, symbol: unsafeFromString "Ni" }
-  , { name: unsafeFromString "铜", atomicNumber: 29, symbol: unsafeFromString "Cu" }
-  , { name: unsafeFromString "锌", atomicNumber: 30, symbol: unsafeFromString "Zn" }
-  , { name: unsafeFromString "镓", atomicNumber: 31, symbol: unsafeFromString "Ga" }
-  , { name: unsafeFromString "锗", atomicNumber: 32, symbol: unsafeFromString "Ge" }
-  , { name: unsafeFromString "砷", atomicNumber: 33, symbol: unsafeFromString "As" }
-  , { name: unsafeFromString "硒", atomicNumber: 34, symbol: unsafeFromString "Se" }
-  , { name: unsafeFromString "溴", atomicNumber: 35, symbol: unsafeFromString "Br" }
-  , { name: unsafeFromString "氪", atomicNumber: 36, symbol: unsafeFromString "Kr" }
-  , { name: unsafeFromString "铷", atomicNumber: 37, symbol: unsafeFromString "Rb" }
-  , { name: unsafeFromString "锶", atomicNumber: 38, symbol: unsafeFromString "Sr" }
-  , { name: unsafeFromString "钇", atomicNumber: 39, symbol: unsafeFromString "Y" }
-  , { name: unsafeFromString "锆", atomicNumber: 40, symbol: unsafeFromString "Zr" }
-  , { name: unsafeFromString "铌", atomicNumber: 41, symbol: unsafeFromString "Nb" }
-  , { name: unsafeFromString "钼", atomicNumber: 42, symbol: unsafeFromString "Mo" }
-  , { name: unsafeFromString "锝", atomicNumber: 43, symbol: unsafeFromString "Tc" }
-  , { name: unsafeFromString "钌", atomicNumber: 44, symbol: unsafeFromString "Ru" }
-  , { name: unsafeFromString "铑", atomicNumber: 45, symbol: unsafeFromString "Rh" }
-  , { name: unsafeFromString "钯", atomicNumber: 46, symbol: unsafeFromString "Pd" }
-  , { name: unsafeFromString "银", atomicNumber: 47, symbol: unsafeFromString "Ag" }
-  , { name: unsafeFromString "镉", atomicNumber: 48, symbol: unsafeFromString "Cd" }
-  , { name: unsafeFromString "铟", atomicNumber: 49, symbol: unsafeFromString "In" }
-  , { name: unsafeFromString "锡", atomicNumber: 50, symbol: unsafeFromString "Sn" }
-  , { name: unsafeFromString "锑", atomicNumber: 51, symbol: unsafeFromString "Sb" }
-  , { name: unsafeFromString "碲", atomicNumber: 52, symbol: unsafeFromString "Te" }
-  , { name: unsafeFromString "碘", atomicNumber: 53, symbol: unsafeFromString "I" }
-  , { name: unsafeFromString "氙", atomicNumber: 54, symbol: unsafeFromString "Xe" }
-  , { name: unsafeFromString "铯", atomicNumber: 55, symbol: unsafeFromString "Cs" }
-  , { name: unsafeFromString "钡", atomicNumber: 56, symbol: unsafeFromString "Ba" }
-  , { name: unsafeFromString "镧", atomicNumber: 57, symbol: unsafeFromString "La" }
-  , { name: unsafeFromString "铈", atomicNumber: 58, symbol: unsafeFromString "Ce" }
-  , { name: unsafeFromString "镨", atomicNumber: 59, symbol: unsafeFromString "Pr" }
-  , { name: unsafeFromString "钕", atomicNumber: 60, symbol: unsafeFromString "Nd" }
-  , { name: unsafeFromString "钷", atomicNumber: 61, symbol: unsafeFromString "Pm" }
-  , { name: unsafeFromString "钐", atomicNumber: 62, symbol: unsafeFromString "Sm" }
-  , { name: unsafeFromString "铕", atomicNumber: 63, symbol: unsafeFromString "Eu" }
-  , { name: unsafeFromString "钆", atomicNumber: 64, symbol: unsafeFromString "Gd" }
-  , { name: unsafeFromString "铽", atomicNumber: 65, symbol: unsafeFromString "Tb" }
-  , { name: unsafeFromString "镝", atomicNumber: 66, symbol: unsafeFromString "Dy" }
-  , { name: unsafeFromString "钬", atomicNumber: 67, symbol: unsafeFromString "Ho" }
-  , { name: unsafeFromString "铒", atomicNumber: 68, symbol: unsafeFromString "Er" }
-  , { name: unsafeFromString "铥", atomicNumber: 69, symbol: unsafeFromString "Tm" }
-  , { name: unsafeFromString "镱", atomicNumber: 70, symbol: unsafeFromString "Yb" }
-  , { name: unsafeFromString "镥", atomicNumber: 71, symbol: unsafeFromString "Lu" }
-  , { name: unsafeFromString "铪", atomicNumber: 72, symbol: unsafeFromString "Hf" }
-  , { name: unsafeFromString "钽", atomicNumber: 73, symbol: unsafeFromString "Ta" }
-  , { name: unsafeFromString "钨", atomicNumber: 74, symbol: unsafeFromString "W" }
-  , { name: unsafeFromString "铼", atomicNumber: 75, symbol: unsafeFromString "Re" }
-  , { name: unsafeFromString "锇", atomicNumber: 76, symbol: unsafeFromString "Os" }
-  , { name: unsafeFromString "铱", atomicNumber: 77, symbol: unsafeFromString "Ir" }
-  , { name: unsafeFromString "铂", atomicNumber: 78, symbol: unsafeFromString "Pt" }
-  , { name: unsafeFromString "金", atomicNumber: 79, symbol: unsafeFromString "Au" }
-  , { name: unsafeFromString "汞", atomicNumber: 80, symbol: unsafeFromString "Hg" }
-  , { name: unsafeFromString "铊", atomicNumber: 81, symbol: unsafeFromString "Tl" }
-  , { name: unsafeFromString "铅", atomicNumber: 82, symbol: unsafeFromString "Pb" }
-  , { name: unsafeFromString "铋", atomicNumber: 83, symbol: unsafeFromString "Bi" }
-  , { name: unsafeFromString "钋", atomicNumber: 84, symbol: unsafeFromString "Po" }
-  , { name: unsafeFromString "砹", atomicNumber: 85, symbol: unsafeFromString "At" }
-  , { name: unsafeFromString "氡", atomicNumber: 86, symbol: unsafeFromString "Rn" }
-  , { name: unsafeFromString "钫", atomicNumber: 87, symbol: unsafeFromString "Fr" }
-  , { name: unsafeFromString "镭", atomicNumber: 88, symbol: unsafeFromString "Ra" }
-  , { name: unsafeFromString "锕", atomicNumber: 89, symbol: unsafeFromString "Ac" }
-  , { name: unsafeFromString "钍", atomicNumber: 90, symbol: unsafeFromString "Th" }
-  , { name: unsafeFromString "镤", atomicNumber: 91, symbol: unsafeFromString "Pa" }
-  , { name: unsafeFromString "铀", atomicNumber: 92, symbol: unsafeFromString "U" }
-  , { name: unsafeFromString "镎", atomicNumber: 93, symbol: unsafeFromString "Np" }
-  , { name: unsafeFromString "钚", atomicNumber: 94, symbol: unsafeFromString "Pu" }
-  , { name: unsafeFromString "镅", atomicNumber: 95, symbol: unsafeFromString "Am" }
-  , { name: unsafeFromString "锔", atomicNumber: 96, symbol: unsafeFromString "Cm" }
-  , { name: unsafeFromString "锫", atomicNumber: 97, symbol: unsafeFromString "Bk" }
-  , { name: unsafeFromString "锎", atomicNumber: 98, symbol: unsafeFromString "Cf" }
-  , { name: unsafeFromString "锿", atomicNumber: 99, symbol: unsafeFromString "Es" }
-  , { name: unsafeFromString "镄", atomicNumber: 100, symbol: unsafeFromString "Fm" }
-  , { name: unsafeFromString "钔", atomicNumber: 101, symbol: unsafeFromString "Md" }
-  , { name: unsafeFromString "锘", atomicNumber: 102, symbol: unsafeFromString "No" }
-  , { name: unsafeFromString "铹", atomicNumber: 103, symbol: unsafeFromString "Lr" }
-  , { name: unsafeFromString "𬬻", atomicNumber: 104, symbol: unsafeFromString "Rf" }
-  , { name: unsafeFromString "𬭊", atomicNumber: 105, symbol: unsafeFromString "Db" }
-  , { name: unsafeFromString "𬭳", atomicNumber: 106, symbol: unsafeFromString "Sg" }
-  , { name: unsafeFromString "𬭛", atomicNumber: 107, symbol: unsafeFromString "Bh" }
-  , { name: unsafeFromString "𬭶", atomicNumber: 108, symbol: unsafeFromString "Hs" }
-  , { name: unsafeFromString "鿏", atomicNumber: 109, symbol: unsafeFromString "Mt" }
-  , { name: unsafeFromString "𫟼", atomicNumber: 110, symbol: unsafeFromString "Ds" }
-  , { name: unsafeFromString "𬬭", atomicNumber: 111, symbol: unsafeFromString "Rg" }
-  , { name: unsafeFromString "鿔", atomicNumber: 112, symbol: unsafeFromString "Cn" }
-  , { name: unsafeFromString "鿭", atomicNumber: 113, symbol: unsafeFromString "Nh" }
-  , { name: unsafeFromString "𫓧", atomicNumber: 114, symbol: unsafeFromString "Fl" }
-  , { name: unsafeFromString "镆", atomicNumber: 115, symbol: unsafeFromString "Mc" }
-  , { name: unsafeFromString "𫟷", atomicNumber: 116, symbol: unsafeFromString "Lv" }
-  , { name: unsafeFromString "鿬", atomicNumber: 117, symbol: unsafeFromString "Ts" }
-  , { name: unsafeFromString "鿫", atomicNumber: 118, symbol: unsafeFromString "Og" }
-  ]
+  ( unsafeCoerce
+      :: Array { atomicNumber :: Int, name :: String, symbol :: String }
+      -> NonEmptyArray { atomicNumber :: Int, name :: NonEmptyString, symbol :: NonEmptyString }
+  )
+    [ { atomicNumber: 1, name: "氢", symbol: "H" }
+    , { atomicNumber: 2, name: "氦", symbol: "He" }
+    , { atomicNumber: 3, name: "锂", symbol: "Li" }
+    , { atomicNumber: 4, name: "铍", symbol: "Be" }
+    , { atomicNumber: 5, name: "硼", symbol: "B" }
+    , { atomicNumber: 6, name: "碳", symbol: "C" }
+    , { atomicNumber: 7, name: "氮", symbol: "N" }
+    , { atomicNumber: 8, name: "氧", symbol: "O" }
+    , { atomicNumber: 9, name: "氟", symbol: "F" }
+    , { atomicNumber: 10, name: "氖", symbol: "Ne" }
+    , { atomicNumber: 11, name: "钠", symbol: "Na" }
+    , { atomicNumber: 12, name: "镁", symbol: "Mg" }
+    , { atomicNumber: 13, name: "铝", symbol: "Al" }
+    , { atomicNumber: 14, name: "硅", symbol: "Si" }
+    , { atomicNumber: 15, name: "磷", symbol: "P" }
+    , { atomicNumber: 16, name: "硫", symbol: "S" }
+    , { atomicNumber: 17, name: "氯", symbol: "Cl" }
+    , { atomicNumber: 18, name: "氩", symbol: "Ar" }
+    , { atomicNumber: 19, name: "钾", symbol: "K" }
+    , { atomicNumber: 20, name: "钙", symbol: "Ca" }
+    , { atomicNumber: 21, name: "钪", symbol: "Sc" }
+    , { atomicNumber: 22, name: "钛", symbol: "Ti" }
+    , { atomicNumber: 23, name: "钒", symbol: "V" }
+    , { atomicNumber: 24, name: "铬", symbol: "Cr" }
+    , { atomicNumber: 25, name: "锰", symbol: "Mn" }
+    , { atomicNumber: 26, name: "铁", symbol: "Fe" }
+    , { atomicNumber: 27, name: "钴", symbol: "Co" }
+    , { atomicNumber: 28, name: "镍", symbol: "Ni" }
+    , { atomicNumber: 29, name: "铜", symbol: "Cu" }
+    , { atomicNumber: 30, name: "锌", symbol: "Zn" }
+    , { atomicNumber: 31, name: "镓", symbol: "Ga" }
+    , { atomicNumber: 32, name: "锗", symbol: "Ge" }
+    , { atomicNumber: 33, name: "砷", symbol: "As" }
+    , { atomicNumber: 34, name: "硒", symbol: "Se" }
+    , { atomicNumber: 35, name: "溴", symbol: "Br" }
+    , { atomicNumber: 36, name: "氪", symbol: "Kr" }
+    , { atomicNumber: 37, name: "铷", symbol: "Rb" }
+    , { atomicNumber: 38, name: "锶", symbol: "Sr" }
+    , { atomicNumber: 39, name: "钇", symbol: "Y" }
+    , { atomicNumber: 40, name: "锆", symbol: "Zr" }
+    , { atomicNumber: 41, name: "铌", symbol: "Nb" }
+    , { atomicNumber: 42, name: "钼", symbol: "Mo" }
+    , { atomicNumber: 43, name: "锝", symbol: "Tc" }
+    , { atomicNumber: 44, name: "钌", symbol: "Ru" }
+    , { atomicNumber: 45, name: "铑", symbol: "Rh" }
+    , { atomicNumber: 46, name: "钯", symbol: "Pd" }
+    , { atomicNumber: 47, name: "银", symbol: "Ag" }
+    , { atomicNumber: 48, name: "镉", symbol: "Cd" }
+    , { atomicNumber: 49, name: "铟", symbol: "In" }
+    , { atomicNumber: 50, name: "锡", symbol: "Sn" }
+    , { atomicNumber: 51, name: "锑", symbol: "Sb" }
+    , { atomicNumber: 52, name: "碲", symbol: "Te" }
+    , { atomicNumber: 53, name: "碘", symbol: "I" }
+    , { atomicNumber: 54, name: "氙", symbol: "Xe" }
+    , { atomicNumber: 55, name: "铯", symbol: "Cs" }
+    , { atomicNumber: 56, name: "钡", symbol: "Ba" }
+    , { atomicNumber: 57, name: "镧", symbol: "La" }
+    , { atomicNumber: 58, name: "铈", symbol: "Ce" }
+    , { atomicNumber: 59, name: "镨", symbol: "Pr" }
+    , { atomicNumber: 60, name: "钕", symbol: "Nd" }
+    , { atomicNumber: 61, name: "钷", symbol: "Pm" }
+    , { atomicNumber: 62, name: "钐", symbol: "Sm" }
+    , { atomicNumber: 63, name: "铕", symbol: "Eu" }
+    , { atomicNumber: 64, name: "钆", symbol: "Gd" }
+    , { atomicNumber: 65, name: "铽", symbol: "Tb" }
+    , { atomicNumber: 66, name: "镝", symbol: "Dy" }
+    , { atomicNumber: 67, name: "钬", symbol: "Ho" }
+    , { atomicNumber: 68, name: "铒", symbol: "Er" }
+    , { atomicNumber: 69, name: "铥", symbol: "Tm" }
+    , { atomicNumber: 70, name: "镱", symbol: "Yb" }
+    , { atomicNumber: 71, name: "镥", symbol: "Lu" }
+    , { atomicNumber: 72, name: "铪", symbol: "Hf" }
+    , { atomicNumber: 73, name: "钽", symbol: "Ta" }
+    , { atomicNumber: 74, name: "钨", symbol: "W" }
+    , { atomicNumber: 75, name: "铼", symbol: "Re" }
+    , { atomicNumber: 76, name: "锇", symbol: "Os" }
+    , { atomicNumber: 77, name: "铱", symbol: "Ir" }
+    , { atomicNumber: 78, name: "铂", symbol: "Pt" }
+    , { atomicNumber: 79, name: "金", symbol: "Au" }
+    , { atomicNumber: 80, name: "汞", symbol: "Hg" }
+    , { atomicNumber: 81, name: "铊", symbol: "Tl" }
+    , { atomicNumber: 82, name: "铅", symbol: "Pb" }
+    , { atomicNumber: 83, name: "铋", symbol: "Bi" }
+    , { atomicNumber: 84, name: "钋", symbol: "Po" }
+    , { atomicNumber: 85, name: "砹", symbol: "At" }
+    , { atomicNumber: 86, name: "氡", symbol: "Rn" }
+    , { atomicNumber: 87, name: "钫", symbol: "Fr" }
+    , { atomicNumber: 88, name: "镭", symbol: "Ra" }
+    , { atomicNumber: 89, name: "锕", symbol: "Ac" }
+    , { atomicNumber: 90, name: "钍", symbol: "Th" }
+    , { atomicNumber: 91, name: "镤", symbol: "Pa" }
+    , { atomicNumber: 92, name: "铀", symbol: "U" }
+    , { atomicNumber: 93, name: "镎", symbol: "Np" }
+    , { atomicNumber: 94, name: "钚", symbol: "Pu" }
+    , { atomicNumber: 95, name: "镅", symbol: "Am" }
+    , { atomicNumber: 96, name: "锔", symbol: "Cm" }
+    , { atomicNumber: 97, name: "锫", symbol: "Bk" }
+    , { atomicNumber: 98, name: "锎", symbol: "Cf" }
+    , { atomicNumber: 99, name: "锿", symbol: "Es" }
+    , { atomicNumber: 100, name: "镄", symbol: "Fm" }
+    , { atomicNumber: 101, name: "钔", symbol: "Md" }
+    , { atomicNumber: 102, name: "锘", symbol: "No" }
+    , { atomicNumber: 103, name: "铹", symbol: "Lr" }
+    , { atomicNumber: 104, name: "𬬻", symbol: "Rf" }
+    , { atomicNumber: 105, name: "𬭊", symbol: "Db" }
+    , { atomicNumber: 106, name: "𬭳", symbol: "Sg" }
+    , { atomicNumber: 107, name: "𬭛", symbol: "Bh" }
+    , { atomicNumber: 108, name: "𬭶", symbol: "Hs" }
+    , { atomicNumber: 109, name: "鿏", symbol: "Mt" }
+    , { atomicNumber: 110, name: "𫟼", symbol: "Ds" }
+    , { atomicNumber: 111, name: "𬬭", symbol: "Rg" }
+    , { atomicNumber: 112, name: "鿔", symbol: "Cn" }
+    , { atomicNumber: 113, name: "鿭", symbol: "Nh" }
+    , { atomicNumber: 114, name: "𫓧", symbol: "Fl" }
+    , { atomicNumber: 115, name: "镆", symbol: "Mc" }
+    , { atomicNumber: 116, name: "𫟷", symbol: "Lv" }
+    , { atomicNumber: 117, name: "鿬", symbol: "Ts" }
+    , { atomicNumber: 118, name: "鿫", symbol: "Og" }
+    ]

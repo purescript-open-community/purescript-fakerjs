@@ -2,10 +2,8 @@ module Fakerjs2.Locales.Base.System.DirectoryPath (directory_path) where
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (DirectoryPath)
 import Unsafe.Coerce (unsafeCoerce)
 
-directory_path :: DirectoryPath
 directory_path = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
   [ "/Applications"
   , "/bin"

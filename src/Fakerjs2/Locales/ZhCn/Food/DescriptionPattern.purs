@@ -2,10 +2,8 @@ module Fakerjs2.Locales.ZhCn.Food.DescriptionPattern (description_pattern) where
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (DescriptionPattern)
 import Unsafe.Coerce (unsafeCoerce)
 
-description_pattern :: DescriptionPattern
 description_pattern = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
   [ "{{food.ingredient}}搭配一撮{{food.spice}}，上面放着焦糖化的{{food.fruit}}和一层鲜奶油。"
   , "{{food.meat}}牛排，外裹一层{{food.adjective}}的{{food.spice}}酥壳，配上{{food.spice}}味的捣碎{{food.vegetable}}。"

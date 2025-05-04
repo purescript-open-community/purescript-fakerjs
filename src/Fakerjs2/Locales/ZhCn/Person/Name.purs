@@ -1,7 +1,9 @@
 module Fakerjs2.Locales.ZhCn.Person.Name (name) where
 
-import Data.String.NonEmpty (unsafeFromString)
-import Fakerjs2.Types (Name)
+import Data.Array.NonEmpty (NonEmptyArray)
+import Data.String.NonEmpty (NonEmptyString)
+import Fakerjs2.Types (Weighted)
+import Unsafe.Coerce (unsafeCoerce)
 
-name :: Name
-name = [ { value: unsafeFromString "{{person.lastName}}{{person.firstName}}", weight: 1 } ]
+name = (unsafeCoerce :: Array (Weighted String) -> NonEmptyArray (Weighted NonEmptyString))
+  [ { value: "{{person.lastName}}{{person.firstName}}", weight: 1 } ]

@@ -2,10 +2,8 @@ module Fakerjs2.Locales.En.Hacker.Phrase (phrase) where
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (Phrase)
 import Unsafe.Coerce (unsafeCoerce)
 
-phrase :: Phrase
 phrase = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
   [ "I'll {{verb}} the {{adjective}} {{abbreviation}} {{noun}}, that should {{noun}} the {{abbreviation}} {{noun}}!"
   , "If we {{verb}} the {{noun}}, we can get to the {{abbreviation}} {{noun}} through the {{adjective}} {{abbreviation}} {{noun}}!"

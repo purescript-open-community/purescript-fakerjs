@@ -2,10 +2,8 @@ module Fakerjs2.Locales.ZhCn.Hacker.Phrase (phrase) where
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (Phrase)
 import Unsafe.Coerce (unsafeCoerce)
 
-phrase :: Phrase
 phrase = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
   [ "{{abbreviation}}{{noun}}已关闭，因为{{adjective}}{{noun}}所以我们能{{verb}}{{abbreviation}}{{noun}}！"
   , "{{verb}}{{noun}}是无济于事的，我们需要{{verb}}{{adjective}}{{abbreviation}}{{noun}}！"

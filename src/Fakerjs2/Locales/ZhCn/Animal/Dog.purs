@@ -2,10 +2,8 @@ module Fakerjs2.Locales.ZhCn.Animal.Dog (dog) where
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (Dog)
 import Unsafe.Coerce (unsafeCoerce)
 
-dog :: Dog
 dog = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
   [ "下司犬"
   , "中华田园犬"

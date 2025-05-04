@@ -2,10 +2,8 @@ module Fakerjs2.Locales.ZhCn.Food.Spice (spice) where
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (Spice)
 import Unsafe.Coerce (unsafeCoerce)
 
-spice :: Spice
 spice = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
   [ "丁香"
   , "五香粉"

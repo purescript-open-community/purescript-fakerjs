@@ -1,12 +1,9 @@
 module Fakerjs2.Locales.ZhCn.Location.State (state) where
 
 import Data.Array.NonEmpty (NonEmptyArray)
-import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (State)
 import Unsafe.Coerce (unsafeCoerce)
 
-state :: State
-state = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
+state = (unsafeCoerce :: Array String -> NonEmptyArray String)
   [ "北京市"
   , "上海市"
   , "天津市"

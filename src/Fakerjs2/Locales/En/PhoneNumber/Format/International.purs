@@ -2,8 +2,6 @@ module Fakerjs2.Locales.En.PhoneNumber.Format.International (international) wher
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (International)
 import Unsafe.Coerce (unsafeCoerce)
 
-international :: International
 international = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString) [ "+1!##!######" ]

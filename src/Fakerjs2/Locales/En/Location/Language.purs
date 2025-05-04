@@ -1,283 +1,83 @@
 module Fakerjs2.Locales.En.Location.Language (language) where
 
-import Data.String.NonEmpty (unsafeFromString)
-import Fakerjs2.Types (Language)
+import Data.Array.NonEmpty (NonEmptyArray)
+import Data.String.NonEmpty (NonEmptyString)
+import Unsafe.Coerce (unsafeCoerce)
 
-language :: Language
 language =
-  [ { alpha3: unsafeFromString "afr"
-    , alpha2: unsafeFromString "af"
-    , name: unsafeFromString "Afrikaans"
-    }
-  , { alpha3: unsafeFromString "aze"
-    , alpha2: unsafeFromString "az"
-    , name: unsafeFromString "Azerbaijani"
-    }
-  , { alpha3: unsafeFromString "div"
-    , alpha2: unsafeFromString "dv"
-    , name: unsafeFromString "Maldivian"
-    }
-  , { alpha3: unsafeFromString "fas"
-    , alpha2: unsafeFromString "fa"
-    , name: unsafeFromString "Farsi/Persian"
-    }
-  , { alpha3: unsafeFromString "lav"
-    , alpha2: unsafeFromString "lv"
-    , name: unsafeFromString "Latvian"
-    }
-  , { alpha3: unsafeFromString "ind"
-    , alpha2: unsafeFromString "id"
-    , name: unsafeFromString "Indonesian"
-    }
-  , { alpha3: unsafeFromString "nep"
-    , alpha2: unsafeFromString "ne"
-    , name: unsafeFromString "Nepali"
-    }
-  , { alpha3: unsafeFromString "tha", alpha2: unsafeFromString "th", name: unsafeFromString "Thai" }
-  , { alpha3: unsafeFromString "uzb"
-    , alpha2: unsafeFromString "uz"
-    , name: unsafeFromString "Uzbek"
-    }
-  , { alpha3: unsafeFromString "yor"
-    , alpha2: unsafeFromString "yo"
-    , name: unsafeFromString "Yoruba"
-    }
-  , { alpha3: unsafeFromString "pus"
-    , alpha2: unsafeFromString "ps"
-    , name: unsafeFromString "Pashto"
-    }
-  , { alpha3: unsafeFromString "eng"
-    , alpha2: unsafeFromString "en"
-    , name: unsafeFromString "English"
-    }
-  , { alpha3: unsafeFromString "urd", alpha2: unsafeFromString "ur", name: unsafeFromString "Urdu" }
-  , { alpha3: unsafeFromString "deu"
-    , alpha2: unsafeFromString "de"
-    , name: unsafeFromString "German"
-    }
-  , { alpha3: unsafeFromString "fra"
-    , alpha2: unsafeFromString "fr"
-    , name: unsafeFromString "French"
-    }
-  , { alpha3: unsafeFromString "spa"
-    , alpha2: unsafeFromString "es"
-    , name: unsafeFromString "Spanish"
-    }
-  , { alpha3: unsafeFromString "ita"
-    , alpha2: unsafeFromString "it"
-    , name: unsafeFromString "Italian"
-    }
-  , { alpha3: unsafeFromString "nld"
-    , alpha2: unsafeFromString "nl"
-    , name: unsafeFromString "Dutch"
-    }
-  , { alpha3: unsafeFromString "rus"
-    , alpha2: unsafeFromString "ru"
-    , name: unsafeFromString "Russian"
-    }
-  , { alpha3: unsafeFromString "por"
-    , alpha2: unsafeFromString "pt"
-    , name: unsafeFromString "Portuguese"
-    }
-  , { alpha3: unsafeFromString "pol"
-    , alpha2: unsafeFromString "pl"
-    , name: unsafeFromString "Polish"
-    }
-  , { alpha3: unsafeFromString "ara"
-    , alpha2: unsafeFromString "ar"
-    , name: unsafeFromString "Arabic"
-    }
-  , { alpha3: unsafeFromString "jpn"
-    , alpha2: unsafeFromString "ja"
-    , name: unsafeFromString "Japanese"
-    }
-  , { alpha3: unsafeFromString "zho"
-    , alpha2: unsafeFromString "zh"
-    , name: unsafeFromString "Chinese"
-    }
-  , { alpha3: unsafeFromString "hin"
-    , alpha2: unsafeFromString "hi"
-    , name: unsafeFromString "Hindi"
-    }
-  , { alpha3: unsafeFromString "ben"
-    , alpha2: unsafeFromString "bn"
-    , name: unsafeFromString "Bengali"
-    }
-  , { alpha3: unsafeFromString "guj"
-    , alpha2: unsafeFromString "gu"
-    , name: unsafeFromString "Gujarati"
-    }
-  , { alpha3: unsafeFromString "tam"
-    , alpha2: unsafeFromString "ta"
-    , name: unsafeFromString "Tamil"
-    }
-  , { alpha3: unsafeFromString "tel"
-    , alpha2: unsafeFromString "te"
-    , name: unsafeFromString "Telugu"
-    }
-  , { alpha3: unsafeFromString "pan"
-    , alpha2: unsafeFromString "pa"
-    , name: unsafeFromString "Punjabi"
-    }
-  , { alpha3: unsafeFromString "vie"
-    , alpha2: unsafeFromString "vi"
-    , name: unsafeFromString "Vietnamese"
-    }
-  , { alpha3: unsafeFromString "kor"
-    , alpha2: unsafeFromString "ko"
-    , name: unsafeFromString "Korean"
-    }
-  , { alpha3: unsafeFromString "tur"
-    , alpha2: unsafeFromString "tr"
-    , name: unsafeFromString "Turkish"
-    }
-  , { alpha3: unsafeFromString "swe"
-    , alpha2: unsafeFromString "sv"
-    , name: unsafeFromString "Swedish"
-    }
-  , { alpha3: unsafeFromString "ell"
-    , alpha2: unsafeFromString "el"
-    , name: unsafeFromString "Greek"
-    }
-  , { alpha3: unsafeFromString "ces"
-    , alpha2: unsafeFromString "cs"
-    , name: unsafeFromString "Czech"
-    }
-  , { alpha3: unsafeFromString "hun"
-    , alpha2: unsafeFromString "hu"
-    , name: unsafeFromString "Hungarian"
-    }
-  , { alpha3: unsafeFromString "ron"
-    , alpha2: unsafeFromString "ro"
-    , name: unsafeFromString "Romanian"
-    }
-  , { alpha3: unsafeFromString "ukr"
-    , alpha2: unsafeFromString "uk"
-    , name: unsafeFromString "Ukrainian"
-    }
-  , { alpha3: unsafeFromString "nor"
-    , alpha2: unsafeFromString "no"
-    , name: unsafeFromString "Norwegian"
-    }
-  , { alpha3: unsafeFromString "srp"
-    , alpha2: unsafeFromString "sr"
-    , name: unsafeFromString "Serbian"
-    }
-  , { alpha3: unsafeFromString "hrv"
-    , alpha2: unsafeFromString "hr"
-    , name: unsafeFromString "Croatian"
-    }
-  , { alpha3: unsafeFromString "slk"
-    , alpha2: unsafeFromString "sk"
-    , name: unsafeFromString "Slovak"
-    }
-  , { alpha3: unsafeFromString "slv"
-    , alpha2: unsafeFromString "sl"
-    , name: unsafeFromString "Slovenian"
-    }
-  , { alpha3: unsafeFromString "isl"
-    , alpha2: unsafeFromString "is"
-    , name: unsafeFromString "Icelandic"
-    }
-  , { alpha3: unsafeFromString "fin"
-    , alpha2: unsafeFromString "fi"
-    , name: unsafeFromString "Finnish"
-    }
-  , { alpha3: unsafeFromString "dan"
-    , alpha2: unsafeFromString "da"
-    , name: unsafeFromString "Danish"
-    }
-  , { alpha3: unsafeFromString "swa"
-    , alpha2: unsafeFromString "sw"
-    , name: unsafeFromString "Swahili"
-    }
-  , { alpha3: unsafeFromString "bak"
-    , alpha2: unsafeFromString "ba"
-    , name: unsafeFromString "Bashkir"
-    }
-  , { alpha3: unsafeFromString "eus"
-    , alpha2: unsafeFromString "eu"
-    , name: unsafeFromString "Basque"
-    }
-  , { alpha3: unsafeFromString "cat"
-    , alpha2: unsafeFromString "ca"
-    , name: unsafeFromString "Catalan"
-    }
-  , { alpha3: unsafeFromString "glg"
-    , alpha2: unsafeFromString "gl"
-    , name: unsafeFromString "Galician"
-    }
-  , { alpha3: unsafeFromString "epo"
-    , alpha2: unsafeFromString "eo"
-    , name: unsafeFromString "Esperanto"
-    }
-  , { alpha3: unsafeFromString "fij"
-    , alpha2: unsafeFromString "fj"
-    , name: unsafeFromString "Fijian"
-    }
-  , { alpha3: unsafeFromString "mlg"
-    , alpha2: unsafeFromString "mg"
-    , name: unsafeFromString "Malagasy"
-    }
-  , { alpha3: unsafeFromString "mlt"
-    , alpha2: unsafeFromString "mt"
-    , name: unsafeFromString "Maltese"
-    }
-  , { alpha3: unsafeFromString "sqi"
-    , alpha2: unsafeFromString "sq"
-    , name: unsafeFromString "Albanian"
-    }
-  , { alpha3: unsafeFromString "hye"
-    , alpha2: unsafeFromString "hy"
-    , name: unsafeFromString "Armenian"
-    }
-  , { alpha3: unsafeFromString "kat"
-    , alpha2: unsafeFromString "ka"
-    , name: unsafeFromString "Georgian"
-    }
-  , { alpha3: unsafeFromString "mkd"
-    , alpha2: unsafeFromString "mk"
-    , name: unsafeFromString "Macedonian"
-    }
-  , { alpha3: unsafeFromString "kaz"
-    , alpha2: unsafeFromString "kk"
-    , name: unsafeFromString "Kazakh"
-    }
-  , { alpha3: unsafeFromString "hat"
-    , alpha2: unsafeFromString "ht"
-    , name: unsafeFromString "Haitian Creole"
-    }
-  , { alpha3: unsafeFromString "mon"
-    , alpha2: unsafeFromString "mn"
-    , name: unsafeFromString "Mongolian"
-    }
-  , { alpha3: unsafeFromString "kir"
-    , alpha2: unsafeFromString "ky"
-    , name: unsafeFromString "Kyrgyz"
-    }
-  , { alpha3: unsafeFromString "fin"
-    , alpha2: unsafeFromString "fi"
-    , name: unsafeFromString "Finnish"
-    }
-  , { alpha3: unsafeFromString "tgl"
-    , alpha2: unsafeFromString "tl"
-    , name: unsafeFromString "Tagalog"
-    }
-  , { alpha3: unsafeFromString "msa"
-    , alpha2: unsafeFromString "ms"
-    , name: unsafeFromString "Malay"
-    }
-  , { alpha3: unsafeFromString "tgk"
-    , alpha2: unsafeFromString "tg"
-    , name: unsafeFromString "Tajik"
-    }
-  , { alpha3: unsafeFromString "ssw"
-    , alpha2: unsafeFromString "ss"
-    , name: unsafeFromString "Swati"
-    }
-  , { alpha3: unsafeFromString "tat"
-    , alpha2: unsafeFromString "tt"
-    , name: unsafeFromString "Tatar"
-    }
-  , { alpha3: unsafeFromString "zul", alpha2: unsafeFromString "zu", name: unsafeFromString "Zulu" }
-  ]
+  ( unsafeCoerce
+      :: Array { alpha2 :: String, alpha3 :: String, name :: String }
+      -> NonEmptyArray { alpha2 :: NonEmptyString, alpha3 :: NonEmptyString, name :: NonEmptyString }
+  )
+    [ { alpha2: "af", alpha3: "afr", name: "Afrikaans" }
+    , { alpha2: "az", alpha3: "aze", name: "Azerbaijani" }
+    , { alpha2: "dv", alpha3: "div", name: "Maldivian" }
+    , { alpha2: "fa", alpha3: "fas", name: "Farsi/Persian" }
+    , { alpha2: "lv", alpha3: "lav", name: "Latvian" }
+    , { alpha2: "id", alpha3: "ind", name: "Indonesian" }
+    , { alpha2: "ne", alpha3: "nep", name: "Nepali" }
+    , { alpha2: "th", alpha3: "tha", name: "Thai" }
+    , { alpha2: "uz", alpha3: "uzb", name: "Uzbek" }
+    , { alpha2: "yo", alpha3: "yor", name: "Yoruba" }
+    , { alpha2: "ps", alpha3: "pus", name: "Pashto" }
+    , { alpha2: "en", alpha3: "eng", name: "English" }
+    , { alpha2: "ur", alpha3: "urd", name: "Urdu" }
+    , { alpha2: "de", alpha3: "deu", name: "German" }
+    , { alpha2: "fr", alpha3: "fra", name: "French" }
+    , { alpha2: "es", alpha3: "spa", name: "Spanish" }
+    , { alpha2: "it", alpha3: "ita", name: "Italian" }
+    , { alpha2: "nl", alpha3: "nld", name: "Dutch" }
+    , { alpha2: "ru", alpha3: "rus", name: "Russian" }
+    , { alpha2: "pt", alpha3: "por", name: "Portuguese" }
+    , { alpha2: "pl", alpha3: "pol", name: "Polish" }
+    , { alpha2: "ar", alpha3: "ara", name: "Arabic" }
+    , { alpha2: "ja", alpha3: "jpn", name: "Japanese" }
+    , { alpha2: "zh", alpha3: "zho", name: "Chinese" }
+    , { alpha2: "hi", alpha3: "hin", name: "Hindi" }
+    , { alpha2: "bn", alpha3: "ben", name: "Bengali" }
+    , { alpha2: "gu", alpha3: "guj", name: "Gujarati" }
+    , { alpha2: "ta", alpha3: "tam", name: "Tamil" }
+    , { alpha2: "te", alpha3: "tel", name: "Telugu" }
+    , { alpha2: "pa", alpha3: "pan", name: "Punjabi" }
+    , { alpha2: "vi", alpha3: "vie", name: "Vietnamese" }
+    , { alpha2: "ko", alpha3: "kor", name: "Korean" }
+    , { alpha2: "tr", alpha3: "tur", name: "Turkish" }
+    , { alpha2: "sv", alpha3: "swe", name: "Swedish" }
+    , { alpha2: "el", alpha3: "ell", name: "Greek" }
+    , { alpha2: "cs", alpha3: "ces", name: "Czech" }
+    , { alpha2: "hu", alpha3: "hun", name: "Hungarian" }
+    , { alpha2: "ro", alpha3: "ron", name: "Romanian" }
+    , { alpha2: "uk", alpha3: "ukr", name: "Ukrainian" }
+    , { alpha2: "no", alpha3: "nor", name: "Norwegian" }
+    , { alpha2: "sr", alpha3: "srp", name: "Serbian" }
+    , { alpha2: "hr", alpha3: "hrv", name: "Croatian" }
+    , { alpha2: "sk", alpha3: "slk", name: "Slovak" }
+    , { alpha2: "sl", alpha3: "slv", name: "Slovenian" }
+    , { alpha2: "is", alpha3: "isl", name: "Icelandic" }
+    , { alpha2: "fi", alpha3: "fin", name: "Finnish" }
+    , { alpha2: "da", alpha3: "dan", name: "Danish" }
+    , { alpha2: "sw", alpha3: "swa", name: "Swahili" }
+    , { alpha2: "ba", alpha3: "bak", name: "Bashkir" }
+    , { alpha2: "eu", alpha3: "eus", name: "Basque" }
+    , { alpha2: "ca", alpha3: "cat", name: "Catalan" }
+    , { alpha2: "gl", alpha3: "glg", name: "Galician" }
+    , { alpha2: "eo", alpha3: "epo", name: "Esperanto" }
+    , { alpha2: "fj", alpha3: "fij", name: "Fijian" }
+    , { alpha2: "mg", alpha3: "mlg", name: "Malagasy" }
+    , { alpha2: "mt", alpha3: "mlt", name: "Maltese" }
+    , { alpha2: "sq", alpha3: "sqi", name: "Albanian" }
+    , { alpha2: "hy", alpha3: "hye", name: "Armenian" }
+    , { alpha2: "ka", alpha3: "kat", name: "Georgian" }
+    , { alpha2: "mk", alpha3: "mkd", name: "Macedonian" }
+    , { alpha2: "kk", alpha3: "kaz", name: "Kazakh" }
+    , { alpha2: "ht", alpha3: "hat", name: "Haitian Creole" }
+    , { alpha2: "mn", alpha3: "mon", name: "Mongolian" }
+    , { alpha2: "ky", alpha3: "kir", name: "Kyrgyz" }
+    , { alpha2: "fi", alpha3: "fin", name: "Finnish" }
+    , { alpha2: "tl", alpha3: "tgl", name: "Tagalog" }
+    , { alpha2: "ms", alpha3: "msa", name: "Malay" }
+    , { alpha2: "tg", alpha3: "tgk", name: "Tajik" }
+    , { alpha2: "ss", alpha3: "ssw", name: "Swati" }
+    , { alpha2: "tt", alpha3: "tat", name: "Tatar" }
+    , { alpha2: "zu", alpha3: "zul", name: "Zulu" }
+    ]

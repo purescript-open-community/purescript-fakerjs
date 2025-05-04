@@ -2,10 +2,8 @@ module Fakerjs2.Locales.En.Book.Title (title) where
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (Title)
 import Unsafe.Coerce (unsafeCoerce)
 
-title :: Title
 title = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
   [ "1984"
   , "20,000 Leagues Under the Sea"

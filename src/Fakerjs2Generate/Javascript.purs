@@ -49,4 +49,10 @@ javascriptCodec = CA.codec' decode encode
       <|> (Javascript_Map <$> CA.decode (CA.strMap javascriptCodec) j)
 
   encode ∷ Javascript → J.Json
-  encode x = unsafeCrashWith "not implemented"
+  encode = case _ of
+    Javascript_Null -> CA.encode CA.null unit
+    Javascript_EmptyString -> CA.encode CA.string ""
+    Javascript_Int i -> CA.encode CA.int i
+    Javascript_NonEmptyString s -> CA.encode CA.nonEmptyString s
+    Javascript_NonEmptyArray arr -> CA.encode (CA.nonEmptyArray javascriptCodec) arr
+    Javascript_Map m -> CA.encode (CA.strMap javascriptCodec) m

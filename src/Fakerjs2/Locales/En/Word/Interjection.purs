@@ -2,10 +2,8 @@ module Fakerjs2.Locales.En.Word.Interjection (interjection) where
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (Interjection)
 import Unsafe.Coerce (unsafeCoerce)
 
-interjection :: Interjection
 interjection = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
   [ "yuck"
   , "oh"

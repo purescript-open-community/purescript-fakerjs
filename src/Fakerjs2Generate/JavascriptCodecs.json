@@ -1,31 +1,22 @@
 {
   "cell_phone/formats.ts": [
     "### ## ## ##",
-    "###-###-####",
-    "###.###.####",
-    "###/## ## ##",
-    "(###) ###-####",
-    "(+995 32) 2-##-##-##",
-    "04##/### ###",
     "{{cell_phone.common_cell_prefix}}-###-####"
   ],
   "company/legal_entity_type.ts": [
-    "（集团）有限公司"
+    "& Co.",
   ],
   "internet/domain_suffix.ts": [
-    "укр"
   ],
   "location/city_name.ts": [
-    "창원",
     "통영"
   ],
   "location/city_pattern.ts": [
-    "{{company.adjective}}{{company.noun}}{{location.city_suffix}}",
     "{{person.last_name.generic}}{{location.city_suffix}}"
   ],
   "location/postcode.ts": [
-    "1### ??",
-    "A## ****",
+    "## ###",
+    "Y## ****",
     "Y#? #?#",
     null
   ],
@@ -35,157 +26,13 @@
   ],
   "location/street_pattern.ts": [
     "{{company.adjective}} {{company.noun}} {{location.street_suffix}}",
-    "{{number.int({\"max\": 9, \"min\": 1})}}丁目{{number.int({\"max\": 9, \"min\": 1})}}番{{number.int({\"max\": 9, \"min\": 1})}}号",
-    "{{person.firstName}} {{location.street_suffix}}",
+    "{{person.last_name.generic}}{{location.street_suffix}}"
   ],
   "person/first_name.ts": [
-    {
-      "generic": [
-        "Yvonne"
-      ],
-      "female": [
-        "Yvonne"
-      ],
-      "male": [
-        "Willie"
-      ]
-    }
   ],
   "person/last_name.ts": [
-    {
-      "generic": [
-        "Ackerman",
-      ]
-    },
-    {
-      "generic": [
-        "ادريس",
-      ]
-    },
-    {
-      "generic": [
-        "Žůrková"
-      ],
-      "female": [
-        "Adamcová",
-      ],
-      "male": [
-        "Žůrek"
-      ]
-    },
   ],
   "person/last_name_pattern.ts": [
-    {
-      "generic": [
-        {
-          "value": "{{person.last_name.generic}}",
-          "weight": 1
-        }
-      ]
-    },
-  ],
-  "color/human.ts": [
-    "회색"
-  ],
-  "commerce/department.ts": [
-    "音乐"
-  ],
-  "commerce/product_name.ts": [
-    {
-      "adjective": [
-        "يدويا"
-      ],
-      "material": [
-        "ناعم"
-      ],
-      "product": [
-        "مناشف"
-      ]
-    },
-  ],
-  "date/month.ts": [
-    {
-      "wide": [
-        "آب",
-      ],
-      "abbr": [
-        "أغسطس",
-      ]
-    },
-  ],
-  "date/weekday.ts": [
-    {
-      "abbr": null,
-      "wide": [
-        "الأحَد",
-      ]
-    },
-  ],
-  "location/building_number.ts": [
-    " s/n.",
-    "#",
-  ],
-  "location/country.ts": [
-    "黑山"
-  ],
-  "location/secondary_address.ts": [
-    "{{person.last_name.generic}}###号室",
-  ],
-  "location/street_address.ts": [
-    {
-      "normal": "{{location.buildingNumber}} {{location.street}}",
-      "full": "{{location.buildingNumber}} {{location.street}} {{location.secondaryAddress}}"
-    },
-  ],
-  "location/street_prefix.ts": [
-    "Acesso",
-  ],
-  "lorem/word.ts": [
-    "",
-    " و زمان",
-  ],
-  "person/job_type.ts": [
-    "წარმომადგენელი"
-  ],
-  "person/name.ts": [
-    {
-      "value": "{{person.prefix}} {{person.firstName}} {{person.lastName}}",
-      "weight": 1
-    },
-  ],
-  "person/prefix.ts": [
-    {
-      "generic": [
-        "آنسة",
-      ],
-      "female": [
-        "آنسة",
-      ],
-      "male": [
-        "بروفيسور",
-      ]
-    },
-  ],
-  "person/suffix.ts": [
-    "DDS",
-  ],
-  "team/creature.ts": [
-    "Vixens",
-  ],
-  "team/name.ts": [
-    "{{location.city}} {{team.suffix}}",
-  ],
-  "vehicle/fuel.ts": [
-    "Diesel",
-  ],
-  "vehicle/manufacturer.ts": [
-    "Aston Martin",
-  ],
-  "vehicle/model.ts": [
-    "1",
-  ],
-  "vehicle/type.ts": [
-    "Berlines",
   ],
   "color/space.ts": [
     "Academy Color Encoding System (ACES)",
@@ -207,71 +54,29 @@
   ],
   "internet/emoji.ts": [
     {
-      "smiley": [
-        "😀",
-        "😃",
-      ],
-      "body": [
-        "👋",
-      ],
-      "person": [
-        "👶",
-      ],
-      "nature": [
-        "🐵",
-      ],
-      "food": [
-        "🍇",
-      ],
-      "travel": [
-        "🌍",
-      ],
-      "activity": [
-        "🎃",
-        "🎄",
-      ],
-      "object": [
-        "👓",
-      ],
-      "symbol": [
-        "🏧",
-      ],
-      "flag": [
-        "🏁",
-      ]
     }
   ],
   "internet/http_status_code.ts": [
-    {
-      "informational": [
-        100,
-      ],
-      "success": [
-        200,
-      ],
-      "redirection": [
-        300,
-      ],
-      "clientError": [
-        400,
-      ],
-      "serverError": [
-        500,
-      ]
-    }
   ],
   "internet/jwt_algorithm.ts": [
     "ES256",
   ],
   "internet/user_agent_pattern.ts": [
     "FakerBot/{{system.semver}}",
-    "Googlebot/2.1 (+http://www.google.com/bot.html)",
   ],
   "location/country_code.ts": [
     {
-      "alpha2": "AD",
-      "alpha3": "AND",
-      "numeric": "020"
+    },
+    {
+      "alpha2": "AE",
+    },
+    {
+      "alpha2": "AF",
+    },
+    {
+      "alpha2": "AG",
+      "alpha3": "ATG",
+      "numeric": "028"
     },
   ],
   "location/time_zone.ts": [
@@ -281,38 +86,119 @@
     "/Applications",
   ],
   "system/mime_type.ts": [
-    {
-      "application/epub+zip": {
-        "extensions": [
-          "epub"
-        ]
-      },
-    }
+  ],
+  "color/human.ts": [
+    "Anthrazit",
+  ],
+  "commerce/department.ts": [
+    "Aire libre",
+  ],
+  "commerce/product_name.ts": [
   ],
   "company/name_pattern.ts": [
     "{{company.adjective}} {{company.noun}} {{company.legal_entity_type}}",
+    "{{company.adjective}} {{person.last_name.generic}} {{person.last_name.generic}} {{company.legal_entity_type}}",
+  ],
+  "date/month.ts": [
+  ],
+  "date/weekday.ts": [
   ],
   "internet/free_email.ts": [
     "126.com",
   ],
-  "location/state_abbr.ts": [
-    "1",
-    "10",
+  "location/building_number.ts": [
+    " #",
+    " ##",
+    " ###",
+  ],
+  "location/country.ts": [
+    "ABŞ",
+    "Afeganistão",
+  ],
+  "location/secondary_address.ts": [
+    "m. ###",
+    "{{person.last_name.generic}}###号室",
+    "ĉambro ###",
+  ],
+  "location/street_address.ts": [
   ],
   "location/street_name.ts": [
     "1. sokače",
   ],
+  "location/street_suffix.ts": [
+    " պողոտա",
+    " փողոց",
+  ],
+  "person/name.ts": [
+    {
+      "value": "{{person.firstName}}",
+      "weight": 1
+    },
+  ],
+  "person/prefix.ts": [
+  ],
+  "person/suffix.ts": [
+    "DDS",
+    "DVM",
+  ],
+  "location/state_abbr.ts": [
+    "1",
+  ],
+  "lorem/word.ts": [
+    "",
+    " و زمان",
+    "3년",
+  ],
+  "location/street_prefix.ts": [
+    "Acesso",
+    "Alameda",
+  ],
+  "person/job_type.ts": [
+    "Administrador",
+    "Administrateur",
+  ],
+  "team/creature.ts": [
+    "Vixens",
+    "abejas",
+  ],
+  "team/name.ts": [
+    "{{location.city}} {{team.suffix}}",
+    "{{location.state}} {{team.creature}}",
+    "{{team.prefix}} {{location.city}}"
+  ],
+  "vehicle/fuel.ts": [
+    "Diesel",
+  ],
+  "vehicle/manufacturer.ts": [
+    "Aston Martin",
+    "Audi",
+    "BMW",
+  ],
+  "vehicle/model.ts": [
+    "1",
+    "2",
+    "911",
+  ],
+  "vehicle/type.ts": [
+    "Berlines",
+    "Berlines compactes",
+    "Cargo Van",
+  ],
   "commerce/product_description.ts": [
     "A Dev Byte vékony és egyszerű Maple Gaming billentyűzete elegáns testtel és 7 színű RGB LED-es háttérvilágítással rendelkezik az intelligens funkcionalitás érdekében",
+    "A Nagasaki Lander több Nagasaki sportkerékpár-sorozat védjegyzett neve, amelyek az 1984-es ABC800J-vel indultak",
   ],
   "company/adjective.ts": [
     "24 ore",
+    "24/7",
   ],
   "company/buzz_adjective.ts": [
     "24/365",
+    "24/7",
   ],
   "company/buzz_noun.ts": [
     "AI",
+    "Mindshare",
   ],
   "company/buzz_verb.ts": [
     "Envisioneer",
@@ -322,6 +208,7 @@
   ],
   "company/descriptor.ts": [
     "24 horas",
+    "24 hour",
   ],
   "company/noun.ts": [
     "Abilità",
@@ -330,15 +217,27 @@
     {
       "cardinal": [
         "Nord",
+        "Øst",
+        "Syd",
+        "Vest"
       ],
       "cardinal_abbr": [
         "N",
+        "Ø",
+        "S",
+        "V"
       ],
       "ordinal": [
         "Nordøst",
+        "Nordvest",
+        "Sydøst",
+        "Sydvest"
       ],
       "ordinal_abbr": [
         "NØ",
+        "NV",
+        "SØ",
+        "SV"
       ]
     },
   ],
@@ -346,6 +245,7 @@
     {
       "generic": [
         "Birk",
+        "Bjerg",
       ],
       "female": [
         "Birk",
@@ -355,4 +255,373 @@
       ]
     },
   ],
+  "person/sex.ts": [
+    "Ayol",
+    "Erkak",
+  ],
+  "word/adjective.ts": [
+    "abandoned",
+  ],
+  "word/adverb.ts": [
+    "abbizony",
+    "abends",
+  ],
+  "word/conjunction.ts": [
+    "afin que",
+    "after",
+  ],
+  "word/interjection.ts": [
+    "a",
+  ],
+  "word/noun.ts": [
+    "AIDS",
+  ],
+  "word/preposition.ts": [
+    "a",
+  ],
+  "word/verb.ts": [
+    "aasen",
+  ],
+  "animal/type.ts": [
+    "Adler",
+  ],
+  "database/column.ts": [
+    "aktualisiertAm",
+  ],
+  "location/city_prefix.ts": [
+    "'s Herenelderen",
+  ],
+  "location/city_suffix.ts": [
+    "",
+    " Bridge",
+  ],
+  "person/nobility_title_prefix.ts": [
+    "vom",
+  ],
+  "app/author.ts": [
+    "{{company.name}}",
+    "{{person.name}}"
+  ],
+  "app/name.ts": [
+    "Alpha",
+  ],
+  "app/version.ts": [
+    "#.#",
+  ],
+  "finance/account_type.ts": [
+    "Auto Loan",
+  ],
+  "finance/currency.ts": [
+    {
+      "name": "Ευρώ",
+      "code": "EUR",
+      "symbol": "€",
+      "numericCode": "978"
+    },
+  ],
+  "finance/transaction_type.ts": [
+    "deposit",
+  ],
+  "hacker/adjective.ts": [
+    "1080-пиксельный",
+    "1080p",
+  ],
+  "hacker/noun.ts": [
+    "alarm",
+    "alarmo",
+  ],
+  "hacker/verb.ts": [
+    "aansluiten",
+  ],
+  "person/job_area.ts": [
+    "Accountability",
+  ],
+  "person/job_descriptor.ts": [
+    "Adelante",
+  ],
+  "airline/airline.ts": [
+    {
+      "name": "Aegean Airlines",
+      "iataCode": "A3"
+    },
+  ],
+  "airline/airplane.ts": [
+    {
+      "name": "Aerospatiale/BAC Concorde",
+      "iataTypeCode": "SSC"
+    },
+  ],
+  "airline/airport.ts": [
+    {
+      "name": "Adelaide International Airport",
+      "iataCode": "ADL"
+    },
+  ],
+  "animal/bear.ts": [
+    "American black bear",
+    "Asian black bear",
+  ],
+  "animal/bird.ts": [
+    "Abert's Towhee",
+  ],
+  "animal/cat.ts": [
+    "Abesszin",
+    "Abyssin",
+  ],
+  "animal/cetacean.ts": [
+    "Amazon River Dolphin",
+  ],
+  "animal/cow.ts": [
+    "Aberdeen Angus",
+  ],
+  "animal/crocodilia.ts": [
+    "African Slender-snouted Crocodile",
+  ],
+  "animal/dog.ts": [
+    "Abruzzói juhászkutya",
+  ],
+  "animal/fish.ts": [
+    "Able de Heckel",
+  ],
+  "animal/horse.ts": [
+    "Abaco Barb",
+  ],
+  "animal/insect.ts": [
+    "Abeille découpeuse de la luzerne",
+  ],
+  "animal/lion.ts": [
+    "Asiatic Lion",
+  ],
+  "animal/pet_name.ts": [
+    "Ace",
+  ],
+  "animal/rabbit.ts": [
+    "Alaska",
+  ],
+  "animal/rodent.ts": [
+    "Abrocoma",
+  ],
+  "animal/snake.ts": [
+    "Abaco Island boa",
+  ],
+  "book/author.ts": [
+    "A.A. Milne",
+  ],
+  "book/format.ts": [
+    "Audiobook",
+  ],
+  "book/genre.ts": [
+    "Adventure",
+  ],
+  "book/publisher.ts": [
+    "Academic Press",
+  ],
+  "book/series.ts": [
+    "A Song of Ice and Fire",
+  ],
+  "book/title.ts": [
+    "1984",
+  ],
+  "finance/transaction_description_pattern.ts": [
+    "A {{finance.transactionType}} for {{finance.currencyCode}} {{finance.amount}} was made at {{company.name}} via card ending ****{{string.numeric(4)}} on account ***{{string.numeric(4)}}.",
+  ],
+  "food/adjective.ts": [
+    "bitter",
+  ],
+  "food/description_pattern.ts": [
+    "A classic pie filled with delicious {{food.meat}} and {{food.adjective}} {{food.ingredient}}, baked in a {{food.adjective}} pastry crust and topped with a golden-brown lattice.",
+  ],
+  "food/dish.ts": [
+    "California maki",
+  ],
+  "food/dish_pattern.ts": [
+    "{{food.adjective}} {{food.ethnic_category}} stew",
+  ],
+  "food/ethnic_category.ts": [
+    "Ainu",
+  ],
+  "food/fruit.ts": [
+    "apple",
+  ],
+  "food/ingredient.ts": [
+    "achacha",
+  ],
+  "food/meat.ts": [
+    "beef",
+  ],
+  "food/spice.ts": [
+    "achiote seed",
+  ],
+  "food/vegetable.ts": [
+    "artichoke",
+  ],
+  "hacker/ingverb.ts": [
+    "analizado",
+  ],
+  "hacker/phrase.ts": [
+    "Als we de {{noun}} {{verb}}, dan kunnen we naar de {{abbreviation}} {{noun}} via de {{adjective}} {{abbreviation}} {{noun}}!",
+    "De {{abbreviation}} {{noun}} ligt eruit, jullie moeten de {{adjective}} {{noun}} {{verb}} zodat we de {{abbreviation}} {{noun}} kunnen {{verb}}!",
+  ],
+  "internet/example_email.ts": [
+    "example.com",
+  ],
+  "location/continent.ts": [
+    "Africa",
+  ],
+  "location/county.ts": [
+    "Adams County",
+  ],
+  "location/language.ts": [
+    {
+      "name": "Afrikaans",
+      "alpha2": "af",
+      "alpha3": "afr"
+    },
+  ],
+  "music/album.ts": [
+    "\"Awaken, My Love!\"",
+  ],
+  "music/artist.ts": [
+    "$NOT",
+  ],
+  "music/genre.ts": [
+    "Acid House",
+  ],
+  "music/song_name.ts": [
+    "(Everything I Do) I Do it For You",
+  ],
+  "person/bio_part.ts": [
+    "GLAT-ulo",
+  ],
+  "person/bio_pattern.ts": [
+    "{{person.bio_part}}",
+  ],
+  "person/bio_supporter.ts": [
+    "advocate",
+  ],
+  "person/gender.ts": [
+    "Agender",
+  ],
+  "person/job_title_pattern.ts": [
+    "{{person.jobDescriptor}} {{person.jobArea}} {{person.jobType}}",
+  ],
+  "person/western_zodiac_sign.ts": [
+    "Akvisto",
+  ],
+  "science/chemical_element.ts": [
+    {
+      "symbol": "H",
+      "name": "Hydrogen",
+      "atomicNumber": 1
+    },
+  ],
+  "science/unit.ts": [
+    {
+      "name": "meter",
+      "symbol": "m"
+    },
+  ],
+  "vehicle/bicycle_type.ts": [
+    "Adventure Road Bicycle",
+  ],
+  "location/postcode_by_state.ts": [
+    {
+      "AB": "{{helpers.fromRegExp(T[0-9][ABCEGHJ-NPRSTVW-Z] [0-9][ABCEGHJ-NPRSTVW-Z][0-9])}}",
+    },
+    {
+      "AK": "{{number.int({\"min\": 99501,\"max\": 99950})}}",
+      "AR": [
+        "{{number.int({\"min\": 71601,\"max\": 72642})}}",
+        "{{number.int({\"min\": 72644,\"max\": 72959})}}"
+      ],
+      "AZ": "{{number.int({\"min\": 85001,\"max\": 86556})}}",
+    },
+    null
+  ],
+  "location/city_infix.ts": [
+    "-le-",
+  ],
+  "location/street_cantonese_part.ts": [
+    "Chau",
+  ],
+  "location/street_english_part.ts": [
+    "Aldrich",
+  ],
+  "phone_number/area_code.ts": [
+    "10",
+  ],
+  "phone_number/exchange_code.ts": [
+    "201",
+  ],
+  "company/prefix.ts": [
+    "AS",
+  ],
+  "person/female_title.ts": [
+    "Dr.",
+  ],
+  "person/male_title.ts": [
+    "Dr.",
+  ],
+  "company/category.ts": [
+    "Збут",
+  ],
+  "location/common_street_suffix.ts": [
+    "gata",
+  ],
+  "team/prefix.ts": [
+    "GKS",
+  ],
+  "location/street_name_part.ts": [
+    "1 Mai",
+  ],
+  "company/suffix.ts": [
+    "Групп",
+  ],
+  "cell_phone/common_cell_prefix.ts": [
+    56,
+  ],
+  "team/suffix.ts": [
+    "AIF",
+  ],
+  "person/bio_parts.ts": [
+    "bitiruvchi",
+  ],
+  "person/job_title.ts": [
+    "agent",
+  ],
+  "phone_number/format/human.ts": [
+    "!# ## ## ##",
+    "995 5##-###-###"
+  ],
+  "phone_number/format/international.ts": [
+    "+###########",
+    "+1!##!######",
+  ],
+  "phone_number/format/national.ts": [
+    "!# ## ## ##",
+    "96# ### ###"
+  ],
+  "finance/credit_card/american_express.ts": [
+    "/34##-######-####L/",
+    "/37##-######-####L/",
+  ],
+  "finance/credit_card/discover.ts": [
+    "/64[4-9]#-####-####-###L/",
+    "64[4-9]#-####-####-###L",
+  ],
+  "finance/credit_card/mastercard.ts": [
+    "5[1-5]##-####-####-###L"
+  ],
+  "finance/credit_card/visa.ts": [
+    "/4###########L/",
+  ],
+  "finance/credit_card/diners_club.ts": [
+    "30[0-5]#-######-###L",
+  ],
+  "finance/credit_card/jcb.ts": [
+    "35[3-8]#-####-####-###L"
+  ],
+  "finance/credit_card/unionpay.ts": [
+    "81#############L"
+  ]
 }

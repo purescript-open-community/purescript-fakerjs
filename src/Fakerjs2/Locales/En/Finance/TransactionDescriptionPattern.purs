@@ -2,10 +2,8 @@ module Fakerjs2.Locales.En.Finance.TransactionDescriptionPattern (transaction_de
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (TransactionDescriptionPattern)
 import Unsafe.Coerce (unsafeCoerce)
 
-transaction_description_pattern :: TransactionDescriptionPattern
 transaction_description_pattern = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
   [ "A {{finance.transactionType}} for {{finance.currencyCode}} {{finance.amount}} was made at {{company.name}} via card ending ****{{string.numeric(4)}} on account ***{{string.numeric(4)}}."
   , "A {{finance.transactionType}} of {{finance.currencyCode}} {{finance.amount}} occurred at {{company.name}} using a card ending in ****{{string.numeric(4)}} for account ***{{string.numeric(4)}}."

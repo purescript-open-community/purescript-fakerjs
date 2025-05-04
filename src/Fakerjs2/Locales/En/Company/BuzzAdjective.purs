@@ -2,10 +2,8 @@ module Fakerjs2.Locales.En.Company.BuzzAdjective (buzz_adjective) where
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (BuzzAdjective)
 import Unsafe.Coerce (unsafeCoerce)
 
-buzz_adjective :: BuzzAdjective
 buzz_adjective = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
   [ "24/7"
   , "AI-driven"

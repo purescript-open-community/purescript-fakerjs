@@ -2,10 +2,8 @@ module Fakerjs2.Locales.Base.Internet.UserAgentPattern (user_agent_pattern) wher
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (UserAgentPattern)
 import Unsafe.Coerce (unsafeCoerce)
 
-user_agent_pattern :: UserAgentPattern
 user_agent_pattern = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
   [ "Mozilla/5.0 (compatible; MSIE {{number.int({\"min\":6,\"max\":10})}}.0; Windows NT {{helpers.arrayElement([\"5.1\",\"5.2\",\"6.0\",\"6.1\",\"6.2\",\"6.3\",\"10.0\"])}}; Trident/{{number.int({\"min\":4,\"max\":7})}}.0)"
   , "Mozilla/5.0 (Windows NT {{helpers.arrayElement([\"5.1\",\"5.2\",\"6.0\",\"6.1\",\"6.2\",\"6.3\",\"10.0\"])}}; Win64; x64) AppleWebKit/{{number.int({\"min\":536,\"max\":605})}}.{{number.int({\"min\":0,\"max\":99})}} (KHTML, like Gecko) Chrome/{{number.int({\"min\":55,\"max\":131})}}.{{system.semver}} Safari/{{number.int({\"min\":536,\"max\":605})}}.{{number.int({\"min\":0,\"max\":99})}} Edg/{{number.int({\"min\":110,\"max\":131})}}.{{system.semver}}"

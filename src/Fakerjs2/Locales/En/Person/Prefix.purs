@@ -1,17 +1,16 @@
-module Fakerjs2.Locales.En.Person.Prefix (female, generic, male) where
+module Fakerjs2.Locales.En.Person.Prefix (prefix) where
 
 import Data.Array.NonEmpty (NonEmptyArray)
+import Data.Maybe (Maybe(..))
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (PrefixFemale, PrefixGeneric, PrefixMale)
 import Unsafe.Coerce (unsafeCoerce)
 
-female :: PrefixFemale
-female = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
-  [ "Dr.", "Miss", "Mrs.", "Ms." ]
-
-generic :: PrefixGeneric
-generic = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
-  [ "Dr.", "Miss", "Mr.", "Mrs.", "Ms." ]
-
-male :: PrefixMale
-male = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString) [ "Dr.", "Mr." ]
+prefix = Just
+  { female: Just
+      ( (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
+          [ "Dr.", "Miss", "Mrs.", "Ms." ]
+      )
+  , generic: (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
+      [ "Dr.", "Miss", "Mr.", "Mrs.", "Ms." ]
+  , male: Just ((unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString) [ "Dr.", "Mr." ])
+  }

@@ -2,10 +2,8 @@ module Fakerjs2.Locales.En.Company.Descriptor (descriptor) where
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (Descriptor)
 import Unsafe.Coerce (unsafeCoerce)
 
-descriptor :: Descriptor
 descriptor = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
   [ "24 hour"
   , "24/7"

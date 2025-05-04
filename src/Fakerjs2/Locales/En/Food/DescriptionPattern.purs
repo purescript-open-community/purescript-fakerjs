@@ -2,10 +2,8 @@ module Fakerjs2.Locales.En.Food.DescriptionPattern (description_pattern) where
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (DescriptionPattern)
 import Unsafe.Coerce (unsafeCoerce)
 
-description_pattern :: DescriptionPattern
 description_pattern = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
   [ "A classic pie filled with delicious {{food.meat}} and {{food.adjective}} {{food.ingredient}}, baked in a {{food.adjective}} pastry crust and topped with a golden-brown lattice."
   , "A delightful tart combining {{food.adjective}} {{food.vegetable}} and sweet {{food.fruit}}, set in a buttery pastry shell and finished with a hint of {{food.spice}}."

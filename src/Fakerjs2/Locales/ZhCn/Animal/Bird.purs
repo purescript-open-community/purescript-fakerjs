@@ -2,10 +2,8 @@ module Fakerjs2.Locales.ZhCn.Animal.Bird (bird) where
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (Bird)
 import Unsafe.Coerce (unsafeCoerce)
 
-bird :: Bird
 bird = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
   [ "中华攀雀"
   , "大山雀"

@@ -2,10 +2,8 @@ module Fakerjs2.Locales.ZhCn.Animal.PetName (pet_name) where
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (PetName)
 import Unsafe.Coerce (unsafeCoerce)
 
-pet_name :: PetName
 pet_name = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
   [ "乐乐"
   , "乖乖"

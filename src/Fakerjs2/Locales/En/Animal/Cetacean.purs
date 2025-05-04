@@ -2,10 +2,8 @@ module Fakerjs2.Locales.En.Animal.Cetacean (cetacean) where
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (Cetacean)
 import Unsafe.Coerce (unsafeCoerce)
 
-cetacean :: Cetacean
 cetacean = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
   [ "Amazon River Dolphin"
   , "Arnoux's Beaked Whale"

@@ -1,126 +1,130 @@
 module Fakerjs2.Locales.En.Science.ChemicalElement (chemical_element) where
 
-import Data.String.NonEmpty (unsafeFromString)
-import Fakerjs2.Types (ChemicalElement)
+import Data.Array.NonEmpty (NonEmptyArray)
+import Data.String.NonEmpty (NonEmptyString)
+import Unsafe.Coerce (unsafeCoerce)
 
-chemical_element :: ChemicalElement
 chemical_element =
-  [ { name: unsafeFromString "Hydrogen", atomicNumber: 1, symbol: unsafeFromString "H" }
-  , { name: unsafeFromString "Helium", atomicNumber: 2, symbol: unsafeFromString "He" }
-  , { name: unsafeFromString "Lithium", atomicNumber: 3, symbol: unsafeFromString "Li" }
-  , { name: unsafeFromString "Beryllium", atomicNumber: 4, symbol: unsafeFromString "Be" }
-  , { name: unsafeFromString "Boron", atomicNumber: 5, symbol: unsafeFromString "B" }
-  , { name: unsafeFromString "Carbon", atomicNumber: 6, symbol: unsafeFromString "C" }
-  , { name: unsafeFromString "Nitrogen", atomicNumber: 7, symbol: unsafeFromString "N" }
-  , { name: unsafeFromString "Oxygen", atomicNumber: 8, symbol: unsafeFromString "O" }
-  , { name: unsafeFromString "Fluorine", atomicNumber: 9, symbol: unsafeFromString "F" }
-  , { name: unsafeFromString "Neon", atomicNumber: 10, symbol: unsafeFromString "Ne" }
-  , { name: unsafeFromString "Sodium", atomicNumber: 11, symbol: unsafeFromString "Na" }
-  , { name: unsafeFromString "Magnesium", atomicNumber: 12, symbol: unsafeFromString "Mg" }
-  , { name: unsafeFromString "Aluminium", atomicNumber: 13, symbol: unsafeFromString "Al" }
-  , { name: unsafeFromString "Silicon", atomicNumber: 14, symbol: unsafeFromString "Si" }
-  , { name: unsafeFromString "Phosphorus", atomicNumber: 15, symbol: unsafeFromString "P" }
-  , { name: unsafeFromString "Sulfur", atomicNumber: 16, symbol: unsafeFromString "S" }
-  , { name: unsafeFromString "Chlorine", atomicNumber: 17, symbol: unsafeFromString "Cl" }
-  , { name: unsafeFromString "Argon", atomicNumber: 18, symbol: unsafeFromString "Ar" }
-  , { name: unsafeFromString "Potassium", atomicNumber: 19, symbol: unsafeFromString "K" }
-  , { name: unsafeFromString "Calcium", atomicNumber: 20, symbol: unsafeFromString "Ca" }
-  , { name: unsafeFromString "Scandium", atomicNumber: 21, symbol: unsafeFromString "Sc" }
-  , { name: unsafeFromString "Titanium", atomicNumber: 22, symbol: unsafeFromString "Ti" }
-  , { name: unsafeFromString "Vanadium", atomicNumber: 23, symbol: unsafeFromString "V" }
-  , { name: unsafeFromString "Chromium", atomicNumber: 24, symbol: unsafeFromString "Cr" }
-  , { name: unsafeFromString "Manganese", atomicNumber: 25, symbol: unsafeFromString "Mn" }
-  , { name: unsafeFromString "Iron", atomicNumber: 26, symbol: unsafeFromString "Fe" }
-  , { name: unsafeFromString "Cobalt", atomicNumber: 27, symbol: unsafeFromString "Co" }
-  , { name: unsafeFromString "Nickel", atomicNumber: 28, symbol: unsafeFromString "Ni" }
-  , { name: unsafeFromString "Copper", atomicNumber: 29, symbol: unsafeFromString "Cu" }
-  , { name: unsafeFromString "Zinc", atomicNumber: 30, symbol: unsafeFromString "Zn" }
-  , { name: unsafeFromString "Gallium", atomicNumber: 31, symbol: unsafeFromString "Ga" }
-  , { name: unsafeFromString "Germanium", atomicNumber: 32, symbol: unsafeFromString "Ge" }
-  , { name: unsafeFromString "Arsenic", atomicNumber: 33, symbol: unsafeFromString "As" }
-  , { name: unsafeFromString "Selenium", atomicNumber: 34, symbol: unsafeFromString "Se" }
-  , { name: unsafeFromString "Bromine", atomicNumber: 35, symbol: unsafeFromString "Br" }
-  , { name: unsafeFromString "Krypton", atomicNumber: 36, symbol: unsafeFromString "Kr" }
-  , { name: unsafeFromString "Rubidium", atomicNumber: 37, symbol: unsafeFromString "Rb" }
-  , { name: unsafeFromString "Strontium", atomicNumber: 38, symbol: unsafeFromString "Sr" }
-  , { name: unsafeFromString "Yttrium", atomicNumber: 39, symbol: unsafeFromString "Y" }
-  , { name: unsafeFromString "Zirconium", atomicNumber: 40, symbol: unsafeFromString "Zr" }
-  , { name: unsafeFromString "Niobium", atomicNumber: 41, symbol: unsafeFromString "Nb" }
-  , { name: unsafeFromString "Molybdenum", atomicNumber: 42, symbol: unsafeFromString "Mo" }
-  , { name: unsafeFromString "Technetium", atomicNumber: 43, symbol: unsafeFromString "Tc" }
-  , { name: unsafeFromString "Ruthenium", atomicNumber: 44, symbol: unsafeFromString "Ru" }
-  , { name: unsafeFromString "Rhodium", atomicNumber: 45, symbol: unsafeFromString "Rh" }
-  , { name: unsafeFromString "Palladium", atomicNumber: 46, symbol: unsafeFromString "Pd" }
-  , { name: unsafeFromString "Silver", atomicNumber: 47, symbol: unsafeFromString "Ag" }
-  , { name: unsafeFromString "Cadmium", atomicNumber: 48, symbol: unsafeFromString "Cd" }
-  , { name: unsafeFromString "Indium", atomicNumber: 49, symbol: unsafeFromString "In" }
-  , { name: unsafeFromString "Tin", atomicNumber: 50, symbol: unsafeFromString "Sn" }
-  , { name: unsafeFromString "Antimony", atomicNumber: 51, symbol: unsafeFromString "Sb" }
-  , { name: unsafeFromString "Tellurium", atomicNumber: 52, symbol: unsafeFromString "Te" }
-  , { name: unsafeFromString "Iodine", atomicNumber: 53, symbol: unsafeFromString "I" }
-  , { name: unsafeFromString "Xenon", atomicNumber: 54, symbol: unsafeFromString "Xe" }
-  , { name: unsafeFromString "Caesium", atomicNumber: 55, symbol: unsafeFromString "Cs" }
-  , { name: unsafeFromString "Barium", atomicNumber: 56, symbol: unsafeFromString "Ba" }
-  , { name: unsafeFromString "Lanthanum", atomicNumber: 57, symbol: unsafeFromString "La" }
-  , { name: unsafeFromString "Cerium", atomicNumber: 58, symbol: unsafeFromString "Ce" }
-  , { name: unsafeFromString "Praseodymium", atomicNumber: 59, symbol: unsafeFromString "Pr" }
-  , { name: unsafeFromString "Neodymium", atomicNumber: 60, symbol: unsafeFromString "Nd" }
-  , { name: unsafeFromString "Promethium", atomicNumber: 61, symbol: unsafeFromString "Pm" }
-  , { name: unsafeFromString "Samarium", atomicNumber: 62, symbol: unsafeFromString "Sm" }
-  , { name: unsafeFromString "Europium", atomicNumber: 63, symbol: unsafeFromString "Eu" }
-  , { name: unsafeFromString "Gadolinium", atomicNumber: 64, symbol: unsafeFromString "Gd" }
-  , { name: unsafeFromString "Terbium", atomicNumber: 65, symbol: unsafeFromString "Tb" }
-  , { name: unsafeFromString "Dysprosium", atomicNumber: 66, symbol: unsafeFromString "Dy" }
-  , { name: unsafeFromString "Holmium", atomicNumber: 67, symbol: unsafeFromString "Ho" }
-  , { name: unsafeFromString "Erbium", atomicNumber: 68, symbol: unsafeFromString "Er" }
-  , { name: unsafeFromString "Thulium", atomicNumber: 69, symbol: unsafeFromString "Tm" }
-  , { name: unsafeFromString "Ytterbium", atomicNumber: 70, symbol: unsafeFromString "Yb" }
-  , { name: unsafeFromString "Lutetium", atomicNumber: 71, symbol: unsafeFromString "Lu" }
-  , { name: unsafeFromString "Hafnium", atomicNumber: 72, symbol: unsafeFromString "Hf" }
-  , { name: unsafeFromString "Tantalum", atomicNumber: 73, symbol: unsafeFromString "Ta" }
-  , { name: unsafeFromString "Tungsten", atomicNumber: 74, symbol: unsafeFromString "W" }
-  , { name: unsafeFromString "Rhenium", atomicNumber: 75, symbol: unsafeFromString "Re" }
-  , { name: unsafeFromString "Osmium", atomicNumber: 76, symbol: unsafeFromString "Os" }
-  , { name: unsafeFromString "Iridium", atomicNumber: 77, symbol: unsafeFromString "Ir" }
-  , { name: unsafeFromString "Platinum", atomicNumber: 78, symbol: unsafeFromString "Pt" }
-  , { name: unsafeFromString "Gold", atomicNumber: 79, symbol: unsafeFromString "Au" }
-  , { name: unsafeFromString "Mercury", atomicNumber: 80, symbol: unsafeFromString "Hg" }
-  , { name: unsafeFromString "Thallium", atomicNumber: 81, symbol: unsafeFromString "Tl" }
-  , { name: unsafeFromString "Lead", atomicNumber: 82, symbol: unsafeFromString "Pb" }
-  , { name: unsafeFromString "Bismuth", atomicNumber: 83, symbol: unsafeFromString "Bi" }
-  , { name: unsafeFromString "Polonium", atomicNumber: 84, symbol: unsafeFromString "Po" }
-  , { name: unsafeFromString "Astatine", atomicNumber: 85, symbol: unsafeFromString "At" }
-  , { name: unsafeFromString "Radon", atomicNumber: 86, symbol: unsafeFromString "Rn" }
-  , { name: unsafeFromString "Francium", atomicNumber: 87, symbol: unsafeFromString "Fr" }
-  , { name: unsafeFromString "Radium", atomicNumber: 88, symbol: unsafeFromString "Ra" }
-  , { name: unsafeFromString "Actinium", atomicNumber: 89, symbol: unsafeFromString "Ac" }
-  , { name: unsafeFromString "Thorium", atomicNumber: 90, symbol: unsafeFromString "Th" }
-  , { name: unsafeFromString "Protactinium", atomicNumber: 91, symbol: unsafeFromString "Pa" }
-  , { name: unsafeFromString "Uranium", atomicNumber: 92, symbol: unsafeFromString "U" }
-  , { name: unsafeFromString "Neptunium", atomicNumber: 93, symbol: unsafeFromString "Np" }
-  , { name: unsafeFromString "Plutonium", atomicNumber: 94, symbol: unsafeFromString "Pu" }
-  , { name: unsafeFromString "Americium", atomicNumber: 95, symbol: unsafeFromString "Am" }
-  , { name: unsafeFromString "Curium", atomicNumber: 96, symbol: unsafeFromString "Cm" }
-  , { name: unsafeFromString "Berkelium", atomicNumber: 97, symbol: unsafeFromString "Bk" }
-  , { name: unsafeFromString "Californium", atomicNumber: 98, symbol: unsafeFromString "Cf" }
-  , { name: unsafeFromString "Einsteinium", atomicNumber: 99, symbol: unsafeFromString "Es" }
-  , { name: unsafeFromString "Fermium", atomicNumber: 100, symbol: unsafeFromString "Fm" }
-  , { name: unsafeFromString "Mendelevium", atomicNumber: 101, symbol: unsafeFromString "Md" }
-  , { name: unsafeFromString "Nobelium", atomicNumber: 102, symbol: unsafeFromString "No" }
-  , { name: unsafeFromString "Lawrencium", atomicNumber: 103, symbol: unsafeFromString "Lr" }
-  , { name: unsafeFromString "Rutherfordium", atomicNumber: 104, symbol: unsafeFromString "Rf" }
-  , { name: unsafeFromString "Dubnium", atomicNumber: 105, symbol: unsafeFromString "Db" }
-  , { name: unsafeFromString "Seaborgium", atomicNumber: 106, symbol: unsafeFromString "Sg" }
-  , { name: unsafeFromString "Bohrium", atomicNumber: 107, symbol: unsafeFromString "Bh" }
-  , { name: unsafeFromString "Hassium", atomicNumber: 108, symbol: unsafeFromString "Hs" }
-  , { name: unsafeFromString "Meitnerium", atomicNumber: 109, symbol: unsafeFromString "Mt" }
-  , { name: unsafeFromString "Darmstadtium", atomicNumber: 110, symbol: unsafeFromString "Ds" }
-  , { name: unsafeFromString "Roentgenium", atomicNumber: 111, symbol: unsafeFromString "Rg" }
-  , { name: unsafeFromString "Copernicium", atomicNumber: 112, symbol: unsafeFromString "Cn" }
-  , { name: unsafeFromString "Nihonium", atomicNumber: 113, symbol: unsafeFromString "Nh" }
-  , { name: unsafeFromString "Flerovium", atomicNumber: 114, symbol: unsafeFromString "Fl" }
-  , { name: unsafeFromString "Moscovium", atomicNumber: 115, symbol: unsafeFromString "Mc" }
-  , { name: unsafeFromString "Livermorium", atomicNumber: 116, symbol: unsafeFromString "Lv" }
-  , { name: unsafeFromString "Tennessine", atomicNumber: 117, symbol: unsafeFromString "Ts" }
-  , { name: unsafeFromString "Oganesson", atomicNumber: 118, symbol: unsafeFromString "Og" }
-  ]
+  ( unsafeCoerce
+      :: Array { atomicNumber :: Int, name :: String, symbol :: String }
+      -> NonEmptyArray { atomicNumber :: Int, name :: NonEmptyString, symbol :: NonEmptyString }
+  )
+    [ { atomicNumber: 1, name: "Hydrogen", symbol: "H" }
+    , { atomicNumber: 2, name: "Helium", symbol: "He" }
+    , { atomicNumber: 3, name: "Lithium", symbol: "Li" }
+    , { atomicNumber: 4, name: "Beryllium", symbol: "Be" }
+    , { atomicNumber: 5, name: "Boron", symbol: "B" }
+    , { atomicNumber: 6, name: "Carbon", symbol: "C" }
+    , { atomicNumber: 7, name: "Nitrogen", symbol: "N" }
+    , { atomicNumber: 8, name: "Oxygen", symbol: "O" }
+    , { atomicNumber: 9, name: "Fluorine", symbol: "F" }
+    , { atomicNumber: 10, name: "Neon", symbol: "Ne" }
+    , { atomicNumber: 11, name: "Sodium", symbol: "Na" }
+    , { atomicNumber: 12, name: "Magnesium", symbol: "Mg" }
+    , { atomicNumber: 13, name: "Aluminium", symbol: "Al" }
+    , { atomicNumber: 14, name: "Silicon", symbol: "Si" }
+    , { atomicNumber: 15, name: "Phosphorus", symbol: "P" }
+    , { atomicNumber: 16, name: "Sulfur", symbol: "S" }
+    , { atomicNumber: 17, name: "Chlorine", symbol: "Cl" }
+    , { atomicNumber: 18, name: "Argon", symbol: "Ar" }
+    , { atomicNumber: 19, name: "Potassium", symbol: "K" }
+    , { atomicNumber: 20, name: "Calcium", symbol: "Ca" }
+    , { atomicNumber: 21, name: "Scandium", symbol: "Sc" }
+    , { atomicNumber: 22, name: "Titanium", symbol: "Ti" }
+    , { atomicNumber: 23, name: "Vanadium", symbol: "V" }
+    , { atomicNumber: 24, name: "Chromium", symbol: "Cr" }
+    , { atomicNumber: 25, name: "Manganese", symbol: "Mn" }
+    , { atomicNumber: 26, name: "Iron", symbol: "Fe" }
+    , { atomicNumber: 27, name: "Cobalt", symbol: "Co" }
+    , { atomicNumber: 28, name: "Nickel", symbol: "Ni" }
+    , { atomicNumber: 29, name: "Copper", symbol: "Cu" }
+    , { atomicNumber: 30, name: "Zinc", symbol: "Zn" }
+    , { atomicNumber: 31, name: "Gallium", symbol: "Ga" }
+    , { atomicNumber: 32, name: "Germanium", symbol: "Ge" }
+    , { atomicNumber: 33, name: "Arsenic", symbol: "As" }
+    , { atomicNumber: 34, name: "Selenium", symbol: "Se" }
+    , { atomicNumber: 35, name: "Bromine", symbol: "Br" }
+    , { atomicNumber: 36, name: "Krypton", symbol: "Kr" }
+    , { atomicNumber: 37, name: "Rubidium", symbol: "Rb" }
+    , { atomicNumber: 38, name: "Strontium", symbol: "Sr" }
+    , { atomicNumber: 39, name: "Yttrium", symbol: "Y" }
+    , { atomicNumber: 40, name: "Zirconium", symbol: "Zr" }
+    , { atomicNumber: 41, name: "Niobium", symbol: "Nb" }
+    , { atomicNumber: 42, name: "Molybdenum", symbol: "Mo" }
+    , { atomicNumber: 43, name: "Technetium", symbol: "Tc" }
+    , { atomicNumber: 44, name: "Ruthenium", symbol: "Ru" }
+    , { atomicNumber: 45, name: "Rhodium", symbol: "Rh" }
+    , { atomicNumber: 46, name: "Palladium", symbol: "Pd" }
+    , { atomicNumber: 47, name: "Silver", symbol: "Ag" }
+    , { atomicNumber: 48, name: "Cadmium", symbol: "Cd" }
+    , { atomicNumber: 49, name: "Indium", symbol: "In" }
+    , { atomicNumber: 50, name: "Tin", symbol: "Sn" }
+    , { atomicNumber: 51, name: "Antimony", symbol: "Sb" }
+    , { atomicNumber: 52, name: "Tellurium", symbol: "Te" }
+    , { atomicNumber: 53, name: "Iodine", symbol: "I" }
+    , { atomicNumber: 54, name: "Xenon", symbol: "Xe" }
+    , { atomicNumber: 55, name: "Caesium", symbol: "Cs" }
+    , { atomicNumber: 56, name: "Barium", symbol: "Ba" }
+    , { atomicNumber: 57, name: "Lanthanum", symbol: "La" }
+    , { atomicNumber: 58, name: "Cerium", symbol: "Ce" }
+    , { atomicNumber: 59, name: "Praseodymium", symbol: "Pr" }
+    , { atomicNumber: 60, name: "Neodymium", symbol: "Nd" }
+    , { atomicNumber: 61, name: "Promethium", symbol: "Pm" }
+    , { atomicNumber: 62, name: "Samarium", symbol: "Sm" }
+    , { atomicNumber: 63, name: "Europium", symbol: "Eu" }
+    , { atomicNumber: 64, name: "Gadolinium", symbol: "Gd" }
+    , { atomicNumber: 65, name: "Terbium", symbol: "Tb" }
+    , { atomicNumber: 66, name: "Dysprosium", symbol: "Dy" }
+    , { atomicNumber: 67, name: "Holmium", symbol: "Ho" }
+    , { atomicNumber: 68, name: "Erbium", symbol: "Er" }
+    , { atomicNumber: 69, name: "Thulium", symbol: "Tm" }
+    , { atomicNumber: 70, name: "Ytterbium", symbol: "Yb" }
+    , { atomicNumber: 71, name: "Lutetium", symbol: "Lu" }
+    , { atomicNumber: 72, name: "Hafnium", symbol: "Hf" }
+    , { atomicNumber: 73, name: "Tantalum", symbol: "Ta" }
+    , { atomicNumber: 74, name: "Tungsten", symbol: "W" }
+    , { atomicNumber: 75, name: "Rhenium", symbol: "Re" }
+    , { atomicNumber: 76, name: "Osmium", symbol: "Os" }
+    , { atomicNumber: 77, name: "Iridium", symbol: "Ir" }
+    , { atomicNumber: 78, name: "Platinum", symbol: "Pt" }
+    , { atomicNumber: 79, name: "Gold", symbol: "Au" }
+    , { atomicNumber: 80, name: "Mercury", symbol: "Hg" }
+    , { atomicNumber: 81, name: "Thallium", symbol: "Tl" }
+    , { atomicNumber: 82, name: "Lead", symbol: "Pb" }
+    , { atomicNumber: 83, name: "Bismuth", symbol: "Bi" }
+    , { atomicNumber: 84, name: "Polonium", symbol: "Po" }
+    , { atomicNumber: 85, name: "Astatine", symbol: "At" }
+    , { atomicNumber: 86, name: "Radon", symbol: "Rn" }
+    , { atomicNumber: 87, name: "Francium", symbol: "Fr" }
+    , { atomicNumber: 88, name: "Radium", symbol: "Ra" }
+    , { atomicNumber: 89, name: "Actinium", symbol: "Ac" }
+    , { atomicNumber: 90, name: "Thorium", symbol: "Th" }
+    , { atomicNumber: 91, name: "Protactinium", symbol: "Pa" }
+    , { atomicNumber: 92, name: "Uranium", symbol: "U" }
+    , { atomicNumber: 93, name: "Neptunium", symbol: "Np" }
+    , { atomicNumber: 94, name: "Plutonium", symbol: "Pu" }
+    , { atomicNumber: 95, name: "Americium", symbol: "Am" }
+    , { atomicNumber: 96, name: "Curium", symbol: "Cm" }
+    , { atomicNumber: 97, name: "Berkelium", symbol: "Bk" }
+    , { atomicNumber: 98, name: "Californium", symbol: "Cf" }
+    , { atomicNumber: 99, name: "Einsteinium", symbol: "Es" }
+    , { atomicNumber: 100, name: "Fermium", symbol: "Fm" }
+    , { atomicNumber: 101, name: "Mendelevium", symbol: "Md" }
+    , { atomicNumber: 102, name: "Nobelium", symbol: "No" }
+    , { atomicNumber: 103, name: "Lawrencium", symbol: "Lr" }
+    , { atomicNumber: 104, name: "Rutherfordium", symbol: "Rf" }
+    , { atomicNumber: 105, name: "Dubnium", symbol: "Db" }
+    , { atomicNumber: 106, name: "Seaborgium", symbol: "Sg" }
+    , { atomicNumber: 107, name: "Bohrium", symbol: "Bh" }
+    , { atomicNumber: 108, name: "Hassium", symbol: "Hs" }
+    , { atomicNumber: 109, name: "Meitnerium", symbol: "Mt" }
+    , { atomicNumber: 110, name: "Darmstadtium", symbol: "Ds" }
+    , { atomicNumber: 111, name: "Roentgenium", symbol: "Rg" }
+    , { atomicNumber: 112, name: "Copernicium", symbol: "Cn" }
+    , { atomicNumber: 113, name: "Nihonium", symbol: "Nh" }
+    , { atomicNumber: 114, name: "Flerovium", symbol: "Fl" }
+    , { atomicNumber: 115, name: "Moscovium", symbol: "Mc" }
+    , { atomicNumber: 116, name: "Livermorium", symbol: "Lv" }
+    , { atomicNumber: 117, name: "Tennessine", symbol: "Ts" }
+    , { atomicNumber: 118, name: "Oganesson", symbol: "Og" }
+    ]

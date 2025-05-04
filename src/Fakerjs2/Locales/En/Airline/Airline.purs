@@ -1,134 +1,138 @@
 module Fakerjs2.Locales.En.Airline.Airline (airline) where
 
-import Data.String.NonEmpty (unsafeFromString)
-import Fakerjs2.Types (Airline)
+import Data.Array.NonEmpty (NonEmptyArray)
+import Data.String.NonEmpty (NonEmptyString)
+import Unsafe.Coerce (unsafeCoerce)
 
-airline :: Airline
 airline =
-  [ { name: unsafeFromString "Aegean Airlines", iataCode: unsafeFromString "A3" }
-  , { name: unsafeFromString "Aeroflot", iataCode: unsafeFromString "SU" }
-  , { name: unsafeFromString "Aerolineas Argentinas", iataCode: unsafeFromString "AR" }
-  , { name: unsafeFromString "Aeromexico", iataCode: unsafeFromString "AM" }
-  , { name: unsafeFromString "Air Algerie", iataCode: unsafeFromString "AH" }
-  , { name: unsafeFromString "Air Arabia", iataCode: unsafeFromString "G9" }
-  , { name: unsafeFromString "Air Canada", iataCode: unsafeFromString "AC" }
-  , { name: unsafeFromString "Air China", iataCode: unsafeFromString "CA" }
-  , { name: unsafeFromString "Air Europa", iataCode: unsafeFromString "UX" }
-  , { name: unsafeFromString "Air France", iataCode: unsafeFromString "AF" }
-  , { name: unsafeFromString "Air India", iataCode: unsafeFromString "AI" }
-  , { name: unsafeFromString "Air Mauritius", iataCode: unsafeFromString "MK" }
-  , { name: unsafeFromString "Air New Zealand", iataCode: unsafeFromString "NZ" }
-  , { name: unsafeFromString "Air Niugini", iataCode: unsafeFromString "PX" }
-  , { name: unsafeFromString "Air Tahiti", iataCode: unsafeFromString "VT" }
-  , { name: unsafeFromString "Air Tahiti Nui", iataCode: unsafeFromString "TN" }
-  , { name: unsafeFromString "Air Transat", iataCode: unsafeFromString "TS" }
-  , { name: unsafeFromString "AirAsia X", iataCode: unsafeFromString "D7" }
-  , { name: unsafeFromString "AirAsia", iataCode: unsafeFromString "AK" }
-  , { name: unsafeFromString "Aircalin", iataCode: unsafeFromString "SB" }
-  , { name: unsafeFromString "Alaska Airlines", iataCode: unsafeFromString "AS" }
-  , { name: unsafeFromString "Alitalia", iataCode: unsafeFromString "AZ" }
-  , { name: unsafeFromString "All Nippon Airways", iataCode: unsafeFromString "NH" }
-  , { name: unsafeFromString "Allegiant Air", iataCode: unsafeFromString "G4" }
-  , { name: unsafeFromString "American Airlines", iataCode: unsafeFromString "AA" }
-  , { name: unsafeFromString "Asiana Airlines", iataCode: unsafeFromString "OZ" }
-  , { name: unsafeFromString "Avianca", iataCode: unsafeFromString "AV" }
-  , { name: unsafeFromString "Azul Linhas Aereas Brasileiras", iataCode: unsafeFromString "AD" }
-  , { name: unsafeFromString "Azur Air", iataCode: unsafeFromString "ZF" }
-  , { name: unsafeFromString "Beijing Capital Airlines", iataCode: unsafeFromString "JD" }
-  , { name: unsafeFromString "Boliviana de Aviacion", iataCode: unsafeFromString "OB" }
-  , { name: unsafeFromString "British Airways", iataCode: unsafeFromString "BA" }
-  , { name: unsafeFromString "Cathay Pacific", iataCode: unsafeFromString "CX" }
-  , { name: unsafeFromString "Cebu Pacific Air", iataCode: unsafeFromString "5J" }
-  , { name: unsafeFromString "China Airlines", iataCode: unsafeFromString "CI" }
-  , { name: unsafeFromString "China Eastern Airlines", iataCode: unsafeFromString "MU" }
-  , { name: unsafeFromString "China Southern Airlines", iataCode: unsafeFromString "CZ" }
-  , { name: unsafeFromString "Condor", iataCode: unsafeFromString "DE" }
-  , { name: unsafeFromString "Copa Airlines", iataCode: unsafeFromString "CM" }
-  , { name: unsafeFromString "Delta Air Lines", iataCode: unsafeFromString "DL" }
-  , { name: unsafeFromString "Easyfly", iataCode: unsafeFromString "VE" }
-  , { name: unsafeFromString "EasyJet", iataCode: unsafeFromString "U2" }
-  , { name: unsafeFromString "EcoJet", iataCode: unsafeFromString "8J" }
-  , { name: unsafeFromString "Egyptair", iataCode: unsafeFromString "MS" }
-  , { name: unsafeFromString "El Al", iataCode: unsafeFromString "LY" }
-  , { name: unsafeFromString "Emirates Airlines", iataCode: unsafeFromString "EK" }
-  , { name: unsafeFromString "Ethiopian Airlines", iataCode: unsafeFromString "ET" }
-  , { name: unsafeFromString "Etihad Airways", iataCode: unsafeFromString "EY" }
-  , { name: unsafeFromString "EVA Air", iataCode: unsafeFromString "BR" }
-  , { name: unsafeFromString "Fiji Airways", iataCode: unsafeFromString "FJ" }
-  , { name: unsafeFromString "Finnair", iataCode: unsafeFromString "AY" }
-  , { name: unsafeFromString "Flybondi", iataCode: unsafeFromString "FO" }
-  , { name: unsafeFromString "Flydubai", iataCode: unsafeFromString "FZ" }
-  , { name: unsafeFromString "FlySafair", iataCode: unsafeFromString "FA" }
-  , { name: unsafeFromString "Frontier Airlines", iataCode: unsafeFromString "F9" }
-  , { name: unsafeFromString "Garuda Indonesia", iataCode: unsafeFromString "GA" }
-  , { name: unsafeFromString "Go First", iataCode: unsafeFromString "G8" }
-  , { name: unsafeFromString "Gol Linhas Aereas Inteligentes", iataCode: unsafeFromString "G3" }
-  , { name: unsafeFromString "Hainan Airlines", iataCode: unsafeFromString "HU" }
-  , { name: unsafeFromString "Hawaiian Airlines", iataCode: unsafeFromString "HA" }
-  , { name: unsafeFromString "IndiGo Airlines", iataCode: unsafeFromString "6E" }
-  , { name: unsafeFromString "Japan Airlines", iataCode: unsafeFromString "JL" }
-  , { name: unsafeFromString "Jeju Air", iataCode: unsafeFromString "7C" }
-  , { name: unsafeFromString "Jet2", iataCode: unsafeFromString "LS" }
-  , { name: unsafeFromString "JetBlue Airways", iataCode: unsafeFromString "B6" }
-  , { name: unsafeFromString "JetSMART", iataCode: unsafeFromString "JA" }
-  , { name: unsafeFromString "Juneyao Airlines", iataCode: unsafeFromString "HO" }
-  , { name: unsafeFromString "Kenya Airways", iataCode: unsafeFromString "KQ" }
-  , { name: unsafeFromString "KLM Royal Dutch Airlines", iataCode: unsafeFromString "KL" }
-  , { name: unsafeFromString "Korean Air", iataCode: unsafeFromString "KE" }
-  , { name: unsafeFromString "Kulula.com", iataCode: unsafeFromString "MN" }
-  , { name: unsafeFromString "LATAM Airlines", iataCode: unsafeFromString "LA" }
-  , { name: unsafeFromString "Lion Air", iataCode: unsafeFromString "JT" }
-  , { name: unsafeFromString "LOT Polish Airlines", iataCode: unsafeFromString "LO" }
-  , { name: unsafeFromString "Lufthansa", iataCode: unsafeFromString "LH" }
-  , { name: unsafeFromString "Libyan Airlines", iataCode: unsafeFromString "LN" }
-  , { name: unsafeFromString "Linea Aerea Amaszonas", iataCode: unsafeFromString "Z8" }
-  , { name: unsafeFromString "Malaysia Airlines", iataCode: unsafeFromString "MH" }
-  , { name: unsafeFromString "Nordwind Airlines", iataCode: unsafeFromString "N4" }
-  , { name: unsafeFromString "Norwegian Air Shuttle", iataCode: unsafeFromString "DY" }
-  , { name: unsafeFromString "Oman Air", iataCode: unsafeFromString "WY" }
-  , { name: unsafeFromString "Pakistan International Airlines", iataCode: unsafeFromString "PK" }
-  , { name: unsafeFromString "Pegasus Airlines", iataCode: unsafeFromString "PC" }
-  , { name: unsafeFromString "Philippine Airlines", iataCode: unsafeFromString "PR" }
-  , { name: unsafeFromString "Qantas Group", iataCode: unsafeFromString "QF" }
-  , { name: unsafeFromString "Qatar Airways", iataCode: unsafeFromString "QR" }
-  , { name: unsafeFromString "Republic Airways", iataCode: unsafeFromString "YX" }
-  , { name: unsafeFromString "Royal Air Maroc", iataCode: unsafeFromString "AT" }
-  , { name: unsafeFromString "Ryanair", iataCode: unsafeFromString "FR" }
-  , { name: unsafeFromString "S7 Airlines", iataCode: unsafeFromString "S7" }
-  , { name: unsafeFromString "SAS", iataCode: unsafeFromString "SK" }
-  , { name: unsafeFromString "Satena", iataCode: unsafeFromString "9R" }
-  , { name: unsafeFromString "Saudia", iataCode: unsafeFromString "SV" }
-  , { name: unsafeFromString "Shandong Airlines", iataCode: unsafeFromString "SC" }
-  , { name: unsafeFromString "Sichuan Airlines", iataCode: unsafeFromString "3U" }
-  , { name: unsafeFromString "Singapore Airlines", iataCode: unsafeFromString "SQ" }
-  , { name: unsafeFromString "Sky Airline", iataCode: unsafeFromString "H2" }
-  , { name: unsafeFromString "SkyWest Airlines", iataCode: unsafeFromString "OO" }
-  , { name: unsafeFromString "South African Airways", iataCode: unsafeFromString "SA" }
-  , { name: unsafeFromString "Southwest Airlines", iataCode: unsafeFromString "WN" }
-  , { name: unsafeFromString "SpiceJet", iataCode: unsafeFromString "SG" }
-  , { name: unsafeFromString "Spirit Airlines", iataCode: unsafeFromString "NK" }
-  , { name: unsafeFromString "Spring Airlines", iataCode: unsafeFromString "9S" }
-  , { name: unsafeFromString "SriLankan Airlines", iataCode: unsafeFromString "UL" }
-  , { name: unsafeFromString "Star Peru", iataCode: unsafeFromString "2I" }
-  , { name: unsafeFromString "Sun Country Airlines", iataCode: unsafeFromString "SY" }
-  , { name: unsafeFromString "SunExpress", iataCode: unsafeFromString "XQ" }
-  , { name: unsafeFromString "TAP Air Portugal", iataCode: unsafeFromString "TP" }
-  , { name: unsafeFromString "Thai AirAsia", iataCode: unsafeFromString "FD" }
-  , { name: unsafeFromString "Thai Airways", iataCode: unsafeFromString "TG" }
-  , { name: unsafeFromString "TUI Airways", iataCode: unsafeFromString "BY" }
-  , { name: unsafeFromString "Tunisair", iataCode: unsafeFromString "TU" }
-  , { name: unsafeFromString "Turkish Airlines", iataCode: unsafeFromString "TK" }
-  , { name: unsafeFromString "Ukraine International", iataCode: unsafeFromString "PS" }
-  , { name: unsafeFromString "United Airlines", iataCode: unsafeFromString "UA" }
-  , { name: unsafeFromString "Ural Airlines", iataCode: unsafeFromString "U6" }
-  , { name: unsafeFromString "VietJet Air", iataCode: unsafeFromString "VJ" }
-  , { name: unsafeFromString "Vietnam Airlines", iataCode: unsafeFromString "VN" }
-  , { name: unsafeFromString "Virgin Atlantic Airways", iataCode: unsafeFromString "VS" }
-  , { name: unsafeFromString "Virgin Australia", iataCode: unsafeFromString "VA" }
-  , { name: unsafeFromString "VivaAerobus", iataCode: unsafeFromString "VB" }
-  , { name: unsafeFromString "VOEPASS Linhas Aereas", iataCode: unsafeFromString "2Z" }
-  , { name: unsafeFromString "Volaris", iataCode: unsafeFromString "Y4" }
-  , { name: unsafeFromString "WestJet", iataCode: unsafeFromString "WS" }
-  , { name: unsafeFromString "Wingo", iataCode: unsafeFromString "P5" }
-  , { name: unsafeFromString "Wizz Air", iataCode: unsafeFromString "W6" }
-  ]
+  ( unsafeCoerce
+      :: Array { iataCode :: String, name :: String }
+      -> NonEmptyArray { iataCode :: NonEmptyString, name :: NonEmptyString }
+  )
+    [ { iataCode: "A3", name: "Aegean Airlines" }
+    , { iataCode: "SU", name: "Aeroflot" }
+    , { iataCode: "AR", name: "Aerolineas Argentinas" }
+    , { iataCode: "AM", name: "Aeromexico" }
+    , { iataCode: "AH", name: "Air Algerie" }
+    , { iataCode: "G9", name: "Air Arabia" }
+    , { iataCode: "AC", name: "Air Canada" }
+    , { iataCode: "CA", name: "Air China" }
+    , { iataCode: "UX", name: "Air Europa" }
+    , { iataCode: "AF", name: "Air France" }
+    , { iataCode: "AI", name: "Air India" }
+    , { iataCode: "MK", name: "Air Mauritius" }
+    , { iataCode: "NZ", name: "Air New Zealand" }
+    , { iataCode: "PX", name: "Air Niugini" }
+    , { iataCode: "VT", name: "Air Tahiti" }
+    , { iataCode: "TN", name: "Air Tahiti Nui" }
+    , { iataCode: "TS", name: "Air Transat" }
+    , { iataCode: "D7", name: "AirAsia X" }
+    , { iataCode: "AK", name: "AirAsia" }
+    , { iataCode: "SB", name: "Aircalin" }
+    , { iataCode: "AS", name: "Alaska Airlines" }
+    , { iataCode: "AZ", name: "Alitalia" }
+    , { iataCode: "NH", name: "All Nippon Airways" }
+    , { iataCode: "G4", name: "Allegiant Air" }
+    , { iataCode: "AA", name: "American Airlines" }
+    , { iataCode: "OZ", name: "Asiana Airlines" }
+    , { iataCode: "AV", name: "Avianca" }
+    , { iataCode: "AD", name: "Azul Linhas Aereas Brasileiras" }
+    , { iataCode: "ZF", name: "Azur Air" }
+    , { iataCode: "JD", name: "Beijing Capital Airlines" }
+    , { iataCode: "OB", name: "Boliviana de Aviacion" }
+    , { iataCode: "BA", name: "British Airways" }
+    , { iataCode: "CX", name: "Cathay Pacific" }
+    , { iataCode: "5J", name: "Cebu Pacific Air" }
+    , { iataCode: "CI", name: "China Airlines" }
+    , { iataCode: "MU", name: "China Eastern Airlines" }
+    , { iataCode: "CZ", name: "China Southern Airlines" }
+    , { iataCode: "DE", name: "Condor" }
+    , { iataCode: "CM", name: "Copa Airlines" }
+    , { iataCode: "DL", name: "Delta Air Lines" }
+    , { iataCode: "VE", name: "Easyfly" }
+    , { iataCode: "U2", name: "EasyJet" }
+    , { iataCode: "8J", name: "EcoJet" }
+    , { iataCode: "MS", name: "Egyptair" }
+    , { iataCode: "LY", name: "El Al" }
+    , { iataCode: "EK", name: "Emirates Airlines" }
+    , { iataCode: "ET", name: "Ethiopian Airlines" }
+    , { iataCode: "EY", name: "Etihad Airways" }
+    , { iataCode: "BR", name: "EVA Air" }
+    , { iataCode: "FJ", name: "Fiji Airways" }
+    , { iataCode: "AY", name: "Finnair" }
+    , { iataCode: "FO", name: "Flybondi" }
+    , { iataCode: "FZ", name: "Flydubai" }
+    , { iataCode: "FA", name: "FlySafair" }
+    , { iataCode: "F9", name: "Frontier Airlines" }
+    , { iataCode: "GA", name: "Garuda Indonesia" }
+    , { iataCode: "G8", name: "Go First" }
+    , { iataCode: "G3", name: "Gol Linhas Aereas Inteligentes" }
+    , { iataCode: "HU", name: "Hainan Airlines" }
+    , { iataCode: "HA", name: "Hawaiian Airlines" }
+    , { iataCode: "6E", name: "IndiGo Airlines" }
+    , { iataCode: "JL", name: "Japan Airlines" }
+    , { iataCode: "7C", name: "Jeju Air" }
+    , { iataCode: "LS", name: "Jet2" }
+    , { iataCode: "B6", name: "JetBlue Airways" }
+    , { iataCode: "JA", name: "JetSMART" }
+    , { iataCode: "HO", name: "Juneyao Airlines" }
+    , { iataCode: "KQ", name: "Kenya Airways" }
+    , { iataCode: "KL", name: "KLM Royal Dutch Airlines" }
+    , { iataCode: "KE", name: "Korean Air" }
+    , { iataCode: "MN", name: "Kulula.com" }
+    , { iataCode: "LA", name: "LATAM Airlines" }
+    , { iataCode: "JT", name: "Lion Air" }
+    , { iataCode: "LO", name: "LOT Polish Airlines" }
+    , { iataCode: "LH", name: "Lufthansa" }
+    , { iataCode: "LN", name: "Libyan Airlines" }
+    , { iataCode: "Z8", name: "Linea Aerea Amaszonas" }
+    , { iataCode: "MH", name: "Malaysia Airlines" }
+    , { iataCode: "N4", name: "Nordwind Airlines" }
+    , { iataCode: "DY", name: "Norwegian Air Shuttle" }
+    , { iataCode: "WY", name: "Oman Air" }
+    , { iataCode: "PK", name: "Pakistan International Airlines" }
+    , { iataCode: "PC", name: "Pegasus Airlines" }
+    , { iataCode: "PR", name: "Philippine Airlines" }
+    , { iataCode: "QF", name: "Qantas Group" }
+    , { iataCode: "QR", name: "Qatar Airways" }
+    , { iataCode: "YX", name: "Republic Airways" }
+    , { iataCode: "AT", name: "Royal Air Maroc" }
+    , { iataCode: "FR", name: "Ryanair" }
+    , { iataCode: "S7", name: "S7 Airlines" }
+    , { iataCode: "SK", name: "SAS" }
+    , { iataCode: "9R", name: "Satena" }
+    , { iataCode: "SV", name: "Saudia" }
+    , { iataCode: "SC", name: "Shandong Airlines" }
+    , { iataCode: "3U", name: "Sichuan Airlines" }
+    , { iataCode: "SQ", name: "Singapore Airlines" }
+    , { iataCode: "H2", name: "Sky Airline" }
+    , { iataCode: "OO", name: "SkyWest Airlines" }
+    , { iataCode: "SA", name: "South African Airways" }
+    , { iataCode: "WN", name: "Southwest Airlines" }
+    , { iataCode: "SG", name: "SpiceJet" }
+    , { iataCode: "NK", name: "Spirit Airlines" }
+    , { iataCode: "9S", name: "Spring Airlines" }
+    , { iataCode: "UL", name: "SriLankan Airlines" }
+    , { iataCode: "2I", name: "Star Peru" }
+    , { iataCode: "SY", name: "Sun Country Airlines" }
+    , { iataCode: "XQ", name: "SunExpress" }
+    , { iataCode: "TP", name: "TAP Air Portugal" }
+    , { iataCode: "FD", name: "Thai AirAsia" }
+    , { iataCode: "TG", name: "Thai Airways" }
+    , { iataCode: "BY", name: "TUI Airways" }
+    , { iataCode: "TU", name: "Tunisair" }
+    , { iataCode: "TK", name: "Turkish Airlines" }
+    , { iataCode: "PS", name: "Ukraine International" }
+    , { iataCode: "UA", name: "United Airlines" }
+    , { iataCode: "U6", name: "Ural Airlines" }
+    , { iataCode: "VJ", name: "VietJet Air" }
+    , { iataCode: "VN", name: "Vietnam Airlines" }
+    , { iataCode: "VS", name: "Virgin Atlantic Airways" }
+    , { iataCode: "VA", name: "Virgin Australia" }
+    , { iataCode: "VB", name: "VivaAerobus" }
+    , { iataCode: "2Z", name: "VOEPASS Linhas Aereas" }
+    , { iataCode: "Y4", name: "Volaris" }
+    , { iataCode: "WS", name: "WestJet" }
+    , { iataCode: "P5", name: "Wingo" }
+    , { iataCode: "W6", name: "Wizz Air" }
+    ]

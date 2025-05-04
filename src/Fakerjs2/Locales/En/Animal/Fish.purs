@@ -2,10 +2,8 @@ module Fakerjs2.Locales.En.Animal.Fish (fish) where
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (Fish)
 import Unsafe.Coerce (unsafeCoerce)
 
-fish :: Fish
 fish = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
   [ "Alaska pollock"
   , "Albacore"

@@ -1,126 +1,130 @@
 module Fakerjs2.Locales.ZhCn.Airline.Airport (airport) where
 
-import Data.String.NonEmpty (unsafeFromString)
-import Fakerjs2.Types (Airport)
+import Data.Array.NonEmpty (NonEmptyArray)
+import Data.String.NonEmpty (NonEmptyString)
+import Unsafe.Coerce (unsafeCoerce)
 
-airport :: Airport
 airport =
-  [ { name: unsafeFromString "阿德莱德国际机场", iataCode: unsafeFromString "ADL" }
-  , { name: unsafeFromString "阿道弗·苏亚雷斯马德里-巴拉哈斯机场", iataCode: unsafeFromString "MAD" }
-  , { name: unsafeFromString "豪尔赫纽伯里机场机场", iataCode: unsafeFromString "AEP" }
-  , { name: unsafeFromString "阿方索·佩纳国际机场", iataCode: unsafeFromString "CWB" }
-  , { name: unsafeFromString "阿方索·博尼利亚·阿拉贡国际机场", iataCode: unsafeFromString "CLO" }
-  , { name: unsafeFromString "阿姆斯特丹史基浦机场", iataCode: unsafeFromString "AMS" }
-  , { name: unsafeFromString "阿图罗·梅里诺·贝尼特斯国际机场", iataCode: unsafeFromString "SCL" }
-  , { name: unsafeFromString "奥克兰国际机场", iataCode: unsafeFromString "AKL" }
-  , { name: unsafeFromString "北京首都国际机场", iataCode: unsafeFromString "PEK" }
-  , { name: unsafeFromString "贝伦瓦德坎斯国际机场", iataCode: unsafeFromString "BEL" }
-  , { name: unsafeFromString "贝洛奥里藏特坦克雷多·内维斯国际机场", iataCode: unsafeFromString "CNF" }
-  , { name: unsafeFromString "柏林泰格尔机场", iataCode: unsafeFromString "TXL" }
-  , { name: unsafeFromString "博乐国际机场", iataCode: unsafeFromString "ADD" }
-  , { name: unsafeFromString "巴西利亚儒塞利诺·库比契克总统国际机场", iataCode: unsafeFromString "BSB" }
-  , { name: unsafeFromString "布里斯班国际机场", iataCode: unsafeFromString "BNE" }
-  , { name: unsafeFromString "布里斯班机场", iataCode: unsafeFromString "BRU" }
-  , { name: unsafeFromString "凯恩斯机场", iataCode: unsafeFromString "CNS" }
-  , { name: unsafeFromString "开罗国际机场", iataCode: unsafeFromString "CAI" }
-  , { name: unsafeFromString "堪培拉机场", iataCode: unsafeFromString "CBR" }
-  , { name: unsafeFromString "开普敦国际机场", iataCode: unsafeFromString "CPT" }
-  , { name: unsafeFromString "戴高乐国际机场", iataCode: unsafeFromString "CDG" }
-  , { name: unsafeFromString "夏洛特道格拉斯国际机场", iataCode: unsafeFromString "CLT" }
-  , { name: unsafeFromString "成都双流国际机场", iataCode: unsafeFromString "CTU" }
-  , { name: unsafeFromString "贾特拉帕蒂·希瓦吉国际机场", iataCode: unsafeFromString "BOM" }
-  , { name: unsafeFromString "芝加哥奥黑尔国际机场", iataCode: unsafeFromString "ORD" }
-  , { name: unsafeFromString "重庆江北国际机场", iataCode: unsafeFromString "CKG" }
-  , { name: unsafeFromString "基督城国际机场", iataCode: unsafeFromString "CHC" }
-  , { name: unsafeFromString "哥本哈根卡斯特鲁普机场", iataCode: unsafeFromString "CPH" }
-  , { name: unsafeFromString "达拉斯沃思堡国际机场", iataCode: unsafeFromString "DFW" }
-  , { name: unsafeFromString "丹尼尔·井上国际机场", iataCode: unsafeFromString "HNL" }
-  , { name: unsafeFromString "丹佛国际机场", iataCode: unsafeFromString "DEN" }
-  , { name: unsafeFromString "廊曼国际机场", iataCode: unsafeFromString "DMK" }
-  , { name: unsafeFromString "迪拜国际机场", iataCode: unsafeFromString "DXB" }
-  , { name: unsafeFromString "都柏林机场", iataCode: unsafeFromString "DUB" }
-  , { name: unsafeFromString "杜塞尔多夫机场", iataCode: unsafeFromString "DUS" }
-  , { name: unsafeFromString "埃尔多拉多国际机场", iataCode: unsafeFromString "BOG" }
-  , { name: unsafeFromString "埃莱夫塞里奥斯·韦尼泽洛斯国际机场", iataCode: unsafeFromString "ATH" }
-  , { name: unsafeFromString "法阿国际机场", iataCode: unsafeFromString "PPT" }
-  , { name: unsafeFromString "劳德代尔堡好莱坞国际机场", iataCode: unsafeFromString "FLL" }
-  , { name: unsafeFromString "福塔莱萨平托马丁斯国际机场", iataCode: unsafeFromString "FOR" }
-  , { name: unsafeFromString "美因河畔法兰克福机场", iataCode: unsafeFromString "FRA" }
-  , { name: unsafeFromString "休斯顿机场乔治·布什洲际酒店", iataCode: unsafeFromString "IAH" }
-  , { name: unsafeFromString "黄金海岸机场", iataCode: unsafeFromString "OOL" }
-  , { name: unsafeFromString "瓜鲁柳斯 - 安德烈·佛朗哥·蒙托罗州长国际机场", iataCode: unsafeFromString "GRU" }
-  , { name: unsafeFromString "哈兹菲尔德-杰克逊亚特兰大国际机场", iataCode: unsafeFromString "ATL" }
-  , { name: unsafeFromString "赫尔辛基万塔机场", iataCode: unsafeFromString "HEL" }
-  , { name: unsafeFromString "霍巴特国际机场", iataCode: unsafeFromString "HBA" }
-  , { name: unsafeFromString "香港国际机场", iataCode: unsafeFromString "HKG" }
-  , { name: unsafeFromString "胡阿里·布迈丁机场", iataCode: unsafeFromString "ALG" }
-  , { name: unsafeFromString "赫尔格达国际机场", iataCode: unsafeFromString "HRG" }
-  , { name: unsafeFromString "仁川国际机场", iataCode: unsafeFromString "ICN" }
-  , { name: unsafeFromString "英迪拉·甘地国际机场", iataCode: unsafeFromString "DEL" }
-  , { name: unsafeFromString "伊斯坦布尔机场", iataCode: unsafeFromString "IST" }
-  , { name: unsafeFromString "杰克逊国际机场", iataCode: unsafeFromString "POM" }
-  , { name: unsafeFromString "济州国际机场", iataCode: unsafeFromString "CJU" }
-  , { name: unsafeFromString "约翰肯尼迪国际机场", iataCode: unsafeFromString "JFK" }
-  , { name: unsafeFromString "豪尔赫·查韦斯国际机场", iataCode: unsafeFromString "LIM" }
-  , { name: unsafeFromString "何塞·玛丽亚·科尔多瓦国际机场", iataCode: unsafeFromString "MDE" }
-  , { name: unsafeFromString "何塞普·塔拉德拉斯巴塞罗那埃尔普拉特机场", iataCode: unsafeFromString "BCN" }
-  , { name: unsafeFromString "卡胡卢伊机场", iataCode: unsafeFromString "OGG" }
-  , { name: unsafeFromString "阿卜杜勒阿齐兹国王国际机场", iataCode: unsafeFromString "JED" }
-  , { name: unsafeFromString "吉隆坡国际机场", iataCode: unsafeFromString "KUL" }
-  , { name: unsafeFromString "昆明长水国际机场", iataCode: unsafeFromString "KMG" }
-  , { name: unsafeFromString "拉通图塔国际机场", iataCode: unsafeFromString "NOU" }
-  , { name: unsafeFromString "莱昂纳多达芬奇-菲乌米奇诺机场", iataCode: unsafeFromString "FCO" }
-  , { name: unsafeFromString "伦敦希思罗机场", iataCode: unsafeFromString "LHR" }
-  , { name: unsafeFromString "洛杉矶国际机场", iataCode: unsafeFromString "LAX" }
-  , { name: unsafeFromString "麦卡伦国际机场", iataCode: unsafeFromString "LAS" }
-  , { name: unsafeFromString "墨尔本国际机场", iataCode: unsafeFromString "MEL" }
-  , { name: unsafeFromString "墨西哥城国际机场", iataCode: unsafeFromString "MEX" }
-  , { name: unsafeFromString "迈阿密国际机场", iataCode: unsafeFromString "MIA" }
-  , { name: unsafeFromString "皮斯塔里尼部长国际机场", iataCode: unsafeFromString "EZE" }
-  , { name: unsafeFromString "明尼阿波利斯-圣保罗国际机场/沃尔德-张伯伦机场", iataCode: unsafeFromString "MSP" }
-  , { name: unsafeFromString "穆罕默德五世国际机场", iataCode: unsafeFromString "CMN" }
-  , { name: unsafeFromString "莫斯科多莫杰多沃机场", iataCode: unsafeFromString "DME" }
-  , { name: unsafeFromString "慕尼黑机场", iataCode: unsafeFromString "MUC" }
-  , { name: unsafeFromString "穆尔塔拉穆罕默德国际机场", iataCode: unsafeFromString "LOS" }
-  , { name: unsafeFromString "楠迪国际机场", iataCode: unsafeFromString "NAN" }
-  , { name: unsafeFromString "内罗毕乔莫肯雅塔国际机场", iataCode: unsafeFromString "NBO" }
-  , { name: unsafeFromString "成田国际机场", iataCode: unsafeFromString "NRT" }
-  , { name: unsafeFromString "纽瓦克自由国际机场", iataCode: unsafeFromString "EWR" }
-  , { name: unsafeFromString "尼诺·阿基诺国际机场", iataCode: unsafeFromString "MNL" }
-  , { name: unsafeFromString "努美阿洋红色机场", iataCode: unsafeFromString "GEA" }
-  , { name: unsafeFromString "奥利弗·R·坦博国际机场", iataCode: unsafeFromString "JNB" }
-  , { name: unsafeFromString "奥兰多国际机场", iataCode: unsafeFromString "MCO" }
-  , { name: unsafeFromString "奥斯陆卢夫塔文机场", iataCode: unsafeFromString "OSL" }
-  , { name: unsafeFromString "珀斯机场", iataCode: unsafeFromString "PER" }
-  , { name: unsafeFromString "凤凰城天港国际机场", iataCode: unsafeFromString "PHX" }
-  , { name: unsafeFromString "累西腓瓜拉拉佩斯-吉尔伯托弗雷尔国际机场", iataCode: unsafeFromString "REC" }
-  , { name: unsafeFromString "里约热内卢加利昂国际机场", iataCode: unsafeFromString "GIG" }
-  , { name: unsafeFromString "萨尔加多菲略国际机场", iataCode: unsafeFromString "POA" }
-  , { name: unsafeFromString "萨尔瓦多·德普塔多·路易斯·爱德华多·马加良斯国际机场", iataCode: unsafeFromString "SSA" }
-  , { name: unsafeFromString "旧金山国际机场", iataCode: unsafeFromString "SFO" }
-  , { name: unsafeFromString "桑托斯·杜蒙特机场", iataCode: unsafeFromString "SDU" }
-  , { name: unsafeFromString "圣保罗孔戈尼亚斯机场", iataCode: unsafeFromString "CGH" }
-  , { name: unsafeFromString "西雅图塔科马国际机场", iataCode: unsafeFromString "SEA" }
-  , { name: unsafeFromString "上海虹桥国际机场", iataCode: unsafeFromString "SHA" }
-  , { name: unsafeFromString "上海浦东国际机场", iataCode: unsafeFromString "PVG" }
-  , { name: unsafeFromString "深圳宝安国际机场", iataCode: unsafeFromString "SZX" }
-  , { name: unsafeFromString "谢列梅捷沃国际机场", iataCode: unsafeFromString "SVO" }
-  , { name: unsafeFromString "新加坡樟宜机场", iataCode: unsafeFromString "SIN" }
-  , { name: unsafeFromString "苏加诺-哈达国际机场", iataCode: unsafeFromString "CGK" }
-  , { name: unsafeFromString "斯德哥尔摩-阿兰达机场", iataCode: unsafeFromString "ARN" }
-  , { name: unsafeFromString "素万那普机场", iataCode: unsafeFromString "BKK" }
-  , { name: unsafeFromString "悉尼金斯福德史密斯国际机场", iataCode: unsafeFromString "SYD" }
-  , { name: unsafeFromString "台湾桃园国际机场", iataCode: unsafeFromString "TPE" }
-  , { name: unsafeFromString "新山一国际机场", iataCode: unsafeFromString "SGN" }
-  , { name: unsafeFromString "东京羽田国际机场", iataCode: unsafeFromString "HND" }
-  , { name: unsafeFromString "多伦多皮尔逊国际机场", iataCode: unsafeFromString "YYZ" }
-  , { name: unsafeFromString "突尼斯迦太基国际机场", iataCode: unsafeFromString "TUN" }
-  , { name: unsafeFromString "温哥华国际机场", iataCode: unsafeFromString "YVR" }
-  , { name: unsafeFromString "维也纳国际机场", iataCode: unsafeFromString "VIE" }
-  , { name: unsafeFromString "维拉科波斯国际机场", iataCode: unsafeFromString "VCP" }
-  , { name: unsafeFromString "伏努科沃国际机场", iataCode: unsafeFromString "VKO" }
-  , { name: unsafeFromString "惠灵顿国际机场", iataCode: unsafeFromString "WLG" }
-  , { name: unsafeFromString "西安咸阳国际机场", iataCode: unsafeFromString "XIY" }
-  , { name: unsafeFromString "茹科夫斯基国际机场", iataCode: unsafeFromString "ZIA" }
-  , { name: unsafeFromString "苏黎世机场", iataCode: unsafeFromString "ZRH" }
-  ]
+  ( unsafeCoerce
+      :: Array { iataCode :: String, name :: String }
+      -> NonEmptyArray { iataCode :: NonEmptyString, name :: NonEmptyString }
+  )
+    [ { iataCode: "ADL", name: "阿德莱德国际机场" }
+    , { iataCode: "MAD", name: "阿道弗·苏亚雷斯马德里-巴拉哈斯机场" }
+    , { iataCode: "AEP", name: "豪尔赫纽伯里机场机场" }
+    , { iataCode: "CWB", name: "阿方索·佩纳国际机场" }
+    , { iataCode: "CLO", name: "阿方索·博尼利亚·阿拉贡国际机场" }
+    , { iataCode: "AMS", name: "阿姆斯特丹史基浦机场" }
+    , { iataCode: "SCL", name: "阿图罗·梅里诺·贝尼特斯国际机场" }
+    , { iataCode: "AKL", name: "奥克兰国际机场" }
+    , { iataCode: "PEK", name: "北京首都国际机场" }
+    , { iataCode: "BEL", name: "贝伦瓦德坎斯国际机场" }
+    , { iataCode: "CNF", name: "贝洛奥里藏特坦克雷多·内维斯国际机场" }
+    , { iataCode: "TXL", name: "柏林泰格尔机场" }
+    , { iataCode: "ADD", name: "博乐国际机场" }
+    , { iataCode: "BSB", name: "巴西利亚儒塞利诺·库比契克总统国际机场" }
+    , { iataCode: "BNE", name: "布里斯班国际机场" }
+    , { iataCode: "BRU", name: "布里斯班机场" }
+    , { iataCode: "CNS", name: "凯恩斯机场" }
+    , { iataCode: "CAI", name: "开罗国际机场" }
+    , { iataCode: "CBR", name: "堪培拉机场" }
+    , { iataCode: "CPT", name: "开普敦国际机场" }
+    , { iataCode: "CDG", name: "戴高乐国际机场" }
+    , { iataCode: "CLT", name: "夏洛特道格拉斯国际机场" }
+    , { iataCode: "CTU", name: "成都双流国际机场" }
+    , { iataCode: "BOM", name: "贾特拉帕蒂·希瓦吉国际机场" }
+    , { iataCode: "ORD", name: "芝加哥奥黑尔国际机场" }
+    , { iataCode: "CKG", name: "重庆江北国际机场" }
+    , { iataCode: "CHC", name: "基督城国际机场" }
+    , { iataCode: "CPH", name: "哥本哈根卡斯特鲁普机场" }
+    , { iataCode: "DFW", name: "达拉斯沃思堡国际机场" }
+    , { iataCode: "HNL", name: "丹尼尔·井上国际机场" }
+    , { iataCode: "DEN", name: "丹佛国际机场" }
+    , { iataCode: "DMK", name: "廊曼国际机场" }
+    , { iataCode: "DXB", name: "迪拜国际机场" }
+    , { iataCode: "DUB", name: "都柏林机场" }
+    , { iataCode: "DUS", name: "杜塞尔多夫机场" }
+    , { iataCode: "BOG", name: "埃尔多拉多国际机场" }
+    , { iataCode: "ATH", name: "埃莱夫塞里奥斯·韦尼泽洛斯国际机场" }
+    , { iataCode: "PPT", name: "法阿国际机场" }
+    , { iataCode: "FLL", name: "劳德代尔堡好莱坞国际机场" }
+    , { iataCode: "FOR", name: "福塔莱萨平托马丁斯国际机场" }
+    , { iataCode: "FRA", name: "美因河畔法兰克福机场" }
+    , { iataCode: "IAH", name: "休斯顿机场乔治·布什洲际酒店" }
+    , { iataCode: "OOL", name: "黄金海岸机场" }
+    , { iataCode: "GRU", name: "瓜鲁柳斯 - 安德烈·佛朗哥·蒙托罗州长国际机场" }
+    , { iataCode: "ATL", name: "哈兹菲尔德-杰克逊亚特兰大国际机场" }
+    , { iataCode: "HEL", name: "赫尔辛基万塔机场" }
+    , { iataCode: "HBA", name: "霍巴特国际机场" }
+    , { iataCode: "HKG", name: "香港国际机场" }
+    , { iataCode: "ALG", name: "胡阿里·布迈丁机场" }
+    , { iataCode: "HRG", name: "赫尔格达国际机场" }
+    , { iataCode: "ICN", name: "仁川国际机场" }
+    , { iataCode: "DEL", name: "英迪拉·甘地国际机场" }
+    , { iataCode: "IST", name: "伊斯坦布尔机场" }
+    , { iataCode: "POM", name: "杰克逊国际机场" }
+    , { iataCode: "CJU", name: "济州国际机场" }
+    , { iataCode: "JFK", name: "约翰肯尼迪国际机场" }
+    , { iataCode: "LIM", name: "豪尔赫·查韦斯国际机场" }
+    , { iataCode: "MDE", name: "何塞·玛丽亚·科尔多瓦国际机场" }
+    , { iataCode: "BCN", name: "何塞普·塔拉德拉斯巴塞罗那埃尔普拉特机场" }
+    , { iataCode: "OGG", name: "卡胡卢伊机场" }
+    , { iataCode: "JED", name: "阿卜杜勒阿齐兹国王国际机场" }
+    , { iataCode: "KUL", name: "吉隆坡国际机场" }
+    , { iataCode: "KMG", name: "昆明长水国际机场" }
+    , { iataCode: "NOU", name: "拉通图塔国际机场" }
+    , { iataCode: "FCO", name: "莱昂纳多达芬奇-菲乌米奇诺机场" }
+    , { iataCode: "LHR", name: "伦敦希思罗机场" }
+    , { iataCode: "LAX", name: "洛杉矶国际机场" }
+    , { iataCode: "LAS", name: "麦卡伦国际机场" }
+    , { iataCode: "MEL", name: "墨尔本国际机场" }
+    , { iataCode: "MEX", name: "墨西哥城国际机场" }
+    , { iataCode: "MIA", name: "迈阿密国际机场" }
+    , { iataCode: "EZE", name: "皮斯塔里尼部长国际机场" }
+    , { iataCode: "MSP", name: "明尼阿波利斯-圣保罗国际机场/沃尔德-张伯伦机场" }
+    , { iataCode: "CMN", name: "穆罕默德五世国际机场" }
+    , { iataCode: "DME", name: "莫斯科多莫杰多沃机场" }
+    , { iataCode: "MUC", name: "慕尼黑机场" }
+    , { iataCode: "LOS", name: "穆尔塔拉穆罕默德国际机场" }
+    , { iataCode: "NAN", name: "楠迪国际机场" }
+    , { iataCode: "NBO", name: "内罗毕乔莫肯雅塔国际机场" }
+    , { iataCode: "NRT", name: "成田国际机场" }
+    , { iataCode: "EWR", name: "纽瓦克自由国际机场" }
+    , { iataCode: "MNL", name: "尼诺·阿基诺国际机场" }
+    , { iataCode: "GEA", name: "努美阿洋红色机场" }
+    , { iataCode: "JNB", name: "奥利弗·R·坦博国际机场" }
+    , { iataCode: "MCO", name: "奥兰多国际机场" }
+    , { iataCode: "OSL", name: "奥斯陆卢夫塔文机场" }
+    , { iataCode: "PER", name: "珀斯机场" }
+    , { iataCode: "PHX", name: "凤凰城天港国际机场" }
+    , { iataCode: "REC", name: "累西腓瓜拉拉佩斯-吉尔伯托弗雷尔国际机场" }
+    , { iataCode: "GIG", name: "里约热内卢加利昂国际机场" }
+    , { iataCode: "POA", name: "萨尔加多菲略国际机场" }
+    , { iataCode: "SSA", name: "萨尔瓦多·德普塔多·路易斯·爱德华多·马加良斯国际机场" }
+    , { iataCode: "SFO", name: "旧金山国际机场" }
+    , { iataCode: "SDU", name: "桑托斯·杜蒙特机场" }
+    , { iataCode: "CGH", name: "圣保罗孔戈尼亚斯机场" }
+    , { iataCode: "SEA", name: "西雅图塔科马国际机场" }
+    , { iataCode: "SHA", name: "上海虹桥国际机场" }
+    , { iataCode: "PVG", name: "上海浦东国际机场" }
+    , { iataCode: "SZX", name: "深圳宝安国际机场" }
+    , { iataCode: "SVO", name: "谢列梅捷沃国际机场" }
+    , { iataCode: "SIN", name: "新加坡樟宜机场" }
+    , { iataCode: "CGK", name: "苏加诺-哈达国际机场" }
+    , { iataCode: "ARN", name: "斯德哥尔摩-阿兰达机场" }
+    , { iataCode: "BKK", name: "素万那普机场" }
+    , { iataCode: "SYD", name: "悉尼金斯福德史密斯国际机场" }
+    , { iataCode: "TPE", name: "台湾桃园国际机场" }
+    , { iataCode: "SGN", name: "新山一国际机场" }
+    , { iataCode: "HND", name: "东京羽田国际机场" }
+    , { iataCode: "YYZ", name: "多伦多皮尔逊国际机场" }
+    , { iataCode: "TUN", name: "突尼斯迦太基国际机场" }
+    , { iataCode: "YVR", name: "温哥华国际机场" }
+    , { iataCode: "VIE", name: "维也纳国际机场" }
+    , { iataCode: "VCP", name: "维拉科波斯国际机场" }
+    , { iataCode: "VKO", name: "伏努科沃国际机场" }
+    , { iataCode: "WLG", name: "惠灵顿国际机场" }
+    , { iataCode: "XIY", name: "西安咸阳国际机场" }
+    , { iataCode: "ZIA", name: "茹科夫斯基国际机场" }
+    , { iataCode: "ZRH", name: "苏黎世机场" }
+    ]

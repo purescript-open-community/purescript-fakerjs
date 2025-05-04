@@ -2,10 +2,8 @@ module Fakerjs2.Locales.En.Food.Dish (dish) where
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (Dish)
 import Unsafe.Coerce (unsafeCoerce)
 
-dish :: Dish
 dish = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
   [ "California maki"
   , "Peking duck"

@@ -1,37 +1,41 @@
 module Fakerjs2.Locales.ZhCn.Science.Unit (unit) where
 
-import Data.String.NonEmpty (unsafeFromString)
-import Fakerjs2.Types (Unit)
+import Data.Array.NonEmpty (NonEmptyArray)
+import Data.String.NonEmpty (NonEmptyString)
+import Unsafe.Coerce (unsafeCoerce)
 
-unit :: Unit
 unit =
-  [ { name: unsafeFromString "米", symbol: unsafeFromString "m" }
-  , { name: unsafeFromString "秒", symbol: unsafeFromString "s" }
-  , { name: unsafeFromString "摩尔", symbol: unsafeFromString "mol" }
-  , { name: unsafeFromString "安培", symbol: unsafeFromString "A" }
-  , { name: unsafeFromString "开尔文", symbol: unsafeFromString "K" }
-  , { name: unsafeFromString "坎德拉", symbol: unsafeFromString "cd" }
-  , { name: unsafeFromString "千克", symbol: unsafeFromString "kg" }
-  , { name: unsafeFromString "弧度", symbol: unsafeFromString "rad" }
-  , { name: unsafeFromString "赫兹", symbol: unsafeFromString "Hz" }
-  , { name: unsafeFromString "牛顿", symbol: unsafeFromString "N" }
-  , { name: unsafeFromString "帕斯卡", symbol: unsafeFromString "Pa" }
-  , { name: unsafeFromString "焦耳", symbol: unsafeFromString "J" }
-  , { name: unsafeFromString "瓦特", symbol: unsafeFromString "W" }
-  , { name: unsafeFromString "库伦", symbol: unsafeFromString "C" }
-  , { name: unsafeFromString "伏特", symbol: unsafeFromString "V" }
-  , { name: unsafeFromString "欧姆", symbol: unsafeFromString "Ω" }
-  , { name: unsafeFromString "特斯拉", symbol: unsafeFromString "T" }
-  , { name: unsafeFromString "摄氏度", symbol: unsafeFromString "°C" }
-  , { name: unsafeFromString "流明", symbol: unsafeFromString "lm" }
-  , { name: unsafeFromString "贝尔勒尔", symbol: unsafeFromString "Bq" }
-  , { name: unsafeFromString "戈瑞", symbol: unsafeFromString "Gy" }
-  , { name: unsafeFromString "希沃特", symbol: unsafeFromString "Sv" }
-  , { name: unsafeFromString "球面度", symbol: unsafeFromString "sr" }
-  , { name: unsafeFromString "法拉", symbol: unsafeFromString "F" }
-  , { name: unsafeFromString "西门子", symbol: unsafeFromString "S" }
-  , { name: unsafeFromString "韦伯", symbol: unsafeFromString "Wb" }
-  , { name: unsafeFromString "亨利", symbol: unsafeFromString "H" }
-  , { name: unsafeFromString "勒克斯", symbol: unsafeFromString "lx" }
-  , { name: unsafeFromString "开特", symbol: unsafeFromString "kat" }
-  ]
+  ( unsafeCoerce
+      :: Array { name :: String, symbol :: String }
+      -> NonEmptyArray { name :: NonEmptyString, symbol :: NonEmptyString }
+  )
+    [ { name: "米", symbol: "m" }
+    , { name: "秒", symbol: "s" }
+    , { name: "摩尔", symbol: "mol" }
+    , { name: "安培", symbol: "A" }
+    , { name: "开尔文", symbol: "K" }
+    , { name: "坎德拉", symbol: "cd" }
+    , { name: "千克", symbol: "kg" }
+    , { name: "弧度", symbol: "rad" }
+    , { name: "赫兹", symbol: "Hz" }
+    , { name: "牛顿", symbol: "N" }
+    , { name: "帕斯卡", symbol: "Pa" }
+    , { name: "焦耳", symbol: "J" }
+    , { name: "瓦特", symbol: "W" }
+    , { name: "库伦", symbol: "C" }
+    , { name: "伏特", symbol: "V" }
+    , { name: "欧姆", symbol: "Ω" }
+    , { name: "特斯拉", symbol: "T" }
+    , { name: "摄氏度", symbol: "°C" }
+    , { name: "流明", symbol: "lm" }
+    , { name: "贝尔勒尔", symbol: "Bq" }
+    , { name: "戈瑞", symbol: "Gy" }
+    , { name: "希沃特", symbol: "Sv" }
+    , { name: "球面度", symbol: "sr" }
+    , { name: "法拉", symbol: "F" }
+    , { name: "西门子", symbol: "S" }
+    , { name: "韦伯", symbol: "Wb" }
+    , { name: "亨利", symbol: "H" }
+    , { name: "勒克斯", symbol: "lx" }
+    , { name: "开特", symbol: "kat" }
+    ]

@@ -2,10 +2,8 @@ module Fakerjs2.Locales.ZhCn.Commerce.ProductDescription (product_description) w
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (ProductDescription)
 import Unsafe.Coerce (unsafeCoerce)
 
-product_description :: ProductDescription
 product_description = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
   [ "Sony/索尼 XR-55A80EK 55英寸4K超清认知智能OLED安卓摄像头电视"
   , "【2023新品官方旗舰正品】DERE戴睿笔记本电脑二合一新Surface Pro13平板商务办公学生教育超轻薄便携电脑本"

@@ -2,10 +2,8 @@ module Fakerjs2.Locales.En.Location.Country (country) where
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (Country)
 import Unsafe.Coerce (unsafeCoerce)
 
-country :: Country
 country = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
   [ "Afghanistan"
   , "Aland Islands"

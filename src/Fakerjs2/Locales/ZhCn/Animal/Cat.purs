@@ -2,10 +2,8 @@ module Fakerjs2.Locales.ZhCn.Animal.Cat (cat) where
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (Cat)
 import Unsafe.Coerce (unsafeCoerce)
 
-cat :: Cat
 cat = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
   [ "三花猫"
   , "中华田园猫"

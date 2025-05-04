@@ -1,167 +1,167 @@
 module Fakerjs2.Locales.ZhCn.Airline.Airplane (airplane) where
 
-import Data.String.NonEmpty (unsafeFromString)
-import Fakerjs2.Types (Airplane)
+import Data.Array.NonEmpty (NonEmptyArray)
+import Data.String.NonEmpty (NonEmptyString)
+import Unsafe.Coerce (unsafeCoerce)
 
-airplane :: Airplane
 airplane =
-  [ { name: unsafeFromString "航天/BAC协和式飞机", iataTypeCode: unsafeFromString "SSC" }
-  , { name: unsafeFromString "空客A300", iataTypeCode: unsafeFromString "AB3" }
-  , { name: unsafeFromString "空客A310", iataTypeCode: unsafeFromString "310" }
-  , { name: unsafeFromString "空客A310-200", iataTypeCode: unsafeFromString "312" }
-  , { name: unsafeFromString "空客A310-300", iataTypeCode: unsafeFromString "313" }
-  , { name: unsafeFromString "空客A318", iataTypeCode: unsafeFromString "318" }
-  , { name: unsafeFromString "空客A319", iataTypeCode: unsafeFromString "319" }
-  , { name: unsafeFromString "空客A319neo", iataTypeCode: unsafeFromString "31N" }
-  , { name: unsafeFromString "空客A320", iataTypeCode: unsafeFromString "320" }
-  , { name: unsafeFromString "空客A320neo", iataTypeCode: unsafeFromString "32N" }
-  , { name: unsafeFromString "空客A321", iataTypeCode: unsafeFromString "321" }
-  , { name: unsafeFromString "空客A321neo", iataTypeCode: unsafeFromString "32Q" }
-  , { name: unsafeFromString "空客A330", iataTypeCode: unsafeFromString "330" }
-  , { name: unsafeFromString "空客A330-200", iataTypeCode: unsafeFromString "332" }
-  , { name: unsafeFromString "空客A330-300", iataTypeCode: unsafeFromString "333" }
-  , { name: unsafeFromString "空客A330-800neo", iataTypeCode: unsafeFromString "338" }
-  , { name: unsafeFromString "空客A330-900neo", iataTypeCode: unsafeFromString "339" }
-  , { name: unsafeFromString "空客A340", iataTypeCode: unsafeFromString "340" }
-  , { name: unsafeFromString "空客A340-200", iataTypeCode: unsafeFromString "342" }
-  , { name: unsafeFromString "空客A340-300", iataTypeCode: unsafeFromString "343" }
-  , { name: unsafeFromString "空客A340-500", iataTypeCode: unsafeFromString "345" }
-  , { name: unsafeFromString "空客A340-600", iataTypeCode: unsafeFromString "346" }
-  , { name: unsafeFromString "空客A350", iataTypeCode: unsafeFromString "350" }
-  , { name: unsafeFromString "空客A350-900", iataTypeCode: unsafeFromString "359" }
-  , { name: unsafeFromString "空客A350-1000", iataTypeCode: unsafeFromString "351" }
-  , { name: unsafeFromString "空客A380", iataTypeCode: unsafeFromString "380" }
-  , { name: unsafeFromString "空客A380-800", iataTypeCode: unsafeFromString "388" }
-  , { name: unsafeFromString "安东诺夫 安-12", iataTypeCode: unsafeFromString "ANF" }
-  , { name: unsafeFromString "安东诺夫 安-24", iataTypeCode: unsafeFromString "AN4" }
-  , { name: unsafeFromString "安东诺夫 安-26", iataTypeCode: unsafeFromString "A26" }
-  , { name: unsafeFromString "安东诺夫 安-28", iataTypeCode: unsafeFromString "A28" }
-  , { name: unsafeFromString "安东诺夫 安-30", iataTypeCode: unsafeFromString "A30" }
-  , { name: unsafeFromString "安东诺夫 安-32", iataTypeCode: unsafeFromString "A32" }
-  , { name: unsafeFromString "安东诺夫 安-72", iataTypeCode: unsafeFromString "AN7" }
-  , { name: unsafeFromString "安东诺夫 安-124 Ruslan", iataTypeCode: unsafeFromString "A4F" }
-  , { name: unsafeFromString "安东诺夫 安-140", iataTypeCode: unsafeFromString "A40" }
-  , { name: unsafeFromString "安东诺夫 安-148", iataTypeCode: unsafeFromString "A81" }
-  , { name: unsafeFromString "安东诺夫 安-158", iataTypeCode: unsafeFromString "A58" }
-  , { name: unsafeFromString "安东诺夫 安-225 Mriya", iataTypeCode: unsafeFromString "A5F" }
-  , { name: unsafeFromString "波音707", iataTypeCode: unsafeFromString "703" }
-  , { name: unsafeFromString "波音717", iataTypeCode: unsafeFromString "717" }
-  , { name: unsafeFromString "波音720B", iataTypeCode: unsafeFromString "B72" }
-  , { name: unsafeFromString "波音727", iataTypeCode: unsafeFromString "727" }
-  , { name: unsafeFromString "波音727-100", iataTypeCode: unsafeFromString "721" }
-  , { name: unsafeFromString "波音727-200", iataTypeCode: unsafeFromString "722" }
-  , { name: unsafeFromString "波音737 MAX 7", iataTypeCode: unsafeFromString "7M7" }
-  , { name: unsafeFromString "波音737 MAX 8", iataTypeCode: unsafeFromString "7M8" }
-  , { name: unsafeFromString "波音737 MAX 9", iataTypeCode: unsafeFromString "7M9" }
-  , { name: unsafeFromString "波音737 MAX 10", iataTypeCode: unsafeFromString "7MJ" }
-  , { name: unsafeFromString "波音737", iataTypeCode: unsafeFromString "737" }
-  , { name: unsafeFromString "波音737-100", iataTypeCode: unsafeFromString "731" }
-  , { name: unsafeFromString "波音737-200", iataTypeCode: unsafeFromString "732" }
-  , { name: unsafeFromString "波音737-300", iataTypeCode: unsafeFromString "733" }
-  , { name: unsafeFromString "波音737-400", iataTypeCode: unsafeFromString "734" }
-  , { name: unsafeFromString "波音737-500", iataTypeCode: unsafeFromString "735" }
-  , { name: unsafeFromString "波音737-600", iataTypeCode: unsafeFromString "736" }
-  , { name: unsafeFromString "波音737-700", iataTypeCode: unsafeFromString "73G" }
-  , { name: unsafeFromString "波音737-800", iataTypeCode: unsafeFromString "738" }
-  , { name: unsafeFromString "波音737-900", iataTypeCode: unsafeFromString "739" }
-  , { name: unsafeFromString "波音747", iataTypeCode: unsafeFromString "747" }
-  , { name: unsafeFromString "波音747-100", iataTypeCode: unsafeFromString "741" }
-  , { name: unsafeFromString "波音747-200", iataTypeCode: unsafeFromString "742" }
-  , { name: unsafeFromString "波音747-300", iataTypeCode: unsafeFromString "743" }
-  , { name: unsafeFromString "波音747-400", iataTypeCode: unsafeFromString "744" }
-  , { name: unsafeFromString "波音747-400D", iataTypeCode: unsafeFromString "74J" }
-  , { name: unsafeFromString "波音747-8", iataTypeCode: unsafeFromString "748" }
-  , { name: unsafeFromString "波音747SP", iataTypeCode: unsafeFromString "74L" }
-  , { name: unsafeFromString "波音747SR", iataTypeCode: unsafeFromString "74R" }
-  , { name: unsafeFromString "波音757", iataTypeCode: unsafeFromString "757" }
-  , { name: unsafeFromString "波音757-200", iataTypeCode: unsafeFromString "752" }
-  , { name: unsafeFromString "波音757-300", iataTypeCode: unsafeFromString "753" }
-  , { name: unsafeFromString "波音767", iataTypeCode: unsafeFromString "767" }
-  , { name: unsafeFromString "波音767-200", iataTypeCode: unsafeFromString "762" }
-  , { name: unsafeFromString "波音767-300", iataTypeCode: unsafeFromString "763" }
-  , { name: unsafeFromString "波音767-400", iataTypeCode: unsafeFromString "764" }
-  , { name: unsafeFromString "波音777", iataTypeCode: unsafeFromString "777" }
-  , { name: unsafeFromString "波音777-200", iataTypeCode: unsafeFromString "772" }
-  , { name: unsafeFromString "波音777-200LR", iataTypeCode: unsafeFromString "77L" }
-  , { name: unsafeFromString "波音777-300", iataTypeCode: unsafeFromString "773" }
-  , { name: unsafeFromString "波音777-300ER", iataTypeCode: unsafeFromString "77W" }
-  , { name: unsafeFromString "波音787", iataTypeCode: unsafeFromString "787" }
-  , { name: unsafeFromString "波音787-8", iataTypeCode: unsafeFromString "788" }
-  , { name: unsafeFromString "波音787-9", iataTypeCode: unsafeFromString "789" }
-  , { name: unsafeFromString "波音787-10", iataTypeCode: unsafeFromString "781" }
-  , { name: unsafeFromString "加拿大挑战者飞机", iataTypeCode: unsafeFromString "CCJ" }
-  , { name: unsafeFromString "加拿大CL-44", iataTypeCode: unsafeFromString "CL4" }
-  , { name: unsafeFromString "加拿大支线喷气机100", iataTypeCode: unsafeFromString "CR1" }
-  , { name: unsafeFromString "加拿大支线喷气机200", iataTypeCode: unsafeFromString "CR2" }
-  , { name: unsafeFromString "加拿大支线喷气机700", iataTypeCode: unsafeFromString "CR7" }
-  , { name: unsafeFromString "加拿大支线喷气机705", iataTypeCode: unsafeFromString "CRA" }
-  , { name: unsafeFromString "加拿大支线喷气机900", iataTypeCode: unsafeFromString "CR9" }
-  , { name: unsafeFromString "加拿大支线喷气机1000", iataTypeCode: unsafeFromString "CRK" }
-  , { name: unsafeFromString "加拿大德哈维兰DHC-2 Beaver", iataTypeCode: unsafeFromString "DHP" }
-  , { name: unsafeFromString "加拿大德哈维兰DHC-2 Turbo-Beaver", iataTypeCode: unsafeFromString "DHR" }
-  , { name: unsafeFromString "加拿大德哈维兰DHC-3 Otter", iataTypeCode: unsafeFromString "DHL" }
-  , { name: unsafeFromString "加拿大德哈维兰DHC-4 Caribou", iataTypeCode: unsafeFromString "DHC" }
-  , { name: unsafeFromString "加拿大德哈维兰DHC-6 Twin Otter", iataTypeCode: unsafeFromString "DHT" }
-  , { name: unsafeFromString "加拿大德哈维兰DHC-7 Dash 7", iataTypeCode: unsafeFromString "DH7" }
-  , { name: unsafeFromString "加拿大德哈维兰DHC-8-100 Dash 8 / 8Q", iataTypeCode: unsafeFromString "DH1" }
-  , { name: unsafeFromString "加拿大德哈维兰DHC-8-200 Dash 8 / 8Q", iataTypeCode: unsafeFromString "DH2" }
-  , { name: unsafeFromString "加拿大德哈维兰DHC-8-300 Dash 8 / 8Q", iataTypeCode: unsafeFromString "DH3" }
-  , { name: unsafeFromString "加拿大德哈维兰DHC-8-400 Dash 8Q", iataTypeCode: unsafeFromString "DH4" }
-  , { name: unsafeFromString "德哈维兰DH.104 Dove", iataTypeCode: unsafeFromString "DHD" }
-  , { name: unsafeFromString "德哈维兰DH.114 Heron", iataTypeCode: unsafeFromString "DHH" }
-  , { name: unsafeFromString "道格拉斯DC-3", iataTypeCode: unsafeFromString "D3F" }
-  , { name: unsafeFromString "道格拉斯DC-6", iataTypeCode: unsafeFromString "D6F" }
-  , { name: unsafeFromString "道格拉斯DC-8-50", iataTypeCode: unsafeFromString "D8T" }
-  , { name: unsafeFromString "道格拉斯DC-8-62", iataTypeCode: unsafeFromString "D8L" }
-  , { name: unsafeFromString "道格拉斯DC-8-72", iataTypeCode: unsafeFromString "D8Q" }
-  , { name: unsafeFromString "道格拉斯DC-9-10", iataTypeCode: unsafeFromString "D91" }
-  , { name: unsafeFromString "道格拉斯DC-9-20", iataTypeCode: unsafeFromString "D92" }
-  , { name: unsafeFromString "道格拉斯DC-9-30", iataTypeCode: unsafeFromString "D93" }
-  , { name: unsafeFromString "道格拉斯DC-9-40", iataTypeCode: unsafeFromString "D94" }
-  , { name: unsafeFromString "道格拉斯DC-9-50", iataTypeCode: unsafeFromString "D95" }
-  , { name: unsafeFromString "道格拉斯DC-10", iataTypeCode: unsafeFromString "D10" }
-  , { name: unsafeFromString "道格拉斯DC-10-10", iataTypeCode: unsafeFromString "D1X" }
-  , { name: unsafeFromString "道格拉斯DC-10-30", iataTypeCode: unsafeFromString "D1Y" }
-  , { name: unsafeFromString "巴西工业航空公司170", iataTypeCode: unsafeFromString "E70" }
-  , { name: unsafeFromString "巴西工业航空公司175", iataTypeCode: unsafeFromString "E75" }
-  , { name: unsafeFromString "巴西工业航空公司190", iataTypeCode: unsafeFromString "E90" }
-  , { name: unsafeFromString "巴西工业航空公司195", iataTypeCode: unsafeFromString "E95" }
-  , { name: unsafeFromString "巴西工业航空公司E190-E2", iataTypeCode: unsafeFromString "290" }
-  , { name: unsafeFromString "巴西工业航空公司E195-E2", iataTypeCode: unsafeFromString "295" }
-  , { name: unsafeFromString "巴西工业航空公司EMB.110 Bandeirante", iataTypeCode: unsafeFromString "EMB" }
-  , { name: unsafeFromString "巴西工业航空公司EMB.120 Brasilia", iataTypeCode: unsafeFromString "EM2" }
-  , { name: unsafeFromString "巴西工业航空公司Legacy 600", iataTypeCode: unsafeFromString "ER3" }
-  , { name: unsafeFromString "巴西工业航空公司Phenom 100", iataTypeCode: unsafeFromString "EP1" }
-  , { name: unsafeFromString "巴西工业航空公司Phenom 300", iataTypeCode: unsafeFromString "EP3" }
-  , { name: unsafeFromString "巴西工业航空公司RJ135", iataTypeCode: unsafeFromString "ER3" }
-  , { name: unsafeFromString "巴西工业航空公司RJ140", iataTypeCode: unsafeFromString "ERD" }
-  , { name: unsafeFromString "巴西工业航空公司RJ145 Amazon", iataTypeCode: unsafeFromString "ER4" }
-  , { name: unsafeFromString "伊留申IL18", iataTypeCode: unsafeFromString "IL8" }
-  , { name: unsafeFromString "伊留申IL62", iataTypeCode: unsafeFromString "IL6" }
-  , { name: unsafeFromString "伊留申IL76", iataTypeCode: unsafeFromString "IL7" }
-  , { name: unsafeFromString "伊留申IL86", iataTypeCode: unsafeFromString "ILW" }
-  , { name: unsafeFromString "伊留申IL96-300", iataTypeCode: unsafeFromString "I93" }
-  , { name: unsafeFromString "伊留申IL114", iataTypeCode: unsafeFromString "I14" }
-  , { name: unsafeFromString "洛克希德L-182 / 282 / 382 (L-100) Hercules"
-    , iataTypeCode: unsafeFromString "LOH"
-    }
-  , { name: unsafeFromString "洛克希德L-188 Electra", iataTypeCode: unsafeFromString "LOE" }
-  , { name: unsafeFromString "洛克希德L-1011 Tristar", iataTypeCode: unsafeFromString "L10" }
-  , { name: unsafeFromString "洛克希德L-1049 Super Constellation"
-    , iataTypeCode: unsafeFromString "L49"
-    }
-  , { name: unsafeFromString "麦克唐纳道格拉斯MD11", iataTypeCode: unsafeFromString "M11" }
-  , { name: unsafeFromString "麦克唐纳道格拉斯MD80", iataTypeCode: unsafeFromString "M80" }
-  , { name: unsafeFromString "麦克唐纳道格拉斯MD81", iataTypeCode: unsafeFromString "M81" }
-  , { name: unsafeFromString "麦克唐纳道格拉斯MD82", iataTypeCode: unsafeFromString "M82" }
-  , { name: unsafeFromString "麦克唐纳道格拉斯MD83", iataTypeCode: unsafeFromString "M83" }
-  , { name: unsafeFromString "麦克唐纳道格拉斯MD87", iataTypeCode: unsafeFromString "M87" }
-  , { name: unsafeFromString "麦克唐纳道格拉斯MD88", iataTypeCode: unsafeFromString "M88" }
-  , { name: unsafeFromString "麦克唐纳道格拉斯MD90", iataTypeCode: unsafeFromString "M90" }
-  , { name: unsafeFromString "苏霍伊超级喷气机100-95", iataTypeCode: unsafeFromString "SU9" }
-  , { name: unsafeFromString "图波列夫Tu-134", iataTypeCode: unsafeFromString "TU3" }
-  , { name: unsafeFromString "图波列夫Tu-154", iataTypeCode: unsafeFromString "TU5" }
-  , { name: unsafeFromString "图波列夫Tu-204", iataTypeCode: unsafeFromString "T20" }
-  , { name: unsafeFromString "雅科夫列夫Yak-40", iataTypeCode: unsafeFromString "YK4" }
-  , { name: unsafeFromString "雅科夫列夫Yak-42", iataTypeCode: unsafeFromString "YK2" }
-  ]
+  ( unsafeCoerce
+      :: Array { iataTypeCode :: String, name :: String }
+      -> NonEmptyArray { iataTypeCode :: NonEmptyString, name :: NonEmptyString }
+  )
+    [ { iataTypeCode: "SSC", name: "航天/BAC协和式飞机" }
+    , { iataTypeCode: "AB3", name: "空客A300" }
+    , { iataTypeCode: "310", name: "空客A310" }
+    , { iataTypeCode: "312", name: "空客A310-200" }
+    , { iataTypeCode: "313", name: "空客A310-300" }
+    , { iataTypeCode: "318", name: "空客A318" }
+    , { iataTypeCode: "319", name: "空客A319" }
+    , { iataTypeCode: "31N", name: "空客A319neo" }
+    , { iataTypeCode: "320", name: "空客A320" }
+    , { iataTypeCode: "32N", name: "空客A320neo" }
+    , { iataTypeCode: "321", name: "空客A321" }
+    , { iataTypeCode: "32Q", name: "空客A321neo" }
+    , { iataTypeCode: "330", name: "空客A330" }
+    , { iataTypeCode: "332", name: "空客A330-200" }
+    , { iataTypeCode: "333", name: "空客A330-300" }
+    , { iataTypeCode: "338", name: "空客A330-800neo" }
+    , { iataTypeCode: "339", name: "空客A330-900neo" }
+    , { iataTypeCode: "340", name: "空客A340" }
+    , { iataTypeCode: "342", name: "空客A340-200" }
+    , { iataTypeCode: "343", name: "空客A340-300" }
+    , { iataTypeCode: "345", name: "空客A340-500" }
+    , { iataTypeCode: "346", name: "空客A340-600" }
+    , { iataTypeCode: "350", name: "空客A350" }
+    , { iataTypeCode: "359", name: "空客A350-900" }
+    , { iataTypeCode: "351", name: "空客A350-1000" }
+    , { iataTypeCode: "380", name: "空客A380" }
+    , { iataTypeCode: "388", name: "空客A380-800" }
+    , { iataTypeCode: "ANF", name: "安东诺夫 安-12" }
+    , { iataTypeCode: "AN4", name: "安东诺夫 安-24" }
+    , { iataTypeCode: "A26", name: "安东诺夫 安-26" }
+    , { iataTypeCode: "A28", name: "安东诺夫 安-28" }
+    , { iataTypeCode: "A30", name: "安东诺夫 安-30" }
+    , { iataTypeCode: "A32", name: "安东诺夫 安-32" }
+    , { iataTypeCode: "AN7", name: "安东诺夫 安-72" }
+    , { iataTypeCode: "A4F", name: "安东诺夫 安-124 Ruslan" }
+    , { iataTypeCode: "A40", name: "安东诺夫 安-140" }
+    , { iataTypeCode: "A81", name: "安东诺夫 安-148" }
+    , { iataTypeCode: "A58", name: "安东诺夫 安-158" }
+    , { iataTypeCode: "A5F", name: "安东诺夫 安-225 Mriya" }
+    , { iataTypeCode: "703", name: "波音707" }
+    , { iataTypeCode: "717", name: "波音717" }
+    , { iataTypeCode: "B72", name: "波音720B" }
+    , { iataTypeCode: "727", name: "波音727" }
+    , { iataTypeCode: "721", name: "波音727-100" }
+    , { iataTypeCode: "722", name: "波音727-200" }
+    , { iataTypeCode: "7M7", name: "波音737 MAX 7" }
+    , { iataTypeCode: "7M8", name: "波音737 MAX 8" }
+    , { iataTypeCode: "7M9", name: "波音737 MAX 9" }
+    , { iataTypeCode: "7MJ", name: "波音737 MAX 10" }
+    , { iataTypeCode: "737", name: "波音737" }
+    , { iataTypeCode: "731", name: "波音737-100" }
+    , { iataTypeCode: "732", name: "波音737-200" }
+    , { iataTypeCode: "733", name: "波音737-300" }
+    , { iataTypeCode: "734", name: "波音737-400" }
+    , { iataTypeCode: "735", name: "波音737-500" }
+    , { iataTypeCode: "736", name: "波音737-600" }
+    , { iataTypeCode: "73G", name: "波音737-700" }
+    , { iataTypeCode: "738", name: "波音737-800" }
+    , { iataTypeCode: "739", name: "波音737-900" }
+    , { iataTypeCode: "747", name: "波音747" }
+    , { iataTypeCode: "741", name: "波音747-100" }
+    , { iataTypeCode: "742", name: "波音747-200" }
+    , { iataTypeCode: "743", name: "波音747-300" }
+    , { iataTypeCode: "744", name: "波音747-400" }
+    , { iataTypeCode: "74J", name: "波音747-400D" }
+    , { iataTypeCode: "748", name: "波音747-8" }
+    , { iataTypeCode: "74L", name: "波音747SP" }
+    , { iataTypeCode: "74R", name: "波音747SR" }
+    , { iataTypeCode: "757", name: "波音757" }
+    , { iataTypeCode: "752", name: "波音757-200" }
+    , { iataTypeCode: "753", name: "波音757-300" }
+    , { iataTypeCode: "767", name: "波音767" }
+    , { iataTypeCode: "762", name: "波音767-200" }
+    , { iataTypeCode: "763", name: "波音767-300" }
+    , { iataTypeCode: "764", name: "波音767-400" }
+    , { iataTypeCode: "777", name: "波音777" }
+    , { iataTypeCode: "772", name: "波音777-200" }
+    , { iataTypeCode: "77L", name: "波音777-200LR" }
+    , { iataTypeCode: "773", name: "波音777-300" }
+    , { iataTypeCode: "77W", name: "波音777-300ER" }
+    , { iataTypeCode: "787", name: "波音787" }
+    , { iataTypeCode: "788", name: "波音787-8" }
+    , { iataTypeCode: "789", name: "波音787-9" }
+    , { iataTypeCode: "781", name: "波音787-10" }
+    , { iataTypeCode: "CCJ", name: "加拿大挑战者飞机" }
+    , { iataTypeCode: "CL4", name: "加拿大CL-44" }
+    , { iataTypeCode: "CR1", name: "加拿大支线喷气机100" }
+    , { iataTypeCode: "CR2", name: "加拿大支线喷气机200" }
+    , { iataTypeCode: "CR7", name: "加拿大支线喷气机700" }
+    , { iataTypeCode: "CRA", name: "加拿大支线喷气机705" }
+    , { iataTypeCode: "CR9", name: "加拿大支线喷气机900" }
+    , { iataTypeCode: "CRK", name: "加拿大支线喷气机1000" }
+    , { iataTypeCode: "DHP", name: "加拿大德哈维兰DHC-2 Beaver" }
+    , { iataTypeCode: "DHR", name: "加拿大德哈维兰DHC-2 Turbo-Beaver" }
+    , { iataTypeCode: "DHL", name: "加拿大德哈维兰DHC-3 Otter" }
+    , { iataTypeCode: "DHC", name: "加拿大德哈维兰DHC-4 Caribou" }
+    , { iataTypeCode: "DHT", name: "加拿大德哈维兰DHC-6 Twin Otter" }
+    , { iataTypeCode: "DH7", name: "加拿大德哈维兰DHC-7 Dash 7" }
+    , { iataTypeCode: "DH1", name: "加拿大德哈维兰DHC-8-100 Dash 8 / 8Q" }
+    , { iataTypeCode: "DH2", name: "加拿大德哈维兰DHC-8-200 Dash 8 / 8Q" }
+    , { iataTypeCode: "DH3", name: "加拿大德哈维兰DHC-8-300 Dash 8 / 8Q" }
+    , { iataTypeCode: "DH4", name: "加拿大德哈维兰DHC-8-400 Dash 8Q" }
+    , { iataTypeCode: "DHD", name: "德哈维兰DH.104 Dove" }
+    , { iataTypeCode: "DHH", name: "德哈维兰DH.114 Heron" }
+    , { iataTypeCode: "D3F", name: "道格拉斯DC-3" }
+    , { iataTypeCode: "D6F", name: "道格拉斯DC-6" }
+    , { iataTypeCode: "D8T", name: "道格拉斯DC-8-50" }
+    , { iataTypeCode: "D8L", name: "道格拉斯DC-8-62" }
+    , { iataTypeCode: "D8Q", name: "道格拉斯DC-8-72" }
+    , { iataTypeCode: "D91", name: "道格拉斯DC-9-10" }
+    , { iataTypeCode: "D92", name: "道格拉斯DC-9-20" }
+    , { iataTypeCode: "D93", name: "道格拉斯DC-9-30" }
+    , { iataTypeCode: "D94", name: "道格拉斯DC-9-40" }
+    , { iataTypeCode: "D95", name: "道格拉斯DC-9-50" }
+    , { iataTypeCode: "D10", name: "道格拉斯DC-10" }
+    , { iataTypeCode: "D1X", name: "道格拉斯DC-10-10" }
+    , { iataTypeCode: "D1Y", name: "道格拉斯DC-10-30" }
+    , { iataTypeCode: "E70", name: "巴西工业航空公司170" }
+    , { iataTypeCode: "E75", name: "巴西工业航空公司175" }
+    , { iataTypeCode: "E90", name: "巴西工业航空公司190" }
+    , { iataTypeCode: "E95", name: "巴西工业航空公司195" }
+    , { iataTypeCode: "290", name: "巴西工业航空公司E190-E2" }
+    , { iataTypeCode: "295", name: "巴西工业航空公司E195-E2" }
+    , { iataTypeCode: "EMB", name: "巴西工业航空公司EMB.110 Bandeirante" }
+    , { iataTypeCode: "EM2", name: "巴西工业航空公司EMB.120 Brasilia" }
+    , { iataTypeCode: "ER3", name: "巴西工业航空公司Legacy 600" }
+    , { iataTypeCode: "EP1", name: "巴西工业航空公司Phenom 100" }
+    , { iataTypeCode: "EP3", name: "巴西工业航空公司Phenom 300" }
+    , { iataTypeCode: "ER3", name: "巴西工业航空公司RJ135" }
+    , { iataTypeCode: "ERD", name: "巴西工业航空公司RJ140" }
+    , { iataTypeCode: "ER4", name: "巴西工业航空公司RJ145 Amazon" }
+    , { iataTypeCode: "IL8", name: "伊留申IL18" }
+    , { iataTypeCode: "IL6", name: "伊留申IL62" }
+    , { iataTypeCode: "IL7", name: "伊留申IL76" }
+    , { iataTypeCode: "ILW", name: "伊留申IL86" }
+    , { iataTypeCode: "I93", name: "伊留申IL96-300" }
+    , { iataTypeCode: "I14", name: "伊留申IL114" }
+    , { iataTypeCode: "LOH", name: "洛克希德L-182 / 282 / 382 (L-100) Hercules" }
+    , { iataTypeCode: "LOE", name: "洛克希德L-188 Electra" }
+    , { iataTypeCode: "L10", name: "洛克希德L-1011 Tristar" }
+    , { iataTypeCode: "L49", name: "洛克希德L-1049 Super Constellation" }
+    , { iataTypeCode: "M11", name: "麦克唐纳道格拉斯MD11" }
+    , { iataTypeCode: "M80", name: "麦克唐纳道格拉斯MD80" }
+    , { iataTypeCode: "M81", name: "麦克唐纳道格拉斯MD81" }
+    , { iataTypeCode: "M82", name: "麦克唐纳道格拉斯MD82" }
+    , { iataTypeCode: "M83", name: "麦克唐纳道格拉斯MD83" }
+    , { iataTypeCode: "M87", name: "麦克唐纳道格拉斯MD87" }
+    , { iataTypeCode: "M88", name: "麦克唐纳道格拉斯MD88" }
+    , { iataTypeCode: "M90", name: "麦克唐纳道格拉斯MD90" }
+    , { iataTypeCode: "SU9", name: "苏霍伊超级喷气机100-95" }
+    , { iataTypeCode: "TU3", name: "图波列夫Tu-134" }
+    , { iataTypeCode: "TU5", name: "图波列夫Tu-154" }
+    , { iataTypeCode: "T20", name: "图波列夫Tu-204" }
+    , { iataTypeCode: "YK4", name: "雅科夫列夫Yak-40" }
+    , { iataTypeCode: "YK2", name: "雅科夫列夫Yak-42" }
+    ]

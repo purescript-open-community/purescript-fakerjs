@@ -2,10 +2,8 @@ module Fakerjs2.Locales.En.Team.Creature (creature) where
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Types (Creature)
 import Unsafe.Coerce (unsafeCoerce)
 
-creature :: Creature
 creature = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
   [ "ants"
   , "bats"
