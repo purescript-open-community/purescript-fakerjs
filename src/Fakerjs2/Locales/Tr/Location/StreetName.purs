@@ -1,0 +1,48 @@
+module Fakerjs2.Locales.Tr.Location.StreetName (street_name) where
+
+import Data.Array.NonEmpty (NonEmptyArray)
+import Data.String.NonEmpty (NonEmptyString)
+import Unsafe.Coerce (unsafeCoerce)
+
+street_name = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
+  [ "Atatürk Bulvarı"
+  , "Alparslan Türkeş Bulvarı"
+  , "Ali Çetinkaya Caddesi"
+  , "Tevfik Fikret Caddesi"
+  , "Kocatepe Caddesi"
+  , "İsmet Paşa Caddesi"
+  , "30 Ağustos Caddesi"
+  , "İsmet Attila Caddesi"
+  , "Namık Kemal Caddesi"
+  , "Lütfi Karadirek Caddesi"
+  , "Sarıkaya Caddesi"
+  , "Yunus Emre Sokak"
+  , "Dar Sokak"
+  , "Fatih Sokak"
+  , "Harman Yolu Sokak"
+  , "Ergenekon Sokak"
+  , "Ülkü Sokak"
+  , "Sağlık Sokak"
+  , "Okul Sokak"
+  , "Harman Altı Sokak"
+  , "Kaldırım Sokak"
+  , "Mevlana Sokak"
+  , "Gül Sokak"
+  , "Sıran Söğüt Sokak"
+  , "Güven Yaka Sokak"
+  , "Saygılı Sokak"
+  , "Menekşe Sokak"
+  , "Dağınık Evler Sokak"
+  , "Sevgi Sokak"
+  , "Afyon Kaya Sokak"
+  , "Oğuzhan Sokak"
+  , "İbn-i Sina Sokak"
+  , "Bahçe Sokak"
+  , "Köypınar Sokak"
+  , "Kekeçoğlu Sokak"
+  , "Barış Sokak"
+  , "Bayır Sokak"
+  , "Kerimoğlu Sokak"
+  , "Nalbant Sokak"
+  , "Bandak Sokak"
+  ]

@@ -5,46 +5,28 @@
         "path": "./",
         "core": {
           "dependencies": [
-            {
-              "arrays": ">=7.3.0 <8.0.0"
-            },
+            "arrays",
             "arrays-extra",
             "codec-argonaut",
             "debug",
-            {
-              "effect": ">=4.0.0 <5.0.0"
-            },
-            {
-              "exceptions": ">=6.1.0 <7.0.0"
-            },
-            {
-              "functions": ">=6.0.0 <7.0.0"
-            },
-            {
-              "gen": ">=3.0.0 <4.0.0"
-            },
+            "effect",
+            "exceptions",
+            "functions",
+            "gen",
             "js-promise-aff",
-            {
-              "maybe": ">=6.0.0 <7.0.0"
-            },
+            "maybe",
             "node-fs",
             "node-path",
-            {
-              "nullable": ">=6.0.0 <7.0.0"
-            },
+            "nullable",
             "parsing",
-            {
-              "prelude": ">=6.0.2 <7.0.0"
-            },
+            "prelude",
             "quickcheck",
             "record-extra-srghma",
             "strings-extra",
             "stringutils",
             "these",
             "tidy-codegen",
-            {
-              "unsafe-coerce": ">=6.0.0 <7.0.0"
-            }
+            "unsafe-coerce"
           ],
           "build_plan": [
             "aff",
@@ -136,6 +118,7 @@
           "dependencies": [
             "console",
             "effect",
+            "spec-discovery",
             "spec-node"
           ],
           "build_plan": [
@@ -201,6 +184,7 @@
             "refs",
             "safe-coerce",
             "spec",
+            "spec-discovery",
             "spec-node",
             "st",
             "strings",
@@ -779,6 +763,9 @@
       },
       "record-extra-srghma": {
         "path": "/home/srghma/projects/purescript-record-extra-srghma"
+      },
+      "spec-discovery": {
+        "path": "/home/srghma/projects/purescript-spec-discovery"
       },
       "tidy-codegen": {
         "git": "https://github.com/natefaubion/purescript-tidy-codegen",
@@ -1852,9 +1839,11 @@
         "functions",
         "lists",
         "maybe",
+        "nonempty",
         "parallel",
         "prelude",
         "record",
+        "strings",
         "tuples",
         "typelevel-prelude",
         "unfoldable"
@@ -1909,6 +1898,18 @@
         "tailrec",
         "transformers",
         "tuples"
+      ]
+    },
+    "spec-discovery": {
+      "type": "local",
+      "path": "/home/srghma/projects/purescript-spec-discovery",
+      "dependencies": [
+        "aff",
+        "effect",
+        "foldable-traversable",
+        "prelude",
+        "spec",
+        "spec-node"
       ]
     },
     "spec-node": {

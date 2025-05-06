@@ -1,50 +1,24 @@
 module Fakerjs2Generate.JavascriptBetter.Encode.CodeGenOutput where
 
-import Fakerjs2Generate.JavascriptBetter.Encode.Impl
+import Fakerjs2Generate.JavascriptBetter.Encode.Impl (Encoder, encodeNEAOf, encodeNES)
 import Prelude
 
 import Data.Array as Array
 import Data.Array.NonEmpty (NonEmptyArray)
-import Data.Array.NonEmpty (NonEmptyArray)
 import Data.Array.NonEmpty as NonEmptyArray
-import Data.Bifunctor (lmap)
-import Data.Either (Either(..))
-import Data.Map (Map)
-import Data.Map as Map
-import Data.Maybe (Maybe(..), fromJust)
-import Data.Set as Set
-import Data.String.NonEmpty (NonEmptyString)
+import Data.Maybe (Maybe(..))
 import Data.String.NonEmpty (NonEmptyString)
 import Data.String.NonEmpty as NonEmptyString
 import Data.Symbol (class IsSymbol)
-import Data.Symbol (class IsSymbol)
-import Data.Traversable (traverse)
-import Data.Tuple (Tuple(..), fst)
-import Data.Tuple (Tuple)
-import Data.Tuple.Nested (type (/\), (/\))
-import Fakerjs2Generate.Javascript (Javascript(..))
-import Foreign.Object as Object
+import Data.Tuple (Tuple(..))
 import Partial.Unsafe (unsafePartial)
 import Prim.Row as Row
-import Prim.Row as Row
-import Prim.RowList as RL
 import Prim.RowList as RL
 import PureScript.CST.Types (Expr)
-import PureScript.CST.Types (Expr, Ident, Module, Proper, QualifiedName)
-import PureScript.CST.Types as CST
 import Record as Record
-import Safe.Coerce (coerce)
-import Tidy.Codegen (declSignature, declValue, exprApp, exprArray, exprCtor, exprIdent, exprInt, exprRecord, exprString, exprTyped, typeApp, typeArrow, typeCtor, typeRow, typeWildcard)
-import Tidy.Codegen (typeApp, typeCtor, typeVar, typeRow, typeRecord)
-import Tidy.Codegen.Class (toQualifiedName)
 import Tidy.Codegen.Monad (Codegen)
-import Tidy.Codegen.Monad (Codegen, CodegenT, exporting, write)
-import Tidy.Codegen.Monad as Tidy.Codegen.Monad
-import Type.Prelude as Symbol
 import Type.Prelude as Symbol
 import Type.Proxy (Proxy(..))
-import Type.Proxy (Proxy(..))
-import Unsafe.Coerce (unsafeCoerce)
 
 type CodeGenOutput_ManyFunctionExported_Value = Tuple NonEmptyString (Codegen Void (Expr Void))
 
@@ -61,47 +35,103 @@ exportOne = map CodeGenOutput_OneFunctionFileNamed
 ---------------------------
 
 -- | Helper for encoding records from Javascript values
-class ExportRecord (rowList :: RL.RowList Type) (row :: Row Type) | rowList -> row where
-  exportRecordImpl :: Record row -> Array CodeGenOutput_ManyFunctionExported_Value
+class ExportRecord (rowList :: RL.RowList Type) (row :: Row Type) (valueToEncode_row :: Row Type) | rowList -> row valueToEncode_row where
+  exportRecordImpl :: Record row -> Record valueToEncode_row -> Array CodeGenOutput_ManyFunctionExported_Value
 
 -- | Base case for empty record
-instance ExportRecord RL.Nil () where
-  exportRecordImpl _ = []
+instance ExportRecord RL.Nil any any2 where
+  exportRecordImpl _ _ = []
 
--- | Recursive case for fields
+newtype Optional a = Optional (Encoder a)
+
 instance
-  ( ExportRecord rowListTail rowTail
-  , Row.Cons sym (a -> Codegen Void (Expr Void)) rowTail row
-  , Row.Cons sym a ro' ro
-  , Row.Lacks sym rowTail
-  , Row.Lacks sym ro'
+  ( ExportRecord rowListTail row valueToEncode_row
+  , Row.Cons sym (Optional a) rowTail row
+  , Row.Cons sym (Maybe a) valueToEncode_rowTail valueToEncode_row
   , IsSymbol sym
   ) =>
-  ExportRecord (RL.Cons sym (Encoder a) rowListTail) row where
-  exportRecordImpl record =
+  ExportRecord (RL.Cons sym (Optional a) rowListTail) row valueToEncode_row where
+  exportRecordImpl recordOfEncoders valueToEncode =
     let
       sym = Proxy :: Proxy sym
-      key = Symbol.reflectSymbol sym
-      tailP = Proxy :: Proxy rowListTail
-      exportr = Record.get sym exportrs
-      value = Record.get sym record
-      restexportrs = Record.delete sym exportrs :: Record rowTail
-      restRecord = Record.delete sym record :: Record ro'
-      exportd = exportr value
-      rest = exportRecordImpl tailP restexportrs restRecord
+      (Optional encoder :: Optional a) = Record.get sym recordOfEncoders
+      value = Record.get sym valueToEncode :: Maybe a
+      rest = exportRecordImpl @rowListTail recordOfEncoders valueToEncode :: Array CodeGenOutput_ManyFunctionExported_Value
     in
-      Array.cons (Tuple key exportd) rest
+      case value of
+        Nothing -> []
+        Just value' ->
+          let
+            key = unsafePartial $ NonEmptyString.unsafeFromString $ Symbol.reflectSymbol sym
+            exported = encoder value'
+            new = Tuple key exported :: CodeGenOutput_ManyFunctionExported_Value
+          in
+            Array.cons new rest
+else instance
+  ( ExportRecord rowListTail row valueToEncode_row
+  , Row.Cons sym (Encoder a) rowTail row
+  , Row.Cons sym a valueToEncode_rowTail valueToEncode_row
+  , IsSymbol sym
+  ) =>
+  ExportRecord (RL.Cons sym (Encoder a) rowListTail) row valueToEncode_row where
+  exportRecordImpl recordOfEncoders valueToEncode =
+    let
+      sym = Proxy :: Proxy sym
+      key = unsafePartial $ NonEmptyString.unsafeFromString $ Symbol.reflectSymbol sym
+      (encoder :: Encoder a) = Record.get sym recordOfEncoders
+      value = Record.get sym valueToEncode :: a
+      rest = exportRecordImpl @rowListTail recordOfEncoders valueToEncode :: Array CodeGenOutput_ManyFunctionExported_Value
+      exported = encoder value
+      new = Tuple key exported :: CodeGenOutput_ManyFunctionExported_Value
+    in
+      Array.cons new rest
 
 exportRecord
-  :: forall row rowList
+  :: forall row rowList valueToEncode_row
    . RL.RowToList row rowList
-  => ExportRecord rowList row
+  => ExportRecord rowList row valueToEncode_row
   => Record row
+  -> Record valueToEncode_row
   -> CodeGenOutput
-exportRecord record =
-  -- fields <-
+exportRecord recordOfEncoders valueToEncode =
   let
-    (fields :: Array CodeGenOutput_ManyFunctionExported_Value) = exportRecordImpl @rowList record
-    (fields' :: NonEmptyArray CodeGenOutput_ManyFunctionExported_Value) = unsafePartial $ fromJust $ NonEmptyArray.fromArray fields
+    (fields :: Array CodeGenOutput_ManyFunctionExported_Value) = exportRecordImpl @rowList recordOfEncoders valueToEncode
   in
-    CodeGenOutput_ManyFunctionExported fields'
+    case NonEmptyArray.fromArray fields of
+      Nothing -> CodeGenOutput_Ignore
+      Just fields' -> CodeGenOutput_ManyFunctionExported fields'
+
+exportRecordIgnoreIfNothing
+  :: forall row rowList valueToEncode_row
+   . RL.RowToList row rowList
+  => ExportRecord rowList row valueToEncode_row
+  => Record row
+  -> Maybe (Record valueToEncode_row)
+  -> CodeGenOutput
+exportRecordIgnoreIfNothing recordOfEncoders =
+  case _ of
+    Nothing -> CodeGenOutput_Ignore
+    Just valueToEncode -> exportRecord recordOfEncoders valueToEncode
+
+exportOneIgnoreIfNothing
+  :: forall a
+   . Encoder a
+  -> Maybe a
+  -> CodeGenOutput
+exportOneIgnoreIfNothing encoder =
+  case _ of
+    Nothing -> CodeGenOutput_Ignore
+    Just v -> CodeGenOutput_OneFunctionFileNamed $ encoder v
+
+-- encodeNEAOf encodeString
+exportOneIgnoreIfNothing__encodeNEAofString__ignoreIfEmptyString
+  :: Partial
+  => Maybe (NonEmptyArray String)
+  -> CodeGenOutput
+exportOneIgnoreIfNothing__encodeNEAofString__ignoreIfEmptyString =
+  case _ of
+    Nothing -> CodeGenOutput_Ignore
+    Just v ->
+      case NonEmptyArray.fromArray $ NonEmptyArray.mapMaybe NonEmptyString.fromString v of
+        Nothing -> CodeGenOutput_Ignore
+        Just v' -> CodeGenOutput_OneFunctionFileNamed $ encodeNEAOf encodeNES v'

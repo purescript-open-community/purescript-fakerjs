@@ -2,16 +2,9 @@ module Fakerjs2Generate.JavascriptBetter.JavascriptError where
 
 import Prelude
 
-import Control.Alt ((<|>))
 import Data.Argonaut.Core as J
-import Data.Array.NonEmpty (NonEmptyArray)
 import Data.Codec.Argonaut (encode) as C
-import Data.Codec.Argonaut.Common (JsonCodec, JsonDecodeError(..), codec', decode, encode, int, nonEmptyArray, nonEmptyString, null, strMap, string) as CA
-import Data.Either (Either(..))
 import Data.Generic.Rep (class Generic)
-import Data.Map (Map)
-import Data.Show.Generic (genericShow)
-import Data.String.NonEmpty (NonEmptyString)
 import Fakerjs2Generate.Javascript (Javascript, javascriptCodec)
 
 ---------------------------------------------------------------

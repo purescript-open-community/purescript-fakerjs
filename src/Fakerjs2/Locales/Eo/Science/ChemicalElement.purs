@@ -1,0 +1,130 @@
+module Fakerjs2.Locales.Eo.Science.ChemicalElement (chemical_element) where
+
+import Data.Array.NonEmpty (NonEmptyArray)
+import Data.String.NonEmpty (NonEmptyString)
+import Unsafe.Coerce (unsafeCoerce)
+
+chemical_element =
+  ( unsafeCoerce
+      :: Array { atomicNumber :: Int, name :: String, symbol :: String }
+      -> NonEmptyArray { atomicNumber :: Int, name :: NonEmptyString, symbol :: NonEmptyString }
+  )
+    [ { atomicNumber: 1, name: "hidrogeno", symbol: "H" }
+    , { atomicNumber: 2, name: "heliumo", symbol: "He" }
+    , { atomicNumber: 3, name: "litio", symbol: "Li" }
+    , { atomicNumber: 4, name: "berilio", symbol: "Be" }
+    , { atomicNumber: 5, name: "boro", symbol: "B" }
+    , { atomicNumber: 6, name: "karbono", symbol: "C" }
+    , { atomicNumber: 7, name: "nitrogeno", symbol: "N" }
+    , { atomicNumber: 8, name: "oksigeno", symbol: "O" }
+    , { atomicNumber: 9, name: "fluoro", symbol: "F" }
+    , { atomicNumber: 10, name: "neono", symbol: "Ne" }
+    , { atomicNumber: 11, name: "natrio", symbol: "Na" }
+    , { atomicNumber: 12, name: "magnezio", symbol: "Mg" }
+    , { atomicNumber: 13, name: "aluminio", symbol: "Al" }
+    , { atomicNumber: 14, name: "silicio", symbol: "Si" }
+    , { atomicNumber: 15, name: "fosforo", symbol: "P" }
+    , { atomicNumber: 16, name: "sulfuro", symbol: "S" }
+    , { atomicNumber: 17, name: "kloro", symbol: "Cl" }
+    , { atomicNumber: 18, name: "argono", symbol: "Ar" }
+    , { atomicNumber: 19, name: "kalio", symbol: "K" }
+    , { atomicNumber: 20, name: "kalcio", symbol: "Ca" }
+    , { atomicNumber: 21, name: "skandio", symbol: "Sc" }
+    , { atomicNumber: 22, name: "titano", symbol: "Ti" }
+    , { atomicNumber: 23, name: "vanado", symbol: "V" }
+    , { atomicNumber: 24, name: "kromo", symbol: "Cr" }
+    , { atomicNumber: 25, name: "mangano", symbol: "Mn" }
+    , { atomicNumber: 26, name: "fero", symbol: "Fe" }
+    , { atomicNumber: 27, name: "kobalto", symbol: "Co" }
+    , { atomicNumber: 28, name: "nikelo", symbol: "Ni" }
+    , { atomicNumber: 29, name: "kupro", symbol: "Cu" }
+    , { atomicNumber: 30, name: "zinko", symbol: "Zn" }
+    , { atomicNumber: 31, name: "galiumo", symbol: "Ga" }
+    , { atomicNumber: 32, name: "germaniumo", symbol: "Ge" }
+    , { atomicNumber: 33, name: "arseno", symbol: "As" }
+    , { atomicNumber: 34, name: "seleno", symbol: "Se" }
+    , { atomicNumber: 35, name: "bromo", symbol: "Br" }
+    , { atomicNumber: 36, name: "kriptono", symbol: "Kr" }
+    , { atomicNumber: 37, name: "rubidio", symbol: "Rb" }
+    , { atomicNumber: 38, name: "stroncio", symbol: "Sr" }
+    , { atomicNumber: 39, name: "itrio", symbol: "Y" }
+    , { atomicNumber: 40, name: "zirkonio", symbol: "Zr" }
+    , { atomicNumber: 41, name: "niobo", symbol: "Nb" }
+    , { atomicNumber: 42, name: "molibdeno", symbol: "Mo" }
+    , { atomicNumber: 43, name: "teknecio", symbol: "Tc" }
+    , { atomicNumber: 44, name: "rutenio", symbol: "Ru" }
+    , { atomicNumber: 45, name: "rodio", symbol: "Rh" }
+    , { atomicNumber: 46, name: "paladio", symbol: "Pd" }
+    , { atomicNumber: 47, name: "arĝento", symbol: "Ag" }
+    , { atomicNumber: 48, name: "kadmio", symbol: "Cd" }
+    , { atomicNumber: 49, name: "indio", symbol: "In" }
+    , { atomicNumber: 50, name: "stano", symbol: "Sn" }
+    , { atomicNumber: 51, name: "antimono", symbol: "Sb" }
+    , { atomicNumber: 52, name: "teluro", symbol: "Te" }
+    , { atomicNumber: 53, name: "jodo", symbol: "I" }
+    , { atomicNumber: 54, name: "ksenono", symbol: "Xe" }
+    , { atomicNumber: 55, name: "cezio", symbol: "Cs" }
+    , { atomicNumber: 56, name: "bario", symbol: "Ba" }
+    , { atomicNumber: 57, name: "lantano", symbol: "La" }
+    , { atomicNumber: 58, name: "cerio", symbol: "Ce" }
+    , { atomicNumber: 59, name: "prazeodimo", symbol: "Pr" }
+    , { atomicNumber: 60, name: "neodimo", symbol: "Nd" }
+    , { atomicNumber: 61, name: "prometio", symbol: "Pm" }
+    , { atomicNumber: 62, name: "samario", symbol: "Sm" }
+    , { atomicNumber: 63, name: "eŭropio", symbol: "Eu" }
+    , { atomicNumber: 64, name: "gadolinio", symbol: "Gd" }
+    , { atomicNumber: 65, name: "terbio", symbol: "Tb" }
+    , { atomicNumber: 66, name: "disprozio", symbol: "Dy" }
+    , { atomicNumber: 67, name: "holmio", symbol: "Ho" }
+    , { atomicNumber: 68, name: "erbio", symbol: "Er" }
+    , { atomicNumber: 69, name: "tulio", symbol: "Tm" }
+    , { atomicNumber: 70, name: "iterbio", symbol: "Yb" }
+    , { atomicNumber: 71, name: "lutecio", symbol: "Lu" }
+    , { atomicNumber: 72, name: "hafnio", symbol: "Hf" }
+    , { atomicNumber: 73, name: "tantalo", symbol: "Ta" }
+    , { atomicNumber: 74, name: "volframo", symbol: "W" }
+    , { atomicNumber: 75, name: "renio", symbol: "Re" }
+    , { atomicNumber: 76, name: "osmio", symbol: "Os" }
+    , { atomicNumber: 77, name: "iridio", symbol: "Ir" }
+    , { atomicNumber: 78, name: "plateno", symbol: "Pt" }
+    , { atomicNumber: 79, name: "oro", symbol: "Au" }
+    , { atomicNumber: 80, name: "hidrargo", symbol: "Hg" }
+    , { atomicNumber: 81, name: "talio", symbol: "Tl" }
+    , { atomicNumber: 82, name: "plumbo", symbol: "Pb" }
+    , { atomicNumber: 83, name: "bismuto", symbol: "Bi" }
+    , { atomicNumber: 84, name: "polonio", symbol: "Po" }
+    , { atomicNumber: 85, name: "astato", symbol: "At" }
+    , { atomicNumber: 86, name: "radono", symbol: "Rn" }
+    , { atomicNumber: 87, name: "franciumo", symbol: "Fr" }
+    , { atomicNumber: 88, name: "radiumo", symbol: "Ra" }
+    , { atomicNumber: 89, name: "aktiniumo", symbol: "Ac" }
+    , { atomicNumber: 90, name: "torio", symbol: "Th" }
+    , { atomicNumber: 91, name: "protaktinio", symbol: "Pa" }
+    , { atomicNumber: 92, name: "uranio", symbol: "U" }
+    , { atomicNumber: 93, name: "neptunio", symbol: "Np" }
+    , { atomicNumber: 94, name: "plutonio", symbol: "Pu" }
+    , { atomicNumber: 95, name: "americio", symbol: "Am" }
+    , { atomicNumber: 96, name: "kuriumo", symbol: "Cm" }
+    , { atomicNumber: 97, name: "berkelio", symbol: "Bk" }
+    , { atomicNumber: 98, name: "kaliforniumo", symbol: "Cf" }
+    , { atomicNumber: 99, name: "ejnŝtejnio", symbol: "Es" }
+    , { atomicNumber: 100, name: "fermio", symbol: "Fm" }
+    , { atomicNumber: 101, name: "mendelevio", symbol: "Md" }
+    , { atomicNumber: 102, name: "nobelio", symbol: "No" }
+    , { atomicNumber: 103, name: "laŭrencio", symbol: "Lr" }
+    , { atomicNumber: 104, name: "ruterfordio", symbol: "Rf" }
+    , { atomicNumber: 105, name: "dubnio", symbol: "Db" }
+    , { atomicNumber: 106, name: "seborgio", symbol: "Sg" }
+    , { atomicNumber: 107, name: "borio", symbol: "Bh" }
+    , { atomicNumber: 108, name: "hasio", symbol: "Hs" }
+    , { atomicNumber: 109, name: "mejtnerio", symbol: "Mt" }
+    , { atomicNumber: 110, name: "darmŝtatio", symbol: "Ds" }
+    , { atomicNumber: 111, name: "rentgenio", symbol: "Rg" }
+    , { atomicNumber: 112, name: "kopernicio", symbol: "Cn" }
+    , { atomicNumber: 113, name: "nihonio", symbol: "Nh" }
+    , { atomicNumber: 114, name: "flerovio", symbol: "Fl" }
+    , { atomicNumber: 115, name: "moskovio", symbol: "Mc" }
+    , { atomicNumber: 116, name: "livermorio", symbol: "Lv" }
+    , { atomicNumber: 117, name: "teneso", symbol: "Ts" }
+    , { atomicNumber: 118, name: "oganesono", symbol: "Og" }
+    ]

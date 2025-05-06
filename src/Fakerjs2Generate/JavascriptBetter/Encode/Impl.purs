@@ -1,48 +1,31 @@
 module Fakerjs2Generate.JavascriptBetter.Encode.Impl where
 
-import Fakerjs2Generate.JavascriptBetter.Encode.Utils
-import Fakerjs2Generate.JavascriptBetter.Types
+import Fakerjs2Generate.JavascriptBetter.Encode.Utils (importFakerjs2Weighted, importJustCtor, importLeftCtor, importNonEmptyArrayType, importNonEmptyStringType, importNothingCtor, importRightCtor, importUnsafeCoerceInd)
+import Fakerjs2Generate.JavascriptBetter.Types (ReplaceSymbols, Weighted, WithFunctionCall)
 import Prelude
 
 import Data.Array as Array
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.Array.NonEmpty as NonEmptyArray
-import Data.Bifunctor (lmap)
 import Data.Either (Either(..))
 import Data.Map (Map)
 import Data.Map as Map
 import Data.Maybe (Maybe(..))
-import Data.Set as Set
 import Data.String.NonEmpty (NonEmptyString)
 import Data.String.NonEmpty as NonEmptyString
 import Data.Symbol (class IsSymbol)
-import Data.Symbol (class IsSymbol)
 import Data.Traversable (traverse)
-import Data.Tuple (Tuple(..), fst)
-import Data.Tuple.Nested (type (/\), (/\))
-import Fakerjs2Generate.Javascript (Javascript(..))
-import Foreign.Object as Object
-import Prim.Row as Row
+import Data.Tuple (Tuple(..))
 import Prim.Row as Row
 import Prim.RowList as RL
-import Prim.RowList as RL
-import PureScript.CST.Types (Expr, Ident, Module, Proper, QualifiedName)
+import PureScript.CST.Types (Expr)
 import PureScript.CST.Types as CST
 import Record as Record
-import Record.ExtraSrghma
-import Safe.Coerce (coerce)
-import Tidy.Codegen (declSignature, declValue, exprApp, exprArray, exprCtor, exprIdent, exprInt, exprRecord, exprString, exprTyped, typeApp, typeArrow, typeCtor, typeRow, typeWildcard)
-import Tidy.Codegen (typeApp, typeCtor, typeVar, typeRow, typeRecord)
-import Tidy.Codegen.Class (toQualifiedName)
-import Tidy.Codegen.Monad (Codegen, CodegenT, exporting, write)
-import Tidy.Codegen.Monad as Tidy.Codegen.Monad
+import Tidy.Codegen (exprApp, exprArray, exprCtor, exprIdent, exprInt, exprRecord, exprString, exprTyped, typeApp, typeArrow, typeCtor, typeRecord)
+import Tidy.Codegen.Monad (Codegen, CodegenT)
 import Type.Prelude as Symbol
-import Type.Prelude as Symbol
-import Type.Proxy (Proxy(..))
 import Type.Proxy (Proxy(..))
 import Unsafe.Coerce (unsafeCoerce)
-import Record.Builder (Builder)
-import Record.Builder as Builder
 
 -- First, define helper functions to create row tuples
 class KnownTypeNameRowList :: RL.RowList Type -> Constraint
@@ -215,35 +198,44 @@ encodeEither encodeA encodeB eab = case eab of
 encodeString :: Partial => Encoder String
 encodeString = pure <<< exprString
 
+-- encodeArrayOfString :: Partial => Encoder (Array String)
+-- encodeArrayOfString =
+
 -- | Helper for encoding records from Javascript values
-class EncodeRecord (rl :: RL.RowList Type) (ri :: Row Type) (ro :: Row Type) | rl -> ri ro where
-  encodeRecordImpl :: Record ri -> Record ro -> Codegen Void (Array (Tuple String (Expr Void)))
+class EncodeRecord (rowList :: RL.RowList Type) (row :: Row Type) (valueToEncode_row :: Row Type) | rowList -> row valueToEncode_row where
+  encodeRecordImpl :: Record row -> Record valueToEncode_row -> Codegen Void (Array (Tuple String (Expr Void)))
 
 -- | Base case for empty record
-instance EncodeRecord RL.Nil () () where
+instance EncodeRecord RL.Nil any any2 where
   encodeRecordImpl _ _ = pure []
 
 -- | Recursive case for fields
 instance
-  ( EncodeRecord tail ri' ro'
-  , Row.Cons sym (a -> Codegen Void (Expr Void)) ri' ri
-  , Row.Cons sym a ro' ro
-  , Row.Lacks sym ri'
-  , Row.Lacks sym ro'
+  ( EncodeRecord rowListTail row valueToEncode_row
+  , Row.Cons sym (Encoder a) rowTail row
+  , Row.Cons sym a valueToEncode_rowTail valueToEncode_row
   , IsSymbol sym
   ) =>
-  EncodeRecord (RL.Cons sym (a -> Codegen Void (Expr Void)) tail) ri ro where
+  EncodeRecord (RL.Cons sym (Encoder a) rowListTail) row valueToEncode_row where
   encodeRecordImpl encoders record = do
     let
       sym = Proxy :: Proxy sym
       key = Symbol.reflectSymbol sym
       encoder = Record.get sym encoders
       value = Record.get sym record
-      restEncoders = Record.delete sym encoders :: Record ri'
-      restRecord = Record.delete sym record :: Record ro'
     encoded <- encoder value
-    rest <- encodeRecordImpl @tail restEncoders restRecord
+    rest <- encodeRecordImpl @rowListTail encoders record
     pure $ Array.cons (Tuple key encoded) rest
+
+encodeRecord
+  :: forall encoders_row valueToEncode_row encoders_rowList
+   . RL.RowToList encoders_row encoders_rowList
+  => EncodeRecord encoders_rowList encoders_row valueToEncode_row
+  => Record encoders_row
+  -> Encoder (Record valueToEncode_row)
+encodeRecord recordOfEncoders valueToEncode = do
+  fields <- encodeRecordImpl @encoders_rowList recordOfEncoders valueToEncode
+  pure $ exprRecord fields
 
 -- encodeRecord
 --   :: forall rowListL rowL rowListR rowR zippedRow
@@ -262,13 +254,3 @@ instance
 --   -- Convert to a record expression
 --   unsafeCoerce unit
 -- -- pure $ exprRecord (valuesToUnfoldableLazy evaluated :: Array (Tuple String (Expr Void)))
-
-encodeRecord
-  :: forall ri ro rl
-   . RL.RowToList ri rl
-  => EncodeRecord rl ri ro
-  => Record ri
-  -> Encoder (Record ro)
-encodeRecord encoders record = do
-  fields <- encodeRecordImpl @rl encoders record
-  pure $ exprRecord fields

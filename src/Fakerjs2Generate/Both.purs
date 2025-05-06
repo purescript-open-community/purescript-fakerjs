@@ -5,7 +5,6 @@ import Prelude
 import Data.Tuple (Tuple(..))
 import Fakerjs2Generate.JavascriptBetter.Decode.Impl (Decoder)
 import Fakerjs2Generate.JavascriptBetter.Encode.CodeGenOutput (EncoderToExport)
-import Fakerjs2Generate.JavascriptBetter.Encode.Impl (Encoder)
 import Prim.Row as Row
 import Prim.RowList as RL
 import Record as Record

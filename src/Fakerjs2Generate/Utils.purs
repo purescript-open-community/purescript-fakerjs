@@ -5,22 +5,14 @@ import Prelude
 import Data.Array as Array
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.Array.NonEmpty as NonEmptyArray
-import Data.Either (Either(..), blush, hush)
-import Data.Maybe (Maybe(..), fromJust)
+import Data.Either (Either, blush, hush)
+import Data.Maybe (Maybe)
 import Data.String (Pattern, split)
 import Data.String.Extra (pascalCase)
 import Data.String.NonEmpty (NonEmptyString)
 import Data.String.NonEmpty as NonEmptyString
 import Data.Traversable (class Traversable, sequence, traverse)
 import Data.Tuple (Tuple)
-import Data.Tuple.Nested (type (/\), (/\))
-import Dodo as Dodo
-import Partial.Unsafe (unsafeCrashWith, unsafePartial)
-import PureScript.CST.Types (Ident, Proper, QualifiedName)
-import PureScript.CST.Types as CST
-import Tidy as Tidy
-import Tidy.Codegen.Monad (CodegenT)
-import Tidy.Codegen.Monad as Tidy.Codegen.Monad
 
 splitNE :: Pattern -> NonEmptyString -> Maybe (NonEmptyArray NonEmptyString)
 splitNE pattern nes = do

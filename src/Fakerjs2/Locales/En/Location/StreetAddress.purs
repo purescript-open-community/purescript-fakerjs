@@ -1,6 +1,4 @@
-module Fakerjs2.Locales.En.Location.StreetAddress (street_address) where
+module Fakerjs2.Locales.En.Location.StreetAddress (full, normal) where
 
-street_address =
-  { full: "{{location.buildingNumber}} {{location.street}} {{location.secondaryAddress}}"
-  , normal: "{{location.buildingNumber}} {{location.street}}"
-  }
+full = "{{location.buildingNumber}} {{location.street}} {{location.secondaryAddress}}"
+normal = "{{location.buildingNumber}} {{location.street}}"

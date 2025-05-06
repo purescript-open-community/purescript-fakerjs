@@ -7,15 +7,15 @@ package:
       githubOwner: purescript-open-community
       githubRepo: purescript-fakerjs
   dependencies:
-    - arrays: ">=7.3.0 <8.0.0"
-    - effect: ">=4.0.0 <5.0.0"
-    - exceptions: ">=6.1.0 <7.0.0"
-    - functions: ">=6.0.0 <7.0.0"
-    - gen: ">=3.0.0 <4.0.0"
-    - maybe: ">=6.0.0 <7.0.0"
-    - nullable: ">=6.0.0 <7.0.0"
-    - prelude: ">=6.0.2 <7.0.0"
-    - unsafe-coerce: ">=6.0.0 <7.0.0"
+    - arrays
+    - effect
+    - exceptions
+    - functions
+    - gen
+    - maybe
+    - nullable
+    - prelude
+    - unsafe-coerce
     - node-path
     - node-fs
     - stringutils
@@ -38,10 +38,13 @@ package:
       - console
       - effect
       - spec-node
+      - spec-discovery
 workspace:
   packageSet:
     registry: 64.6.1
   extraPackages:
+    spec-discovery:
+      path: /home/srghma/projects/purescript-spec-discovery
     node-fs:
       git: https://github.com/srghma/purescript-node-fs
       ref: master

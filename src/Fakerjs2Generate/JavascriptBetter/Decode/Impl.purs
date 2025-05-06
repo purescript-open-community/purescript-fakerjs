@@ -149,12 +149,12 @@ instance
     pure $ Record.insert (Proxy :: Proxy sym) value rest
 else instance
   ( DecodeRecord tail ri' ro'
-  , Row.Cons sym (Javascript -> Either JavascriptDecodeError a) ri' ri
+  , Row.Cons sym (Decoder a) ri' ri
   , Row.Cons sym a ro' ro
   , Row.Lacks sym ro'
   , IsSymbol sym
   ) =>
-  DecodeRecord (RL.Cons sym (Javascript -> Either JavascriptDecodeError a) tail) ri ro where
+  DecodeRecord (RL.Cons sym (Decoder a) tail) ri ro where
   decodeRecordImpl decoders jsMap = do
     let
       fieldName = Symbol.reflectSymbol (Proxy :: Proxy sym)
@@ -187,8 +187,10 @@ decodeRecordStrict
   -> Decoder (Record ro)
 decodeRecordStrict decoders = case _ of
   Javascript_Map jsMap -> do
+    -- traceM jsMap
     -- First decode the record normally
     result <- decodeRecordImpl @rl decoders jsMap
+    -- traceM result
 
     -- Then check if there are any unused keys
     let

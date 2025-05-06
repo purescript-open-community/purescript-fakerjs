@@ -1,0 +1,20 @@
+module Fakerjs2.Locales.Hy.Color.Human (human) where
+
+import Data.Array.NonEmpty (NonEmptyArray)
+import Data.String.NonEmpty (NonEmptyString)
+import Unsafe.Coerce (unsafeCoerce)
+
+human = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
+  [ "դեղին"
+  , "երկնագույն"
+  , "կանաչ"
+  , "կապույտ"
+  , "կարմիր"
+  , "մանուշակագույն"
+  , "մոխրագույն"
+  , "նարնջագույն"
+  , "ոսկեգույն"
+  , "սպիտակ"
+  , "սև"
+  , "վարդագույն"
+  ]

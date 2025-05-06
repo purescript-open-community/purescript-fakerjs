@@ -175,7 +175,34 @@ toPathInfo xs = case NonEmptyArray.toArray xs of
 
 main :: Effect Unit
 main = launchAff_ $ do
-  (files :: Array String) <- map toPath <$> globDirent' [ "zh*/**/*.ts", "en/**/*.ts", "base/**/*.ts" ]
+  (files :: Array String) <- map toPath <$> globDirent'
+    [ "a*/**/*.ts"
+    , "b*/**/*.ts"
+    , "c*/**/*.ts"
+    , "d*/**/*.ts"
+    , "e*/**/*.ts"
+    , "f*/**/*.ts"
+    , "g*/**/*.ts"
+    , "h*/**/*.ts"
+    , "i*/**/*.ts"
+    , "j*/**/*.ts"
+    , "k*/**/*.ts"
+    , "l*/**/*.ts"
+    , "m*/**/*.ts"
+    , "n*/**/*.ts"
+    , "o*/**/*.ts"
+    , "p*/**/*.ts"
+    , "q*/**/*.ts"
+    , "r*/**/*.ts"
+    , "s*/**/*.ts"
+    , "t*/**/*.ts"
+    , "u*/**/*.ts"
+    , "v*/**/*.ts"
+    , "w*/**/*.ts"
+    , "x*/**/*.ts"
+    , "y*/**/*.ts"
+    , "z*/**/*.ts"
+    ]
     { cwd: Just inputDir
     , exclude: Just \dirent -> not $ fileNameIsValid dirent
     }

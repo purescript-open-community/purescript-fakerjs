@@ -1,0 +1,130 @@
+module Fakerjs2.Locales.NbNo.Science.ChemicalElement (chemical_element) where
+
+import Data.Array.NonEmpty (NonEmptyArray)
+import Data.String.NonEmpty (NonEmptyString)
+import Unsafe.Coerce (unsafeCoerce)
+
+chemical_element =
+  ( unsafeCoerce
+      :: Array { atomicNumber :: Int, name :: String, symbol :: String }
+      -> NonEmptyArray { atomicNumber :: Int, name :: NonEmptyString, symbol :: NonEmptyString }
+  )
+    [ { atomicNumber: 1, name: "Hydrogen", symbol: "H" }
+    , { atomicNumber: 2, name: "Helium", symbol: "He" }
+    , { atomicNumber: 3, name: "Litium", symbol: "Li" }
+    , { atomicNumber: 4, name: "Beryllium", symbol: "Be" }
+    , { atomicNumber: 5, name: "Bor", symbol: "B" }
+    , { atomicNumber: 6, name: "Karbon", symbol: "C" }
+    , { atomicNumber: 7, name: "Nitrogen", symbol: "N" }
+    , { atomicNumber: 8, name: "Oksygen", symbol: "O" }
+    , { atomicNumber: 9, name: "Fluor", symbol: "F" }
+    , { atomicNumber: 10, name: "Neon", symbol: "Ne" }
+    , { atomicNumber: 11, name: "Natrium", symbol: "Na" }
+    , { atomicNumber: 12, name: "Magnesium", symbol: "Mg" }
+    , { atomicNumber: 13, name: "Aluminium", symbol: "Al" }
+    , { atomicNumber: 14, name: "Silisium", symbol: "Si" }
+    , { atomicNumber: 15, name: "Fosfor", symbol: "P" }
+    , { atomicNumber: 16, name: "Svovel", symbol: "S" }
+    , { atomicNumber: 17, name: "Klor", symbol: "Cl" }
+    , { atomicNumber: 18, name: "Argon", symbol: "Ar" }
+    , { atomicNumber: 19, name: "Kalium", symbol: "K" }
+    , { atomicNumber: 20, name: "Kalsium", symbol: "Ca" }
+    , { atomicNumber: 21, name: "Scandium", symbol: "Sc" }
+    , { atomicNumber: 22, name: "Titan", symbol: "Ti" }
+    , { atomicNumber: 23, name: "Vanadium", symbol: "V" }
+    , { atomicNumber: 24, name: "Krom", symbol: "Cr" }
+    , { atomicNumber: 25, name: "Mangan", symbol: "Mn" }
+    , { atomicNumber: 26, name: "Jern", symbol: "Fe" }
+    , { atomicNumber: 27, name: "Kobolt", symbol: "Co" }
+    , { atomicNumber: 28, name: "Nikkel", symbol: "Ni" }
+    , { atomicNumber: 29, name: "Kobber", symbol: "Cu" }
+    , { atomicNumber: 30, name: "Sink", symbol: "Zn" }
+    , { atomicNumber: 31, name: "Gallium", symbol: "Ga" }
+    , { atomicNumber: 32, name: "Germanium", symbol: "Ge" }
+    , { atomicNumber: 33, name: "Arsen", symbol: "As" }
+    , { atomicNumber: 34, name: "Selen", symbol: "Se" }
+    , { atomicNumber: 35, name: "Brom", symbol: "Br" }
+    , { atomicNumber: 36, name: "Krypton", symbol: "Kr" }
+    , { atomicNumber: 37, name: "Rubidium", symbol: "Rb" }
+    , { atomicNumber: 38, name: "Strontium", symbol: "Sr" }
+    , { atomicNumber: 39, name: "Yttrium", symbol: "Y" }
+    , { atomicNumber: 40, name: "Zirkonium", symbol: "Zr" }
+    , { atomicNumber: 41, name: "Niob", symbol: "Nb" }
+    , { atomicNumber: 42, name: "Molybden", symbol: "Mo" }
+    , { atomicNumber: 43, name: "Technetium", symbol: "Tc" }
+    , { atomicNumber: 44, name: "Ruthenium", symbol: "Ru" }
+    , { atomicNumber: 45, name: "Rhodium", symbol: "Rh" }
+    , { atomicNumber: 46, name: "Palladium", symbol: "Pd" }
+    , { atomicNumber: 47, name: "Sølv", symbol: "Ag" }
+    , { atomicNumber: 48, name: "Kadmium", symbol: "Cd" }
+    , { atomicNumber: 49, name: "Indium", symbol: "In" }
+    , { atomicNumber: 50, name: "Tinn", symbol: "Sn" }
+    , { atomicNumber: 51, name: "Antimon", symbol: "Sb" }
+    , { atomicNumber: 52, name: "Tellur", symbol: "Te" }
+    , { atomicNumber: 53, name: "Jod", symbol: "I" }
+    , { atomicNumber: 54, name: "Xenon", symbol: "Xe" }
+    , { atomicNumber: 55, name: "Cesium", symbol: "Cs" }
+    , { atomicNumber: 56, name: "Barium", symbol: "Ba" }
+    , { atomicNumber: 57, name: "Lantan", symbol: "La" }
+    , { atomicNumber: 58, name: "Cerium", symbol: "Ce" }
+    , { atomicNumber: 59, name: "Praseodym", symbol: "Pr" }
+    , { atomicNumber: 60, name: "Neodym", symbol: "Nd" }
+    , { atomicNumber: 61, name: "Promethium", symbol: "Pm" }
+    , { atomicNumber: 62, name: "Samarium", symbol: "Sm" }
+    , { atomicNumber: 63, name: "Europium", symbol: "Eu" }
+    , { atomicNumber: 64, name: "Gadolinium", symbol: "Gd" }
+    , { atomicNumber: 65, name: "Terbium", symbol: "Tb" }
+    , { atomicNumber: 66, name: "Dysprosium", symbol: "Dy" }
+    , { atomicNumber: 67, name: "Holmium", symbol: "Ho" }
+    , { atomicNumber: 68, name: "Erbium", symbol: "Er" }
+    , { atomicNumber: 69, name: "Thulium", symbol: "Tm" }
+    , { atomicNumber: 70, name: "Ytterbium", symbol: "Yb" }
+    , { atomicNumber: 71, name: "Lutetium", symbol: "Lu" }
+    , { atomicNumber: 72, name: "Hafnium", symbol: "Hf" }
+    , { atomicNumber: 73, name: "Tantal", symbol: "Ta" }
+    , { atomicNumber: 74, name: "Wolfram", symbol: "W" }
+    , { atomicNumber: 75, name: "Rhenium", symbol: "Re" }
+    , { atomicNumber: 76, name: "Osmium", symbol: "Os" }
+    , { atomicNumber: 77, name: "Iridium", symbol: "Ir" }
+    , { atomicNumber: 78, name: "Platina", symbol: "Pt" }
+    , { atomicNumber: 79, name: "Gull", symbol: "Au" }
+    , { atomicNumber: 80, name: "Kvikksølv", symbol: "Hg" }
+    , { atomicNumber: 81, name: "Thallium", symbol: "Tl" }
+    , { atomicNumber: 82, name: "Bly", symbol: "Pb" }
+    , { atomicNumber: 83, name: "Vismut", symbol: "Bi" }
+    , { atomicNumber: 84, name: "Polonium", symbol: "Po" }
+    , { atomicNumber: 85, name: "Astat", symbol: "At" }
+    , { atomicNumber: 86, name: "Radon", symbol: "Rn" }
+    , { atomicNumber: 87, name: "Francium", symbol: "Fr" }
+    , { atomicNumber: 88, name: "Radium", symbol: "Ra" }
+    , { atomicNumber: 89, name: "Actinium", symbol: "Ac" }
+    , { atomicNumber: 90, name: "Thorium", symbol: "Th" }
+    , { atomicNumber: 91, name: "Protactinium", symbol: "Pa" }
+    , { atomicNumber: 92, name: "Uran", symbol: "U" }
+    , { atomicNumber: 93, name: "Neptunium", symbol: "Np" }
+    , { atomicNumber: 94, name: "Plutonium", symbol: "Pu" }
+    , { atomicNumber: 95, name: "Americium", symbol: "Am" }
+    , { atomicNumber: 96, name: "Curium", symbol: "Cm" }
+    , { atomicNumber: 97, name: "Berkelium", symbol: "Bk" }
+    , { atomicNumber: 98, name: "Californium", symbol: "Cf" }
+    , { atomicNumber: 99, name: "Einsteinium", symbol: "Es" }
+    , { atomicNumber: 100, name: "Fermium", symbol: "Fm" }
+    , { atomicNumber: 101, name: "Mendelevium", symbol: "Md" }
+    , { atomicNumber: 102, name: "Nobelium", symbol: "No" }
+    , { atomicNumber: 103, name: "Lawrencium", symbol: "Lr" }
+    , { atomicNumber: 104, name: "Rutherfordium", symbol: "Rf" }
+    , { atomicNumber: 105, name: "Dubnium", symbol: "Db" }
+    , { atomicNumber: 106, name: "Seaborgium", symbol: "Sg" }
+    , { atomicNumber: 107, name: "Bohrium", symbol: "Bh" }
+    , { atomicNumber: 108, name: "Hassium", symbol: "Hs" }
+    , { atomicNumber: 109, name: "Meitnerium", symbol: "Mt" }
+    , { atomicNumber: 110, name: "Darmstadtium", symbol: "Ds" }
+    , { atomicNumber: 111, name: "Røntgenium", symbol: "Rg" }
+    , { atomicNumber: 112, name: "Copernicium", symbol: "Cn" }
+    , { atomicNumber: 113, name: "Nihonium", symbol: "Nh" }
+    , { atomicNumber: 114, name: "Flerovium", symbol: "Fl" }
+    , { atomicNumber: 115, name: "Moscovium", symbol: "Mc" }
+    , { atomicNumber: 116, name: "Livermorium", symbol: "Lv" }
+    , { atomicNumber: 117, name: "Tenness", symbol: "Ts" }
+    , { atomicNumber: 118, name: "Oganesson", symbol: "Og" }
+    ]

@@ -3,25 +3,12 @@ module Fakerjs2Generate.JavascriptBetter.Encode.Utils where
 import Prelude
 
 import Data.Array as Array
-import Data.Array.NonEmpty (NonEmptyArray)
-import Data.Array.NonEmpty as NonEmptyArray
-import Data.Either (Either(..))
-import Data.Maybe (Maybe(..), fromJust)
-import Data.String (Pattern, split)
-import Data.String.Extra (pascalCase)
-import Data.String.NonEmpty (NonEmptyString)
-import Data.String.NonEmpty as NonEmptyString
-import Data.Traversable (traverse)
-import Data.Tuple (Tuple)
-import Data.Tuple.Nested ((/\))
 import Dodo as Dodo
-import Partial.Unsafe (unsafeCrashWith, unsafePartial)
 import PureScript.CST.Types (Ident, Proper, QualifiedName)
 import PureScript.CST.Types as CST
 import Tidy as Tidy
 import Tidy.Codegen.Monad (CodegenT)
 import Tidy.Codegen.Monad as Tidy.Codegen.Monad
-import Fakerjs2Generate.Utils
 
 importNonEmptyStringType :: forall e1328 m1329. Monad m1329 => Partial => CodegenT e1328 m1329 (QualifiedName Proper)
 importNonEmptyStringType = Tidy.Codegen.Monad.importFrom "Data.String.NonEmpty" (Tidy.Codegen.Monad.importType "NonEmptyString")

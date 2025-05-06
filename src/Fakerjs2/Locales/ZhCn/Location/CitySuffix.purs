@@ -1,10 +1,9 @@
 module Fakerjs2.Locales.ZhCn.Location.CitySuffix (city_suffix) where
 
 import Data.Array.NonEmpty (NonEmptyArray)
-import Data.String.NonEmpty (NonEmptyString)
 import Unsafe.Coerce (unsafeCoerce)
 
-city_suffix = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString)
+city_suffix = (unsafeCoerce :: Array String -> NonEmptyArray String)
   [ "乡县"
   , "京市"
   , "南市"

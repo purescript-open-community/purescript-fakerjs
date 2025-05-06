@@ -1,0 +1,130 @@
+module Fakerjs2.Locales.Pl.Science.ChemicalElement (chemical_element) where
+
+import Data.Array.NonEmpty (NonEmptyArray)
+import Data.String.NonEmpty (NonEmptyString)
+import Unsafe.Coerce (unsafeCoerce)
+
+chemical_element =
+  ( unsafeCoerce
+      :: Array { atomicNumber :: Int, name :: String, symbol :: String }
+      -> NonEmptyArray { atomicNumber :: Int, name :: NonEmptyString, symbol :: NonEmptyString }
+  )
+    [ { atomicNumber: 1, name: "Wodór", symbol: "H" }
+    , { atomicNumber: 2, name: "Hel", symbol: "He" }
+    , { atomicNumber: 3, name: "Lit", symbol: "Li" }
+    , { atomicNumber: 4, name: "Beryl", symbol: "Be" }
+    , { atomicNumber: 5, name: "Bor", symbol: "B" }
+    , { atomicNumber: 6, name: "Węgiel", symbol: "C" }
+    , { atomicNumber: 7, name: "Azot", symbol: "N" }
+    , { atomicNumber: 8, name: "Tlen", symbol: "O" }
+    , { atomicNumber: 9, name: "Fluor", symbol: "F" }
+    , { atomicNumber: 10, name: "Neon", symbol: "Ne" }
+    , { atomicNumber: 11, name: "Sód", symbol: "Na" }
+    , { atomicNumber: 12, name: "Magnez", symbol: "Mg" }
+    , { atomicNumber: 13, name: "Glin", symbol: "Al" }
+    , { atomicNumber: 14, name: "Krzem", symbol: "Si" }
+    , { atomicNumber: 15, name: "Fosfor", symbol: "P" }
+    , { atomicNumber: 16, name: "Siarka", symbol: "S" }
+    , { atomicNumber: 17, name: "Chlor", symbol: "Cl" }
+    , { atomicNumber: 18, name: "Argon", symbol: "Ar" }
+    , { atomicNumber: 19, name: "Potas", symbol: "K" }
+    , { atomicNumber: 20, name: "Wapń", symbol: "Ca" }
+    , { atomicNumber: 21, name: "Skand", symbol: "Sc" }
+    , { atomicNumber: 22, name: "Tytan", symbol: "Ti" }
+    , { atomicNumber: 23, name: "Wanad", symbol: "V" }
+    , { atomicNumber: 24, name: "Chrom", symbol: "Cr" }
+    , { atomicNumber: 25, name: "Mangan", symbol: "Mn" }
+    , { atomicNumber: 26, name: "Żelazo", symbol: "Fe" }
+    , { atomicNumber: 27, name: "Kobalt", symbol: "Co" }
+    , { atomicNumber: 28, name: "Nikiel", symbol: "Ni" }
+    , { atomicNumber: 29, name: "Miedź", symbol: "Cu" }
+    , { atomicNumber: 30, name: "Cynk", symbol: "Zn" }
+    , { atomicNumber: 31, name: "Gal", symbol: "Ga" }
+    , { atomicNumber: 32, name: "German", symbol: "Ge" }
+    , { atomicNumber: 33, name: "Arsen", symbol: "As" }
+    , { atomicNumber: 34, name: "Selen", symbol: "Se" }
+    , { atomicNumber: 35, name: "Brom", symbol: "Br" }
+    , { atomicNumber: 36, name: "Krypton", symbol: "Kr" }
+    , { atomicNumber: 37, name: "Rubid", symbol: "Rb" }
+    , { atomicNumber: 38, name: "Stront", symbol: "Sr" }
+    , { atomicNumber: 39, name: "Itr", symbol: "Y" }
+    , { atomicNumber: 40, name: "Cyrkon", symbol: "Zr" }
+    , { atomicNumber: 41, name: "Niob", symbol: "Nb" }
+    , { atomicNumber: 42, name: "Molibden", symbol: "Mo" }
+    , { atomicNumber: 43, name: "Technet", symbol: "Tc" }
+    , { atomicNumber: 44, name: "Ruten", symbol: "Ru" }
+    , { atomicNumber: 45, name: "Rod", symbol: "Rh" }
+    , { atomicNumber: 46, name: "Pallad", symbol: "Pd" }
+    , { atomicNumber: 47, name: "Srebro", symbol: "Ag" }
+    , { atomicNumber: 48, name: "Kadm", symbol: "Cd" }
+    , { atomicNumber: 49, name: "Ind", symbol: "In" }
+    , { atomicNumber: 50, name: "Cyna", symbol: "Sn" }
+    , { atomicNumber: 51, name: "Antymon", symbol: "Sb" }
+    , { atomicNumber: 52, name: "Tellur", symbol: "Te" }
+    , { atomicNumber: 53, name: "Jod", symbol: "I" }
+    , { atomicNumber: 54, name: "Ksenon", symbol: "Xe" }
+    , { atomicNumber: 55, name: "Cez", symbol: "Cs" }
+    , { atomicNumber: 56, name: "Bar", symbol: "Ba" }
+    , { atomicNumber: 57, name: "Lantan", symbol: "La" }
+    , { atomicNumber: 58, name: "Cer", symbol: "Ce" }
+    , { atomicNumber: 59, name: "Prazeodym", symbol: "Pr" }
+    , { atomicNumber: 60, name: "Neodym", symbol: "Nd" }
+    , { atomicNumber: 61, name: "Promet", symbol: "Pm" }
+    , { atomicNumber: 62, name: "Samar", symbol: "Sm" }
+    , { atomicNumber: 63, name: "Europ", symbol: "Eu" }
+    , { atomicNumber: 64, name: "Gadolin", symbol: "Gd" }
+    , { atomicNumber: 65, name: "Terb", symbol: "Tb" }
+    , { atomicNumber: 66, name: "Dysproz", symbol: "Dy" }
+    , { atomicNumber: 67, name: "Holm", symbol: "Ho" }
+    , { atomicNumber: 68, name: "Erb", symbol: "Er" }
+    , { atomicNumber: 69, name: "Tul", symbol: "Tm" }
+    , { atomicNumber: 70, name: "Iterb", symbol: "Yb" }
+    , { atomicNumber: 71, name: "Lutet", symbol: "Lu" }
+    , { atomicNumber: 72, name: "Hafn", symbol: "Hf" }
+    , { atomicNumber: 73, name: "Tantal", symbol: "Ta" }
+    , { atomicNumber: 74, name: "Wolfram", symbol: "W" }
+    , { atomicNumber: 75, name: "Ren", symbol: "Re" }
+    , { atomicNumber: 76, name: "Osm", symbol: "Os" }
+    , { atomicNumber: 77, name: "Iryd", symbol: "Ir" }
+    , { atomicNumber: 78, name: "Platyna", symbol: "Pt" }
+    , { atomicNumber: 79, name: "Złoto", symbol: "Au" }
+    , { atomicNumber: 80, name: "Rtęć", symbol: "Hg" }
+    , { atomicNumber: 81, name: "Tal", symbol: "Tl" }
+    , { atomicNumber: 82, name: "Ołów", symbol: "Pb" }
+    , { atomicNumber: 83, name: "Bizmut", symbol: "Bi" }
+    , { atomicNumber: 84, name: "Polon", symbol: "Po" }
+    , { atomicNumber: 85, name: "Astat", symbol: "At" }
+    , { atomicNumber: 86, name: "Radon", symbol: "Rn" }
+    , { atomicNumber: 87, name: "Frans", symbol: "Fr" }
+    , { atomicNumber: 88, name: "Rad", symbol: "Ra" }
+    , { atomicNumber: 89, name: "Aktyn", symbol: "Ac" }
+    , { atomicNumber: 90, name: "Tor", symbol: "Th" }
+    , { atomicNumber: 91, name: "Protaktyn", symbol: "Pa" }
+    , { atomicNumber: 92, name: "Uran", symbol: "U" }
+    , { atomicNumber: 93, name: "Neptun", symbol: "Np" }
+    , { atomicNumber: 94, name: "Pluton", symbol: "Pu" }
+    , { atomicNumber: 95, name: "Ameryk", symbol: "Am" }
+    , { atomicNumber: 96, name: "Kiur", symbol: "Cm" }
+    , { atomicNumber: 97, name: "Berkel", symbol: "Bk" }
+    , { atomicNumber: 98, name: "Kaliforn", symbol: "Cf" }
+    , { atomicNumber: 99, name: "Einstein", symbol: "Es" }
+    , { atomicNumber: 100, name: "Ferm", symbol: "Fm" }
+    , { atomicNumber: 101, name: "Mendelew", symbol: "Md" }
+    , { atomicNumber: 102, name: "Nobel", symbol: "No" }
+    , { atomicNumber: 103, name: "Lorens", symbol: "Lr" }
+    , { atomicNumber: 104, name: "Rutherford", symbol: "Rf" }
+    , { atomicNumber: 105, name: "Dubn", symbol: "Db" }
+    , { atomicNumber: 106, name: "Seaborg", symbol: "Sg" }
+    , { atomicNumber: 107, name: "Bohr", symbol: "Bh" }
+    , { atomicNumber: 108, name: "Has", symbol: "Hs" }
+    , { atomicNumber: 109, name: "Meitner", symbol: "Mt" }
+    , { atomicNumber: 110, name: "Darmsztadt", symbol: "Ds" }
+    , { atomicNumber: 111, name: "Roentgen", symbol: "Rg" }
+    , { atomicNumber: 112, name: "Kopernik", symbol: "Cn" }
+    , { atomicNumber: 113, name: "Nihon", symbol: "Nh" }
+    , { atomicNumber: 114, name: "Flerow", symbol: "Fl" }
+    , { atomicNumber: 115, name: "Moskow", symbol: "Mc" }
+    , { atomicNumber: 116, name: "Liwermor", symbol: "Lv" }
+    , { atomicNumber: 117, name: "Tenes", symbol: "Ts" }
+    , { atomicNumber: 118, name: "Oganeson", symbol: "Og" }
+    ]
