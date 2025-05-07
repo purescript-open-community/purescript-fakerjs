@@ -1,17 +1,21 @@
 module Fakerjs2Generate.JavascriptBetter.Decode where
 
-import Fakerjs2Generate.JavascriptBetter.Decode.Impl (Decoder, Optional(..), decodeEither, decodeInt, decodeMapOf, decodeMaybe, decodeNEAOf, decodeNES, decodeRecordStrict, decodeString)
-import Fakerjs2Generate.JavascriptBetter.Types (DirsTo, NameCodeSymbolNumericCode, ReplaceSymbols(..), Weighted(..), WithFunctionCall(..))
+import Fakerjs2Generate.JavascriptBetter.Decode.Impl
 import Prelude
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
+import Fakerjs2Generate.JavascriptBetter.Types (DirsTo, NameCodeSymbolNumericCode, ReplaceSymbols(..), Weighted(..), WithFunctionCall(..))
+import Fakerjs2Generate.Parser.ReplaceSymbolsPattern
 
 decodeReplaceSymbols :: forall a. Decoder a -> Decoder (ReplaceSymbols a)
 decodeReplaceSymbols d j = map ReplaceSymbols (d j)
 
 decodeWithFunctionCall :: forall a. Decoder a -> Decoder (WithFunctionCall a)
 decodeWithFunctionCall d j = map WithFunctionCall (d j)
+
+decodeReplaceSymbolsPattern :: Decoder ReplaceSymbolsPattern
+decodeReplaceSymbolsPattern j = decodeNES j <#> parseReplaceSymbols
 
 decodeWeightedOf
   :: forall a
@@ -126,7 +130,7 @@ decoders =
   , "internet/http_status_code": decodeRecordStrict { informational: decodeNEAOf decodeInt, success: decodeNEAOf decodeInt, redirection: decodeNEAOf decodeInt, clientError: decodeNEAOf decodeInt, serverError: decodeNEAOf decodeInt }
   , "internet/jwt_algorithm": decodeNEAOf decodeNES
   , "internet/user_agent_pattern": decodeNEAOf (decodeWithFunctionCall decodeNES)
-  , "location/building_number": decodeNEAOf (decodeReplaceSymbols decodeNES)
+  , "location/building_number": decodeNEAOf decodeReplaceSymbolsPattern
   , "location/city_infix": decodeNEAOf decodeNES
   , "location/city_name": decodeNEAOf decodeNES
   , "location/city_pattern": decodeNEAOf (decodeWithFunctionCall decodeNES)
@@ -139,7 +143,7 @@ decoders =
   , "location/county": decodeNEAOf decodeNES
   , "location/direction": decodeRecordStrict { cardinal: decodeNEAOf decodeNES, cardinal_abbr: decodeNEAOf decodeNES, ordinal: decodeNEAOf decodeNES, ordinal_abbr: decodeNEAOf decodeNES }
   , "location/language": decodeNEAOf (decodeRecordStrict { name: decodeNES, alpha2: decodeNES, alpha3: decodeNES })
-  , "location/postcode": decodeMaybe $ decodeNEAOf ((decodeReplaceSymbols decodeNES))
+  , "location/postcode": decodeMaybe $ decodeNEAOf decodeReplaceSymbolsPattern
   , "location/postcode_by_state": decodeMaybe (decodeMapOf (decodeEither (decodeWithFunctionCall decodeNES) (decodeNEAOf (decodeWithFunctionCall decodeNES))))
   , "location/secondary_address": decodeNEAOf (decodeWithFunctionCall (decodeReplaceSymbols decodeNES))
   , "location/state": decodeMaybe $ decodeNEAOf decodeString

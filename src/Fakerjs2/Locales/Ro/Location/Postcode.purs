@@ -1,7 +1,13 @@
 module Fakerjs2.Locales.Ro.Location.Postcode (postcode) where
 
 import Data.Array.NonEmpty (NonEmptyArray)
-import Data.String.NonEmpty (NonEmptyString)
+import Fakerjs2.Helpers.FromRegExp.Types (Atom(..), Quantifier(..), TypeSafePattern(..))
 import Unsafe.Coerce (unsafeCoerce)
 
-postcode = (unsafeCoerce :: Array String -> NonEmptyArray NonEmptyString) [ "######" ]
+postcode =
+  ( unsafeCoerce
+      :: Array (NonEmptyArray TypeSafePattern) -> NonEmptyArray (NonEmptyArray TypeSafePattern)
+  )
+    [ (unsafeCoerce :: Array TypeSafePattern -> NonEmptyArray TypeSafePattern)
+        [ PAtom AnyDigit (Exactly 6) ]
+    ]

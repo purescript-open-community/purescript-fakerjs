@@ -176,6 +176,7 @@ toPathInfo xs = case NonEmptyArray.toArray xs of
 main :: Effect Unit
 main = launchAff_ $ do
   (files :: Array String) <- map toPath <$> globDirent'
+    -- [ "base/**/*.ts"
     [ "a*/**/*.ts"
     , "b*/**/*.ts"
     , "c*/**/*.ts"

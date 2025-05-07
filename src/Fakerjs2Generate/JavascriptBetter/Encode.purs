@@ -1,18 +1,23 @@
 module Fakerjs2Generate.JavascriptBetter.Encode where
 
-import Fakerjs2Generate.JavascriptBetter.Encode.Impl (Encoder, encodeEither, encodeInt, encodeMapOf, encodeMaybe, encodeNEAOf, encodeNES, encodeRecord, encodeString)
-import Fakerjs2Generate.JavascriptBetter.Types (DirsTo, NameCodeSymbolNumericCode, ReplaceSymbols(..), Weighted(..), WithFunctionCall(..))
+import Fakerjs2Generate.Parser.ReplaceSymbolsPattern
 import Prelude
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2Generate.JavascriptBetter.Encode.CodeGenOutput (EncoderToExport, Optional(..), exportOne, exportOneIgnoreIfNothing, exportRecord, exportRecordIgnoreIfNothing)
+import Fakerjs2.Helpers.FromRegExp.Encoder
+import Fakerjs2Generate.JavascriptBetter.Encode.CodeGenOutput
+import Fakerjs2Generate.JavascriptBetter.Encode.Impl
+import Fakerjs2Generate.JavascriptBetter.Types (DirsTo, NameCodeSymbolNumericCode, ReplaceSymbols(..), Weighted(..), WithFunctionCall(..))
 
 encodeReplaceSymbols :: forall a. Encoder a -> Encoder (ReplaceSymbols a)
 encodeReplaceSymbols e (ReplaceSymbols x) = e x
 
 encodeWithFunctionCall :: forall a. Encoder a -> Encoder (WithFunctionCall a)
 encodeWithFunctionCall e (WithFunctionCall x) = e x
+
+encodeReplaceSymbolsPattern :: Partial => Encoder ReplaceSymbolsPattern
+encodeReplaceSymbolsPattern = unReplaceSymbolsPattern >>> \nonEmptyArrayTypeSafePattern -> encodeNonEmptyArrayTypeSafePattern nonEmptyArrayTypeSafePattern -- encodeCallUnsafeGenerate true nonEmptyArrayTypeSafePattern
 
 encodeWeightedOf
   :: forall a
@@ -130,7 +135,7 @@ encoders =
   , "internet/http_status_code": exportRecord { informational: encodeNEAOf encodeInt, success: encodeNEAOf encodeInt, redirection: encodeNEAOf encodeInt, clientError: encodeNEAOf encodeInt, serverError: encodeNEAOf encodeInt }
   , "internet/jwt_algorithm": exportOne $ encodeNEAOf encodeNES
   , "internet/user_agent_pattern": exportOne $ encodeNEAOf (encodeWithFunctionCall encodeNES)
-  , "location/building_number": exportOne $ encodeNEAOf (encodeReplaceSymbols encodeNES)
+  , "location/building_number": exportOne $ encodeNEAOf encodeReplaceSymbolsPattern -- TODO: (encodeReplaceSymbols encodeNES)
   , "location/city_infix": exportOne $ encodeNEAOf encodeNES
   , "location/city_name": exportOne $ encodeNEAOf encodeNES
   , "location/city_pattern": exportOne $ encodeNEAOf (encodeWithFunctionCall encodeNES)
@@ -143,7 +148,7 @@ encoders =
   , "location/county": exportOne $ encodeNEAOf encodeNES
   , "location/direction": exportRecord { cardinal: encodeNEAOf encodeNES, cardinal_abbr: encodeNEAOf encodeNES, ordinal: encodeNEAOf encodeNES, ordinal_abbr: encodeNEAOf encodeNES }
   , "location/language": exportOne $ encodeNEAOf (encodeRecord { name: encodeNES, alpha2: encodeNES, alpha3: encodeNES })
-  , "location/postcode": exportOneIgnoreIfNothing $ encodeNEAOf (encodeReplaceSymbols encodeNES)
+  , "location/postcode": exportOneIgnoreIfNothing $ encodeNEAOf encodeReplaceSymbolsPattern -- TODO: (encodeReplaceSymbols encodeNES)
   , "location/postcode_by_state": exportOneIgnoreIfNothing $ encodeMapOf (encodeEither (encodeWithFunctionCall encodeNES) (encodeNEAOf (encodeWithFunctionCall encodeNES)))
   , "location/secondary_address": exportOne $ encodeNEAOf (encodeWithFunctionCall (encodeReplaceSymbols encodeNES))
   , "location/state": exportOneIgnoreIfNothing $ encodeNEAOf encodeString

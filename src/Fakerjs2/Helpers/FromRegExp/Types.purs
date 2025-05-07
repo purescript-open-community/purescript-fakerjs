@@ -1,7 +1,11 @@
 module Fakerjs2.Helpers.FromRegExp.Types where
 
 import Data.Array.NonEmpty (NonEmptyArray)
+import Data.Eq (class Eq)
+import Data.Ord (class Ord)
+import Data.String.NonEmpty (NonEmptyString)
 import Data.Tuple (Tuple)
+import Test.QuickCheck.Gen (Gen)
 
 -- | Represents a single character pattern
 -- | Examples:
@@ -13,17 +17,25 @@ import Data.Tuple (Tuple)
 -- | NotInRange [(Tuple 'a' 'z')]  -- Matches any character not in range 'a'-'z'
 -- | ```
 data Atom
-  = Lit Char
-  | Range Char Char
-  | Wildcard
-  | NotIn (NonEmptyArray Char)
-  | NotInRange (NonEmptyArray (Tuple Char Char))
-  -- gratuitous bonus, can comment out
-  | DecimalLit Int
-  | DecimalRange Int Int
-  | DecimalWildcard
-  | DecimalNotIn (NonEmptyArray Int)
-  | DecimalNotInRange (NonEmptyArray (Tuple Int Int))
+  = LitChar Char
+  | AnyCharInRange Char Char
+  | AnyAlphabetChar
+  | AnyAlphabetCharUppercase -- `?` in replaceSymbols
+  | AnyAlphabetCharLowercase
+  | AnyAlphabetCharNotIn (NonEmptyArray Char)
+  | AnyAlphabetCharNotInRange (NonEmptyArray (Tuple Char Char))
+  ---------
+  | LitDigit Int
+  | AnyDigitInRange Int Int
+  | AnyDigit -- `#` in replaceSymbols
+  | AnyDigitEqOrMore2 -- `!` in legacyReplaceSymbolWithNumber, used for credit cards
+  | AnyDigitNotIn (NonEmptyArray Int)
+  | AnyDigitNotInRange (NonEmptyArray (Tuple Int Int))
+  ---------
+  | AnyAlphabetCharOrDecimal -- `*` in replaceSymbols
+
+derive instance Eq Atom
+derive instance Ord Atom
 
 -- | Represents pattern repetition rules
 -- | Examples:
@@ -43,6 +55,9 @@ data Quantifier
   | OneOrMore
   | Optional
 
+derive instance Eq Quantifier
+derive instance Ord Quantifier
+
 -- | A type-safe representation of regex patterns
 -- | Examples:
 -- | ```purescript
@@ -52,3 +67,8 @@ data Quantifier
 data TypeSafePattern
   = PAtom Atom Quantifier
   | PGroup (NonEmptyArray TypeSafePattern) Quantifier
+  | PLitNES NonEmptyString
+  | PGenNES (Gen NonEmptyString)
+
+-- derive instance Eq TypeSafePattern
+-- derive instance Ord TypeSafePattern

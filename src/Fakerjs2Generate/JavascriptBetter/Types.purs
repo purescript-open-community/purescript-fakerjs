@@ -5,6 +5,7 @@ import Data.Either (Either)
 import Data.Map (Map)
 import Data.Maybe (Maybe)
 import Data.String.NonEmpty (NonEmptyString)
+import Fakerjs2Generate.Parser.ReplaceSymbolsPattern (ReplaceSymbolsPattern)
 
 newtype Weighted a = Weighted { value :: a, weight :: Int }
 type NameCodeSymbolNumericCode = { name :: NonEmptyString, code :: NonEmptyString, symbol :: String, numericCode :: NonEmptyString }
@@ -102,7 +103,7 @@ type DirsTo f =
   , "internet/http_status_code" :: f { informational :: NonEmptyArray Int, success :: NonEmptyArray Int, redirection :: NonEmptyArray Int, clientError :: NonEmptyArray Int, serverError :: NonEmptyArray Int }
   , "internet/jwt_algorithm" :: f (NonEmptyArray NonEmptyString)
   , "internet/user_agent_pattern" :: f (NonEmptyArray (WithFunctionCall NonEmptyString))
-  , "location/building_number" :: f (NonEmptyArray (ReplaceSymbols NonEmptyString))
+  , "location/building_number" :: f (NonEmptyArray ReplaceSymbolsPattern)
   , "location/city_infix" :: f (NonEmptyArray NonEmptyString)
   , "location/city_name" :: f (NonEmptyArray NonEmptyString)
   , "location/city_pattern" :: f (NonEmptyArray (WithFunctionCall NonEmptyString))
@@ -115,7 +116,7 @@ type DirsTo f =
   , "location/county" :: f (NonEmptyArray NonEmptyString)
   , "location/direction" :: f { cardinal :: NonEmptyArray NonEmptyString, cardinal_abbr :: NonEmptyArray NonEmptyString, ordinal :: NonEmptyArray NonEmptyString, ordinal_abbr :: NonEmptyArray NonEmptyString }
   , "location/language" :: f (NonEmptyArray { name :: NonEmptyString, alpha2 :: NonEmptyString, alpha3 :: NonEmptyString })
-  , "location/postcode" :: f (Maybe (NonEmptyArray (ReplaceSymbols NonEmptyString)))
+  , "location/postcode" :: f (Maybe (NonEmptyArray ReplaceSymbolsPattern))
   , "location/postcode_by_state" :: f (Maybe (Map NonEmptyString (Either (WithFunctionCall NonEmptyString) (NonEmptyArray (WithFunctionCall NonEmptyString)))))
   , "location/secondary_address" :: f (NonEmptyArray (WithFunctionCall (ReplaceSymbols NonEmptyString)))
   , "location/state" :: f (Maybe (NonEmptyArray String))

@@ -33,16 +33,43 @@ withoutRangesNE = unsafeCoerce withoutRanges
 
 ---------------------------------------------------------------------
 
--- | All printable ASCII characters (32-126)
-allCharsInts :: NonEmptyArray Int
-allCharsInts = unsafePartial $ fromJust $ NonEmptyArray.fromArray $ range 32 126
+-- | ASCII character set, excluding control codes
+-- https://github.com/purescript/purescript-strings/blob/b6654d49e2300416b25c05a00a0e6065c29fcf07/src/Data/Char/Gen.purs#L14
+asciiCharsInts :: NonEmptyArray Int
+asciiCharsInts = unsafePartial $ fromJust $ NonEmptyArray.fromArray $ range 32 126
 
-allChars :: NonEmptyArray Char
-allChars = map (\x -> unsafePartial $ fromJust $ fromCharCode x) allCharsInts
+asciiChars :: NonEmptyArray Char
+asciiChars = map (\x -> unsafePartial $ fromJust $ fromCharCode x) asciiCharsInts
 
--- | All printable ASCII characters (32-126)
-allInts :: NonEmptyArray Int
-allInts = unsafePartial $ fromJust $ NonEmptyArray.fromArray $ range 0 9
+--------------
+alphaLowercaseCharsInts :: NonEmptyArray Int
+alphaLowercaseCharsInts = unsafePartial $ fromJust $ NonEmptyArray.fromArray $ range 32 126
+
+alphaLowercaseChars :: NonEmptyArray Char
+alphaLowercaseChars = map (\x -> unsafePartial $ fromJust $ fromCharCode x) alphaLowercaseCharsInts
+
+alphaUppercaseCharsInts :: NonEmptyArray Int
+alphaUppercaseCharsInts = unsafePartial $ fromJust $ NonEmptyArray.fromArray $ range 65 90
+
+alphaUppercaseChars :: NonEmptyArray Char
+alphaUppercaseChars = map (\x -> unsafePartial $ fromJust $ fromCharCode x) alphaUppercaseCharsInts
+
+alphaCharsInts :: NonEmptyArray Int
+alphaCharsInts = alphaUppercaseCharsInts <> alphaLowercaseCharsInts
+
+alphaChars :: NonEmptyArray Char
+alphaChars = alphaUppercaseChars <> alphaLowercaseChars
+
+--------------
+
+digits :: NonEmptyArray Int
+digits = unsafePartial $ fromJust $ NonEmptyArray.fromArray $ range 0 9
+
+digitsEqOrMore2 :: NonEmptyArray Int
+digitsEqOrMore2 = unsafePartial $ fromJust $ NonEmptyArray.fromArray $ range 2 9
+
+digitsEqOrMore2Chars :: NonEmptyArray Char
+digitsEqOrMore2Chars = map (\x -> unsafePartial $ fromJust $ fromCharCode x) digitsEqOrMore2
 
 intToChar :: Int -> Char
 intToChar = toEnumWithDefaults bottom top

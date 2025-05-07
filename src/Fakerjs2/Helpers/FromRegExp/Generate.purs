@@ -4,40 +4,44 @@ import Prelude
 
 import Control.Monad.Gen (class MonadGen)
 import Control.Monad.Gen as MonadGen
-import Data.Array (concat)
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.Array.NonEmpty as NonEmptyArray
 import Data.Bifunctor (bimap)
 import Data.Char (toCharCode)
+import Data.Char.Gen (genAlpha, genAlphaLowercase, genAlphaUppercase, genDigitChar)
 import Data.Enum (toEnumWithDefaults)
-import Data.Maybe (Maybe(..))
+import Data.Maybe (Maybe(..), fromJust)
+import Data.Semigroup.Traversable (sequence1, traverse1)
+import Data.String as String
 import Data.String.CodeUnits (fromCharArray)
+import Data.String.NonEmpty as NonEmptyString
 import Data.Traversable (sequence, traverse)
-import Data.Tuple (Tuple)
 import Fakerjs2.Helpers.FromRegExp.Types (Atom(..), Quantifier(..), TypeSafePattern(..))
-import Fakerjs2.Helpers.FromRegExp.Utils (allChars, allCharsInts, allInts, intToChar, toLowerChar, toUpperChar, withoutRangesNE)
+import Fakerjs2.Helpers.FromRegExp.Utils (alphaChars, alphaCharsInts, digits, digitsEqOrMore2Chars, intToChar, toLowerChar, toUpperChar, withoutRangesNE)
+import Partial.Unsafe (unsafePartial)
 import Test.QuickCheck.Gen (Gen, elements, vectorOf)
+import Test.QuickCheck.Gen as Gen
+import Unsafe.Coerce (unsafeCoerce)
 
 -- | Generates characters for a single atom
 -- | Input: Range 'a' 'z'
 -- | Output: single random character between 'a' and 'z'
 mkAtomGenerator :: Atom -> Maybe (Gen Char)
 mkAtomGenerator = case _ of
-  DecimalLit i -> Just $ pure (intToChar i)
-  DecimalRange lo hi -> Just $ intToChar <$> MonadGen.chooseInt lo hi
-  DecimalWildcard -> Just $ intToChar <$> elements allInts
-  DecimalNotIn xs -> map (\nea -> intToChar <$> elements nea) $ NonEmptyArray.fromArray $ NonEmptyArray.difference allInts xs
-  DecimalNotInRange ranges -> map (\nea -> intToChar <$> elements nea) $ NonEmptyArray.fromArray $ withoutRangesNE ranges allInts
-  Lit c -> Just $ pure c
-  Range start end -> Just $ toEnumWithDefaults bottom top <$> MonadGen.chooseInt (toCharCode start :: Int) (toCharCode end :: Int)
-  Wildcard -> Just $ elements allChars
-  NotIn xs -> map elements $ NonEmptyArray.fromArray $ NonEmptyArray.difference allChars xs
-  NotInRange ranges ->
-    let
-      rangeCodes = map (bimap toCharCode toCharCode) ranges :: NonEmptyArray (Tuple Int Int)
-      validCodes = withoutRangesNE rangeCodes allCharsInts :: Array Int
-    in
-      map (\validCodesNEArray -> toEnumWithDefaults bottom top <$> elements validCodesNEArray) $ NonEmptyArray.fromArray validCodes
+  LitDigit i -> Just $ pure $ intToChar i
+  AnyDigit -> Just genDigitChar
+  AnyDigitInRange lo hi -> Just $ intToChar <$> MonadGen.chooseInt lo hi
+  AnyDigitNotIn xs -> map (\nea -> intToChar <$> elements nea) $ NonEmptyArray.fromArray $ NonEmptyArray.difference digits xs
+  AnyDigitNotInRange ranges -> map (\nea -> intToChar <$> elements nea) $ NonEmptyArray.fromArray $ withoutRangesNE ranges digits
+  AnyDigitEqOrMore2 -> Just $ elements digitsEqOrMore2Chars
+  AnyAlphabetChar -> Just genAlpha
+  AnyAlphabetCharUppercase -> Just genAlphaUppercase
+  AnyAlphabetCharLowercase -> Just genAlphaLowercase
+  LitChar c -> Just $ pure c
+  AnyCharInRange start end -> Just $ toEnumWithDefaults bottom top <$> MonadGen.chooseInt (toCharCode start :: Int) (toCharCode end :: Int)
+  AnyAlphabetCharNotIn xs -> map elements $ NonEmptyArray.fromArray $ NonEmptyArray.difference alphaChars xs
+  AnyAlphabetCharNotInRange ranges -> map (\validCodesNEArray -> toEnumWithDefaults bottom top <$> elements validCodesNEArray) $ NonEmptyArray.fromArray $ withoutRangesNE (map (bimap toCharCode toCharCode) ranges) alphaCharsInts
+  AnyAlphabetCharOrDecimal -> Just $ Gen.oneOf $ NonEmptyArray.cons' genAlpha [ genDigitChar ]
 
 -- same as https://github.com/faker-js/faker/blob/54fd5519e92270926e75a914ccf98b4699fbb4f2/src/modules/helpers/index.ts#L40
 -- Example 1: Input 0
@@ -83,32 +87,43 @@ makeGeneratorCaseInsensitive genChar = do
   MonadGen.chooseBool >>= \b -> pure $ if b then toLowerChar char else toUpperChar char
 
 -- `Nothing` signals that pattern was invalid somewhere - for example `NotIn 0 infinity` excluded all characters
-genPattern :: Boolean -> TypeSafePattern -> Maybe (Gen (Array Char))
+genPattern :: Boolean -> TypeSafePattern -> Maybe (Gen String)
 genPattern caseSensitive = case _ of
+  PLitNES nes -> Just $ pure $ NonEmptyString.toString nes
+  PGenNES gennes -> Just $ map NonEmptyString.toString gennes
   PAtom atom quantifier -> map (workWithSuccess_PAtom quantifier) (mkAtomGenerator atom)
-  PGroup arrayOfTypeSafePatterns quantifier -> map (workWithSuccess_PGroup quantifier) $ traverse (genPattern caseSensitive) (NonEmptyArray.toArray arrayOfTypeSafePatterns)
+  PGroup arrayOfTypeSafePatterns quantifier ->
+    map (workWithSuccess_PGroup quantifier) $
+      traverse1 (genPattern caseSensitive) arrayOfTypeSafePatterns
   where
+  concatNEAS :: NonEmptyArray String -> String
+  concatNEAS = unsafeCoerce (String.joinWith "")
+
   workWithSuccess_PAtom :: _ -> Gen Char -> _
   workWithSuccess_PAtom quantifier genChar = do
     let genChar' = if caseSensitive then genChar else makeGeneratorCaseInsensitive genChar
-    execGeneratorQuantifierTimes genChar' quantifier :: Gen (Array Char)
+    map fromCharArray $ execGeneratorQuantifierTimes genChar' quantifier :: Gen _
 
-  workWithSuccess_PGroup :: _ -> Array (Gen (Array Char)) -> _
+  workWithSuccess_PGroup :: Quantifier -> NonEmptyArray (Gen String) -> Gen String
   workWithSuccess_PGroup quantifier arrayOfGens = do
     let
-      generateGroupOnce :: Gen (Array Char)
-      generateGroupOnce = map join $ sequence arrayOfGens
+      generateGroupOnce :: Gen String
+      generateGroupOnce = map concatNEAS $ sequence1 arrayOfGens
     -- Repeat the group according to the quantifier
-    execGeneratorQuantifierTimes generateGroupOnce quantifier <#> join
+    map (String.joinWith "") $ execGeneratorQuantifierTimes generateGroupOnce quantifier
 
 -- | Generates a string matching the given pattern
 -- | Input: { caseSensitive: true }, [PAtom (Lit 'a') (Exactly 3)]
 -- | Output: NonEmptyString "aaa"
 -- same as https://github.com/faker-js/faker/blob/54fd5519e92270926e75a914ccf98b4699fbb4f2/src/modules/helpers/index.ts#L368
-generate :: { caseSensitive :: Boolean } -> NonEmptyArray TypeSafePattern -> Maybe (Gen String)
-generate { caseSensitive } patterns = map workWithSuccess (traverse (genPattern caseSensitive) patterns)
+generate :: Boolean -> NonEmptyArray TypeSafePattern -> Maybe (Gen String)
+generate caseSensitive patterns = map workWithSuccess (traverse (genPattern caseSensitive) patterns)
   where
-  workWithSuccess :: NonEmptyArray (Gen (Array Char)) -> Gen String
+  workWithSuccess :: NonEmptyArray (Gen String) -> Gen String
   workWithSuccess = NonEmptyArray.toArray >>> \arrayOfGens -> do
-    x :: Array (Array Char) <- sequence arrayOfGens
-    pure $ fromCharArray $ concat x
+    x :: Array String <- sequence arrayOfGens
+    pure $ String.joinWith "" x
+
+-- it requires `NonEmptyArray TypeSafePattern` to be correctly constructed
+unsafeGenerate :: Boolean -> NonEmptyArray TypeSafePattern -> Gen String
+unsafeGenerate caseSensitive patterns = unsafePartial $ fromJust $ generate caseSensitive patterns

@@ -1,4 +1,4 @@
-module Fakerjs2Generate.Parser.FunctionCall where
+module Fakerjs2Generate.Parser.FunctionCall (parseFunctionCall, FunctionCall(..), IntArgs) where
 
 import Prelude
 
