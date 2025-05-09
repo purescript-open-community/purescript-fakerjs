@@ -1,14 +1,15 @@
 module Fakerjs2Generate.JavascriptBetter.Encode where
 
+import Fakerjs2.Helpers.FromRegExp.Encoder
+import Fakerjs2Generate.JavascriptBetter.Encode.CodeGenOutput
+import Fakerjs2Generate.JavascriptBetter.Encode.Impl
 import Fakerjs2Generate.Parser.ReplaceSymbolsPattern
 import Prelude
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
-import Fakerjs2.Helpers.FromRegExp.Encoder
-import Fakerjs2Generate.JavascriptBetter.Encode.CodeGenOutput
-import Fakerjs2Generate.JavascriptBetter.Encode.Impl
 import Fakerjs2Generate.JavascriptBetter.Types (DirsTo, NameCodeSymbolNumericCode, ReplaceSymbols(..), Weighted(..), WithFunctionCall(..))
+import Fakerjs2Generate.Parser.StringWithCalls (StringWithCalls(..))
 
 encodeReplaceSymbols :: forall a. Encoder a -> Encoder (ReplaceSymbols a)
 encodeReplaceSymbols e (ReplaceSymbols x) = e x
@@ -18,6 +19,12 @@ encodeWithFunctionCall e (WithFunctionCall x) = e x
 
 encodeReplaceSymbolsPattern :: Partial => Encoder ReplaceSymbolsPattern
 encodeReplaceSymbolsPattern = unReplaceSymbolsPattern >>> \nonEmptyArrayTypeSafePattern -> encodeNonEmptyArrayTypeSafePattern nonEmptyArrayTypeSafePattern -- encodeCallUnsafeGenerate true nonEmptyArrayTypeSafePattern
+
+-- encodeFunctionCalls :: Partial => Encoder ReplaceSymbolsPattern
+-- encodeFunctionCalls = exportOneWithGeneratorsSupplied $ ?a -- encodeNEAOf (encodeWithFunctionCall encodeNES)
+
+exportNEAOfFunctionCalls :: Partial => EncoderToExport (NonEmptyArray StringWithCalls)
+exportNEAOfFunctionCalls = exportOneWithGeneratorsSupplied $ encodeNEAOf \(StringWithCalls x) -> -- implement AI!
 
 encodeWeightedOf
   :: forall a
@@ -158,7 +165,7 @@ encoders =
   , "location/street_english_part": exportOne $ encodeNEAOf encodeNES
   , "location/street_name": exportOne $ encodeNEAOf encodeNES
   , "location/street_name_part": exportOne $ encodeNEAOf encodeNES
-  , "location/street_pattern": exportOne $ encodeNEAOf (encodeWithFunctionCall encodeNES)
+  , "location/street_pattern": exportNEAOfFunctionCalls -- exportOne $ encodeNEAOf (encodeWithFunctionCall encodeNES)
   , "location/street_prefix": exportOneIgnoreIfNothing $ encodeNEAOf encodeNES
   , "location/street_suffix": exportOne $ encodeNEAOf encodeNES
   , "location/time_zone": exportOne $ encodeNEAOf (encodeMaybe encodeNES)

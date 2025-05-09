@@ -1,12 +1,14 @@
 module Fakerjs2Generate.JavascriptBetter.Decode where
 
 import Fakerjs2Generate.JavascriptBetter.Decode.Impl
+import Fakerjs2Generate.Parser.ReplaceSymbolsPattern
 import Prelude
 
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.String.NonEmpty (NonEmptyString)
 import Fakerjs2Generate.JavascriptBetter.Types (DirsTo, NameCodeSymbolNumericCode, ReplaceSymbols(..), Weighted(..), WithFunctionCall(..))
-import Fakerjs2Generate.Parser.ReplaceSymbolsPattern
+import Fakerjs2Generate.Parser.StringWithCalls (StringWithCalls)
+import Unsafe.Coerce (unsafeCoerce)
 
 decodeReplaceSymbols :: forall a. Decoder a -> Decoder (ReplaceSymbols a)
 decodeReplaceSymbols d j = map ReplaceSymbols (d j)
@@ -16,6 +18,9 @@ decodeWithFunctionCall d j = map WithFunctionCall (d j)
 
 decodeReplaceSymbolsPattern :: Decoder ReplaceSymbolsPattern
 decodeReplaceSymbolsPattern j = decodeNES j <#> parseReplaceSymbols
+
+decodeNEAofStringWithCalls :: Decoder StringWithCalls
+decodeNEAofStringWithCalls = unsafeCoerce unit
 
 decodeWeightedOf
   :: forall a
@@ -153,7 +158,7 @@ decoders =
   , "location/street_english_part": decodeNEAOf decodeNES
   , "location/street_name": decodeNEAOf decodeNES
   , "location/street_name_part": decodeNEAOf decodeNES
-  , "location/street_pattern": decodeNEAOf (decodeWithFunctionCall decodeNES)
+  , "location/street_pattern": decodeNEAOf decodeNEAofStringWithCalls -- (decodeWithFunctionCall decodeNES)
   , "location/street_prefix": decodeMaybe $ decodeNEAOf decodeNES
   , "location/street_suffix": decodeNEAOf decodeNES
   , "location/time_zone": decodeNEAOf (decodeMaybe decodeNES)

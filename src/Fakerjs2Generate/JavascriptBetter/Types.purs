@@ -6,6 +6,7 @@ import Data.Map (Map)
 import Data.Maybe (Maybe)
 import Data.String.NonEmpty (NonEmptyString)
 import Fakerjs2Generate.Parser.ReplaceSymbolsPattern (ReplaceSymbolsPattern)
+import Fakerjs2Generate.Parser.StringWithCalls (StringWithCalls)
 
 newtype Weighted a = Weighted { value :: a, weight :: Int }
 type NameCodeSymbolNumericCode = { name :: NonEmptyString, code :: NonEmptyString, symbol :: String, numericCode :: NonEmptyString }
@@ -126,7 +127,7 @@ type DirsTo f =
   , "location/street_english_part" :: f (NonEmptyArray NonEmptyString)
   , "location/street_name" :: f (NonEmptyArray NonEmptyString)
   , "location/street_name_part" :: f (NonEmptyArray NonEmptyString)
-  , "location/street_pattern" :: f (NonEmptyArray (WithFunctionCall NonEmptyString))
+  , "location/street_pattern" :: f (NonEmptyArray StringWithCalls)
   , "location/street_prefix" :: f (Maybe (NonEmptyArray NonEmptyString))
   , "location/street_suffix" :: f (NonEmptyArray NonEmptyString)
   , "location/time_zone" :: f (NonEmptyArray (Maybe NonEmptyString))

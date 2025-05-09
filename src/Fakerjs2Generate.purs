@@ -282,13 +282,16 @@ main = launchAff_ $ do
 
         mkdir' outDirAbs (mkdirOptionsDefault { recursive = true })
 
-        result <- try do
-          let rendered = printModule (unsafePartial $ generateModule { moduleName: dirsPascalized <> [ fileNameStrPascalized ], fileName: fileNameStr } code)
-          pure rendered
+        case unsafePartial $ generateModule { moduleName: dirsPascalized <> [ fileNameStrPascalized ], fileName: fileNameStr } code of
+          Nothing -> log $ "Ignoring: " <> NonEmptyString.toString fileName
+          Just code' -> do
+            result <- try do
+              let rendered = printModule code'
+              pure rendered
 
-        case result of
-          Left err -> log $ "Error generating module for " <> NonEmptyString.toString fileName <> ": " <> message err
-          Right rendered -> writeTextFile UTF8 pursFilePathAbs rendered
+            case result of
+              Left err -> log $ "Error generating module for " <> NonEmptyString.toString fileName <> ": " <> message err
+              Right rendered -> writeTextFile UTF8 pursFilePathAbs rendered
     )
     validOutputs''''
 
@@ -298,28 +301,34 @@ generateModule
   :: Partial
   => { fileName :: String, moduleName :: Array String }
   -> CodeGenOutput
-  -> Module Void
+  -> Maybe (Module Void)
 generateModule { moduleName, fileName } output =
   let
     varName = add_ifPurescriptKeyword fileName
   in
-    Tidy.Codegen.Monad.codegenModule (mkModuleName moduleName) case output of
+    case output of
       CodeGenOutput_Ignore ->
-        -- Generate an empty module (or no declarations)
-        pure unit
+        Nothing
 
-      CodeGenOutput_OneFunctionFileNamed code -> do
-        c <- code
-        Tidy.Codegen.Monad.writeAndExport (declValue varName [] c)
+      CodeGenOutput_OneFunctionFileNamedWithGeneratorsSupplied code ->
+        Just $ Tidy.Codegen.Monad.codegenModule (mkModuleName moduleName) do
+          c <- code
+          Tidy.Codegen.Monad.writeAndExport (declValue varName [ binderVar "generators" ] c)
+
+      CodeGenOutput_OneFunctionFileNamed code ->
+        Just $ Tidy.Codegen.Monad.codegenModule (mkModuleName moduleName) do
+          c <- code
+          Tidy.Codegen.Monad.writeAndExport (declValue varName [] c)
 
       CodeGenOutput_ManyFunctionExported pairs ->
-        traverse_
-          ( \(Tuple name gen) -> do
-              expr <- gen
-              let fnName = add_ifPurescriptKeyword (NonEmptyString.toString name)
-              Tidy.Codegen.Monad.writeAndExport (declValue fnName [] expr)
-          )
-          (NonEmptyArray.toArray pairs)
+        Just $ Tidy.Codegen.Monad.codegenModule (mkModuleName moduleName) do
+          traverse_
+            ( \(Tuple name gen) -> do
+                expr <- gen
+                let fnName = add_ifPurescriptKeyword (NonEmptyString.toString name)
+                Tidy.Codegen.Monad.writeAndExport (declValue fnName [] expr)
+            )
+            (NonEmptyArray.toArray pairs)
 
 mkModuleName :: Array String -> String
 mkModuleName arr = "Fakerjs2.Locales." <> (String.joinWith "." $ map (\x -> unsafePartial $ pascalCase x) arr)

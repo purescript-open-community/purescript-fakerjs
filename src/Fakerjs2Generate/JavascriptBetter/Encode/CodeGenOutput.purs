@@ -25,12 +25,16 @@ type CodeGenOutput_ManyFunctionExported_Value = Tuple NonEmptyString (Codegen Vo
 data CodeGenOutput
   = CodeGenOutput_Ignore
   | CodeGenOutput_OneFunctionFileNamed (Codegen Void (Expr Void))
+  | CodeGenOutput_OneFunctionFileNamedWithGeneratorsSupplied (Codegen Void (Expr Void))
   | CodeGenOutput_ManyFunctionExported (NonEmptyArray CodeGenOutput_ManyFunctionExported_Value)
 
 type EncoderToExport a = a -> CodeGenOutput
 
 exportOne :: forall a. Encoder a -> EncoderToExport a
 exportOne = map CodeGenOutput_OneFunctionFileNamed
+
+exportOneWithGeneratorsSupplied :: forall a. Encoder a -> EncoderToExport a
+exportOneWithGeneratorsSupplied = map CodeGenOutput_OneFunctionFileNamedWithGeneratorsSupplied
 
 ---------------------------
 

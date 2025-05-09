@@ -14,3 +14,4 @@ node_modules
 output
 output-es
 package-lock.json
+.aider*

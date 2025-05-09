@@ -21,6 +21,7 @@ import Data.Tuple (Tuple(..))
 import Fakerjs2.Helpers.FromRegExp.Types (TypeSafePattern)
 import Fakerjs2Generate.JavascriptBetter.Types (ReplaceSymbols, Weighted, WithFunctionCall)
 import Fakerjs2Generate.Parser.ReplaceSymbolsPattern (ReplaceSymbolsPattern)
+import Fakerjs2Generate.Parser.StringWithCalls (StringWithCalls(..))
 import Prim.Row as Row
 import Prim.RowList as RL
 import PureScript.CST.Types (Expr)
@@ -126,6 +127,10 @@ instance KnownTypeName Int where
   knownTypeName_importInnerTypeExpected_getProper = pure $ typeCtor "Int"
 
 instance KnownTypeName TypeSafePattern where
+  knownTypeName_importInnerTypeRuntime_getProper = importTypeSafePatternType >>= (pure <<< typeCtor)
+  knownTypeName_importInnerTypeExpected_getProper = importTypeSafePatternType >>= (pure <<< typeCtor)
+
+instance KnownTypeName StringWithCalls where
   knownTypeName_importInnerTypeRuntime_getProper = importTypeSafePatternType >>= (pure <<< typeCtor)
   knownTypeName_importInnerTypeExpected_getProper = importTypeSafePatternType >>= (pure <<< typeCtor)
 

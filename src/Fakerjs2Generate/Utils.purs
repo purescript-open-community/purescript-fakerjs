@@ -5,7 +5,8 @@ import Prelude
 import Data.Array as Array
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.Array.NonEmpty as NonEmptyArray
-import Data.Either (Either, blush, hush)
+import Data.Either (Either(..), blush, hush)
+import Data.Either.Nested (type (\/))
 import Data.Maybe (Maybe)
 import Data.String (Pattern, split)
 import Data.String.Extra (pascalCase)
